@@ -18,11 +18,62 @@ export default function ResultPage() {
       try {
         const parsed = JSON.parse(stored);
         setAnalysis(parsed);
+        
+        // Save attempt after analysis is loaded
+        if (parsed.questionId) {
+          saveAttempt(parsed);
+        }
       } catch (e) {
         console.error('Failed to parse analysis result', e);
       }
     }
   }, []);
+
+  const saveAttempt = async (analysisData: any) => {
+    // Get userId from sessionStorage first, then localStorage
+    let userId = sessionStorage.getItem('currentUserId') || localStorage.getItem('logiclue_user_id');
+    
+    if (!userId) {
+      console.warn('No userId found, skipping attempt save');
+      return;
+    }
+
+    // Get input data from sessionStorage
+    const inputDataStr = sessionStorage.getItem('inputData');
+    if (!inputDataStr) {
+      console.warn('No input data found, skipping attempt save');
+      return;
+    }
+
+    try {
+      const inputData = JSON.parse(inputDataStr);
+      
+      const response = await fetch('/api/attempt', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          userId,
+          questionId: analysisData.questionId,
+          userChoice: analysisData.userChoice,
+          isCorrect: analysisData.isCorrect,
+          errorType: analysisData.userChoiceFeedback?.errorType || null,
+          userDifficulty: inputData.difficulty || null,
+          altChoice: inputData.hesitatedChoice || null,
+          altRationaleTag: inputData.hesitationReason || null,
+          altRationaleText: inputData.altRationaleText || null,
+          userCorrectAnswer: inputData.correctAnswer || null,
+          userNote: null
+        })
+      });
+
+      const result = await response.json();
+      if (!result.success) {
+        console.error('Failed to save attempt:', result.error);
+      }
+    } catch (error) {
+      console.error('Error saving attempt:', error);
+    }
+  };
 
   const toggleLayer = (layerNumber: number) => {
     setExpandedLayers(prev => ({

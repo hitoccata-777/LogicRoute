@@ -5,7 +5,7 @@ import crypto from 'crypto';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { stimulus, questionStem, options, userChoice, correctAnswer, userDifficulty, sourceId } = body;
+    const { stimulus, questionStem, options, userChoice, correctAnswer, userDifficulty, sourceId, userId } = body;
 
     const prompt = `You are an expert LSAT logical reasoning tutor. Analyze this question and provide detailed feedback.
 

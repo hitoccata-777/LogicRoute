@@ -145,6 +145,14 @@ export default function InputPage() {
       return;
     }
 
+    // Get or create userId
+    let userId = localStorage.getItem('logiclue_user_id');
+    if (!userId) {
+      userId = 'user_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+      localStorage.setItem('logiclue_user_id', userId);
+    }
+    sessionStorage.setItem('currentUserId', userId);
+
     setIsLoading(true);
 
     try {
@@ -159,6 +167,7 @@ export default function InputPage() {
           correctAnswer: correctAnswer || undefined,
           userDifficulty: difficulty || undefined,
           sourceId: sourceId || undefined,
+          userId: userId,
         }),
       });
 
