@@ -3,59 +3,9 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
-interface ParsedQuestion {
-  stimulus: string;
-  question_stem: string;
-  options: { [key: string]: string };
-}
-
-interface InputData {
-  parsedQuestion: ParsedQuestion;
-  sourceId: string;
-  correctAnswer: string;
-  yourChoice: string;
-  hesitatedChoice: string;
-  hesitationReason: string;
-  altRationaleText: string;
-  difficulty: number;
-}
-
-interface MockAnalysis {
-  isCorrect: boolean;
-  userChoice: string;
-  correctAnswer: string;
-  questionType: string;
-  userChoiceFeedback: {
-    errorType: string;
-    errorTypeDisplay: string;
-    diagnosis: string;
-  };
-  correctAnswerExplanation: {
-    brief: string;
-    whyCorrect: string;
-  };
-  diagram: {
-    type: string;
-    content: {
-      joannaClaim: string;
-      ruthResponse: string;
-      technique: string;
-    };
-  };
-  allOptions: {
-    [key: string]: {
-      brief: string;
-      isCorrect: boolean;
-      errorType?: string;
-    };
-  };
-  skillPoint: string;
-  takeaway: string;
-}
-
 export default function ResultPage() {
   const router = useRouter();
-  const [inputData, setInputData] = useState<InputData | null>(null);
+  const [analysis, setAnalysis] = useState<any>(null);
   const [expandedLayers, setExpandedLayers] = useState<{ [key: number]: boolean }>({
     2: false,
     3: false,
@@ -63,14 +13,13 @@ export default function ResultPage() {
   });
 
   useEffect(() => {
-    // Get data from sessionStorage
-    const storedData = sessionStorage.getItem('inputData');
-    if (storedData) {
+    const stored = sessionStorage.getItem('analysisResult');
+    if (stored) {
       try {
-        const parsed = JSON.parse(storedData);
-        setInputData(parsed);
-      } catch (error) {
-        console.error('Error parsing input data:', error);
+        const parsed = JSON.parse(stored);
+        setAnalysis(parsed);
+      } catch (e) {
+        console.error('Failed to parse analysis result', e);
       }
     }
   }, []);
@@ -82,66 +31,75 @@ export default function ResultPage() {
     }));
   };
 
-  // Mock analysis data - will be replaced with API call later
-  const getMockAnalysis = (): MockAnalysis => {
-    return {
-      isCorrect: inputData?.yourChoice === inputData?.correctAnswer || false,
-      userChoice: inputData?.yourChoice || 'D',
-      correctAnswer: inputData?.correctAnswer || 'A',
-      questionType: 'Method of Reasoning',
-      
-      userChoiceFeedback: {
-        errorType: 'wrong_flaw',
-        errorTypeDisplay: 'Wrong flaw type',
-        diagnosis: inputData?.yourChoice === inputData?.correctAnswer 
-          ? "You got it right! Great job identifying the correct reasoning technique."
-          : "Ruth isn't explaining anything - she's giving a counterexample to disprove Joanna's claim."
-      },
-      
-      correctAnswerExplanation: {
-        brief: "She presents a counterexample to a claim",
-        whyCorrect: "Joanna claims the ONLY way to succeed after bankruptcy is to keep the same business. Ruth gives ONE example (Kelton) that succeeded by changing business. One counterexample is enough to disprove an 'only' claim."
-      },
-      
-      diagram: {
-        type: "argument_structure",
-        content: {
-          joannaClaim: "Only way to succeed = same business",
-          ruthResponse: "Kelton: bankruptcy → changed business → successful",
-          technique: "Counterexample disproves 'only' claim"
-        }
-      },
-      
-      allOptions: {
-        A: { brief: "Counterexample to a claim", isCorrect: true },
-        B: { brief: "Alternative explanation", isCorrect: false, errorType: "wrong_flaw" },
-        C: { brief: "Analogy", isCorrect: false, errorType: "wrong_flaw" },
-        D: { brief: "Shows ambiguity", isCorrect: false, errorType: "wrong_flaw" },
-        E: { brief: "Excludes alternatives", isCorrect: false, errorType: "wrong_flaw" }
-      },
-      
-      skillPoint: "Identifying counterexample as an argumentative technique",
-      takeaway: "When someone says 'the ONLY way is X', one real example of succeeding without X is enough to prove them wrong."
-    };
+  // Helper function to render diagram content flexibly
+  const renderDiagram = () => {
+    if (!analysis.diagram?.content) {
+      return <p className="text-gray-500 italic">No diagram available</p>;
+    }
+
+    const content = analysis.diagram.content;
+    
+    // If content has a description field (from API)
+    if (content.description) {
+      return (
+        <div className="text-sm text-gray-700 whitespace-pre-wrap">
+          {content.description}
+        </div>
+      );
+    }
+    
+    // If content has structured fields (like joannaClaim, ruthResponse, etc.)
+    return (
+      <div className="space-y-2 text-sm">
+        {content.joannaClaim && (
+          <div className="flex items-start gap-2">
+            <span className="font-semibold text-indigo-600">Joanna:</span>
+            <span className="text-gray-700">{content.joannaClaim}</span>
+          </div>
+        )}
+        {content.ruthResponse && (
+          <div className="flex items-start gap-2">
+            <span className="font-semibold text-indigo-600">Ruth:</span>
+            <span className="text-gray-700">{content.ruthResponse}</span>
+          </div>
+        )}
+        {content.technique && (
+          <div className="mt-3 pt-3 border-t border-gray-300">
+            <span className="font-semibold text-indigo-600">Technique: </span>
+            <span className="text-gray-700">{content.technique}</span>
+          </div>
+        )}
+        {/* Fallback: render all other fields */}
+        {Object.entries(content).map(([key, value]) => {
+          if (!['joannaClaim', 'ruthResponse', 'technique'].includes(key)) {
+            return (
+              <div key={key} className="flex items-start gap-2">
+                <span className="font-semibold text-indigo-600 capitalize">{key}:</span>
+                <span className="text-gray-700">{String(value)}</span>
+              </div>
+            );
+          }
+          return null;
+        })}
+      </div>
+    );
   };
 
-  if (!inputData) {
+  if (!analysis) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <p className="text-gray-600 mb-4">No data found. Please go back and submit your input.</p>
+          <p className="text-gray-600 mb-4">No analysis data found</p>
           <button
             onClick={() => router.push('/')}
-            className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
+            className="text-indigo-600 hover:underline"
           >
-            Go to Home
+            Go back to home
           </button>
         </div>
       </div>
     );
   }
-
-  const analysis = getMockAnalysis();
 
   return (
     <main className="min-h-screen bg-gray-50">
@@ -210,23 +168,14 @@ export default function ResultPage() {
           {expandedLayers[2] && (
             <div className="px-6 pb-6 space-y-4 border-t border-gray-200">
               {/* Diagram */}
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="text-sm font-semibold text-gray-700 mb-3 uppercase">Argument Structure</h3>
-                <div className="space-y-2 text-sm">
-                  <div className="flex items-start gap-2">
-                    <span className="font-semibold text-indigo-600">Joanna:</span>
-                    <span className="text-gray-700">{analysis.diagram.content.joannaClaim}</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <span className="font-semibold text-indigo-600">Ruth:</span>
-                    <span className="text-gray-700">{analysis.diagram.content.ruthResponse}</span>
-                  </div>
-                  <div className="mt-3 pt-3 border-t border-gray-300">
-                    <span className="font-semibold text-indigo-600">Technique: </span>
-                    <span className="text-gray-700">{analysis.diagram.content.technique}</span>
-                  </div>
+              {analysis.diagram && (
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h3 className="text-sm font-semibold text-gray-700 mb-3 uppercase">
+                    {analysis.diagram.type ? analysis.diagram.type.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase()) : 'Argument Structure'}
+                  </h3>
+                  {renderDiagram()}
                 </div>
-              </div>
+              )}
 
               {/* Why correct answer is correct */}
               <div>
