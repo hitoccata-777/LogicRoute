@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { supabase } from '@/lib/supabase';
+import crypto from 'crypto';
 
 export async function POST(request: NextRequest) {
   try {
@@ -96,6 +98,76 @@ Return ONLY valid JSON, no other text.`;
     // Add user's choice info
     analysis.userChoice = userChoice;
     analysis.isCorrect = userChoice === analysis.correctAnswer;
+
+    // Generate content hash for deduplication
+    const contentHash = crypto.createHash('sha256')
+      .update(stimulus + questionStem + JSON.stringify(options))
+      .digest('hex');
+
+    // Check if question already exists
+    const { data: existingQuestion } = await supabase
+      .from('questions')
+      .select('id')
+      .eq('content_hash', contentHash)
+      .single();
+
+    // If not exists, insert new question
+    let questionId: string | undefined;
+
+    if (existingQuestion) {
+      questionId = existingQuestion.id;
+    } else {
+      const { data: newQuestion, error: questionError } = await supabase
+        .from('questions')
+        .insert({
+          stimulus,
+          question_stem: questionStem,
+          options,
+          question_type: analysis.questionType,
+          question_family: 'argument_evaluation',
+          correct_answer: analysis.correctAnswer,
+          llm_suggested_answer: analysis.correctAnswer,
+          answer_source: correctAnswer ? 'user' : 'llm',
+          answer_conflict: correctAnswer && correctAnswer !== analysis.correctAnswer,
+          source_id: sourceId || null,
+          content_hash: contentHash
+        })
+        .select('id')
+        .single();
+
+      if (questionError) {
+        console.error('Error saving question:', questionError);
+      }
+      questionId = newQuestion?.id;
+    }
+
+    // Save analysis
+    if (questionId) {
+      await supabase.from('analyses').upsert({
+        question_id: questionId,
+        method: analysis.diagram?.type || 'unknown',
+        steps: {},
+        summary: analysis.correctAnswerExplanation?.whyCorrect,
+        skill_point: analysis.skillPoint,
+        takeaway: analysis.takeaway
+      }, { onConflict: 'question_id' });
+
+      // Save option analyses
+      for (const [letter, optionData] of Object.entries(analysis.allOptions)) {
+        const opt = optionData as any;
+        await supabase.from('option_analyses').upsert({
+          question_id: questionId,
+          option_letter: letter,
+          is_correct: opt.isCorrect,
+          content_brief: opt.brief,
+          why_correct: opt.isCorrect ? analysis.correctAnswerExplanation : null,
+          error: opt.isCorrect ? null : { error_type: opt.errorType }
+        }, { onConflict: 'question_id,option_letter' });
+      }
+    }
+
+    // Add questionId to the response
+    analysis.questionId = questionId;
 
     return NextResponse.json({ success: true, data: analysis });
 
