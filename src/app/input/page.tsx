@@ -23,6 +23,7 @@ export default function InputPage() {
   const [hesitationReason, setHesitationReason] = useState('');
   const [altRationaleText, setAltRationaleText] = useState('');
   const [difficulty, setDifficulty] = useState<number>(0);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     // Get questionText from sessionStorage
@@ -133,26 +134,63 @@ export default function InputPage() {
     setDifficulty(0);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!yourChoice) {
-      alert('Please select your choice');
+      alert('Please select your answer choice');
       return;
     }
 
-    // Store all data in sessionStorage
-    const inputData = {
-      parsedQuestion,
-      sourceId,
-      correctAnswer,
-      yourChoice,
-      hesitatedChoice,
-      hesitationReason,
-      altRationaleText,
-      difficulty
-    };
+    if (!parsedQuestion) {
+      alert('Question data is missing');
+      return;
+    }
 
-    sessionStorage.setItem('inputData', JSON.stringify(inputData));
-    router.push('/result');
+    setIsLoading(true);
+
+    try {
+      const response = await fetch('/api/analyze', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          stimulus: parsedQuestion.stimulus,
+          questionStem: parsedQuestion.question_stem,
+          options: parsedQuestion.options,
+          userChoice: yourChoice,
+          correctAnswer: correctAnswer || undefined,
+          userDifficulty: difficulty || undefined,
+          sourceId: sourceId || undefined,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        // Store analysis result
+        sessionStorage.setItem('analysisResult', JSON.stringify(result.data));
+        
+        // Also store input data for reference
+        const inputData = {
+          parsedQuestion,
+          sourceId,
+          correctAnswer,
+          yourChoice,
+          hesitatedChoice,
+          hesitationReason,
+          altRationaleText,
+          difficulty
+        };
+        sessionStorage.setItem('inputData', JSON.stringify(inputData));
+        
+        router.push('/result');
+      } else {
+        alert('Analysis failed: ' + (result.error || 'Unknown error'));
+      }
+    } catch (error) {
+      alert('Failed to connect to server');
+      console.error(error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   if (!parsedQuestion) {
@@ -464,9 +502,32 @@ export default function InputPage() {
           </button>
           <button
             onClick={handleSubmit}
-            className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
+            disabled={isLoading}
+            className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:bg-indigo-400 disabled:cursor-not-allowed flex items-center gap-2"
           >
-            Submit
+            {isLoading && (
+              <svg
+                className="animate-spin h-4 w-4 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
+              </svg>
+            )}
+            {isLoading ? 'Analyzing...' : 'Submit'}
           </button>
       </div>
     </div>
