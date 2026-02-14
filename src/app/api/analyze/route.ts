@@ -1,38 +1,9 @@
-import Anthropic from '@anthropic-ai/sdk';
 import { NextRequest, NextResponse } from 'next/server';
-
-const anthropic = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY,
-});
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     const { stimulus, questionStem, options, userChoice, correctAnswer, userDifficulty, sourceId } = body;
-
-    // Validate required fields
-    if (!stimulus || !questionStem || !options || !userChoice) {
-      return NextResponse.json(
-        { success: false, error: 'Missing required fields: stimulus, questionStem, options, userChoice' },
-        { status: 400 }
-      );
-    }
-
-    // Validate options structure
-    if (!options.A || !options.B || !options.C || !options.D || !options.E) {
-      return NextResponse.json(
-        { success: false, error: 'All options (A-E) are required' },
-        { status: 400 }
-      );
-    }
-
-    // Check if API key is configured
-    if (!process.env.ANTHROPIC_API_KEY) {
-      return NextResponse.json(
-        { success: false, error: 'ANTHROPIC_API_KEY not configured' },
-        { status: 500 }
-      );
-    }
 
     const prompt = `You are an expert LSAT logical reasoning tutor. Analyze this question and provide detailed feedback.
 
@@ -49,8 +20,6 @@ ${questionStem}
 
 User selected: ${userChoice}
 ${correctAnswer ? `User claims correct answer is: ${correctAnswer}` : 'Please determine the correct answer.'}
-${userDifficulty ? `User rated difficulty: ${userDifficulty}/5` : ''}
-${sourceId ? `Source: ${sourceId}` : ''}
 
 Respond in this exact JSON format:
 {
@@ -84,37 +53,45 @@ Respond in this exact JSON format:
 
 Return ONLY valid JSON, no other text.`;
 
-    const message = await anthropic.messages.create({
-      model: "claude-sonnet-4-20250514",
-      max_tokens: 2000,
-      messages: [
-        { role: "user", content: prompt }
-      ],
+    const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
+        'Content-Type': 'application/json',
+        'HTTP-Referer': 'https://logiclue.net',
+        'X-Title': 'LogiClue'
+      },
+      body: JSON.stringify({
+        model: 'anthropic/claude-sonnet-4',
+        messages: [
+          { role: 'user', content: prompt }
+        ],
+        max_tokens: 2000
+      })
     });
 
-    // Extract text content from response
-    const textContent = message.content.find(block => block.type === 'text');
-    if (!textContent || textContent.type !== 'text') {
-      throw new Error('No text response from Claude');
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error('OpenRouter error:', response.status, errorText);
+      throw new Error(`OpenRouter API error: ${response.status}`);
     }
 
-    // Parse JSON from response
-    // Claude might return JSON wrapped in markdown code blocks, so we need to extract it
-    let jsonText = textContent.text.trim();
-    
-    // Remove markdown code blocks if present
-    if (jsonText.startsWith('```json')) {
-      jsonText = jsonText.replace(/^```json\n?/, '').replace(/\n?```$/, '');
-    } else if (jsonText.startsWith('```')) {
-      jsonText = jsonText.replace(/^```\n?/, '').replace(/\n?```$/, '');
+    const data = await response.json();
+    const content = data.choices[0]?.message?.content;
+
+    if (!content) {
+      throw new Error('No response content from Claude');
     }
-    
-    const analysis = JSON.parse(jsonText);
-    
-    // Validate that we got the expected structure
-    if (!analysis.correctAnswer || !analysis.questionType) {
-      throw new Error('Invalid response structure from Claude');
+
+    // Parse JSON from response (handle markdown code blocks if present)
+    let jsonStr = content;
+    if (content.includes('```json')) {
+      jsonStr = content.split('```json')[1].split('```')[0].trim();
+    } else if (content.includes('```')) {
+      jsonStr = content.split('```')[1].split('```')[0].trim();
     }
+
+    const analysis = JSON.parse(jsonStr);
     
     // Add user's choice info
     analysis.userChoice = userChoice;
@@ -124,27 +101,9 @@ Return ONLY valid JSON, no other text.`;
 
   } catch (error: any) {
     console.error('Analysis error:', error);
-    
-    // Handle JSON parse errors specifically
-    if (error instanceof SyntaxError) {
-      return NextResponse.json(
-        { success: false, error: 'Failed to parse Claude response as JSON', details: error.message },
-        { status: 500 }
-      );
-    }
-    
-    // Handle Anthropic API errors
-    if (error.status) {
-      return NextResponse.json(
-        { success: false, error: 'Claude API error', details: error.message },
-        { status: error.status || 500 }
-      );
-    }
-    
     return NextResponse.json(
-      { success: false, error: 'Failed to analyze question', details: error?.message || 'Unknown error' },
+      { success: false, error: 'Claude API error: ' + (error?.message || 'Unknown error') },
       { status: 500 }
     );
   }
 }
-
