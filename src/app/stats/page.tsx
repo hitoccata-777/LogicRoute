@@ -1,43 +1,39 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-
-interface MockStats {
-  overview: {
-    totalQuestions: number;
-    correctCount: number;
-    accuracy: number;
-    avgDifficulty: number;
-  };
-  byErrorType: Array<{
-    errorType: string;
-    display: string;
-    count: number;
-  }>;
-}
 
 export default function StatsPage() {
   const router = useRouter();
+  const [stats, setStats] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
 
-  // Mock data - will be replaced with API call later
-  const mockStats: MockStats = {
-    overview: {
-      totalQuestions: 47,
-      correctCount: 32,
-      accuracy: 68.1,
-      avgDifficulty: 3.2
-    },
-    byErrorType: [
-      { errorType: "direction_reversed", display: "Reversed direction", count: 8 },
-      { errorType: "too_strong", display: "Too strong", count: 6 },
-      { errorType: "off_topic", display: "Off topic", count: 5 },
-      { errorType: "wrong_flaw", display: "Wrong flaw type", count: 4 },
-      { errorType: "missing_link", display: "Missing link", count: 3 }
-    ]
-  };
+  useEffect(() => {
+    const fetchStats = async () => {
+      // Get userId from localStorage
+      let userId = localStorage.getItem('logiclue_user_id') || 'debug_user';
+
+      try {
+        const response = await fetch(`/api/stats?userId=${userId}`);
+        const result = await response.json();
+        
+        if (result.success) {
+          setStats(result.data);
+        }
+      } catch (error) {
+        console.error('Failed to fetch stats:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchStats();
+  }, []);
 
   // Calculate max count for bar scaling
-  const maxCount = Math.max(...mockStats.byErrorType.map(e => e.count));
+  const maxCount = stats?.byErrorType?.length > 0 
+    ? Math.max(...stats.byErrorType.map((e: any) => e.count))
+    : 1;
 
   // Render stars for average difficulty
   const renderStars = (rating: number) => {
@@ -60,6 +56,27 @@ export default function StatsPage() {
     );
   };
 
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <p className="text-gray-600">Loading statistics...</p>
+      </div>
+    );
+  }
+
+  if (!stats || stats.overview.totalQuestions === 0) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <p className="text-gray-600 mb-4">No questions analyzed yet</p>
+          <button onClick={() => router.push('/')} className="text-indigo-600 hover:underline">
+            Analyze your first question
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <main className="min-h-screen bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 py-8">
@@ -74,26 +91,26 @@ export default function StatsPage() {
           {/* Total Questions */}
           <div className="bg-white rounded-lg shadow-md p-6">
             <div className="text-sm font-medium text-gray-500 mb-2">Total Questions</div>
-            <div className="text-3xl font-bold text-gray-900">{mockStats.overview.totalQuestions}</div>
+            <div className="text-3xl font-bold text-gray-900">{stats.overview.totalQuestions}</div>
           </div>
 
           {/* Correct Count */}
           <div className="bg-white rounded-lg shadow-md p-6">
             <div className="text-sm font-medium text-gray-500 mb-2">Correct</div>
-            <div className="text-3xl font-bold text-green-600">{mockStats.overview.correctCount}</div>
+            <div className="text-3xl font-bold text-green-600">{stats.overview.correctCount}</div>
           </div>
 
           {/* Accuracy */}
           <div className="bg-white rounded-lg shadow-md p-6">
             <div className="text-sm font-medium text-gray-500 mb-2">Accuracy</div>
-            <div className="text-3xl font-bold text-indigo-600">{mockStats.overview.accuracy.toFixed(1)}%</div>
+            <div className="text-3xl font-bold text-indigo-600">{stats.overview.accuracy.toFixed(1)}%</div>
           </div>
 
           {/* Avg Difficulty */}
           <div className="bg-white rounded-lg shadow-md p-6">
             <div className="text-sm font-medium text-gray-500 mb-2">Avg Difficulty</div>
             <div className="mt-1">
-              {renderStars(mockStats.overview.avgDifficulty)}
+              {renderStars(stats.overview.avgDifficulty)}
             </div>
           </div>
         </div>
@@ -103,7 +120,8 @@ export default function StatsPage() {
           <h2 className="text-xl font-bold text-gray-900 mb-6">Your Most Common Errors</h2>
           
           <div className="space-y-4">
-            {mockStats.byErrorType.map((error, index) => {
+            {stats.byErrorType && stats.byErrorType.length > 0 ? (
+              stats.byErrorType.map((error: any, index: number) => {
               const percentage = (error.count / maxCount) * 100;
               // Create gradient: darker indigo for higher counts
               const intensity = Math.min(100, 40 + (percentage * 0.6)); // Range from 40% to 100% opacity
@@ -132,7 +150,10 @@ export default function StatsPage() {
                   </div>
                 </button>
               );
-            })}
+            })
+            ) : (
+              <p className="text-gray-500 text-center py-4">No errors to display yet</p>
+            )}
           </div>
         </div>
 
