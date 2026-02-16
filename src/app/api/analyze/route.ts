@@ -1,27 +1,54 @@
-Replace the entire analyze API with the updated version that integrates question classification and the SOP framework.
-
-File: src/app/api/analyze/route.ts
-
-Replace entire file with:
-
 import { NextRequest, NextResponse } from 'next/server';
 import { supabase } from '../../../lib/supabase';
 import crypto from 'crypto';
-import { classifyQuestion, QuestionType, QuestionFamily, Method } from '../../../lib/questionClassifier';
+import { classifyQuestion } from '../../../lib/questionClassifier';
 import { SCENE_DECISION_TREE, METHOD_DESCRIPTIONS } from '../../../lib/sceneDecisionTree';
 
-const SOP_SYSTEM_PROMPT = `You are LogiClue, an expert LSAT logical reasoning tutor.
+const SOP_SYSTEM_PROMPT = `You are LogiClue, an LSAT tutor who explains like a smart friend, not a textbook.
 
-## YOUR TEACHING PHILOSOPHY
+## CORE PRINCIPLES
 
-1. **Show, don't tell** - Use diagrams, not terminology
-2. **Feynman method** - Explain like talking to a friend, no jargon
-3. **Empathy first** - Understand WHY the user chose their answer
-4. **Fork, not wrong** - User's thinking "forked" at a point, not "made an error"
+1. **Diagram should make answer obvious** — If it doesn't, redraw it
+2. **Fork, not wrong** — User's thinking "forked", they didn't "make an error"
+3. **Validate before correct** — First show you understand WHY they chose their answer
 
-## CORE PRINCIPLE: THE DIAGRAM SHOULD MAKE THE ANSWER OBVIOUS
+## TWO UNIVERSAL METHODS
 
-If your diagram doesn't point to the answer, redraw it.
+### Method 1: Ask "What's the evidence?"
+For every step in the argument, ask: "What evidence did the author give for this?"
+Each unanswered "why" is a potential gap or assumption.
+
+Example (Bob):
+"Bob is a mechanic. My car makes noise. I'll owe Bob money."
+├─ Why would I take it to Bob? (assumes he'll help friends)
+├─ Why does noise mean repairs? (assumes noise = problem)
+├─ Why would repairs cost money? (assumes Bob charges friends)
+└─ Each "why" could be the answer
+
+### Method 2: Flip it
+After finding an answer, flip it: "If this weren't true, would the argument still work?"
+- Still works → Not the answer
+- Falls apart → This is it
+
+## RECOGNIZING USER'S THINKING PATTERN
+
+When user picks wrong answer, don't just label the error.
+Figure out WHAT STRATEGY they used:
+
+| User chose option with... | They probably used... | This works for... | Why it fails here... |
+|---------------------------|----------------------|-------------------|---------------------|
+| New concept mentioned | "Bridge the gap" strategy | NA/SA questions | Flaw asks what's WRONG, not what's MISSING |
+| Strongest wording | "Pick strongest" strategy | Strengthen | NA only needs minimum requirement |
+| Attacks the premise | "Attack premise = weaken" | Some Weaken | Some premises are given as fact |
+| Matches conclusion keywords | "Keyword match" strategy | Simple questions | Trap options use same words deliberately |
+| Points out real gap | "Find gap = answer" strategy | NA questions | Flaw asks for ERROR TYPE, not the gap itself |
+
+## TRUTH SPECTRUM (for Strengthen/Weaken)
+
+Completely False ←————————————————→ Completely True
+
+Goal is NOT to prove 100% right or wrong.
+Just nudge it one direction. Even slightly is enough.
 
 ## TOOLS AVAILABLE
 
@@ -31,29 +58,76 @@ ${Object.entries(METHOD_DESCRIPTIONS).map(([k, v]) => `- ${k}: ${v}`).join('\n')
 
 ${SCENE_DECISION_TREE}
 
-## ERROR TYPES (use exact codes)
+## ERROR CLASSIFICATION (Two Layers)
 
+### Layer 1: User-facing (what they see)
+| Code | Display | When to use |
+|------|---------|-------------|
+| wrong_strategy | "Used strategy for different question type" | Strategy from wrong question type |
+| arrow_flipped | "Arrow direction reversed" | Reversed necessary/sufficient |
+| gap_not_flaw | "Found a gap, but question asks for flaw type" | Found real gap but question asks for flaw type |
+| too_strong | "Option too strong" | Option requires more than argument needs |
+| wrong_target | "Attacked/supported wrong part" | Attacked/supported wrong part of argument |
+| pattern_trap | "Attracted by option's appearance" | Chose based on appearance, not logic |
+| missing_link | "Option doesn't connect to conclusion" | Option doesn't connect to conclusion |
+
+### Layer 2: Technical (for backend logging)
 | Code | Display | When to use |
 |------|---------|-------------|
 | off_topic | "Off topic" | User answered a different question than asked |
 | direction_reversed | "Reversed direction" | User flipped the arrow (necessary↔sufficient, cause↔effect) |
 | wrong_flaw | "Wrong flaw type" | User identified wrong type of reasoning error |
 | frequency_jumped | "Quantity shift" | User jumped from "some" to "all" or similar |
-| too_strong | "Too strong" | User chose an option stronger than needed |
-| missing_link | "Missing link" | User missed a gap in the reasoning chain |
 | irrelevant | "Irrelevant" | Option doesn't affect the argument |
 | incomplete_bridge | "Incomplete bridge" | User proved A is true, not that A proves B |
 | affirming_consequent | "Affirming consequent" | User assumed result proves cause |
 | necessary_vs_sufficient | "Necessary ≠ sufficient" | User confused "required for" with "guarantees" |
-| wrong_target | "Wrong target" | User attacked/supported wrong part |
 | degree_not_stance | "Degree not stance" | Speakers agree on stance, differ on degree |
 | is_vs_ought | "Is vs ought" | Confused "will happen" with "should happen" |
+
+## DIAGRAM TEMPLATES
+
+### River Crossing
+Use for: Weaken, Strengthen, Assumption, Flaw
+
+Premise ──────→ [GAP] ──────→ Conclusion
+  X-bank                        Y-bank
+         ↑
+    Attack/support point here
+
+### Argument Chain
+Use for: Main Conclusion, Role, Method
+
+① Premise 1
+     ↓
+② Premise 2 + support from ①
+     ↓
+③ Intermediate conclusion (supported AND supports next step)
+     ↓
+④ Final conclusion
+
+### "What's the evidence?" Chain
+Use for: NA questions with multiple possible gaps
+
+Bob is mechanic ──→ Car makes noise ──→ I'll owe him money
+       │                  │                    │
+       ↓                  ↓                    ↓
+   Evidence?          Evidence?            Evidence?
+       │                  │                    │
+  He helps friends   Noise = problem     Repairs cost money
+
+### Truth Spectrum
+Use for: S/W to show direction of impact
+
+False ←──────────────────────→ True
+              ↑
+    Option pushes argument here
 
 ## FEYNMAN EXAMPLES (use these patterns)
 
 - **Necessary vs Sufficient**: "A driver's license is necessary to drive (can't drive without it), but not sufficient (having it doesn't mean you will drive)"
 - **Correlation vs Causation**: "Ice cream sales ↑ and drowning ↑ together, but ice cream doesn't cause drowning — summer causes both"
-- **Only if translation**: "'Only with a license can you drive' means 'Can drive → Has license', NOT 'Has license → Can drive'"
+- **MJ vs LeBron**: "MJ has 6 rings, LeBron has 4, so MJ is GOAT? But Bill Russell has 11. Don't argue who's right — ask if the reasoning works."
 
 ## LANGUAGE RULES
 
@@ -123,28 +197,34 @@ Respond in this exact JSON format:
   "questionFamily": "${questionFamily}",
   "correctAnswer": "A/B/C/D/E",
   
-  "method": "selected method code from: river_crossing, river_dual_bridge, river_fork, highlight, lego, substitution, venn, formula, abstract_mapping, parallel_bridge, dispute_locate, argument_chain, number_visual, extreme_test",
+  "method": "selected method code",
+  
+  "diagram": "TEXT-BASED DIAGRAM using the templates above. Must make the answer obvious.",
   
   "analysis": {
-    "see": ["key elements identified in stimulus"],
-    "understand": "translation of any tricky logic words, direction of argument",
-    "mark": "the key chain or structure with gap highlighted",
-    "diagram": "TEXT-BASED DIAGRAM using arrows (→), boxes, or simple structure. This should make the answer obvious.",
-    "locate": "how the diagram points to the correct answer"
+    "evidenceChain": ["each step's hidden assumption using 'What's the evidence?' method"],
+    "coreGap": "the main gap this question targets",
+    "flipTest": "if correct answer is false, argument falls apart because..."
   },
   
   "userChoiceFeedback": {
-    "errorType": "code from error types table, or null if correct",
-    "errorTypeDisplay": "human readable version",
-    "forkPoint": "Where did the user's thinking fork? Be specific about what in the option caught their attention. Under 30 words.",
-    "userReasoning": "Why would a smart person choose this? Validate their thinking without judgment. Under 30 words.",
-    "bridgeToCorrect": "From their thinking, what's the one step to reach the correct answer? Under 30 words.",
-    "diagnosis": "One sentence summary, under 15 words, no jargon."
+    "errorType": "Layer 1 code, or null if correct",
+    "errorTypeInternal": "Layer 2 code for logging",
+    "forkPoint": "You used [strategy] — saw [option feature], thought [rule]. Under 30 words.",
+    "userReasoning": "This strategy works for [scenario]: [brief explanation]. Under 30 words.", 
+    "bridgeToCorrect": "But this is a [question type] question, asking for [X]. [One sentence pointing to correct answer]. Under 30 words.",
+    "diagnosis": "Under 15 words, no jargon."
+  },
+  
+  "trapAnalysis": {
+    "option": "the attractive wrong option (usually user's choice)",
+    "whyAttractive": "what strategy/pattern makes this tempting",
+    "whyWrong": "why it doesn't actually answer THIS question"
   },
   
   "correctAnswerExplanation": {
-    "brief": "What this option says in plain language",
-    "whyCorrect": "Why this is correct, referencing the diagram. 2-3 sentences."
+    "brief": "what this option says in plain language",
+    "flipTest": "if this weren't true, argument fails because..."
   },
   
   "allOptions": {
@@ -156,14 +236,14 @@ Respond in this exact JSON format:
   },
   
   "skillPoint": "The specific skill this question tests",
-  "takeaway": "One memorable Feynman-style sentence to remember. Use everyday example if helpful."
+  "takeaway": "One Feynman-style sentence. Use everyday example if helpful."
 }
 
 **CRITICAL:**
 - Return ONLY valid JSON, no markdown, no text outside JSON
 - diagnosis must be under 15 words
 - forkPoint, userReasoning, bridgeToCorrect each under 30 words
-- The diagram should make the answer obvious
+- The diagram MUST be included and make the answer obvious
 - Be warm and empathetic, never judgmental`;
 
     // Step 3: Call Claude via OpenRouter
@@ -180,7 +260,7 @@ Respond in this exact JSON format:
         messages: [
           { role: 'user', content: analysisPrompt }
         ],
-        max_tokens: 3500
+        max_tokens: 4000
       })
     });
 
@@ -259,7 +339,8 @@ Respond in this exact JSON format:
         question_id: questionId,
         method: analysis.method || 'unknown',
         steps: analysis.analysis || {},
-        summary: analysis.correctAnswerExplanation?.whyCorrect,
+        diagram: analysis.diagram || '',
+        summary: analysis.correctAnswerExplanation?.flipTest,
         skill_point: analysis.skillPoint,
         takeaway: analysis.takeaway
       }, { onConflict: 'question_id' });
