@@ -7,7 +7,7 @@ export default function ResultPage() {
   const router = useRouter();
   const [analysis, setAnalysis] = useState<any>(null);
   const [expandedLayers, setExpandedLayers] = useState<{ [key: number]: boolean }>({
-    2: false,
+    2: true,  // Auto-expand Analysis by default
     3: false,
     4: false
   });
@@ -19,7 +19,6 @@ export default function ResultPage() {
         const parsed = JSON.parse(stored);
         setAnalysis(parsed);
         
-        // Save attempt after analysis is loaded
         if (parsed.questionId) {
           saveAttempt(parsed);
         }
@@ -30,7 +29,6 @@ export default function ResultPage() {
   }, []);
 
   const saveAttempt = async (analysisData: any) => {
-    // Get userId from sessionStorage first, then localStorage
     let userId = sessionStorage.getItem('currentUserId') || localStorage.getItem('logiclue_user_id');
     
     if (!userId) {
@@ -38,7 +36,6 @@ export default function ResultPage() {
       return;
     }
 
-    // Get input data from sessionStorage
     const inputDataStr = sessionStorage.getItem('inputData');
     if (!inputDataStr) {
       console.warn('No input data found, skipping attempt save');
@@ -80,60 +77,6 @@ export default function ResultPage() {
       ...prev,
       [layerNumber]: !prev[layerNumber]
     }));
-  };
-
-  // Helper function to render diagram content flexibly
-  const renderDiagram = () => {
-    if (!analysis.diagram?.content) {
-      return <p className="text-gray-500 italic">No diagram available</p>;
-    }
-
-    const content = analysis.diagram.content;
-    
-    // If content has a description field (from API)
-    if (content.description) {
-      return (
-        <div className="text-sm text-gray-700 whitespace-pre-wrap">
-          {content.description}
-        </div>
-      );
-    }
-    
-    // If content has structured fields (like joannaClaim, ruthResponse, etc.)
-    return (
-      <div className="space-y-2 text-sm">
-        {content.joannaClaim && (
-          <div className="flex items-start gap-2">
-            <span className="font-semibold text-indigo-600">Joanna:</span>
-            <span className="text-gray-700">{content.joannaClaim}</span>
-          </div>
-        )}
-        {content.ruthResponse && (
-          <div className="flex items-start gap-2">
-            <span className="font-semibold text-indigo-600">Ruth:</span>
-            <span className="text-gray-700">{content.ruthResponse}</span>
-          </div>
-        )}
-        {content.technique && (
-          <div className="mt-3 pt-3 border-t border-gray-300">
-            <span className="font-semibold text-indigo-600">Technique: </span>
-            <span className="text-gray-700">{content.technique}</span>
-          </div>
-        )}
-        {/* Fallback: render all other fields */}
-        {Object.entries(content).map(([key, value]) => {
-          if (!['joannaClaim', 'ruthResponse', 'technique'].includes(key)) {
-            return (
-              <div key={key} className="flex items-start gap-2">
-                <span className="font-semibold text-indigo-600 capitalize">{key}:</span>
-                <span className="text-gray-700">{String(value)}</span>
-              </div>
-            );
-          }
-          return null;
-        })}
-      </div>
-    );
   };
 
   if (!analysis) {
@@ -188,9 +131,11 @@ export default function ResultPage() {
             </div>
 
             {/* One-line diagnosis */}
-            <div className="text-gray-700 text-lg max-w-2xl">
-              {analysis.userChoiceFeedback.diagnosis}
-            </div>
+            {analysis.userChoiceFeedback?.diagnosis && (
+              <div className="text-gray-700 text-lg max-w-2xl">
+                {analysis.userChoiceFeedback.diagnosis}
+              </div>
+            )}
 
             {/* Question type badge */}
             <div className="inline-block px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">
@@ -217,25 +162,104 @@ export default function ResultPage() {
           </button>
           
           {expandedLayers[2] && (
-            <div className="px-6 pb-6 space-y-4 border-t border-gray-200">
-              {/* Diagram */}
+            <div className="px-6 pb-6 space-y-6 border-t border-gray-200 pt-4">
+              
+              {/* Diagram - Now handles string format */}
               {analysis.diagram && (
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <h3 className="text-sm font-semibold text-gray-700 mb-3 uppercase">
-                    {analysis.diagram.type ? analysis.diagram.type.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase()) : 'Argument Structure'}
+                <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                  <h3 className="text-xs font-semibold text-gray-400 mb-3 uppercase tracking-wide">
+                    Diagram
                   </h3>
-                  {renderDiagram()}
+                  <pre className="whitespace-pre-wrap">{analysis.diagram}</pre>
+                </div>
+              )}
+
+              {/* Fork Point Feedback - NEW */}
+              {analysis.userChoiceFeedback && !analysis.isCorrect && (
+                <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 space-y-3">
+                  <h3 className="text-sm font-semibold text-amber-800 uppercase tracking-wide">
+                    Where Your Thinking Forked
+                  </h3>
+                  
+                  {analysis.userChoiceFeedback.forkPoint && (
+                    <div>
+                      <span className="text-amber-700 font-medium">Fork Point: </span>
+                      <span className="text-gray-700">{analysis.userChoiceFeedback.forkPoint}</span>
+                    </div>
+                  )}
+                  
+                  {analysis.userChoiceFeedback.userReasoning && (
+                    <div>
+                      <span className="text-amber-700 font-medium">Your Logic: </span>
+                      <span className="text-gray-700">{analysis.userChoiceFeedback.userReasoning}</span>
+                    </div>
+                  )}
+                  
+                  {analysis.userChoiceFeedback.bridgeToCorrect && (
+                    <div>
+                      <span className="text-amber-700 font-medium">Bridge to Correct: </span>
+                      <span className="text-gray-700">{analysis.userChoiceFeedback.bridgeToCorrect}</span>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Trap Analysis - NEW */}
+              {analysis.trapAnalysis && !analysis.isCorrect && (
+                <div className="bg-red-50 border border-red-200 rounded-lg p-4 space-y-2">
+                  <h3 className="text-sm font-semibold text-red-800 uppercase tracking-wide">
+                    Why Option {analysis.trapAnalysis.option} is Tempting
+                  </h3>
+                  <div>
+                    <span className="text-red-700 font-medium">Attractive because: </span>
+                    <span className="text-gray-700">{analysis.trapAnalysis.whyAttractive}</span>
+                  </div>
+                  <div>
+                    <span className="text-red-700 font-medium">But wrong because: </span>
+                    <span className="text-gray-700">{analysis.trapAnalysis.whyWrong}</span>
+                  </div>
                 </div>
               )}
 
               {/* Why correct answer is correct */}
-              <div>
-                <h3 className="text-sm font-semibold text-gray-700 mb-2">Why {analysis.correctAnswer} is Correct</h3>
-                <p className="text-gray-600 mb-2">
-                  <span className="font-medium">{analysis.correctAnswerExplanation.brief}</span>
-                </p>
-                <p className="text-gray-700">{analysis.correctAnswerExplanation.whyCorrect}</p>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4 space-y-2">
+                <h3 className="text-sm font-semibold text-green-800 uppercase tracking-wide">
+                  Why {analysis.correctAnswer} is Correct
+                </h3>
+                {analysis.correctAnswerExplanation?.brief && (
+                  <p className="text-gray-700">
+                    <span className="font-medium">It says: </span>
+                    {analysis.correctAnswerExplanation.brief}
+                  </p>
+                )}
+                {/* Handle both old 'whyCorrect' and new 'flipTest' field */}
+                {(analysis.correctAnswerExplanation?.flipTest || analysis.correctAnswerExplanation?.whyCorrect) && (
+                  <p className="text-gray-700">
+                    <span className="font-medium">Flip test: </span>
+                    {analysis.correctAnswerExplanation.flipTest || analysis.correctAnswerExplanation.whyCorrect}
+                  </p>
+                )}
               </div>
+
+              {/* Evidence Chain - NEW */}
+              {analysis.analysis?.evidenceChain && analysis.analysis.evidenceChain.length > 0 && (
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                  <h3 className="text-sm font-semibold text-blue-800 uppercase tracking-wide mb-2">
+                    Evidence Chain (Ask "What's the evidence?")
+                  </h3>
+                  <ul className="list-disc list-inside space-y-1 text-gray-700">
+                    {analysis.analysis.evidenceChain.map((item: string, idx: number) => (
+                      <li key={idx}>{item}</li>
+                    ))}
+                  </ul>
+                  {analysis.analysis.coreGap && (
+                    <p className="mt-3 pt-3 border-t border-blue-200">
+                      <span className="font-medium text-blue-800">Core Gap: </span>
+                      <span className="text-gray-700">{analysis.analysis.coreGap}</span>
+                    </p>
+                  )}
+                </div>
+              )}
             </div>
           )}
         </div>
@@ -258,9 +282,9 @@ export default function ResultPage() {
           </button>
           
           {expandedLayers[3] && (
-            <div className="px-6 pb-6 space-y-3 border-t border-gray-200">
+            <div className="px-6 pb-6 space-y-3 border-t border-gray-200 pt-4">
               {['A', 'B', 'C', 'D', 'E'].map((letter) => {
-                const option = analysis.allOptions[letter];
+                const option = analysis.allOptions?.[letter];
                 const isUserChoice = letter === analysis.userChoice;
                 const isCorrect = option?.isCorrect || false;
                 
@@ -282,7 +306,7 @@ export default function ResultPage() {
                         {isCorrect ? '✓' : '✗'}
                       </div>
                       <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
+                        <div className="flex items-center gap-2 mb-1 flex-wrap">
                           <span className="font-semibold text-gray-900">{letter}.</span>
                           <span className="text-gray-700">{option?.brief}</span>
                           {isUserChoice && (
@@ -294,7 +318,7 @@ export default function ResultPage() {
                         {option?.errorType && !isCorrect && (
                           <div className="mt-2">
                             <span className="text-xs px-2 py-1 bg-red-100 text-red-700 rounded">
-                              {option.errorType}
+                              {option.errorType.replace(/_/g, ' ')}
                             </span>
                           </div>
                         )}
@@ -325,15 +349,19 @@ export default function ResultPage() {
           </button>
           
           {expandedLayers[4] && (
-            <div className="px-6 pb-6 space-y-4 border-t border-gray-200">
-              <div>
-                <h3 className="text-sm font-semibold text-gray-700 mb-2 uppercase">Skill Point</h3>
-                <p className="text-gray-700">{analysis.skillPoint}</p>
-              </div>
-              <div>
-                <h3 className="text-sm font-semibold text-gray-700 mb-2 uppercase">Takeaway</h3>
-                <p className="text-gray-700">{analysis.takeaway}</p>
-              </div>
+            <div className="px-6 pb-6 space-y-4 border-t border-gray-200 pt-4">
+              {analysis.skillPoint && (
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-700 mb-2 uppercase">Skill Point</h3>
+                  <p className="text-gray-700">{analysis.skillPoint}</p>
+                </div>
+              )}
+              {analysis.takeaway && (
+                <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4">
+                  <h3 className="text-sm font-semibold text-indigo-700 mb-2 uppercase">💡 Remember This</h3>
+                  <p className="text-gray-800 text-lg">{analysis.takeaway}</p>
+                </div>
+              )}
             </div>
           )}
         </div>
