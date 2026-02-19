@@ -8,8 +8,7 @@ export default function ResultPage() {
   const [analysis, setAnalysis] = useState<any>(null);
   const [expandedLayers, setExpandedLayers] = useState<{ [key: number]: boolean }>({
     2: true,  // Auto-expand Analysis by default
-    3: false,
-    4: false
+    3: false
   });
 
   useEffect(() => {
@@ -113,7 +112,7 @@ export default function ResultPage() {
             </div>
             
             <div className={`text-2xl font-semibold ${analysis.isCorrect ? 'text-green-600' : 'text-red-600'}`}>
-              {analysis.isCorrect ? 'Correct' : 'Incorrect'}
+              {analysis.isCorrect ? 'Correct' : 'Your thinking forked here'}
             </div>
 
             {/* Choice display */}
@@ -122,12 +121,6 @@ export default function ResultPage() {
                 <span className="text-gray-600">You chose: </span>
                 <span className="font-semibold text-gray-900">{analysis.userChoice}</span>
               </div>
-              {analysis.correctAnswer && (
-                <div>
-                  <span className="text-gray-600">Correct answer: </span>
-                  <span className="font-semibold text-gray-900">{analysis.correctAnswer}</span>
-                </div>
-              )}
             </div>
 
             {/* One-line diagnosis */}
@@ -221,25 +214,15 @@ export default function ResultPage() {
                 </div>
               )}
 
-              {/* Why correct answer is correct */}
-              <div className="bg-green-50 border border-green-200 rounded-lg p-4 space-y-2">
-                <h3 className="text-sm font-semibold text-green-800 uppercase tracking-wide">
-                  Why {analysis.correctAnswer} is Correct
-                </h3>
-                {analysis.correctAnswerExplanation?.brief && (
-                  <p className="text-gray-700">
-                    <span className="font-medium">It says: </span>
-                    {analysis.correctAnswerExplanation.brief}
-                  </p>
-                )}
-                {/* Handle both old 'whyCorrect' and new 'flipTest' field */}
-                {(analysis.correctAnswerExplanation?.flipTest || analysis.correctAnswerExplanation?.whyCorrect) && (
-                  <p className="text-gray-700">
-                    <span className="font-medium">Flip test: </span>
-                    {analysis.correctAnswerExplanation.flipTest || analysis.correctAnswerExplanation.whyCorrect}
-                  </p>
-                )}
-              </div>
+              {/* Where to Look */}
+              {analysis.selfCheckInstruction && (
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4 space-y-2">
+                  <h3 className="text-sm font-semibold text-green-800 uppercase tracking-wide">
+                    Where to Look
+                  </h3>
+                  <p className="text-gray-700 whitespace-pre-wrap">{analysis.selfCheckInstruction}</p>
+                </div>
+              )}
 
               {/* Evidence Chain - NEW */}
               {analysis.analysis?.evidenceChain && analysis.analysis.evidenceChain.length > 0 && (
@@ -264,13 +247,13 @@ export default function ResultPage() {
           )}
         </div>
 
-        {/* Layer 3: All Options (Expandable) */}
-        <div className="bg-white rounded-lg shadow-md mb-4 overflow-hidden transition-all duration-300">
+        {/* Layer 3: Key Takeaway (Expandable) */}
+        <div className="bg-white rounded-lg shadow-md mb-6 overflow-hidden transition-all duration-300">
           <button
             onClick={() => toggleLayer(3)}
             className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors"
           >
-            <h2 className="text-xl font-bold text-gray-900">All Options</h2>
+            <h2 className="text-xl font-bold text-gray-900">Key Takeaway</h2>
             <svg
               className={`w-5 h-5 text-gray-500 transition-transform duration-300 ${expandedLayers[3] ? 'rotate-180' : ''}`}
               fill="none"
@@ -282,73 +265,6 @@ export default function ResultPage() {
           </button>
           
           {expandedLayers[3] && (
-            <div className="px-6 pb-6 space-y-3 border-t border-gray-200 pt-4">
-              {['A', 'B', 'C', 'D', 'E'].map((letter) => {
-                const option = analysis.allOptions?.[letter];
-                const isUserChoice = letter === analysis.userChoice;
-                const isCorrect = option?.isCorrect || false;
-                
-                return (
-                  <div
-                    key={letter}
-                    className={`p-4 rounded-lg border-2 transition-all ${
-                      isUserChoice
-                        ? 'border-indigo-500 bg-indigo-50'
-                        : isCorrect
-                        ? 'border-green-300 bg-green-50'
-                        : 'border-gray-200 bg-white'
-                    }`}
-                  >
-                    <div className="flex items-start gap-3">
-                      <div className={`text-lg font-bold ${
-                        isCorrect ? 'text-green-600' : 'text-red-600'
-                      }`}>
-                        {isCorrect ? '✓' : '✗'}
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1 flex-wrap">
-                          <span className="font-semibold text-gray-900">{letter}.</span>
-                          <span className="text-gray-700">{option?.brief}</span>
-                          {isUserChoice && (
-                            <span className="text-xs px-2 py-1 bg-indigo-600 text-white rounded">
-                              Your Choice
-                            </span>
-                          )}
-                        </div>
-                        {option?.errorType && !isCorrect && (
-                          <div className="mt-2">
-                            <span className="text-xs px-2 py-1 bg-red-100 text-red-700 rounded">
-                              {option.errorType.replace(/_/g, ' ')}
-                            </span>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          )}
-        </div>
-
-        {/* Layer 4: Key Takeaway (Expandable) */}
-        <div className="bg-white rounded-lg shadow-md mb-6 overflow-hidden transition-all duration-300">
-          <button
-            onClick={() => toggleLayer(4)}
-            className="w-full flex items-center justify-between p-6 text-left hover:bg-gray-50 transition-colors"
-          >
-            <h2 className="text-xl font-bold text-gray-900">Key Takeaway</h2>
-            <svg
-              className={`w-5 h-5 text-gray-500 transition-transform duration-300 ${expandedLayers[4] ? 'rotate-180' : ''}`}
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          
-          {expandedLayers[4] && (
             <div className="px-6 pb-6 space-y-4 border-t border-gray-200 pt-4">
               {analysis.skillPoint && (
                 <div>

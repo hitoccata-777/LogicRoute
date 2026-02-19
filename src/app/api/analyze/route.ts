@@ -6,6 +6,12 @@ import { SCENE_DECISION_TREE, METHOD_DESCRIPTIONS } from '../../../lib/sceneDeci
 
 const SOP_SYSTEM_PROMPT = `You are LogiClue, an LSAT tutor who explains like a smart friend, not a textbook.
 
+## CRITICAL COMPLIANCE RULES (non-negotiable):
+- Never output the correct answer letter (A/B/C/D/E)
+- Never describe, paraphrase, or reference any specific answer option
+- Never reproduce any part of the original question text
+- selfCheckInstruction must describe only the logical pattern to look for, not point to any specific option
+
 ## CORE PRINCIPLES
 
 1. **Diagram should make answer obvious** — If it doesn't, redraw it
@@ -147,7 +153,7 @@ False ←──────────────────────→ T
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { stimulus, questionStem, options, userChoice, correctAnswer, userDifficulty, sourceId, userId } = body;
+    const { questionStem, userChoice, userReasoningText, userDifficulty, sourceId, userId } = body;
 
     // Step 1: Classify question type using rules
     const { type: questionType, family: questionFamily, primaryMethods } = classifyQuestion(questionStem);
@@ -164,38 +170,29 @@ export async function POST(request: NextRequest) {
 - Question Family: ${questionFamily}
 - Suggested Methods: ${primaryMethods.join(', ')}
 
-**Stimulus:**
-${stimulus}
-
 **Question:**
 ${questionStem}
 
-**Options:**
-(A) ${options.A}
-(B) ${options.B}
-(C) ${options.C}
-(D) ${options.D}
-(E) ${options.E}
+**User's reasoning:**
+${userReasoningText}
 
 **User chose:** ${userChoice}
-${correctAnswer ? `**User claims correct answer:** ${correctAnswer}` : '**Please determine the correct answer.**'}
 
 ---
 
 ## YOUR TASK
 
 1. Verify or adjust the question type if needed
-2. Select the best method from the decision tree based on stimulus content
+2. Select the best method from the decision tree based on user's reasoning
 3. Draw the diagram using that method
-4. Analyze each option
-5. Provide empathetic feedback for the user's choice
+4. Provide empathetic feedback for the user's choice
+5. Describe the logical pattern to look for (without referencing specific options)
 
 Respond in this exact JSON format:
 
 {
   "questionType": "${questionType}",
   "questionFamily": "${questionFamily}",
-  "correctAnswer": "A/B/C/D/E",
   
   "method": "selected method code",
   
@@ -217,23 +214,11 @@ Respond in this exact JSON format:
   },
   
   "trapAnalysis": {
-    "option": "the attractive wrong option (usually user's choice)",
     "whyAttractive": "what strategy/pattern makes this tempting",
     "whyWrong": "why it doesn't actually answer THIS question"
   },
   
-  "correctAnswerExplanation": {
-    "brief": "what this option says in plain language",
-    "flipTest": "if this weren't true, argument fails because..."
-  },
-  
-  "allOptions": {
-    "A": { "brief": "plain language description", "isCorrect": true/false, "errorType": "code or null" },
-    "B": { "brief": "plain language description", "isCorrect": true/false, "errorType": "code or null" },
-    "C": { "brief": "plain language description", "isCorrect": true/false, "errorType": "code or null" },
-    "D": { "brief": "plain language description", "isCorrect": true/false, "errorType": "code or null" },
-    "E": { "brief": "plain language description", "isCorrect": true/false, "errorType": "code or null" }
-  },
+  "selfCheckInstruction": "One sentence describing the logical feature of the correct answer, so user can identify it from their own copy. No option letters. No option paraphrasing.",
   
   "skillPoint": "The specific skill this question tests",
   "takeaway": "One Feynman-style sentence. Use everyday example if helpful."
@@ -244,7 +229,8 @@ Respond in this exact JSON format:
 - diagnosis must be under 15 words
 - forkPoint, userReasoning, bridgeToCorrect each under 30 words
 - The diagram MUST be included and make the answer obvious
-- Be warm and empathetic, never judgmental`;
+- Be warm and empathetic, never judgmental
+- NEVER output correct answer letter or describe specific options`;
 
     // Step 3: Call Claude via OpenRouter
     const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
@@ -289,77 +275,58 @@ Respond in this exact JSON format:
     
     // Add derived fields
     analysis.userChoice = userChoice;
-    analysis.isCorrect = userChoice === analysis.correctAnswer;
+    // Note: isCorrect cannot be determined without correctAnswer, so we'll set it based on errorType
+    analysis.isCorrect = !analysis.userChoiceFeedback?.errorType;
 
     // Step 5: Save to database
-    const contentHash = crypto.createHash('sha256')
-      .update(stimulus + questionStem + JSON.stringify(options))
-      .digest('hex');
-
-    // Check if question exists
-    const { data: existingQuestion } = await supabase
-      .from('questions')
-      .select('id')
-      .eq('content_hash', contentHash)
-      .single();
-
-    let questionId: string | null = null;
-
-    if (existingQuestion) {
-      questionId = existingQuestion.id;
-    } else {
-      const { data: newQuestion, error: questionError } = await supabase
-        .from('questions')
-        .insert({
-          stimulus,
-          question_stem: questionStem,
-          options,
-          question_type: analysis.questionType,
-          question_family: analysis.questionFamily,
-          correct_answer: analysis.correctAnswer,
-          llm_suggested_answer: analysis.correctAnswer,
-          answer_source: correctAnswer ? 'user' : 'llm',
-          answer_conflict: correctAnswer && correctAnswer !== analysis.correctAnswer,
-          source_id: sourceId || null,
-          content_hash: contentHash
-        })
-        .select('id')
-        .single();
-
-      if (questionError) {
-        console.error('Error saving question:', questionError);
-      } else {
-        questionId = newQuestion?.id;
-      }
-    }
+    // Generate a unique ID for this analysis session
+    const analysisId = crypto.createHash('sha256')
+      .update(questionStem + userReasoningText + userChoice + Date.now().toString())
+      .digest('hex').substring(0, 16);
 
     // Save analysis
-    if (questionId) {
-      await supabase.from('analyses').upsert({
-        question_id: questionId,
+    const { data: savedAnalysis, error: analysisError } = await supabase
+      .from('analyses')
+      .upsert({
+        id: analysisId,
         method: analysis.method || 'unknown',
         steps: analysis.analysis || {},
         diagram: analysis.diagram || '',
-        summary: analysis.correctAnswerExplanation?.flipTest,
+        summary: analysis.analysis?.flipTest || '',
         skill_point: analysis.skillPoint,
-        takeaway: analysis.takeaway
-      }, { onConflict: 'question_id' });
+        takeaway: analysis.takeaway,
+        self_check_instruction: analysis.selfCheckInstruction
+      }, { onConflict: 'id' });
 
-      // Save option analyses
-      for (const [letter, optionData] of Object.entries(analysis.allOptions)) {
-        const opt = optionData as any;
-        await supabase.from('option_analyses').upsert({
-          question_id: questionId,
-          option_letter: letter,
-          is_correct: opt.isCorrect,
-          content_brief: opt.brief,
-          why_correct: opt.isCorrect ? analysis.correctAnswerExplanation : null,
-          error: opt.isCorrect ? null : { error_type: opt.errorType }
-        }, { onConflict: 'question_id,option_letter' });
+    if (analysisError) {
+      console.error('Error saving analysis:', analysisError);
+    }
+
+    // Save attempt
+    if (userId) {
+      const { error: attemptError } = await supabase
+        .from('attempts')
+        .insert({
+          user_id: userId,
+          question_id: null, // No question reference anymore
+          user_choice: userChoice,
+          is_correct: analysis.isCorrect,
+          error_type: analysis.userChoiceFeedback?.errorTypeInternal || analysis.userChoiceFeedback?.errorType || null,
+          user_difficulty: userDifficulty || null,
+          alt_choice: null,
+          alt_rationale_tag: null,
+          alt_rationale_text: null,
+          user_correct_answer: null,
+          user_reasoning_text: userReasoningText || null,
+          analysis_id: analysisId
+        });
+
+      if (attemptError) {
+        console.error('Error saving attempt:', attemptError);
       }
     }
 
-    analysis.questionId = questionId;
+    analysis.analysisId = analysisId;
 
     return NextResponse.json({ success: true, data: analysis });
 
