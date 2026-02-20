@@ -1,150 +1,143 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 
-interface ParsedQuestion {
-  stimulus: string;
-  question_stem: string;
-  options: { [key: string]: string };
+// Voice Input Component
+function VoiceInput({ onTranscript, textareaRef }: { onTranscript: (text: string) => void; textareaRef: React.RefObject<HTMLTextAreaElement> }) {
+  const [isRecording, setIsRecording] = useState(false);
+  const [isSupported, setIsSupported] = useState(false);
+  const recognitionRef = useRef<any>(null);
+
+  useEffect(() => {
+    // Check if browser supports Web Speech API
+    if (typeof window !== 'undefined') {
+      const SpeechRecognition = (window as any).webkitSpeechRecognition || (window as any).SpeechRecognition;
+      if (SpeechRecognition) {
+        setIsSupported(true);
+        recognitionRef.current = new SpeechRecognition();
+        recognitionRef.current.continuous = false;
+        recognitionRef.current.interimResults = false;
+        recognitionRef.current.lang = 'en-US';
+
+        recognitionRef.current.onresult = (event: any) => {
+          const transcript = event.results[0][0].transcript;
+          onTranscript(transcript);
+          setIsRecording(false);
+        };
+
+        recognitionRef.current.onerror = () => {
+          setIsRecording(false);
+        };
+
+        recognitionRef.current.onend = () => {
+          setIsRecording(false);
+        };
+      }
+    }
+  }, [onTranscript]);
+
+  const handleClick = () => {
+    if (!isSupported || !recognitionRef.current) return;
+
+    if (isRecording) {
+      recognitionRef.current.stop();
+      setIsRecording(false);
+    } else {
+      recognitionRef.current.start();
+      setIsRecording(true);
+    }
+  };
+
+  if (!isSupported) {
+    return null;
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={handleClick}
+      className={`p-2 rounded-full transition-colors ${
+        isRecording
+          ? 'bg-red-500 text-white'
+          : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+      }`}
+      title={isRecording ? 'Stop recording' : 'Start voice input'}
+    >
+      <svg
+        className="w-4 h-4"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+        />
+      </svg>
+    </button>
+  );
 }
 
 export default function InputPage() {
   const router = useRouter();
-  const [parsedQuestion, setParsedQuestion] = useState<ParsedQuestion | null>(null);
-  const [editingSection, setEditingSection] = useState<string | null>(null);
-  const [editValue, setEditValue] = useState<string>('');
-  
-  // User inputs
-  const [sourceId, setSourceId] = useState('');
-  const [correctAnswer, setCorrectAnswer] = useState('');
-  const [yourChoice, setYourChoice] = useState('');
-  const [hesitatedChoice, setHesitatedChoice] = useState('');
-  const [hesitationReason, setHesitationReason] = useState('');
-  const [altRationaleText, setAltRationaleText] = useState('');
-  const [difficulty, setDifficulty] = useState<number>(0);
+  const [mode, setMode] = useState<'argument' | 'writing'>('argument');
   const [isLoading, setIsLoading] = useState(false);
 
+  // Argument mode fields
+  const [description, setDescription] = useState('');
+  const [question, setQuestion] = useState('');
+  const [userAnswerDescription, setUserAnswerDescription] = useState('');
+  const [userReasoning, setUserReasoning] = useState('');
+  const [difficulty, setDifficulty] = useState<number>(0);
+
+  // Writing mode fields
+  const [argumentText, setArgumentText] = useState('');
+  const [unsurePart, setUnsurePart] = useState('');
+  const [issueThought, setIssueThought] = useState('');
+
+  // Refs for textareas
+  const descriptionRef = useRef<HTMLTextAreaElement>(null);
+  const questionRef = useRef<HTMLTextAreaElement>(null);
+  const userAnswerRef = useRef<HTMLTextAreaElement>(null);
+  const userReasoningRef = useRef<HTMLTextAreaElement>(null);
+  const argumentTextRef = useRef<HTMLTextAreaElement>(null);
+  const unsurePartRef = useRef<HTMLTextAreaElement>(null);
+  const issueThoughtRef = useRef<HTMLTextAreaElement>(null);
+
   useEffect(() => {
-    // Get questionText from sessionStorage
+    // Get mode from sessionStorage, default to 'argument'
+    const storedMode = sessionStorage.getItem('inputMode') as 'argument' | 'writing' | null;
+    if (storedMode === 'argument' || storedMode === 'writing') {
+      setMode(storedMode);
+    }
+
+    // Try to get any existing data from sessionStorage
     const questionText = sessionStorage.getItem('questionText');
-    if (questionText) {
-      const parsed = parseQuestion(questionText);
-      setParsedQuestion(parsed);
+    if (questionText && mode === 'argument') {
+      // Simple extraction - could be enhanced with LLM
+      setDescription(questionText);
     }
   }, []);
 
-  const parseQuestion = (text: string): ParsedQuestion => {
-    const options: { [key: string]: string } = {};
-    
-    // Find all option markers: (A), (B), etc. or A., B., etc.
-    const optionPattern = /(?:\(([A-E])\)|([A-E])\.)\s*/g;
-    const optionMatches: Array<{ letter: string; index: number }> = [];
-    let match;
-
-    while ((match = optionPattern.exec(text)) !== null) {
-      const letter = match[1] || match[2];
-      optionMatches.push({ letter, index: match.index });
-    }
-
-    // Extract option text between markers
-    optionMatches.forEach((opt, idx) => {
-      const startIndex = opt.index;
-      const endIndex = idx < optionMatches.length - 1 
-        ? optionMatches[idx + 1].index 
-        : text.length;
-      
-      // Extract text after the marker (A), (B), etc. or A., B., etc.
-      const optionText = text.substring(startIndex, endIndex);
-      // Remove the marker itself
-      const cleanedText = optionText.replace(/^[\(]?[A-E][\)\.]\s*/, '').trim();
-      options[opt.letter] = cleanedText;
-    });
-
-    // Find question stem - sentence ending with ? or : right before first option
-    const firstOptionIndex = optionMatches.length > 0 ? optionMatches[0].index : text.length;
-    const textBeforeOptions = text.substring(0, firstOptionIndex).trim();
-    
-    // Find the last sentence ending with ? or :
-    let question_stem = '';
-    let stimulus = '';
-    
-    // Try to find sentence ending with ? or :
-    const questionEndMatch = textBeforeOptions.match(/(.+?[?:])\s*$/);
-    if (questionEndMatch) {
-      question_stem = questionEndMatch[1].trim();
-      const stemIndex = textBeforeOptions.lastIndexOf(question_stem);
-      stimulus = textBeforeOptions.substring(0, stemIndex).trim();
-    } else {
-      // Fallback: if no ? or : found, try to split by sentences
-      const sentences = textBeforeOptions.split(/(?<=[.!?])\s+/);
-      if (sentences.length > 1) {
-        question_stem = sentences[sentences.length - 1].trim();
-        stimulus = sentences.slice(0, -1).join(' ').trim();
-      } else {
-        // If only one sentence, treat it as question stem
-        question_stem = textBeforeOptions;
-        stimulus = '';
-      }
-    }
-
-    return {
-      stimulus: stimulus || '',
-      question_stem: question_stem || textBeforeOptions,
-      options
-    };
-  };
-
-  const handleEdit = (section: string, currentValue: string) => {
-    setEditingSection(section);
-    setEditValue(currentValue);
-  };
-
-  const handleSaveEdit = () => {
-    if (!parsedQuestion || !editingSection) return;
-
-    const updated = { ...parsedQuestion };
-    
-    if (editingSection === 'stimulus') {
-      updated.stimulus = editValue;
-    } else if (editingSection === 'question_stem') {
-      updated.question_stem = editValue;
-    } else if (editingSection.startsWith('option_')) {
-      const letter = editingSection.replace('option_', '');
-      updated.options[letter] = editValue;
-    }
-
-    setParsedQuestion(updated);
-    setEditingSection(null);
-    setEditValue('');
-  };
-
-  const handleCancelEdit = () => {
-    setEditingSection(null);
-    setEditValue('');
-  };
 
   const handleClear = () => {
-    setSourceId('');
-    setCorrectAnswer('');
-    setYourChoice('');
-    setHesitatedChoice('');
-    setHesitationReason('');
-    setAltRationaleText('');
-    setDifficulty(0);
+    if (mode === 'argument') {
+      setDescription('');
+      setQuestion('');
+      setUserAnswerDescription('');
+      setUserReasoning('');
+      setDifficulty(0);
+    } else {
+      setArgumentText('');
+      setUnsurePart('');
+      setIssueThought('');
+    }
   };
 
   const handleSubmit = async () => {
-    if (!yourChoice) {
-      alert('Please select your answer choice');
-      return;
-    }
-
-    if (!parsedQuestion) {
-      alert('Question data is missing');
-      return;
-    }
-
     // Get or create userId
     let userId = localStorage.getItem('logiclue_user_id');
     if (!userId) {
@@ -156,40 +149,33 @@ export default function InputPage() {
     setIsLoading(true);
 
     try {
+      // Combine user reasoning text
+      const userReasoningText = mode === 'argument'
+        ? [userAnswerDescription, userReasoning].filter(Boolean).join(' ')
+        : [unsurePart, issueThought].filter(Boolean).join(' ');
+
       const response = await fetch('/api/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          stimulus: parsedQuestion.stimulus,
-          questionStem: parsedQuestion.question_stem,
-          options: parsedQuestion.options,
-          userChoice: yourChoice,
-          correctAnswer: correctAnswer || undefined,
-          userDifficulty: difficulty || undefined,
-          sourceId: sourceId || undefined,
-          userId: userId,
+          questionStem: mode === 'argument' ? (question || description) : argumentText,
+          userChoice: '', // Not used in new API
+          userReasoningText: userReasoningText,
+          userDifficulty: mode === 'argument' ? (difficulty || undefined) : undefined,
+          sourceId: undefined,
+          userId: userId
         }),
       });
 
       const result = await response.json();
 
       if (result.success) {
-        // Store analysis result
         sessionStorage.setItem('analysisResult', JSON.stringify(result.data));
-        
-        // Also store input data for reference
-        const inputData = {
-          parsedQuestion,
-          sourceId,
-          correctAnswer,
-          yourChoice,
-          hesitatedChoice,
-          hesitationReason,
-          altRationaleText,
-          difficulty
-        };
+        // Store input data for reference
+        const inputData = mode === 'argument'
+          ? { description, question, userAnswerDescription, userReasoning, difficulty, mode }
+          : { argumentText, unsurePart, issueThought, mode };
         sessionStorage.setItem('inputData', JSON.stringify(inputData));
-        
         router.push('/result');
       } else {
         alert('Analysis failed: ' + (result.error || 'Unknown error'));
@@ -202,298 +188,231 @@ export default function InputPage() {
     }
   };
 
-  if (!parsedQuestion) {
-  return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-      <div className="text-center">
-          <p className="text-gray-600">No question found. Please go back and enter a question.</p>
-          <button
-            onClick={() => router.push('/')}
-            className="mt-4 px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
-          >
-            Back to Home
-          </button>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <main className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-indigo-600 mb-2">Review Question</h1>
-          <p className="text-gray-600">Review the parsed question and provide your input</p>
+          <h1 className="text-3xl font-bold text-indigo-600 mb-2">Analyze Your Thinking</h1>
+          <p className="text-gray-600">Describe the argument and what went wrong</p>
         </div>
 
-        {/* Parsed Content Section */}
-        <div className="bg-white rounded-lg shadow-md p-6 mb-6 space-y-6">
-          {/* Stimulus */}
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <h2 className="text-sm font-semibold text-gray-700 uppercase">Stimulus</h2>
-              {editingSection !== 'stimulus' && (
-                <button
-                  onClick={() => handleEdit('stimulus', parsedQuestion.stimulus)}
-                  className="text-xs text-indigo-600 hover:text-indigo-700"
-                >
-                  Edit
-                </button>
-              )}
-            </div>
-            {editingSection === 'stimulus' ? (
-              <div className="space-y-2">
-                <textarea
-                  value={editValue}
-                  onChange={(e) => setEditValue(e.target.value)}
-                  className="w-full min-h-[100px] p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                />
-                <div className="flex gap-2">
-                  <button
-                    onClick={handleSaveEdit}
-                    className="px-3 py-1 text-sm bg-indigo-600 text-white rounded hover:bg-indigo-700"
-                  >
-                    Save
-                  </button>
-                  <button
-                    onClick={handleCancelEdit}
-                    className="px-3 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50"
-                  >
-                    Cancel
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div className="bg-gray-100 p-4 rounded-lg text-gray-800 whitespace-pre-wrap">
-                {parsedQuestion.stimulus || <span className="text-gray-400 italic">No stimulus found</span>}
-              </div>
-            )}
-          </div>
-
-          {/* Question Stem */}
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <h2 className="text-sm font-semibold text-gray-700 uppercase">Question Stem</h2>
-              {editingSection !== 'question_stem' && (
-                <button
-                  onClick={() => handleEdit('question_stem', parsedQuestion.question_stem)}
-                  className="text-xs text-indigo-600 hover:text-indigo-700"
-                >
-                  Edit
-                </button>
-              )}
-            </div>
-            {editingSection === 'question_stem' ? (
-              <div className="space-y-2">
-                <textarea
-                  value={editValue}
-                  onChange={(e) => setEditValue(e.target.value)}
-                  className="w-full min-h-[60px] p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                />
-                <div className="flex gap-2">
-                  <button
-                    onClick={handleSaveEdit}
-                    className="px-3 py-1 text-sm bg-indigo-600 text-white rounded hover:bg-indigo-700"
-                  >
-                    Save
-                  </button>
-                  <button
-                    onClick={handleCancelEdit}
-                    className="px-3 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50"
-                  >
-                    Cancel
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div className="bg-indigo-50 p-4 rounded-lg text-gray-800 border-l-4 border-indigo-600">
-                {parsedQuestion.question_stem || <span className="text-gray-400 italic">No question stem found</span>}
-              </div>
-            )}
-          </div>
-
-          {/* Options */}
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <h2 className="text-sm font-semibold text-gray-700 uppercase">Options</h2>
-            </div>
-            <div className="space-y-3">
-              {['A', 'B', 'C', 'D', 'E'].map((letter) => (
-                <div key={letter}>
-                  {editingSection === `option_${letter}` ? (
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-2">
-                        <span className="font-semibold text-gray-700 w-6">{letter}.</span>
-                        <textarea
-                          value={editValue}
-                          onChange={(e) => setEditValue(e.target.value)}
-                          className="flex-1 min-h-[50px] p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                        />
-                      </div>
-                      <div className="flex gap-2 ml-8">
-                        <button
-                          onClick={handleSaveEdit}
-                          className="px-3 py-1 text-sm bg-indigo-600 text-white rounded hover:bg-indigo-700"
-                        >
-                          Save
-                        </button>
-                        <button
-                          onClick={handleCancelEdit}
-                          className="px-3 py-1 text-sm border border-gray-300 rounded hover:bg-gray-50"
-                        >
-                          Cancel
-                        </button>
-                      </div>
+        {mode === 'argument' ? (
+          <>
+            {/* Argument Mode - Upper Section */}
+            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+              <h2 className="text-xl font-bold text-gray-900 mb-6">The Argument</h2>
+              
+              <div className="space-y-6">
+                {/* Description */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Description
+                  </label>
+                  <div className="flex gap-2">
+                    <textarea
+                      ref={descriptionRef}
+                      value={description}
+                      onChange={(e) => setDescription(e.target.value)}
+                      placeholder="Describe the argument or passage..."
+                      className="flex-1 min-h-[120px] p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-y"
+                    />
+                    <div className="flex items-start pt-2">
+                      <VoiceInput
+                        onTranscript={(text) => {
+                          setDescription(prev => prev ? `${prev} ${text}` : text);
+                        }}
+                        textareaRef={descriptionRef}
+                      />
                     </div>
-                  ) : (
-                    <div className="flex items-start gap-2">
-                      <span className="font-semibold text-gray-700 w-6">{letter}.</span>
-                      <div className="flex-1 bg-white p-3 rounded-lg border border-gray-200 text-gray-800">
-                        {parsedQuestion.options[letter] || <span className="text-gray-400 italic">No option {letter} found</span>}
-                      </div>
+                  </div>
+                </div>
+
+                {/* Question */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    The Question
+                  </label>
+                  <div className="flex gap-2">
+                    <textarea
+                      ref={questionRef}
+                      value={question}
+                      onChange={(e) => setQuestion(e.target.value)}
+                      placeholder="What was the question asking?"
+                      className="flex-1 min-h-[80px] p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-y"
+                    />
+                    <div className="flex items-start pt-2">
+                      <VoiceInput
+                        onTranscript={(text) => {
+                          setQuestion(prev => prev ? `${prev} ${text}` : text);
+                        }}
+                        textareaRef={questionRef}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Argument Mode - Lower Section */}
+            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+              <h2 className="text-xl font-bold text-gray-900 mb-6">What Went Wrong</h2>
+              
+              <div className="space-y-6">
+                {/* My answer was saying */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    My answer was saying... <span className="text-gray-400 font-normal">(optional)</span>
+                  </label>
+                  <div className="flex gap-2">
+                    <textarea
+                      ref={userAnswerRef}
+                      value={userAnswerDescription}
+                      onChange={(e) => setUserAnswerDescription(e.target.value)}
+                      placeholder="Describe what your answer was trying to say..."
+                      className="flex-1 min-h-[100px] p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-y"
+                    />
+                    <div className="flex items-start pt-2">
+                      <VoiceInput
+                        onTranscript={(text) => {
+                          setUserAnswerDescription(prev => prev ? `${prev} ${text}` : text);
+                        }}
+                        textareaRef={userAnswerRef}
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* I got confused because */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    I got confused because... <span className="text-gray-400 font-normal">(optional)</span>
+                  </label>
+                  <div className="flex gap-2">
+                    <textarea
+                      ref={userReasoningRef}
+                      value={userReasoning}
+                      onChange={(e) => setUserReasoning(e.target.value)}
+                      placeholder="What made you uncertain or confused?"
+                      className="flex-1 min-h-[100px] p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-y"
+                    />
+                    <div className="flex items-start pt-2">
+                      <VoiceInput
+                        onTranscript={(text) => {
+                          setUserReasoning(prev => prev ? `${prev} ${text}` : text);
+                        }}
+                        textareaRef={userReasoningRef}
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Difficulty */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-3">
+                    Difficulty
+                  </label>
+                  <div className="flex gap-3 items-center">
+                    {[1, 2, 3, 4, 5].map((num) => (
                       <button
-                        onClick={() => handleEdit(`option_${letter}`, parsedQuestion.options[letter] || '')}
-                        className="text-xs text-indigo-600 hover:text-indigo-700 ml-2"
+                        key={num}
+                        type="button"
+                        onClick={() => setDifficulty(num)}
+                        className={`w-12 h-12 rounded-full border-2 flex items-center justify-center text-lg font-semibold transition-all ${
+                          difficulty === num
+                            ? 'bg-indigo-600 text-white border-indigo-600'
+                            : 'bg-white text-gray-600 border-gray-300 hover:border-indigo-400'
+                        }`}
                       >
-                        Edit
+                        {num}
                       </button>
-                    </div>
-                  )}
+                    ))}
+                  </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* User Input Section */}
-        <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-6">Your Input</h2>
-          
-          <div className="space-y-4">
-            {/* Source ID */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Source ID <span className="text-gray-400">(optional)</span>
-              </label>
-              <input
-                type="text"
-                value={sourceId}
-                onChange={(e) => setSourceId(e.target.value)}
-                placeholder="PT147-S1-Q21"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-              />
-            </div>
-
-            {/* Correct Answer */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Correct Answer <span className="text-gray-400">(optional)</span>
-              </label>
-              <select
-                value={correctAnswer}
-                onChange={(e) => setCorrectAnswer(e.target.value)}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-              >
-                <option value="">Select...</option>
-                {['A', 'B', 'C', 'D', 'E'].map((letter) => (
-                  <option key={letter} value={letter}>{letter}</option>
-                ))}
-              </select>
-            </div>
-
-            {/* Your Choice */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Your Choice <span className="text-red-500">*</span>
-              </label>
-              <select
-                value={yourChoice}
-                onChange={(e) => setYourChoice(e.target.value)}
-                required
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-              >
-                <option value="">Select...</option>
-                {['A', 'B', 'C', 'D', 'E'].map((letter) => (
-                  <option key={letter} value={letter}>{letter}</option>
-                ))}
-              </select>
-            </div>
-
-            {/* Hesitated Choice */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Hesitated Choice <span className="text-gray-400">(optional)</span>
-              </label>
-              <select
-                value={hesitatedChoice}
-                onChange={(e) => setHesitatedChoice(e.target.value)}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-              >
-                <option value="">Select...</option>
-                {['A', 'B', 'C', 'D', 'E'].map((letter) => (
-                  <option key={letter} value={letter}>{letter}</option>
-                ))}
-              </select>
-            </div>
-
-            {/* Hesitation Reason */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Hesitation Reason <span className="text-gray-400">(optional)</span>
-              </label>
-              <select
-                value={hesitationReason}
-                onChange={(e) => setHesitationReason(e.target.value)}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-              >
-                <option value="">Select...</option>
-                <option value="Both seem right">Both seem right</option>
-                <option value="Both seem wrong">Both seem wrong</option>
-                <option value="Didn't understand the question">Didn't understand the question</option>
-                <option value="Didn't understand the passage">Didn't understand the passage</option>
-                <option value="Ran out of time">Ran out of time</option>
-                <option value="Logic was confusing">Logic was confusing</option>
-                <option value="Other">Other</option>
-              </select>
-              {hesitationReason === 'Other' && (
-                <input
-                  type="text"
-                  value={altRationaleText}
-                  onChange={(e) => setAltRationaleText(e.target.value)}
-                  placeholder="Please describe..."
-                  className="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                />
-              )}
-            </div>
-
-            {/* Difficulty */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Difficulty
-              </label>
-              <div className="flex gap-1">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <button
-                    key={star}
-                    type="button"
-                    onClick={() => setDifficulty(star)}
-                    className="text-2xl focus:outline-none"
-                  >
-                    {star <= difficulty ? (
-                      <span className="text-yellow-400">★</span>
-                    ) : (
-                      <span className="text-gray-300">★</span>
-                    )}
-                  </button>
-                ))}
-                {difficulty > 0 && (
-                  <span className="ml-2 text-sm text-gray-600">{difficulty}/5</span>
-                )}
               </div>
             </div>
-          </div>
-        </div>
+          </>
+        ) : (
+          <>
+            {/* Writing Mode - Upper Section */}
+            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+              <h2 className="text-xl font-bold text-gray-900 mb-6">The Argument</h2>
+              
+              <div className="flex gap-2">
+                <textarea
+                  ref={argumentTextRef}
+                  value={argumentText}
+                  onChange={(e) => setArgumentText(e.target.value)}
+                  placeholder="Paste or type your argument here..."
+                  className="flex-1 min-h-[200px] p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-y"
+                />
+                <div className="flex items-start pt-2">
+                  <VoiceInput
+                    onTranscript={(text) => {
+                      setArgumentText(prev => prev ? `${prev} ${text}` : text);
+                    }}
+                    textareaRef={argumentTextRef}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Writing Mode - Lower Section */}
+            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+              <h2 className="text-xl font-bold text-gray-900 mb-6">What Concerns You</h2>
+              
+              <div className="space-y-6">
+                {/* The part I'm unsure about */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    The part I'm unsure about... <span className="text-gray-400 font-normal">(optional)</span>
+                  </label>
+                  <div className="flex gap-2">
+                    <textarea
+                      ref={unsurePartRef}
+                      value={unsurePart}
+                      onChange={(e) => setUnsurePart(e.target.value)}
+                      placeholder="Which part of your argument are you uncertain about?"
+                      className="flex-1 min-h-[100px] p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-y"
+                    />
+                    <div className="flex items-start pt-2">
+                      <VoiceInput
+                        onTranscript={(text) => {
+                          setUnsurePart(prev => prev ? `${prev} ${text}` : text);
+                        }}
+                        textareaRef={unsurePartRef}
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* I think the issue might be */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    I think the issue might be... <span className="text-gray-400 font-normal">(optional)</span>
+                  </label>
+                  <div className="flex gap-2">
+                    <textarea
+                      ref={issueThoughtRef}
+                      value={issueThought}
+                      onChange={(e) => setIssueThought(e.target.value)}
+                      placeholder="What do you think might be wrong with your reasoning?"
+                      className="flex-1 min-h-[100px] p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-y"
+                    />
+                    <div className="flex items-start pt-2">
+                      <VoiceInput
+                        onTranscript={(text) => {
+                          setIssueThought(prev => prev ? `${prev} ${text}` : text);
+                        }}
+                        textareaRef={issueThoughtRef}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
 
         {/* Buttons */}
         <div className="flex gap-3 justify-end">
@@ -511,7 +430,7 @@ export default function InputPage() {
           </button>
           <button
             onClick={handleSubmit}
-            disabled={isLoading}
+            disabled={isLoading || (mode === 'argument' && !description && !question)}
             className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:bg-indigo-400 disabled:cursor-not-allowed flex items-center gap-2"
           >
             {isLoading && (
@@ -536,10 +455,10 @@ export default function InputPage() {
                 ></path>
               </svg>
             )}
-            {isLoading ? 'Analyzing...' : 'Submit'}
+            {isLoading ? 'Analyzing...' : 'Analyze My Thinking'}
           </button>
+        </div>
       </div>
-    </div>
     </main>
   );
 }
