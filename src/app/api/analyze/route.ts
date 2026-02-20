@@ -1,16 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { supabase } from '../../../lib/supabase';
+import { supabase } from '@/lib/supabase';
 import crypto from 'crypto';
-import { classifyQuestion } from '../../../lib/questionClassifier';
-import { SCENE_DECISION_TREE, METHOD_DESCRIPTIONS } from '../../../lib/sceneDecisionTree';
+import { classifyQuestion } from '@/lib/questionClassifier';
+import { SCENE_DECISION_TREE, METHOD_DESCRIPTIONS } from '@/lib/sceneDecisionTree';
 
-const SOP_SYSTEM_PROMPT = `You are LogiClue, an LSAT tutor who explains like a smart friend, not a textbook.
-
-## CRITICAL COMPLIANCE RULES (non-negotiable):
-- Never output the correct answer letter (A/B/C/D/E)
-- Never describe, paraphrase, or reference any specific answer option
+const SOP_SYSTEM_PROMPT = `CRITICAL COMPLIANCE RULES:
+- Never output a correct answer letter (A/B/C/D/E)
+- Never describe, paraphrase or reference any specific answer option
 - Never reproduce any part of the original question text
-- selfCheckInstruction must describe only the logical pattern to look for, not point to any specific option
+- selfCheckInstruction must describe only the logical pattern to look for
+- You are a general logic reasoning tool, not an exam solver
+
+You are LogiClue, a logic reasoning tutor who explains like a smart friend, not a textbook.
 
 ## CORE PRINCIPLES
 
@@ -153,9 +154,19 @@ False ←──────────────────────→ T
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { questionStem, userChoice, userReasoningText, userDifficulty, sourceId, userId } = body;
+    const { 
+      description,
+      question, 
+      userAnswerDescription,
+      userReasoning,
+      userDifficulty,
+      userId,
+      sourceId,
+      mode
+    } = body;
 
     // Step 1: Classify question type using rules
+    const questionStem = question || description || '';
     const { type: questionType, family: questionFamily, primaryMethods } = classifyQuestion(questionStem);
 
     // Step 2: Build the analysis prompt
@@ -170,13 +181,19 @@ export async function POST(request: NextRequest) {
 - Question Family: ${questionFamily}
 - Suggested Methods: ${primaryMethods.join(', ')}
 
-**Question:**
-${questionStem}
+**User's description of the argument:**
+${description}
+
+**The question being asked:**
+${question || 'Not provided'}
+
+**User's answer was saying:**
+${userAnswerDescription || 'Not provided'}
 
 **User's reasoning:**
-${userReasoningText}
+${userReasoning || 'Not provided'}
 
-**User chose:** ${userChoice}
+**Mode:** ${mode || 'argument'}
 
 ---
 
@@ -274,51 +291,64 @@ Respond in this exact JSON format:
     const analysis = JSON.parse(jsonStr);
     
     // Add derived fields
-    analysis.userChoice = userChoice;
-    // Note: isCorrect cannot be determined without correctAnswer, so we'll set it based on errorType
+    analysis.userChoice = userAnswerDescription || '';
     analysis.isCorrect = !analysis.userChoiceFeedback?.errorType;
 
     // Step 5: Save to database
-    // Generate a unique ID for this analysis session
-    const analysisId = crypto.createHash('sha256')
-      .update(questionStem + userReasoningText + userChoice + Date.now().toString())
-      .digest('hex').substring(0, 16);
+    let questionId: string | null = null;
+
+    // Save minimal question record
+    const { data: savedQuestion, error: questionError } = await supabase
+      .from('questions')
+      .insert({
+        question_type: analysis.questionType,
+        question_family: analysis.questionFamily,
+        source_id: sourceId || null,
+        user_description: description,
+        user_question: question || null
+      })
+      .select('id')
+      .single();
+
+    if (questionError) {
+      console.error('Error saving question:', questionError);
+    } else {
+      questionId = savedQuestion?.id;
+    }
 
     // Save analysis
-    const { data: savedAnalysis, error: analysisError } = await supabase
-      .from('analyses')
-      .upsert({
-        id: analysisId,
-        method: analysis.method || 'unknown',
-        steps: analysis.analysis || {},
-        diagram: analysis.diagram || '',
-        summary: analysis.analysis?.flipTest || '',
-        skill_point: analysis.skillPoint,
-        takeaway: analysis.takeaway,
-        self_check_instruction: analysis.selfCheckInstruction
-      }, { onConflict: 'id' });
+    if (questionId) {
+      const { error: analysisError } = await supabase
+        .from('analyses')
+        .insert({
+          question_id: questionId,
+          method: analysis.method || 'unknown',
+          steps: analysis.analysis || {},
+          diagram: analysis.diagram || '',
+          summary: analysis.analysis?.flipTest || '',
+          skill_point: analysis.skillPoint,
+          takeaway: analysis.takeaway,
+          self_check_instruction: analysis.selfCheckInstruction
+        });
 
-    if (analysisError) {
-      console.error('Error saving analysis:', analysisError);
+      if (analysisError) {
+        console.error('Error saving analysis:', analysisError);
+      }
     }
 
     // Save attempt
-    if (userId) {
+    if (userId && questionId) {
       const { error: attemptError } = await supabase
         .from('attempts')
         .insert({
           user_id: userId,
-          question_id: null, // No question reference anymore
-          user_choice: userChoice,
-          is_correct: analysis.isCorrect,
-          error_type: analysis.userChoiceFeedback?.errorTypeInternal || analysis.userChoiceFeedback?.errorType || null,
+          question_id: questionId,
+          user_choice: userAnswerDescription || null,
+          user_reasoning_text: userReasoning || null,
+          is_correct: false,
+          error_type: analysis.userChoiceFeedback?.errorType || null,
           user_difficulty: userDifficulty || null,
-          alt_choice: null,
-          alt_rationale_tag: null,
-          alt_rationale_text: null,
-          user_correct_answer: null,
-          user_reasoning_text: userReasoningText || null,
-          analysis_id: analysisId
+          input_mode: mode || 'argument'
         });
 
       if (attemptError) {
@@ -326,7 +356,7 @@ Respond in this exact JSON format:
       }
     }
 
-    analysis.analysisId = analysisId;
+    analysis.questionId = questionId;
 
     return NextResponse.json({ success: true, data: analysis });
 
