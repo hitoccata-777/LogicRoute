@@ -155,6 +155,14 @@ export default function ResultPage() {
           </div>
         </div>
 
+        {/* Most Warning Banner */}
+        {analysis.mostWarning && (
+          <div className="bg-amber-50 border border-amber-300 rounded-xl p-4 mb-4 flex items-start gap-3">
+            <div className="text-2xl flex-shrink-0">⚠️</div>
+            <p className="text-amber-800 text-base leading-relaxed">{analysis.mostWarning}</p>
+          </div>
+        )}
+
         {/* Layer 2: Analysis (Expandable) */}
         <div className="bg-white rounded-lg shadow-md mb-4 overflow-hidden transition-all duration-300">
           <button

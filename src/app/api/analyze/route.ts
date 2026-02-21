@@ -199,11 +199,68 @@ ${userReasoning || 'Not provided'}
 
 ## YOUR TASK
 
-1. Verify or adjust the question type if needed
-2. Select the best method from the decision tree based on user's reasoning
-3. Draw the diagram using that method
-4. Provide empathetic feedback for the user's choice
-5. Describe the logical pattern to look for (without referencing specific options)
+STEP 0 - DETECT USER'S INTENT:
+
+Check userReasoning for phrases like:
+- "correct answer is..."
+- "the answer is..."
+- "right answer is..."
+- "I know the answer is..."
+- "answer should be..."
+
+If found:
+- Extract the stated correct answer text
+- Set isCorrect based on whether userAnswerDescription matches the stated correct answer
+- Switch to COMPARISON MODE
+
+COMPARISON MODE:
+When user has provided both their answer and the correct answer, your diagram should show:
+
+"diagram": Show why user's chosen answer fails AND why the stated correct answer succeeds, side by side:
+
+USER'S CHOICE: [their answer]
+→ Test: [logical operation]
+→ Result: [why it fails or is weaker]
+
+CORRECT ANSWER: [stated answer]  
+→ Test: [same logical operation]
+→ Result: [why it succeeds more directly]
+
+"forkPoint": Explain the specific difference between the two answers' logical strength on THIS question.
+
+"mostWarning": If question has "most", suppress the generic warning — user has already provided the correct answer, so set to null.
+
+STEP 1 - SEMANTIC RECONSTRUCTION (do this before any judgment):
+Restate the user's reasoning as a logical chain in plain terms.
+Ignore their terminology. Ask: what logical operation did they actually perform?
+
+Example: If user says "E is a necessary assumption" about a rejection question, reconstruct as:
+"User is saying: if E were true, the story couldn't have happened → E contradicts the passage → E can be rejected."
+This IS a correct operation. Do not label it wrong direction.
+
+STEP 2 - EVALUATE THE RECONSTRUCTED CHAIN:
+Judge only the logical operation, not the label used.
+If the operation leads to the correct answer → isCorrect = true, explain why their reasoning works.
+If the operation has a genuine logical flaw → identify the specific flaw in the operation itself.
+
+STEP 3 - DIAGRAM:
+Show USER PATH only if the logical operation is genuinely wrong.
+If user's operation is correct but terminology is imprecise, show only CORRECT PATH and note "your reasoning was right."
+Never label a correct logical operation as "WRONG DIRECTION."
+
+Diagram should show:
+- The relevant facts from passage (凭什么链 if most_supported)
+- Which fact directly contradicts which claim
+- Where user's path and correct path actually diverge (only if they genuinely do)
+
+STEP 4 - CHECK FOR "MOST" QUESTIONS:
+After reconstructing user's reasoning, check if the question contains "most" (most supported, most justified, most strongly supported, can most justifiably be rejected, etc.)
+
+If yes AND user has NOT provided the correct answer in STEP 0, add this field:
+"mostWarning": "This question asks for the MOST [X] answer. Without seeing all options, we can confirm your reasoning is valid — but cannot guarantee yours is the strongest. Paste any other options you're comparing and we'll analyze them."
+
+If no "most" in question OR user provided correct answer in STEP 0, set:
+"mostWarning": null
 
 Respond in this exact JSON format:
 
@@ -213,10 +270,11 @@ Respond in this exact JSON format:
   
   "method": "selected method code",
   
-  "diagram": "Must show WHERE THE USER'S THINKING WENT WRONG, not just the argument structure. Format: WHAT THE PASSAGE SAYS: [list only facts given] WHAT THE QUESTION ASKS: [exact task] USER'S PATH: [what user tried to prove] ← WRONG DIRECTION CORRECT PATH: [what actually answers the question] If user's path and correct path don't appear side by side, redraw.",
+  "diagram": "Show the relevant facts from the passage, which fact contradicts which claim, and where paths diverge (only if they genuinely do). If user's logical operation was correct, show only CORRECT PATH with note 'your reasoning was right.'",
+  
+  "mostWarning": "Set to warning message if question contains 'most', otherwise null",
   
   "analysis": {
-    "evidenceChain": ["each step's hidden assumption using 'What's the evidence?' method"],
     "coreGap": "the main gap this question targets",
     "flipTest": "if correct answer is false, argument falls apart because..."
   },
@@ -224,15 +282,10 @@ Respond in this exact JSON format:
   "userChoiceFeedback": {
     "errorType": "Layer 1 code, or null if correct",
     "errorTypeInternal": "Layer 2 code for logging",
-    "forkPoint": "Name the EXACT moment: user was solving [X problem] but question asks for [Y]. Must name both X and Y specifically. Under 25 words.",
+    "forkPoint": "Name the EXACT moment: user was solving [X problem] but question asks for [Y]. Must name both X and Y specifically. Include any relevant insight about why the answer was tempting. Under 25 words.",
     "userReasoning": "Explain why [X strategy] is valid in [specific scenario], using one concrete example that is NOT this question. Under 30 words.", 
     "bridgeToCorrect": "State the one specific thing in the passage that directly answers the question. Point to it. Under 25 words.",
     "diagnosis": "Under 15 words, no jargon."
-  },
-  
-  "trapAnalysis": {
-    "whyAttractive": "Name the specific word/concept in user's answer that triggered the wrong strategy. Be specific, not general.",
-    "whyWrong": "State what the passage actually says (or doesn't say) that makes this wrong. Quote the logical gap directly."
   },
   
   "selfCheckInstruction": "Tell user to look for [specific type of sentence/claim] in the passage that [specific logical relationship]. Must be actionable for THIS question type, not general advice.",
@@ -242,8 +295,10 @@ Respond in this exact JSON format:
 }
 
 **QUALITY CHECK: Before outputting, ask yourself:**
+- Did I reconstruct the user's logical operation before judging it?
+- Am I judging the operation itself, not the terminology they used?
 - Could any of these fields apply to a different question? If yes, make them more specific.
-- Does the diagram show the user's specific wrong path? If no, redraw it.
+- Does the diagram show where paths actually diverge (or note that reasoning was correct)?
 - Does selfCheckInstruction tell user WHERE to look in the passage? If no, rewrite it.
 
 **CRITICAL:**
