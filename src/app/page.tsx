@@ -17,25 +17,101 @@ export default function Home() {
   const [yourArgument, setYourArgument] = useState('');
   const [yourConcern, setYourConcern] = useState('');
 
-  const handleSubmit = () => {
+  // Submission state
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+  const [isRecording, setIsRecording] = useState(false);
+
+  const startRecording = (fieldSetter: (val: string) => void, currentValue: string) => {
+    if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+      alert('Voice input not supported in this browser. Please use Chrome.');
+      return;
+    }
+    
+    const SpeechRecognition = (window as any).webkitSpeechRecognition || (window as any).SpeechRecognition;
+    const recognition = new SpeechRecognition();
+    
+    recognition.continuous = false;
+    recognition.interimResults = false;
+    recognition.lang = 'en-US';
+    
+    recognition.onresult = (event: any) => {
+      const transcript = event.results[0][0].transcript;
+      fieldSetter(currentValue + ' ' + transcript);
+      setIsRecording(false);
+    };
+    
+    recognition.onerror = (event: any) => {
+      console.error('Speech error:', event.error);
+      setIsRecording(false);
+    };
+    
+    recognition.onend = () => setIsRecording(false);
+    
+    setIsRecording(true);
+    recognition.start();
+  };
+
+  const handleSubmit = async () => {
+    // Validation
     if (activeTab === 'argument') {
       if (!argument) {
         alert('Please describe the argument');
         return;
       }
-      sessionStorage.setItem('inputMode', 'argument');
-      sessionStorage.setItem('questionText', argument);
-      sessionStorage.setItem('whereStuck', whereStuck);
     } else {
       if (!yourArgument) {
         alert('Please describe your argument');
         return;
       }
-      sessionStorage.setItem('inputMode', 'writing');
-      sessionStorage.setItem('questionText', yourArgument);
-      sessionStorage.setItem('yourConcern', yourConcern);
     }
-    router.push('/input');
+
+    // Reset error state
+    setSubmitError('');
+    setIsSubmitting(true);
+
+    try {
+      // Prepare request body
+      const requestBody = {
+        text: activeTab === 'argument' ? argument : yourArgument,
+        stuck: activeTab === 'argument' ? whereStuck : yourConcern,
+        mode: activeTab
+      };
+
+      // Call extract API
+      const response = await fetch('/api/extract', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to extract data');
+      }
+
+      const result = await response.json();
+
+      // Store extracted data and navigate
+      sessionStorage.setItem('inputMode', activeTab);
+      sessionStorage.setItem('extractedData', JSON.stringify(result));
+      
+      // Also store original inputs for backward compatibility
+      if (activeTab === 'argument') {
+        sessionStorage.setItem('questionText', argument);
+        sessionStorage.setItem('whereStuck', whereStuck);
+      } else {
+        sessionStorage.setItem('questionText', yourArgument);
+        sessionStorage.setItem('yourConcern', yourConcern);
+      }
+
+      router.push('/input');
+    } catch (error) {
+      console.error('Submission error:', error);
+      setSubmitError('Something went wrong. Please try again.');
+      setIsSubmitting(false);
+    }
   };
 
   const handleClear = () => {
@@ -112,12 +188,29 @@ export default function Home() {
               <label className="block text-lg font-semibold text-[#1A1A1A] mb-3">
                 The Argument <span className="text-[#2D9D78]">*</span>
               </label>
-              <textarea
-                value={argument}
-                onChange={(e) => setArgument(e.target.value)}
-                placeholder="What was being argued? (the claim and the evidence given)"
-                className="w-full min-h-48 p-5 bg-white border border-gray-200 rounded-2xl shadow-sm focus:ring-2 focus:ring-[#2D9D78] focus:border-transparent resize-y text-base text-[#1A1A1A] placeholder:text-gray-300 transition-all"
-              />
+              <div className="relative">
+                <textarea
+                  value={argument}
+                  onChange={(e) => setArgument(e.target.value)}
+                  placeholder="What was being argued? (the claim and the evidence given)"
+                  className="w-full min-h-48 p-5 pr-14 bg-white border border-gray-200 rounded-2xl shadow-sm focus:ring-2 focus:ring-[#2D9D78] focus:border-transparent resize-y text-base text-[#1A1A1A] placeholder:text-gray-300 transition-all"
+                />
+                <button
+                  type="button"
+                  onClick={() => startRecording(setArgument, argument)}
+                  disabled={isRecording}
+                  className={`absolute right-4 top-4 p-2 rounded-full transition-colors ${
+                    isRecording
+                      ? 'bg-red-500 text-white'
+                      : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+                  }`}
+                  title={isRecording ? 'Recording...' : 'Start voice input'}
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                  </svg>
+                </button>
+              </div>
               
               {/* Collapsible Hint */}
               <button
@@ -138,12 +231,29 @@ export default function Home() {
               <label className="block text-lg font-semibold text-[#1A1A1A] mb-3">
                 Where You Got Stuck <span className="text-gray-400 text-sm font-normal">(optional)</span>
               </label>
-              <textarea
-                value={whereStuck}
-                onChange={(e) => setWhereStuck(e.target.value)}
-                placeholder="What made sense to you, or where did your thinking diverge?"
-                className="w-full min-h-36 p-5 bg-white border border-gray-200 rounded-2xl shadow-sm focus:ring-2 focus:ring-[#2D9D78] focus:border-transparent resize-y text-base text-[#1A1A1A] placeholder:text-gray-300 transition-all"
-              />
+              <div className="relative">
+                <textarea
+                  value={whereStuck}
+                  onChange={(e) => setWhereStuck(e.target.value)}
+                  placeholder="What made sense to you, or where did your thinking diverge?"
+                  className="w-full min-h-36 p-5 pr-14 bg-white border border-gray-200 rounded-2xl shadow-sm focus:ring-2 focus:ring-[#2D9D78] focus:border-transparent resize-y text-base text-[#1A1A1A] placeholder:text-gray-300 transition-all"
+                />
+                <button
+                  type="button"
+                  onClick={() => startRecording(setWhereStuck, whereStuck)}
+                  disabled={isRecording}
+                  className={`absolute right-4 top-4 p-2 rounded-full transition-colors ${
+                    isRecording
+                      ? 'bg-red-500 text-white'
+                      : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+                  }`}
+                  title={isRecording ? 'Recording...' : 'Start voice input'}
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                  </svg>
+                </button>
+              </div>
               
               {/* Collapsible Hint */}
               <button
@@ -166,12 +276,29 @@ export default function Home() {
               <label className="block text-lg font-semibold text-[#1A1A1A] mb-3">
                 Your Argument <span className="text-[#2D9D78]">*</span>
               </label>
-              <textarea
-                value={yourArgument}
-                onChange={(e) => setYourArgument(e.target.value)}
-                placeholder="What are you trying to argue?"
-                className="w-full min-h-48 p-5 bg-white border border-gray-200 rounded-2xl shadow-sm focus:ring-2 focus:ring-[#2D9D78] focus:border-transparent resize-y text-base text-[#1A1A1A] placeholder:text-gray-300 transition-all"
-              />
+              <div className="relative">
+                <textarea
+                  value={yourArgument}
+                  onChange={(e) => setYourArgument(e.target.value)}
+                  placeholder="What are you trying to argue?"
+                  className="w-full min-h-48 p-5 pr-14 bg-white border border-gray-200 rounded-2xl shadow-sm focus:ring-2 focus:ring-[#2D9D78] focus:border-transparent resize-y text-base text-[#1A1A1A] placeholder:text-gray-300 transition-all"
+                />
+                <button
+                  type="button"
+                  onClick={() => startRecording(setYourArgument, yourArgument)}
+                  disabled={isRecording}
+                  className={`absolute right-4 top-4 p-2 rounded-full transition-colors ${
+                    isRecording
+                      ? 'bg-red-500 text-white'
+                      : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+                  }`}
+                  title={isRecording ? 'Recording...' : 'Start voice input'}
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                  </svg>
+                </button>
+              </div>
             </div>
 
             {/* Your Concern */}
@@ -179,12 +306,29 @@ export default function Home() {
               <label className="block text-lg font-semibold text-[#1A1A1A] mb-3">
                 Your Concern <span className="text-gray-400 text-sm font-normal">(optional)</span>
               </label>
-              <textarea
-                value={yourConcern}
-                onChange={(e) => setYourConcern(e.target.value)}
-                placeholder="What part feels weak or uncertain?"
-                className="w-full min-h-36 p-5 bg-white border border-gray-200 rounded-2xl shadow-sm focus:ring-2 focus:ring-[#2D9D78] focus:border-transparent resize-y text-base text-[#1A1A1A] placeholder:text-gray-300 transition-all"
-              />
+              <div className="relative">
+                <textarea
+                  value={yourConcern}
+                  onChange={(e) => setYourConcern(e.target.value)}
+                  placeholder="What part feels weak or uncertain?"
+                  className="w-full min-h-36 p-5 pr-14 bg-white border border-gray-200 rounded-2xl shadow-sm focus:ring-2 focus:ring-[#2D9D78] focus:border-transparent resize-y text-base text-[#1A1A1A] placeholder:text-gray-300 transition-all"
+                />
+                <button
+                  type="button"
+                  onClick={() => startRecording(setYourConcern, yourConcern)}
+                  disabled={isRecording}
+                  className={`absolute right-4 top-4 p-2 rounded-full transition-colors ${
+                    isRecording
+                      ? 'bg-red-500 text-white'
+                      : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+                  }`}
+                  title={isRecording ? 'Recording...' : 'Start voice input'}
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         )}
@@ -195,20 +339,36 @@ export default function Home() {
         </p>
 
         {/* Button Row */}
-        <div className="flex gap-3 justify-end mt-4">
-          <button
-            onClick={handleClear}
-            className="text-gray-400 hover:text-gray-600 text-base transition-colors"
-          >
-            Clear
-          </button>
-          <button
-            onClick={handleSubmit}
-            disabled={activeTab === 'argument' ? !argument : !yourArgument}
-            className="bg-[#1B4D3E] hover:bg-[#2D6A4F] text-white rounded-xl px-10 py-3.5 text-base font-medium shadow-sm disabled:opacity-40 disabled:cursor-not-allowed transition-all min-w-40"
-          >
-            {activeTab === 'argument' ? 'Analyze' : 'Check My Writing'}
-          </button>
+        <div className="mt-4">
+          <div className="flex gap-3 justify-end">
+            <button
+              onClick={handleClear}
+              disabled={isSubmitting}
+              className="text-gray-400 hover:text-gray-600 text-base transition-colors disabled:opacity-40"
+            >
+              Clear
+            </button>
+            <button
+              onClick={handleSubmit}
+              disabled={isSubmitting || (activeTab === 'argument' ? !argument : !yourArgument)}
+              className="bg-[#1B4D3E] hover:bg-[#2D6A4F] text-white rounded-xl px-10 py-3.5 text-base font-medium shadow-sm disabled:opacity-40 disabled:cursor-not-allowed transition-all min-w-40 flex items-center justify-center gap-2"
+            >
+              {isSubmitting ? (
+                <>
+                  <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Analyzing...
+                </>
+              ) : (
+                activeTab === 'argument' ? 'Analyze' : 'Check My Writing'
+              )}
+            </button>
+          </div>
+          {submitError && (
+            <p className="text-red-500 text-sm text-right mt-2">{submitError}</p>
+          )}
         </div>
       </div>
 

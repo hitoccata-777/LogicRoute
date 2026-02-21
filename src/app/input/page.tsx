@@ -59,8 +59,8 @@ function VoiceInput({ onTranscript, textareaRef }: { onTranscript: (text: string
       onClick={handleClick}
       className={`p-2 rounded-full transition-colors ${
         isRecording
-          ? 'bg-red-500 text-white'
-          : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+          ? 'bg-red-400 text-white'
+          : 'bg-[#F0F7F4] text-[#2D9D78] hover:bg-[#E0F0EA]'
       }`}
       title={isRecording ? 'Stop recording' : 'Start voice input'}
     >
@@ -114,11 +114,35 @@ export default function InputPage() {
       setMode(storedMode);
     }
 
-    // Try to get any existing data from sessionStorage
-    const questionText = sessionStorage.getItem('questionText');
-    if (questionText && mode === 'argument') {
-      // Simple extraction - could be enhanced with LLM
-      setDescription(questionText);
+    // Check for extracted data from landing page
+    const raw = sessionStorage.getItem('extractedData');
+    if (raw) {
+      try {
+        const data = JSON.parse(raw);
+        console.log('extractedData:', data);
+        
+        // Pre-fill fields based on extracted data
+        if (data.description) {
+          setDescription(data.description);
+        }
+        if (data.questionStem) {
+          setQuestion(data.questionStem);
+        }
+        if (data.userReasoning) {
+          setUserAnswerDescription(data.userReasoning);
+        }
+        
+        // Clear extractedData after reading
+        sessionStorage.removeItem('extractedData');
+      } catch (e) {
+        console.error('Failed to parse extractedData', e);
+      }
+    } else {
+      // Fallback: Try to get any existing data from sessionStorage (old flow)
+      const questionText = sessionStorage.getItem('questionText');
+      if (questionText && storedMode === 'argument') {
+        setDescription(questionText);
+      }
     }
   }, []);
 
@@ -149,21 +173,18 @@ export default function InputPage() {
     setIsLoading(true);
 
     try {
-      // Combine user reasoning text
-      const userReasoningText = mode === 'argument'
-        ? [userAnswerDescription, userReasoning].filter(Boolean).join(' ')
-        : [unsurePart, issueThought].filter(Boolean).join(' ');
-
       const response = await fetch('/api/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          questionStem: mode === 'argument' ? (question || description) : argumentText,
-          userChoice: '', // Not used in new API
-          userReasoningText: userReasoningText,
+          description: mode === 'argument' ? description : argumentText,
+          question: mode === 'argument' ? question : '',
+          userAnswerDescription: mode === 'argument' ? userAnswerDescription : unsurePart,
+          userReasoning: mode === 'argument' ? userReasoning : issueThought,
           userDifficulty: mode === 'argument' ? (difficulty || undefined) : undefined,
+          userId: userId,
           sourceId: undefined,
-          userId: userId
+          mode: mode
         }),
       });
 
@@ -193,20 +214,20 @@ export default function InputPage() {
       <div className="max-w-4xl mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-indigo-600 mb-2">Analyze Your Thinking</h1>
-          <p className="text-gray-600">Describe the argument and what went wrong</p>
+          <h1 className="text-4xl font-bold text-[#1B4D3E] mb-2">Analyze Your Thinking</h1>
+          <p className="text-gray-500 text-base">Describe the argument and what went wrong</p>
         </div>
 
         {mode === 'argument' ? (
           <>
             {/* Argument Mode - Upper Section */}
-            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-6">The Argument</h2>
+            <div className="bg-white rounded-2xl shadow-sm border border-[#E5EBE9] p-6 mb-6">
+              <h2 className="text-lg font-bold text-[#1B4D3E] mb-6">The Argument</h2>
               
               <div className="space-y-6">
                 {/* Description */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-base font-medium text-gray-700 mb-2">
                     Description
                   </label>
                   <div className="flex gap-2">
@@ -215,7 +236,7 @@ export default function InputPage() {
                       value={description}
                       onChange={(e) => setDescription(e.target.value)}
                       placeholder="Describe the argument or passage..."
-                      className="flex-1 min-h-[120px] p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-y"
+                      className="flex-1 min-h-[120px] p-4 bg-[#FAFCFB] border border-[#E5EBE9] rounded-xl focus:ring-2 focus:ring-[#2D9D78] focus:border-transparent resize-y"
                     />
                     <div className="flex items-start pt-2">
                       <VoiceInput
@@ -230,7 +251,7 @@ export default function InputPage() {
 
                 {/* Question */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-base font-medium text-gray-700 mb-2">
                     The Question
                   </label>
                   <div className="flex gap-2">
@@ -239,7 +260,7 @@ export default function InputPage() {
                       value={question}
                       onChange={(e) => setQuestion(e.target.value)}
                       placeholder="What was the question asking?"
-                      className="flex-1 min-h-[80px] p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-y"
+                      className="flex-1 min-h-[80px] p-4 bg-[#FAFCFB] border border-[#E5EBE9] rounded-xl focus:ring-2 focus:ring-[#2D9D78] focus:border-transparent resize-y"
                     />
                     <div className="flex items-start pt-2">
                       <VoiceInput
@@ -255,13 +276,13 @@ export default function InputPage() {
             </div>
 
             {/* Argument Mode - Lower Section */}
-            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-6">What Went Wrong</h2>
+            <div className="bg-white rounded-2xl shadow-sm border border-[#E5EBE9] p-6 mb-6">
+              <h2 className="text-lg font-bold text-[#1B4D3E] mb-6">What Went Wrong</h2>
               
               <div className="space-y-6">
                 {/* My answer was saying */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-base font-medium text-gray-700 mb-2">
                     My answer was saying... <span className="text-gray-400 font-normal">(optional)</span>
                   </label>
                   <div className="flex gap-2">
@@ -270,7 +291,7 @@ export default function InputPage() {
                       value={userAnswerDescription}
                       onChange={(e) => setUserAnswerDescription(e.target.value)}
                       placeholder="Describe what your answer was trying to say..."
-                      className="flex-1 min-h-[100px] p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-y"
+                      className="flex-1 min-h-[100px] p-4 bg-[#FAFCFB] border border-[#E5EBE9] rounded-xl focus:ring-2 focus:ring-[#2D9D78] focus:border-transparent resize-y"
                     />
                     <div className="flex items-start pt-2">
                       <VoiceInput
@@ -285,7 +306,7 @@ export default function InputPage() {
 
                 {/* I got confused because */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-base font-medium text-gray-700 mb-2">
                     I got confused because... <span className="text-gray-400 font-normal">(optional)</span>
                   </label>
                   <div className="flex gap-2">
@@ -294,7 +315,7 @@ export default function InputPage() {
                       value={userReasoning}
                       onChange={(e) => setUserReasoning(e.target.value)}
                       placeholder="What made you uncertain or confused?"
-                      className="flex-1 min-h-[100px] p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-y"
+                      className="flex-1 min-h-[100px] p-4 bg-[#FAFCFB] border border-[#E5EBE9] rounded-xl focus:ring-2 focus:ring-[#2D9D78] focus:border-transparent resize-y"
                     />
                     <div className="flex items-start pt-2">
                       <VoiceInput
@@ -309,7 +330,7 @@ export default function InputPage() {
 
                 {/* Difficulty */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-3">
+                  <label className="block text-base font-medium text-gray-700 mb-3">
                     Difficulty
                   </label>
                   <div className="flex gap-3 items-center">
@@ -320,8 +341,8 @@ export default function InputPage() {
                         onClick={() => setDifficulty(num)}
                         className={`w-12 h-12 rounded-full border-2 flex items-center justify-center text-lg font-semibold transition-all ${
                           difficulty === num
-                            ? 'bg-indigo-600 text-white border-indigo-600'
-                            : 'bg-white text-gray-600 border-gray-300 hover:border-indigo-400'
+                            ? 'bg-[#1B4D3E] text-white border-[#1B4D3E]'
+                            : 'bg-white text-gray-600 border-gray-300 hover:border-[#2D9D78]'
                         }`}
                       >
                         {num}
@@ -335,8 +356,8 @@ export default function InputPage() {
         ) : (
           <>
             {/* Writing Mode - Upper Section */}
-            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-6">The Argument</h2>
+            <div className="bg-white rounded-2xl shadow-sm border border-[#E5EBE9] p-6 mb-6">
+              <h2 className="text-lg font-bold text-[#1B4D3E] mb-6">The Argument</h2>
               
               <div className="flex gap-2">
                 <textarea
@@ -344,7 +365,7 @@ export default function InputPage() {
                   value={argumentText}
                   onChange={(e) => setArgumentText(e.target.value)}
                   placeholder="Paste or type your argument here..."
-                  className="flex-1 min-h-[200px] p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-y"
+                  className="flex-1 min-h-[200px] p-4 bg-[#FAFCFB] border border-[#E5EBE9] rounded-xl focus:ring-2 focus:ring-[#2D9D78] focus:border-transparent resize-y"
                 />
                 <div className="flex items-start pt-2">
                   <VoiceInput
@@ -358,13 +379,13 @@ export default function InputPage() {
             </div>
 
             {/* Writing Mode - Lower Section */}
-            <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-6">What Concerns You</h2>
+            <div className="bg-white rounded-2xl shadow-sm border border-[#E5EBE9] p-6 mb-6">
+              <h2 className="text-lg font-bold text-[#1B4D3E] mb-6">What Concerns You</h2>
               
               <div className="space-y-6">
                 {/* The part I'm unsure about */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-base font-medium text-gray-700 mb-2">
                     The part I'm unsure about... <span className="text-gray-400 font-normal">(optional)</span>
                   </label>
                   <div className="flex gap-2">
@@ -373,7 +394,7 @@ export default function InputPage() {
                       value={unsurePart}
                       onChange={(e) => setUnsurePart(e.target.value)}
                       placeholder="Which part of your argument are you uncertain about?"
-                      className="flex-1 min-h-[100px] p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-y"
+                      className="flex-1 min-h-[100px] p-4 bg-[#FAFCFB] border border-[#E5EBE9] rounded-xl focus:ring-2 focus:ring-[#2D9D78] focus:border-transparent resize-y"
                     />
                     <div className="flex items-start pt-2">
                       <VoiceInput
@@ -388,7 +409,7 @@ export default function InputPage() {
 
                 {/* I think the issue might be */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-base font-medium text-gray-700 mb-2">
                     I think the issue might be... <span className="text-gray-400 font-normal">(optional)</span>
                   </label>
                   <div className="flex gap-2">
@@ -397,7 +418,7 @@ export default function InputPage() {
                       value={issueThought}
                       onChange={(e) => setIssueThought(e.target.value)}
                       placeholder="What do you think might be wrong with your reasoning?"
-                      className="flex-1 min-h-[100px] p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-y"
+                      className="flex-1 min-h-[100px] p-4 bg-[#FAFCFB] border border-[#E5EBE9] rounded-xl focus:ring-2 focus:ring-[#2D9D78] focus:border-transparent resize-y"
                     />
                     <div className="flex items-start pt-2">
                       <VoiceInput
@@ -418,7 +439,7 @@ export default function InputPage() {
         <div className="flex gap-3 justify-end">
           <button
             onClick={() => router.push('/')}
-            className="px-6 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50"
+            className="px-6 py-2 border border-[#1B4D3E] rounded-xl text-[#1B4D3E] hover:bg-[#F0F7F4]"
           >
             Back
           </button>
@@ -431,7 +452,7 @@ export default function InputPage() {
           <button
             onClick={handleSubmit}
             disabled={isLoading || (mode === 'argument' && !description && !question)}
-            className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:bg-indigo-400 disabled:cursor-not-allowed flex items-center gap-2"
+            className="px-8 py-3 bg-[#1B4D3E] text-white text-base font-medium rounded-xl hover:bg-[#2D6A4F] disabled:bg-[#2D9D78] disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
           >
             {isLoading && (
               <svg

@@ -99,39 +99,57 @@ export default function ResultPage() {
       <div className="max-w-4xl mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-indigo-600 mb-2">Analysis Result</h1>
+          <h1 className="text-3xl font-bold text-[#1B4D3E] mb-2">Analysis Result</h1>
           <p className="text-gray-600">Review your performance and learn from the analysis</p>
         </div>
 
         {/* Layer 1: Always Visible - Result Summary */}
         <div className="bg-white rounded-lg shadow-md p-6 mb-4">
           <div className="flex flex-col items-center text-center space-y-4">
-            {/* Big indicator */}
-            <div className={`text-6xl font-bold ${analysis.isCorrect ? 'text-green-600' : 'text-red-600'}`}>
-              {analysis.isCorrect ? '✓' : '✗'}
-            </div>
+            {/* Fork Visual */}
+            {!analysis.isCorrect && (
+              <div className="w-full max-w-md space-y-2 text-left font-mono text-sm">
+                <div className="flex items-center">
+                  <div className="border-l-4 border-amber-400 pl-3 py-1 text-amber-700">
+                    YOUR PATH ──────────┐
+                  </div>
+                </div>
+                <div className="flex items-center pl-20">
+                  <div className="text-gray-600">
+                    ├── DIVERGED HERE
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <div className="border-l-4 border-[#2D9D78] pl-3 py-1 text-[#2D9D78]">
+                    CORRECT PATH ───────┘
+                  </div>
+                </div>
+              </div>
+            )}
             
-            <div className={`text-2xl font-semibold ${analysis.isCorrect ? 'text-green-600' : 'text-red-600'}`}>
+            <div className={`text-2xl font-semibold ${analysis.isCorrect ? 'text-[#2D9D78]' : 'text-[#1B4D3E]'}`}>
               {analysis.isCorrect ? 'Correct' : 'Your thinking forked here'}
             </div>
 
             {/* Choice display */}
-            <div className="flex gap-4 text-lg">
-              <div>
-                <span className="text-gray-600">You chose: </span>
-                <span className="font-semibold text-gray-900">{analysis.userChoice}</span>
+            {analysis.userChoice && (
+              <div className="flex gap-4 text-lg">
+                <div>
+                  <span className="text-gray-600">You chose: </span>
+                  <span className="font-semibold text-gray-900">{analysis.userChoice}</span>
+                </div>
               </div>
-            </div>
+            )}
 
             {/* One-line diagnosis */}
             {analysis.userChoiceFeedback?.diagnosis && (
-              <div className="text-gray-700 text-lg max-w-2xl">
+              <div className="text-gray-800 text-xl font-medium max-w-2xl">
                 {analysis.userChoiceFeedback.diagnosis}
               </div>
             )}
 
             {/* Question type badge */}
-            <div className="inline-block px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">
+            <div className="inline-block px-4 py-2 bg-[#F0F7F4] text-[#1B4D3E] rounded-full text-sm font-medium">
               {analysis.questionType}
             </div>
           </div>
@@ -157,70 +175,96 @@ export default function ResultPage() {
           {expandedLayers[2] && (
             <div className="px-6 pb-6 space-y-6 border-t border-gray-200 pt-4">
               
-              {/* Diagram - Now handles string format */}
+              {/* Diagram */}
               {analysis.diagram && (
-                <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm overflow-x-auto">
-                  <h3 className="text-xs font-semibold text-gray-400 mb-3 uppercase tracking-wide">
-                    Diagram
+                <div className="bg-gray-900 text-green-400 p-4 rounded-lg font-mono text-sm overflow-x-auto border-l-4 border-[#2D9D78]">
+                  <h3 className="text-xs font-semibold text-gray-400 mb-3 uppercase tracking-widest">
+                    ARGUMENT STRUCTURE
                   </h3>
-                  <pre className="whitespace-pre-wrap">{analysis.diagram}</pre>
+                  <pre className="whitespace-pre-wrap max-h-64 overflow-y-auto">{analysis.diagram}</pre>
                 </div>
               )}
 
-              {/* Fork Point Feedback - NEW */}
+              {/* Fork Point Feedback - Hero Section */}
               {analysis.userChoiceFeedback && !analysis.isCorrect && (
-                <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 space-y-3">
-                  <h3 className="text-sm font-semibold text-amber-800 uppercase tracking-wide">
-                    Where Your Thinking Forked
+                <div className="bg-[#FFFBEB] border-l-4 border-amber-400 rounded-r-xl p-5 space-y-4">
+                  <h3 className="text-sm font-bold text-amber-700 uppercase tracking-wide mb-4">
+                    WHERE YOUR THINKING FORKED
                   </h3>
                   
                   {analysis.userChoiceFeedback.forkPoint && (
-                    <div>
-                      <span className="text-amber-700 font-medium">Fork Point: </span>
-                      <span className="text-gray-700">{analysis.userChoiceFeedback.forkPoint}</span>
+                    <div className="flex items-start">
+                      <div className="inline-flex w-6 h-6 rounded-full bg-amber-400 text-white text-xs font-bold items-center justify-center mr-2 flex-shrink-0">
+                        1
+                      </div>
+                      <div>
+                        <div className="text-xs font-bold text-amber-700 uppercase tracking-wide">FORK POINT</div>
+                        <div className="text-gray-800 text-base mt-1">{analysis.userChoiceFeedback.forkPoint}</div>
+                      </div>
                     </div>
+                  )}
+                  
+                  {analysis.userChoiceFeedback.forkPoint && analysis.userChoiceFeedback.userReasoning && (
+                    <div className="border-t border-amber-200 my-3"></div>
                   )}
                   
                   {analysis.userChoiceFeedback.userReasoning && (
-                    <div>
-                      <span className="text-amber-700 font-medium">Your Logic: </span>
-                      <span className="text-gray-700">{analysis.userChoiceFeedback.userReasoning}</span>
+                    <div className="flex items-start">
+                      <div className="inline-flex w-6 h-6 rounded-full bg-amber-400 text-white text-xs font-bold items-center justify-center mr-2 flex-shrink-0">
+                        2
+                      </div>
+                      <div>
+                        <div className="text-xs font-bold text-amber-700 uppercase tracking-wide">YOUR LOGIC</div>
+                        <div className="text-gray-800 text-base mt-1">{analysis.userChoiceFeedback.userReasoning}</div>
+                      </div>
                     </div>
                   )}
                   
+                  {analysis.userChoiceFeedback.userReasoning && analysis.userChoiceFeedback.bridgeToCorrect && (
+                    <div className="border-t border-amber-200 my-3"></div>
+                  )}
+                  
                   {analysis.userChoiceFeedback.bridgeToCorrect && (
-                    <div>
-                      <span className="text-amber-700 font-medium">Bridge to Correct: </span>
-                      <span className="text-gray-700">{analysis.userChoiceFeedback.bridgeToCorrect}</span>
+                    <div className="flex items-start">
+                      <div className="inline-flex w-6 h-6 rounded-full bg-amber-400 text-white text-xs font-bold items-center justify-center mr-2 flex-shrink-0">
+                        3
+                      </div>
+                      <div>
+                        <div className="text-xs font-bold text-amber-700 uppercase tracking-wide">BRIDGE TO CORRECT</div>
+                        <div className="text-gray-800 text-base mt-1">{analysis.userChoiceFeedback.bridgeToCorrect}</div>
+                      </div>
                     </div>
                   )}
                 </div>
               )}
 
-              {/* Trap Analysis - NEW */}
+              {/* Trap Analysis */}
               {analysis.trapAnalysis && !analysis.isCorrect && (
-                <div className="bg-red-50 border border-red-200 rounded-lg p-4 space-y-2">
+                <div className="bg-[#FFF5F5] border border-red-200 rounded-lg p-4 space-y-2">
                   <h3 className="text-sm font-semibold text-red-800 uppercase tracking-wide">
-                    Why Option {analysis.trapAnalysis.option} is Tempting
+                    Why Your Answer Was Tempting
                   </h3>
                   <div>
-                    <span className="text-red-700 font-medium">Attractive because: </span>
+                    <span className="text-red-700 font-bold">Attractive because: </span>
                     <span className="text-gray-700">{analysis.trapAnalysis.whyAttractive}</span>
                   </div>
                   <div>
-                    <span className="text-red-700 font-medium">But wrong because: </span>
+                    <span className="text-red-700 font-bold">But wrong because: </span>
                     <span className="text-gray-700">{analysis.trapAnalysis.whyWrong}</span>
                   </div>
                 </div>
               )}
 
-              {/* Where to Look */}
+              {/* Where to Look - Compass Card */}
               {analysis.selfCheckInstruction && (
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4 space-y-2">
-                  <h3 className="text-sm font-semibold text-green-800 uppercase tracking-wide">
-                    Where to Look
+                <div className="bg-[#F0F7F4] border border-[#1B4D3E] rounded-xl p-4 space-y-2">
+                  <h3 className="text-sm font-bold text-[#1B4D3E] uppercase tracking-wide">
+                    🧭 Where to Look
                   </h3>
-                  <p className="text-gray-700 whitespace-pre-wrap">{analysis.selfCheckInstruction}</p>
+                  <p className="text-gray-700 text-base leading-relaxed whitespace-pre-wrap">{analysis.selfCheckInstruction}</p>
+                  <p className="text-xs text-gray-400 mt-3 pt-3 border-t border-[#D1E8E2]">
+                    Verify against the original source material
+                  </p>
                 </div>
               )}
 
@@ -268,13 +312,13 @@ export default function ResultPage() {
             <div className="px-6 pb-6 space-y-4 border-t border-gray-200 pt-4">
               {analysis.skillPoint && (
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-700 mb-2 uppercase">Skill Point</h3>
+                  <h3 className="text-sm font-semibold text-[#1B4D3E] mb-2 uppercase">🎯 Skill Point</h3>
                   <p className="text-gray-700">{analysis.skillPoint}</p>
                 </div>
               )}
               {analysis.takeaway && (
-                <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4">
-                  <h3 className="text-sm font-semibold text-indigo-700 mb-2 uppercase">💡 Remember This</h3>
+                <div className="bg-[#F0F7F4] border border-[#1B4D3E] rounded-lg p-4">
+                  <h3 className="text-sm font-semibold text-[#1B4D3E] mb-2 uppercase">💡 Remember This</h3>
                   <p className="text-gray-800 text-lg">{analysis.takeaway}</p>
                 </div>
               )}
@@ -286,13 +330,13 @@ export default function ResultPage() {
         <div className="flex gap-3 justify-center">
           <button
             onClick={() => router.push('/')}
-            className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+            className="px-6 py-2 bg-[#1B4D3E] text-white rounded-lg hover:bg-[#2D6A4F] transition-colors"
           >
             Try Another
           </button>
           <button
             onClick={() => router.push('/stats')}
-            className="px-6 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors"
+            className="px-6 py-2 border border-[#1B4D3E] rounded-lg text-[#1B4D3E] hover:bg-[#F0F7F4] transition-colors"
           >
             View Stats
           </button>

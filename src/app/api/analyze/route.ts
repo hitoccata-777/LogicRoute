@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { supabase } from '@/lib/supabase';
+import { supabase } from '../../../lib/supabase';
 import crypto from 'crypto';
-import { classifyQuestion } from '@/lib/questionClassifier';
-import { SCENE_DECISION_TREE, METHOD_DESCRIPTIONS } from '@/lib/sceneDecisionTree';
+import { classifyQuestion } from '../../../lib/questionClassifier';
+import { SCENE_DECISION_TREE, METHOD_DESCRIPTIONS } from '../../../lib/sceneDecisionTree';
 
 const SOP_SYSTEM_PROMPT = `CRITICAL COMPLIANCE RULES:
 - Never output a correct answer letter (A/B/C/D/E)
