@@ -213,7 +213,7 @@ Respond in this exact JSON format:
   
   "method": "selected method code",
   
-  "diagram": "TEXT-BASED DIAGRAM using the templates above. Must make the answer obvious.",
+  "diagram": "Must show WHERE THE USER'S THINKING WENT WRONG, not just the argument structure. Format: WHAT THE PASSAGE SAYS: [list only facts given] WHAT THE QUESTION ASKS: [exact task] USER'S PATH: [what user tried to prove] ← WRONG DIRECTION CORRECT PATH: [what actually answers the question] If user's path and correct path don't appear side by side, redraw.",
   
   "analysis": {
     "evidenceChain": ["each step's hidden assumption using 'What's the evidence?' method"],
@@ -224,27 +224,33 @@ Respond in this exact JSON format:
   "userChoiceFeedback": {
     "errorType": "Layer 1 code, or null if correct",
     "errorTypeInternal": "Layer 2 code for logging",
-    "forkPoint": "You used [strategy] — saw [option feature], thought [rule]. Under 30 words.",
-    "userReasoning": "This strategy works for [scenario]: [brief explanation]. Under 30 words.", 
-    "bridgeToCorrect": "But this is a [question type] question, asking for [X]. [One sentence pointing to correct answer]. Under 30 words.",
+    "forkPoint": "Name the EXACT moment: user was solving [X problem] but question asks for [Y]. Must name both X and Y specifically. Under 25 words.",
+    "userReasoning": "Explain why [X strategy] is valid in [specific scenario], using one concrete example that is NOT this question. Under 30 words.", 
+    "bridgeToCorrect": "State the one specific thing in the passage that directly answers the question. Point to it. Under 25 words.",
     "diagnosis": "Under 15 words, no jargon."
   },
   
   "trapAnalysis": {
-    "whyAttractive": "what strategy/pattern makes this tempting",
-    "whyWrong": "why it doesn't actually answer THIS question"
+    "whyAttractive": "Name the specific word/concept in user's answer that triggered the wrong strategy. Be specific, not general.",
+    "whyWrong": "State what the passage actually says (or doesn't say) that makes this wrong. Quote the logical gap directly."
   },
   
-  "selfCheckInstruction": "One sentence describing the logical feature of the correct answer, so user can identify it from their own copy. No option letters. No option paraphrasing.",
+  "selfCheckInstruction": "Tell user to look for [specific type of sentence/claim] in the passage that [specific logical relationship]. Must be actionable for THIS question type, not general advice.",
   
   "skillPoint": "The specific skill this question tests",
-  "takeaway": "One Feynman-style sentence. Use everyday example if helpful."
+  "takeaway": "One sentence that would only apply to THIS type of question. If it could apply to any question, rewrite it."
 }
+
+**QUALITY CHECK: Before outputting, ask yourself:**
+- Could any of these fields apply to a different question? If yes, make them more specific.
+- Does the diagram show the user's specific wrong path? If no, redraw it.
+- Does selfCheckInstruction tell user WHERE to look in the passage? If no, rewrite it.
 
 **CRITICAL:**
 - Return ONLY valid JSON, no markdown, no text outside JSON
 - diagnosis must be under 15 words
-- forkPoint, userReasoning, bridgeToCorrect each under 30 words
+- forkPoint and bridgeToCorrect each under 25 words
+- userReasoning under 30 words
 - The diagram MUST be included and make the answer obvious
 - Be warm and empathetic, never judgmental
 - NEVER output correct answer letter or describe specific options`;
