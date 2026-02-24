@@ -392,12 +392,41 @@ export default function ResultPage() {
                 </div>
               )}
 
-              {/* Analysis: Core Gap and Flip Test */}
+              {/* Analysis: X_bank, Y_bank, gap, key_insight */}
               {analysis.analysis && (
                 <div className="space-y-3">
                   <h3 className="text-lg font-bold text-gray-900">Analysis</h3>
                   
-                  {analysis.analysis.coreGap && (
+                  {(analysis.analysis as any).X_bank && (
+                    <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
+                      <div className="text-sm font-semibold text-blue-800 mb-1">Premise/Evidence</div>
+                      <div className="text-gray-700">{(analysis.analysis as any).X_bank}</div>
+                    </div>
+                  )}
+
+                  {(analysis.analysis as any).Y_bank && (
+                    <div className="bg-purple-50 border-l-4 border-purple-400 p-4 rounded-r-lg">
+                      <div className="text-sm font-semibold text-purple-800 mb-1">Conclusion</div>
+                      <div className="text-gray-700">{(analysis.analysis as any).Y_bank}</div>
+                    </div>
+                  )}
+
+                  {(analysis.analysis as any).gap && (
+                    <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded-r-lg">
+                      <div className="text-sm font-semibold text-red-800 mb-1">The Gap (Hidden Assumption)</div>
+                      <div className="text-gray-700">{(analysis.analysis as any).gap}</div>
+                    </div>
+                  )}
+
+                  {(analysis.analysis as any).key_insight && (
+                    <div className="bg-teal-50 border-l-4 border-teal-400 p-4 rounded-r-lg">
+                      <div className="text-sm font-semibold text-teal-800 mb-1">Key Insight</div>
+                      <div className="text-gray-700">{(analysis.analysis as any).key_insight}</div>
+                    </div>
+                  )}
+
+                  {/* Fallback to old fields if they exist */}
+                  {analysis.analysis.coreGap && !(analysis.analysis as any).gap && (
                     <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded-r-lg">
                       <div className="text-sm font-semibold text-red-800 mb-1">Core Gap</div>
                       <div className="text-gray-700">{analysis.analysis.coreGap}</div>
@@ -449,10 +478,33 @@ export default function ResultPage() {
               {/* Takeaway */}
               {analysis.takeaway && (
                 <div className="bg-green-50 p-5 rounded-xl border border-green-200">
-                  <h3 className="text-sm font-bold text-green-800 uppercase tracking-wide mb-2">
+                  <h3 className="text-sm font-bold text-green-800 uppercase tracking-wide mb-3">
                     💡 Takeaway
                   </h3>
-                  <p className="text-gray-800 text-lg leading-relaxed font-medium">{analysis.takeaway}</p>
+                  {typeof analysis.takeaway === 'string' ? (
+                    <p className="text-gray-800 text-lg leading-relaxed font-medium">{analysis.takeaway}</p>
+                  ) : (
+                    <div className="space-y-3">
+                      {(analysis.takeaway as any).pattern_name && (
+                        <div>
+                          <div className="text-xs font-semibold text-green-700 uppercase tracking-wide mb-1">Pattern</div>
+                          <div className="text-gray-900 text-lg font-bold">{(analysis.takeaway as any).pattern_name}</div>
+                        </div>
+                      )}
+                      {(analysis.takeaway as any).trigger_signal && (
+                        <div>
+                          <div className="text-xs font-semibold text-green-700 uppercase tracking-wide mb-1">Look for</div>
+                          <div className="text-gray-800 leading-relaxed">{(analysis.takeaway as any).trigger_signal}</div>
+                        </div>
+                      )}
+                      {(analysis.takeaway as any).one_liner && (
+                        <div>
+                          <div className="text-xs font-semibold text-green-700 uppercase tracking-wide mb-1">Action</div>
+                          <div className="text-gray-800 text-base leading-relaxed font-medium">{(analysis.takeaway as any).one_liner}</div>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               )}
 

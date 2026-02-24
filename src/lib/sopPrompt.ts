@@ -232,7 +232,11 @@ When user selects wrong answer, generate these three fields:
     "attraction": "Why it's tempting",
     "flaw": "Why it doesn't work"
   },
-  "takeaway": "One transferable principle for future questions"
+  "takeaway": {
+    "pattern_name": "2-4 word memorable name for this pattern",
+    "trigger_signal": "What to look for in future questions",
+    "one_liner": "Concrete actionable advice (not generic principles)"
+  }
 }
 \`\`\`
 
@@ -255,7 +259,12 @@ When user selects wrong answer, generate these three fields:
 3. Select appropriate method and diagram template
 4. Draw diagram that makes answer obvious
 5. If user selected wrong answer, generate empathetic feedback
-6. Output structured JSON following the schema above
+6. Generate takeaway following these rules:
+   - The takeaway should be SPECIFIC to this question type, not a generic principle
+   - Include a catchy pattern name the student can remember (2-4 words)
+   - Include a trigger signal: what words/structures in future questions should activate this lesson
+   - Include one concrete sentence of advice that applies to similar questions (not generic principles like "read carefully")
+7. Output structured JSON following the schema above
 `;
 
 export default SOP_SYSTEM_PROMPT;

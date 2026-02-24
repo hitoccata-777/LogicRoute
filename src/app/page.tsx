@@ -3,26 +3,38 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
+const EXAMPLE_QUESTION = `Description:
+A city council member argues that the new late-night bus route should be canceled because ridership has been low during its first month. However, a transit planner notes that the route was launched during a university holiday, when many regular riders were out of town. Therefore, the planner concludes that the current ridership numbers do not provide a reliable basis for deciding whether to cancel the route.
+
+Question:
+Which one of the following, if true, most strengthens the transit planner's conclusion?
+
+Choices:
+(A) The city has recently increased parking fees in the downtown area.
+(B) The late-night bus route costs less to operate than several older routes.
+(C) Ridership on other bus routes also tends to drop during university holidays.
+(D) Some city council members have opposed public transit expansion for years.
+(E) The late-night bus route serves several neighborhoods with low car ownership.`;
+
 export default function Home() {
   const router = useRouter();
   const [argument, setArgument] = useState('');
-  const [imageFile, setImageFile] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
 
-  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      setImageFile(file);
-      // TODO: Process image with OCR if needed
-      alert('Image upload feature coming soon!');
-    }
+  const handleTryExample = () => {
+    setArgument(EXAMPLE_QUESTION);
+    // Focus textarea after a brief delay to ensure state update
+    setTimeout(() => {
+      const textarea = document.querySelector('textarea');
+      textarea?.focus();
+    }, 50);
   };
 
   const handleSubmit = async () => {
     // Validation
     if (!argument.trim()) {
-      alert('Please paste the argument text');
+      alert('Please paste the question text');
       return;
     }
 
@@ -66,130 +78,134 @@ export default function Home() {
 
   const handleClear = () => {
     setArgument('');
-    setImageFile(null);
   };
 
   return (
-    <main className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <div className="text-center py-12 max-w-3xl mx-auto px-4">
-        <h1 className="text-5xl font-bold text-gray-900 tracking-tight">LogiClue</h1>
-        <p className="text-gray-600 text-lg mt-4">
-          Understand where your logical reasoning went wrong
-        </p>
-      </div>
+    <main className="min-h-screen bg-slate-50">
+      {/* Hero Section */}
+      <div className="w-full">
+        {/* Header */}
+        <div className="text-center pt-16 pb-10 px-4">
+          <h1 className="text-6xl font-bold text-slate-900 tracking-tight mb-3">LogiClue</h1>
+          <p className="text-slate-600 text-xl">
+            Understand where your logical reasoning went wrong
+          </p>
+        </div>
 
-      {/* Main Input Section */}
-      <div className="max-w-3xl mx-auto px-4 pb-16">
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8">
-          {/* The Argument */}
-          <div>
-            <label className="block text-lg font-semibold text-gray-900 mb-3">
-              The Argument
-            </label>
-            <textarea
-              value={argument}
-              onChange={(e) => setArgument(e.target.value)}
-              placeholder="Paste the full question here: stimulus, question stem, and all answer choices (A-E)..."
-              className="w-full min-h-[300px] p-4 bg-gray-50 border border-gray-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-y text-base text-gray-900 placeholder:text-gray-400 transition-all"
-            />
-            <p className="text-sm text-gray-500 mt-2">
-              💡 Paste the complete question including all context and answer options
-            </p>
-          </div>
-
-          {/* Image Upload (Small, Secondary) */}
-          <div className="mt-6">
-            <label className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors cursor-pointer text-sm">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              Upload Image
-              <input
-                type="file"
-                accept="image/*"
-                onChange={handleImageUpload}
-                className="hidden"
+        {/* Hero Input Area */}
+        <div className="w-full max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12 pb-16">
+          <div className="bg-white rounded-3xl shadow-lg border border-slate-200 p-10 lg:p-12 transition-shadow hover:shadow-xl">
+            <div>
+              <label className="block text-2xl font-semibold text-slate-900 mb-5">
+                Your Question
+              </label>
+              <textarea
+                value={argument}
+                onChange={(e) => setArgument(e.target.value)}
+                placeholder="Paste the full question here: description, question stem, and all answer choices..."
+                className="w-full min-h-[440px] p-6 bg-slate-50 border-2 border-slate-300 rounded-2xl focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:bg-white resize-y text-lg leading-relaxed text-slate-900 placeholder:text-slate-400 transition-all duration-200"
               />
-            </label>
-            {imageFile && (
-              <span className="ml-3 text-sm text-gray-600">
-                {imageFile.name}
-              </span>
+              <p className="text-base text-slate-500 mt-4">
+                💡 Include the complete question with all context and answer options
+              </p>
+            </div>
+
+            {/* Disclaimer */}
+            <p className="text-slate-400 text-sm mt-6 leading-relaxed">
+              Please describe in your own words. Do not paste copyrighted text. Users are solely responsible for their own inputs.
+            </p>
+
+            {/* Buttons */}
+            <div className="flex flex-wrap gap-4 justify-between items-center mt-8">
+              <button
+                onClick={handleTryExample}
+                disabled={isSubmitting}
+                className="px-7 py-3.5 border-2 border-slate-300 text-slate-700 rounded-xl hover:bg-slate-50 hover:border-slate-400 hover:shadow-sm transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed font-medium text-base"
+              >
+                Try Example
+              </button>
+              
+              <div className="flex gap-4">
+                <button
+                  onClick={handleClear}
+                  disabled={isSubmitting}
+                  className="px-7 py-3.5 text-slate-600 hover:text-slate-900 transition-colors duration-200 disabled:opacity-40 font-medium text-base"
+                >
+                  Clear
+                </button>
+                <button
+                  onClick={handleSubmit}
+                  disabled={isSubmitting || !argument.trim()}
+                  className="bg-teal-600 hover:bg-teal-700 hover:shadow-lg hover:-translate-y-0.5 text-white rounded-xl px-10 py-3.5 text-lg font-semibold shadow-md disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-md transition-all duration-200 flex items-center justify-center gap-2 min-w-[160px]"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Analyzing...
+                    </>
+                  ) : (
+                    'Analyze'
+                  )}
+                </button>
+              </div>
+            </div>
+            
+            {submitError && (
+              <p className="text-red-500 text-base text-right mt-3">{submitError}</p>
             )}
           </div>
-
-          {/* Disclaimer */}
-          <p className="text-gray-400 text-xs mt-6 text-center">
-            Please describe in your own words. Do not paste copyrighted text. Users are solely responsible for their own inputs.
-          </p>
-
-          {/* Buttons */}
-          <div className="flex gap-3 justify-end mt-8">
-            <button
-              onClick={handleClear}
-              disabled={isSubmitting}
-              className="px-6 py-2.5 text-gray-600 hover:text-gray-900 text-base transition-colors disabled:opacity-40"
-            >
-              Clear
-            </button>
-            <button
-              onClick={handleSubmit}
-              disabled={isSubmitting || !argument.trim()}
-              className="bg-teal-600 hover:bg-teal-700 text-white rounded-xl px-8 py-2.5 text-base font-medium shadow-sm disabled:opacity-40 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2 min-w-[140px]"
-            >
-              {isSubmitting ? (
-                <>
-                  <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                  </svg>
-                  Analyzing...
-                </>
-              ) : (
-                'Analyze'
-              )}
-            </button>
-          </div>
-          
-          {submitError && (
-            <p className="text-red-500 text-sm text-right mt-2">{submitError}</p>
-          )}
         </div>
       </div>
 
-      {/* What You'll Get Section */}
-      <div className="max-w-5xl mx-auto px-4 pb-16">
-        <h2 className="text-gray-700 font-semibold text-sm text-center mb-6 tracking-widest uppercase">
-          What you'll get
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Card 1 */}
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 text-center">
-            <div className="text-4xl mb-3">🧩</div>
-            <h3 className="font-semibold text-gray-900 text-base mb-2">Argument Structure</h3>
-            <p className="text-gray-500 text-sm leading-relaxed">
-              Visual breakdown of premises, conclusion, and logical gaps
-            </p>
-          </div>
+      {/* Features Section - Natural Flow Below Hero */}
+      <div className="w-full bg-white border-t border-slate-200 py-20 px-6 sm:px-8 lg:px-12">
+        <div className="max-w-[1280px] mx-auto">
+          <h2 className="text-slate-700 font-semibold text-sm text-center mb-12 tracking-wide uppercase">
+            What you'll get
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
+            {/* Feature 1 */}
+            <div className="group text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-50 rounded-2xl text-3xl mb-5 transition-all duration-200 group-hover:bg-teal-100 group-hover:scale-110">
+                🧩
+              </div>
+              <h3 className="font-semibold text-slate-900 text-xl mb-3">
+                Argument Structure
+              </h3>
+              <p className="text-slate-600 text-base leading-relaxed">
+                Visual breakdown of premises, conclusion, and logical gaps
+              </p>
+            </div>
 
-          {/* Card 2 */}
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 text-center">
-            <div className="text-4xl mb-3">🔀</div>
-            <h3 className="font-semibold text-gray-900 text-base mb-2">Fork Point Analysis</h3>
-            <p className="text-gray-500 text-sm leading-relaxed">
-              Exactly where and why your reasoning diverged from the correct path
-            </p>
-          </div>
+            {/* Feature 2 */}
+            <div className="group text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-50 rounded-2xl text-3xl mb-5 transition-all duration-200 group-hover:bg-teal-100 group-hover:scale-110">
+                🔀
+              </div>
+              <h3 className="font-semibold text-slate-900 text-xl mb-3">
+                Fork Point Analysis
+              </h3>
+              <p className="text-slate-600 text-base leading-relaxed">
+                Where and why your reasoning diverged from the correct path
+              </p>
+            </div>
 
-          {/* Card 3 */}
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 text-center">
-            <div className="text-4xl mb-3">🎯</div>
-            <h3 className="font-semibold text-gray-900 text-base mb-2">Skill Takeaway</h3>
-            <p className="text-gray-500 text-sm leading-relaxed">
-              One targeted insight to improve your logical reasoning
-            </p>
+            {/* Feature 3 */}
+            <div className="group text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-50 rounded-2xl text-3xl mb-5 transition-all duration-200 group-hover:bg-teal-100 group-hover:scale-110">
+                🎯
+              </div>
+              <h3 className="font-semibold text-slate-900 text-xl mb-3">
+                Skill Takeaway
+              </h3>
+              <p className="text-slate-600 text-base leading-relaxed">
+                One targeted insight to improve your logical reasoning
+              </p>
+            </div>
           </div>
         </div>
       </div>

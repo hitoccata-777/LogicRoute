@@ -187,56 +187,56 @@ export default function InputPage() {
 
   return (
     <main className="min-h-screen bg-slate-50">
-      <div className="max-w-4xl mx-auto px-4 py-8">
+      <div className="w-full max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12 py-10">
         {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-slate-900 mb-2">Review Your Answer</h1>
-          <p className="text-slate-600 text-base">Edit the question details and tell us about your thinking</p>
+        <div className="text-center mb-10">
+          <h1 className="text-4xl font-bold text-slate-900 mb-3">Review Your Answer</h1>
+          <p className="text-slate-600 text-lg">Edit the question details and tell us about your thinking</p>
         </div>
 
         {/* Question Section */}
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-6">
-          <h2 className="text-lg font-bold text-slate-900 mb-6">Question</h2>
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 mb-8">
+          <h2 className="text-xl font-bold text-slate-900 mb-6">Question</h2>
           
-          <div className="space-y-5">
+          <div className="space-y-6">
             {/* Description */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-2">
+              <label className="block text-base font-semibold text-slate-700 mb-3">
                 Description
               </label>
               <textarea
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 placeholder="The passage or context..."
-                className="w-full min-h-[120px] p-4 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-y text-slate-900"
+                className="w-full min-h-[140px] p-4 bg-slate-50 border-2 border-slate-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:bg-white resize-y text-base text-slate-900 transition-all duration-200"
               />
             </div>
 
             {/* Question */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-2">
+              <label className="block text-base font-semibold text-slate-700 mb-3">
                 Question
               </label>
               <textarea
                 value={question}
                 onChange={(e) => setQuestion(e.target.value)}
                 placeholder="The question being asked..."
-                className="w-full min-h-[80px] p-4 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-y text-slate-900"
+                className="w-full min-h-[100px] p-4 bg-slate-50 border-2 border-slate-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:bg-white resize-y text-base text-slate-900 transition-all duration-200"
               />
             </div>
 
             {/* Answer Choices */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-2">
+              <label className="block text-base font-semibold text-slate-700 mb-3">
                 Answer Choices
               </label>
               <textarea
                 value={answerChoices}
                 onChange={(e) => setAnswerChoices(e.target.value)}
                 placeholder="(A) First option&#10;(B) Second option&#10;(C) Third option&#10;(D) Fourth option&#10;(E) Fifth option"
-                className="w-full min-h-[140px] p-4 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-y text-slate-900 font-mono text-sm"
+                className="w-full min-h-[160px] p-4 bg-slate-50 border-2 border-slate-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:bg-white resize-y text-base text-slate-900 font-mono transition-all duration-200"
               />
-              <p className="text-xs text-slate-500 mt-1">
+              <p className="text-sm text-slate-500 mt-2">
                 Format: (A) option text, one per line
               </p>
             </div>
@@ -244,25 +244,25 @@ export default function InputPage() {
         </div>
 
         {/* Your Response Section */}
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-6">
-          <h2 className="text-lg font-bold text-slate-900 mb-6">Your Response</h2>
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 mb-8">
+          <h2 className="text-xl font-bold text-slate-900 mb-6">Your Response</h2>
           
-          <div className="space-y-6">
+          <div className="space-y-7">
             {/* Your Answer */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-3">
+              <label className="block text-base font-semibold text-slate-700 mb-3">
                 Your Answer <span className="text-red-500">*</span>
               </label>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3">
                 {['A', 'B', 'C', 'D', 'E'].map((letter) => (
                   <button
                     key={letter}
                     type="button"
                     onClick={() => setUserChoice(letter)}
-                    className={`px-4 py-2 rounded-full border text-sm font-medium transition-all ${
+                    className={`px-6 py-3 rounded-xl border-2 text-base font-semibold transition-all duration-200 ${
                       userChoice === letter
-                        ? 'border-teal-600 bg-teal-600 text-white'
-                        : 'border-slate-300 bg-slate-100 text-slate-600 hover:border-teal-400'
+                        ? 'border-teal-600 bg-teal-600 text-white shadow-md'
+                        : 'border-slate-300 bg-white text-slate-700 hover:border-teal-400 hover:bg-slate-50'
                     }`}
                   >
                     {letter}
@@ -273,19 +273,19 @@ export default function InputPage() {
 
             {/* Correct Answer */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-3">
-                Correct Answer <span className="text-slate-400 text-xs font-normal">(optional)</span>
+              <label className="block text-base font-semibold text-slate-700 mb-3">
+                Correct Answer <span className="text-slate-400 text-sm font-normal">(optional)</span>
               </label>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3">
                 {['A', 'B', 'C', 'D', 'E', 'Unknown'].map((letter) => (
                   <button
                     key={letter}
                     type="button"
                     onClick={() => setCorrectAnswer(letter === 'Unknown' ? '' : letter)}
-                    className={`px-4 py-2 rounded-full border text-sm font-medium transition-all ${
+                    className={`px-6 py-3 rounded-xl border-2 text-base font-semibold transition-all duration-200 ${
                       (letter === 'Unknown' && !correctAnswer) || correctAnswer === letter
-                        ? 'border-teal-600 bg-teal-600 text-white'
-                        : 'border-slate-300 bg-slate-100 text-slate-600 hover:border-teal-400'
+                        ? 'border-teal-600 bg-teal-600 text-white shadow-md'
+                        : 'border-slate-300 bg-white text-slate-700 hover:border-teal-400 hover:bg-slate-50'
                     }`}
                   >
                     {letter}
@@ -296,19 +296,19 @@ export default function InputPage() {
 
             {/* Hesitated Between */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-3">
-                Hesitated Between <span className="text-slate-400 text-xs font-normal">(optional)</span>
+              <label className="block text-base font-semibold text-slate-700 mb-3">
+                Hesitated Between <span className="text-slate-400 text-sm font-normal">(optional)</span>
               </label>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3">
                 {['A', 'B', 'C', 'D', 'E', 'None'].map((letter) => (
                   <button
                     key={letter}
                     type="button"
                     onClick={() => setHesitatedChoice(letter === 'None' ? '' : letter)}
-                    className={`px-4 py-2 rounded-full border text-sm font-medium transition-all ${
+                    className={`px-6 py-3 rounded-xl border-2 text-base font-semibold transition-all duration-200 ${
                       (letter === 'None' && !hesitatedChoice) || hesitatedChoice === letter
-                        ? 'border-teal-600 bg-teal-600 text-white'
-                        : 'border-slate-300 bg-slate-100 text-slate-600 hover:border-teal-400'
+                        ? 'border-teal-600 bg-teal-600 text-white shadow-md'
+                        : 'border-slate-300 bg-white text-slate-700 hover:border-teal-400 hover:bg-slate-50'
                     }`}
                   >
                     {letter}
@@ -319,10 +319,10 @@ export default function InputPage() {
 
             {/* Hesitation Reason */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-3">
-                Hesitation Reason <span className="text-slate-400 text-xs font-normal">(optional)</span>
+              <label className="block text-base font-semibold text-slate-700 mb-3">
+                Hesitation Reason <span className="text-slate-400 text-sm font-normal">(optional)</span>
               </label>
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
                   'Both seem right',
                   'Both seem wrong',
@@ -335,10 +335,10 @@ export default function InputPage() {
                     key={reason}
                     type="button"
                     onClick={() => setHesitationReason(reason)}
-                    className={`px-3 py-1.5 rounded-full border text-sm font-medium transition-all text-left ${
+                    className={`px-4 py-3 rounded-xl border-2 text-base font-medium transition-all duration-200 text-left ${
                       hesitationReason === reason
-                        ? 'border-teal-600 bg-teal-600 text-white'
-                        : 'border-slate-300 bg-slate-100 text-slate-600 hover:border-teal-400'
+                        ? 'border-teal-600 bg-teal-600 text-white shadow-md'
+                        : 'border-slate-300 bg-white text-slate-700 hover:border-teal-400 hover:bg-slate-50'
                     }`}
                   >
                     {reason}
@@ -350,7 +350,7 @@ export default function InputPage() {
             {/* Other Reason Text */}
             {hesitationReason === 'Other' && (
               <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-2">
+                <label className="block text-base font-semibold text-slate-700 mb-3">
                   Please specify
                 </label>
                 <input
@@ -358,14 +358,14 @@ export default function InputPage() {
                   value={hesitationReasonText}
                   onChange={(e) => setHesitationReasonText(e.target.value)}
                   placeholder="Describe your hesitation..."
-                  className="w-full p-3 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent text-slate-900"
+                  className="w-full p-4 bg-slate-50 border-2 border-slate-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:bg-white text-base text-slate-900 transition-all duration-200"
                 />
               </div>
             )}
 
             {/* Difficulty */}
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-3">
+              <label className="block text-base font-semibold text-slate-700 mb-3">
                 Difficulty
               </label>
               <div className="flex gap-2 items-center">
@@ -374,13 +374,13 @@ export default function InputPage() {
                     key={num}
                     type="button"
                     onClick={() => setDifficulty(num)}
-                    className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${
+                    className={`w-12 h-12 rounded-full flex items-center justify-center transition-all duration-200 ${
                       difficulty >= num
-                        ? 'text-yellow-500'
-                        : 'text-slate-300 hover:text-yellow-400'
+                        ? 'text-yellow-500 scale-110'
+                        : 'text-slate-300 hover:text-yellow-400 hover:scale-105'
                     }`}
                   >
-                    <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   </button>
@@ -391,27 +391,27 @@ export default function InputPage() {
         </div>
 
         {/* Buttons */}
-        <div className="flex gap-3 justify-end">
+        <div className="flex flex-wrap gap-4 justify-end">
           <button
             onClick={() => router.push('/')}
-            className="px-6 py-2.5 border-2 border-slate-300 rounded-xl text-slate-700 hover:bg-slate-100 transition-colors font-medium"
+            className="px-7 py-3.5 border-2 border-slate-300 rounded-xl text-slate-700 hover:bg-slate-50 hover:border-slate-400 transition-all duration-200 font-semibold text-base"
           >
             Back
           </button>
           <button
             onClick={handleClear}
-            className="px-6 py-2.5 text-slate-500 hover:text-slate-700 transition-colors font-medium"
+            className="px-7 py-3.5 text-slate-600 hover:text-slate-900 transition-colors duration-200 font-semibold text-base"
           >
             Clear
           </button>
           <button
             onClick={handleSubmit}
             disabled={isLoading || !description.trim() || !question.trim() || !userChoice}
-            className="px-8 py-2.5 bg-teal-600 text-white text-base font-medium rounded-xl hover:bg-teal-700 disabled:bg-slate-400 disabled:cursor-not-allowed transition-all flex items-center gap-2"
+            className="px-10 py-3.5 bg-teal-600 text-white text-lg font-semibold rounded-xl hover:bg-teal-700 hover:shadow-lg hover:-translate-y-0.5 disabled:bg-slate-400 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-none transition-all duration-200 flex items-center gap-2 shadow-md"
           >
             {isLoading && (
               <svg
-                className="animate-spin h-4 w-4 text-white"
+                className="animate-spin h-5 w-5 text-white"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"

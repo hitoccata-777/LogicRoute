@@ -7,7 +7,7 @@ import crypto from 'crypto';
 import SOP_SYSTEM_PROMPT from '../../../lib/sopPrompt';
 import DIAGRAM_TEMPLATES, { METHOD_DESCRIPTIONS } from '../../../lib/diagramTemplates';
 import { SCENE_DECISION_TREE, selectMethod } from '../../../lib/sceneDecisionTree';
-import ERROR_TYPES, { getErrorCodes } from '../../../lib/errorTypes';
+import ERROR_TYPES, { getErrorCodes } from '../../../lib/Errortypes';
 
 // ============================================
 // BUILD THE FULL PROMPT
