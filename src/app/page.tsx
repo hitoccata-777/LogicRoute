@@ -173,48 +173,51 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      <section className="px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="max-w-[1120px] mx-auto">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              What You&apos;ll Get
-            </h2>
-            <p className="text-slate-600 text-sm sm:text-base mt-2">
-              Clear, practical feedback to improve your reasoning
-            </p>
-          </div>
+      <div className="w-full bg-slate-900 py-20 px-6 sm:px-8 lg:px-12">
+  <div className="max-w-[1280px] mx-auto">
+    <h2 className="text-white font-bold text-5xl text-center mb-4 tracking-tight">
+      What You'll Get
+    </h2>
+    <p className="text-slate-300 text-center text-xl mb-14">
+      Clear, practical feedback to improve your reasoning
+    </p>
 
-          <div className="bg-slate-800 rounded-3xl border border-slate-700 p-6 shadow-[0_10px_28px_rgba(15,23,42,0.18)] hover:bg-slate-700 hover:shadow-[0_14px_32px_rgba(15,23,42,0.24)] transition-all duration-200 text-center">
-  <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-4 text-2xl">
-    🧩
-  </div>
-  <h3 className="text-xl font-bold text-white mb-2">Argument Structure</h3>
-  <p className="text-slate-300 text-sm leading-6">
-    Visual breakdown of premises, conclusion, and logical gaps
-  </p>
-</div>
-
-<div className="bg-slate-800 rounded-3xl border border-slate-700 p-6 shadow-[0_10px_28px_rgba(15,23,42,0.18)] hover:bg-slate-700 hover:shadow-[0_14px_32px_rgba(15,23,42,0.24)] transition-all duration-200 text-center">
-  <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-4 text-2xl">
-    🔀
-  </div>
-  <h3 className="text-xl font-bold text-white mb-2">Fork Point Analysis</h3>
-  <p className="text-slate-300 text-sm leading-6">
-    See where your reasoning split from the correct path, and why
-  </p>
-</div>
-
-<div className="bg-slate-800 rounded-3xl border border-slate-700 p-6 shadow-[0_10px_28px_rgba(15,23,42,0.18)] hover:bg-slate-700 hover:shadow-[0_14px_32px_rgba(15,23,42,0.24)] transition-all duration-200 text-center">
-  <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-4 text-2xl">
-    🎯
-  </div>
-  <h3 className="text-xl font-bold text-white mb-2">Skill Takeaway</h3>
-  <p className="text-slate-300 text-sm leading-6">
-    Get one targeted insight you can apply on your next question
-  </p>
-</div>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Card 1 */}
+      <div className="bg-white rounded-3xl p-8 text-center shadow-sm border border-slate-200 min-h-[320px] flex flex-col items-center justify-center">
+        <div className="w-16 h-16 rounded-2xl bg-slate-100 flex items-center justify-center mb-6 text-3xl">
+          🧩
         </div>
-      </section>
-    </main>
-  );
+        <h3 className="text-slate-900 text-2xl font-bold mb-4">Argument Structure</h3>
+        <p className="text-slate-600 text-base leading-8">
+          Visual breakdown of premises, conclusion, and logical gaps
+        </p>
+      </div>
+
+      {/* Card 2 */}
+      <div className="bg-white rounded-3xl p-8 text-center shadow-sm border border-slate-200 min-h-[320px] flex flex-col items-center justify-center">
+        <div className="w-16 h-16 rounded-2xl bg-slate-100 flex items-center justify-center mb-6 text-3xl">
+          🔀
+        </div>
+        <h3 className="text-slate-900 text-2xl font-bold mb-4">Fork Point Analysis</h3>
+        <p className="text-slate-600 text-base leading-8">
+          See where your reasoning split from the correct path, and why
+        </p>
+      </div>
+
+      {/* Card 3 */}
+      <div className="bg-white rounded-3xl p-8 text-center shadow-sm border border-slate-200 min-h-[320px] flex flex-col items-center justify-center">
+        <div className="w-16 h-16 rounded-2xl bg-slate-100 flex items-center justify-center mb-6 text-3xl">
+          🎯
+        </div>
+        <h3 className="text-slate-900 text-2xl font-bold mb-4">Skill Takeaway</h3>
+        <p className="text-slate-600 text-base leading-8">
+          Get one targeted insight you can apply on your next question
+        </p>
+      </div>
+    </div>
+   </div>
+ </div>
+</main>
+);
 }
