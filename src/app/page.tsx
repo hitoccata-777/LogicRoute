@@ -24,7 +24,6 @@ export default function Home() {
 
   const handleTryExample = () => {
     setArgument(EXAMPLE_QUESTION);
-    // Focus textarea after a brief delay to ensure state update
     setTimeout(() => {
       const textarea = document.querySelector('textarea');
       textarea?.focus();
@@ -32,7 +31,6 @@ export default function Home() {
   };
 
   const handleSubmit = async () => {
-    // Validation
     if (!argument.trim()) {
       alert('Please paste the question text');
       return;
@@ -42,18 +40,14 @@ export default function Home() {
     setIsSubmitting(true);
 
     try {
-      // Prepare request body
       const requestBody = {
         text: argument,
-        mode: 'exam'
+        mode: 'exam',
       };
 
-      // Call extract API
       const response = await fetch('/api/extract', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(requestBody),
       });
 
@@ -63,7 +57,6 @@ export default function Home() {
 
       const result = await response.json();
 
-      // Store extracted data and navigate
       sessionStorage.setItem('inputMode', 'exam');
       sessionStorage.setItem('extractedData', JSON.stringify(result));
       sessionStorage.setItem('questionText', argument);
@@ -78,71 +71,90 @@ export default function Home() {
 
   const handleClear = () => {
     setArgument('');
+    setSubmitError('');
   };
 
   return (
     <main className="min-h-screen bg-slate-50">
-      {/* Hero Section */}
-      <div className="w-full">
-        {/* Header */}
-        <div className="text-center pt-16 pb-10 px-4">
-          <h1 className="text-6xl font-bold text-slate-900 tracking-tight mb-3">LogiClue</h1>
-          <p className="text-slate-600 text-xl">
+      {/* Hero */}
+      <section className="px-4 sm:px-6 lg:px-8 pt-14 pb-10">
+        <div className="max-w-[1120px] mx-auto text-center">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-3">
+            LogiClue
+          </h1>
+          <p className="text-slate-600 text-base sm:text-lg lg:text-xl">
             Understand where your logical reasoning went wrong
           </p>
         </div>
+      </section>
 
-        {/* Hero Input Area */}
-        <div className="w-full max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12 pb-16">
-          <div className="bg-white rounded-3xl shadow-lg border border-slate-200 p-10 lg:p-12 transition-shadow hover:shadow-xl">
-            <div>
-              <label className="block text-2xl font-semibold text-slate-900 mb-5">
-                Your Question
-              </label>
-              <textarea
-                value={argument}
-                onChange={(e) => setArgument(e.target.value)}
-                placeholder="Paste the full question here: description, question stem, and all answer choices..."
-                className="w-full min-h-[440px] p-6 bg-slate-50 border-2 border-slate-300 rounded-2xl focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:bg-white resize-y text-lg leading-relaxed text-slate-900 placeholder:text-slate-400 transition-all duration-200"
-              />
-              <p className="text-base text-slate-500 mt-4">
-                💡 Include the complete question with all context and answer options
-              </p>
-            </div>
+      {/* Main Input Card */}
+      <section className="px-4 sm:px-6 lg:px-8 pb-14">
+        <div className="max-w-[1120px] mx-auto">
+          <div className="bg-white rounded-[28px] border border-slate-200 shadow-[0_12px_32px_rgba(15,23,42,0.06)] p-6 sm:p-7 lg:p-8">
+            <label className="block text-xl font-semibold text-slate-900 mb-4">
+              Your Question
+            </label>
 
-            {/* Disclaimer */}
-            <p className="text-slate-400 text-sm mt-6 leading-relaxed">
+            <textarea
+              value={argument}
+              onChange={(e) => setArgument(e.target.value)}
+              placeholder="Paste the full question here: description, question stem, and all answer choices..."
+              className="w-full min-h-[340px] p-5 bg-slate-50 border-2 border-slate-300 rounded-2xl focus:ring-2 focus:ring-teal-500/30 focus:border-teal-500 focus:bg-white resize-y text-base leading-relaxed text-slate-900 placeholder:text-slate-400 transition-all duration-200"
+            />
+
+            <p className="text-sm text-slate-500 mt-3">
+              💡 Include the complete question with all context and answer options
+            </p>
+
+            <p className="text-slate-400 text-xs sm:text-sm mt-4 leading-relaxed">
               Please describe in your own words. Do not paste copyrighted text. Users are solely responsible for their own inputs.
             </p>
 
-            {/* Buttons */}
-            <div className="flex flex-wrap gap-4 justify-between items-center mt-8">
+            <div className="flex flex-wrap gap-3 justify-between items-center mt-6">
               <button
                 onClick={handleTryExample}
                 disabled={isSubmitting}
-                className="px-7 py-3.5 border-2 border-slate-300 text-slate-700 rounded-xl hover:bg-slate-50 hover:border-slate-400 hover:shadow-sm transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed font-medium text-base"
+                className="px-5 py-2.5 border-2 border-slate-300 bg-white text-slate-700 rounded-xl hover:bg-slate-50 hover:border-slate-400 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed font-medium text-sm"
               >
                 Try Example
               </button>
-              
-              <div className="flex gap-4">
+
+              <div className="flex items-center gap-3">
                 <button
                   onClick={handleClear}
                   disabled={isSubmitting}
-                  className="px-7 py-3.5 text-slate-600 hover:text-slate-900 transition-colors duration-200 disabled:opacity-40 font-medium text-base"
+                  className="px-3 py-2 text-slate-600 hover:text-slate-900 transition-colors duration-200 disabled:opacity-40 font-medium text-sm"
                 >
                   Clear
                 </button>
+
                 <button
                   onClick={handleSubmit}
                   disabled={isSubmitting || !argument.trim()}
-                  className="bg-teal-600 hover:bg-teal-700 hover:shadow-lg hover:-translate-y-0.5 text-white rounded-xl px-10 py-3.5 text-lg font-semibold shadow-md disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-md transition-all duration-200 flex items-center justify-center gap-2 min-w-[160px]"
+                  className="bg-teal-500 hover:bg-teal-600 text-white rounded-xl px-7 py-2.5 text-base font-semibold shadow-sm disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center gap-2 min-w-[130px]"
                 >
                   {isSubmitting ? (
                     <>
-                      <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      <svg
+                        className="animate-spin h-4 w-4 text-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        />
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        />
                       </svg>
                       Analyzing...
                     </>
@@ -152,63 +164,57 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            
+
             {submitError && (
-              <p className="text-red-500 text-base text-right mt-3">{submitError}</p>
+              <p className="text-red-500 text-sm text-right mt-3">{submitError}</p>
             )}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Features Section - Natural Flow Below Hero */}
-      <div className="w-full bg-white border-t border-slate-200 py-20 px-6 sm:px-8 lg:px-12">
-        <div className="max-w-[1280px] mx-auto">
-          <h2 className="text-slate-700 font-semibold text-sm text-center mb-12 tracking-wide uppercase">
-            What you'll get
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16">
-            {/* Feature 1 */}
-            <div className="group text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-50 rounded-2xl text-3xl mb-5 transition-all duration-200 group-hover:bg-teal-100 group-hover:scale-110">
-                🧩
-              </div>
-              <h3 className="font-semibold text-slate-900 text-xl mb-3">
-                Argument Structure
-              </h3>
-              <p className="text-slate-600 text-base leading-relaxed">
-                Visual breakdown of premises, conclusion, and logical gaps
-              </p>
-            </div>
-
-            {/* Feature 2 */}
-            <div className="group text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-50 rounded-2xl text-3xl mb-5 transition-all duration-200 group-hover:bg-teal-100 group-hover:scale-110">
-                🔀
-              </div>
-              <h3 className="font-semibold text-slate-900 text-xl mb-3">
-                Fork Point Analysis
-              </h3>
-              <p className="text-slate-600 text-base leading-relaxed">
-                Where and why your reasoning diverged from the correct path
-              </p>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="group text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-50 rounded-2xl text-3xl mb-5 transition-all duration-200 group-hover:bg-teal-100 group-hover:scale-110">
-                🎯
-              </div>
-              <h3 className="font-semibold text-slate-900 text-xl mb-3">
-                Skill Takeaway
-              </h3>
-              <p className="text-slate-600 text-base leading-relaxed">
-                One targeted insight to improve your logical reasoning
-              </p>
-            </div>
+      {/* Features */}
+      <section className="px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="max-w-[1120px] mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+              What You&apos;ll Get
+            </h2>
+            <p className="text-slate-600 text-sm sm:text-base mt-2">
+              Clear, practical feedback to improve your reasoning
+            </p>
           </div>
+
+          <div className="bg-slate-800 rounded-3xl border border-slate-700 p-6 shadow-[0_10px_28px_rgba(15,23,42,0.18)] hover:bg-slate-700 hover:shadow-[0_14px_32px_rgba(15,23,42,0.24)] transition-all duration-200 text-center">
+  <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-4 text-2xl">
+    🧩
+  </div>
+  <h3 className="text-xl font-bold text-white mb-2">Argument Structure</h3>
+  <p className="text-slate-300 text-sm leading-6">
+    Visual breakdown of premises, conclusion, and logical gaps
+  </p>
+</div>
+
+<div className="bg-slate-800 rounded-3xl border border-slate-700 p-6 shadow-[0_10px_28px_rgba(15,23,42,0.18)] hover:bg-slate-700 hover:shadow-[0_14px_32px_rgba(15,23,42,0.24)] transition-all duration-200 text-center">
+  <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-4 text-2xl">
+    🔀
+  </div>
+  <h3 className="text-xl font-bold text-white mb-2">Fork Point Analysis</h3>
+  <p className="text-slate-300 text-sm leading-6">
+    See where your reasoning split from the correct path, and why
+  </p>
+</div>
+
+<div className="bg-slate-800 rounded-3xl border border-slate-700 p-6 shadow-[0_10px_28px_rgba(15,23,42,0.18)] hover:bg-slate-700 hover:shadow-[0_14px_32px_rgba(15,23,42,0.24)] transition-all duration-200 text-center">
+  <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-4 text-2xl">
+    🎯
+  </div>
+  <h3 className="text-xl font-bold text-white mb-2">Skill Takeaway</h3>
+  <p className="text-slate-300 text-sm leading-6">
+    Get one targeted insight you can apply on your next question
+  </p>
+</div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
