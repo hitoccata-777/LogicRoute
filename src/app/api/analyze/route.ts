@@ -1,18 +1,16 @@
 // File: src/app/api/analyze/route.ts
-// LogiClue Analyze API - Integrates SOP Framework
+// LogiClue Analyze API — SOP v1.0
 
 import { NextRequest, NextResponse } from 'next/server';
 import { supabase } from '../../../lib/supabase';
 import crypto from 'crypto';
 import SOP_SYSTEM_PROMPT from '../../../lib/sopPrompt';
-import DIAGRAM_TEMPLATES, { METHOD_DESCRIPTIONS } from '../../../lib/diagramTemplates';
-import { SCENE_DECISION_TREE, selectMethod } from '../../../lib/sceneDecisionTree';
-import ERROR_TYPES, { getErrorCodes } from '../../../lib/Errortypes';
+import { classifyQuestion } from '../../../lib/questionClassifier';
 
 // ============================================
-// BUILD THE FULL PROMPT
+// BUILD USER MESSAGE (question-specific content only)
 // ============================================
-function buildAnalysisPrompt(
+function buildUserMessage(
   stimulus: string,
   questionStem: string,
   options: Record<string, string>,
@@ -25,10 +23,10 @@ function buildAnalysisPrompt(
     userDifficulty?: number;
   }
 ): string {
-  
-  // Pre-select method based on question stem and stimulus
-  const suggestedMethod = selectMethod(questionStem, stimulus);
-  
+
+  // Pre-classify question type
+  const { type, family, primaryMethods } = classifyQuestion(questionStem);
+
   // Build options string
   const optionsText = Object.entries(options)
     .map(([letter, text]) => `(${letter}) ${text}`)
@@ -48,25 +46,7 @@ function buildAnalysisPrompt(
     }
   }
 
-  return `
-${SOP_SYSTEM_PROMPT}
-
----
-
-## AVAILABLE DIAGRAM TEMPLATES
-
-${Object.entries(METHOD_DESCRIPTIONS).map(([key, desc]) => `- **${key}**: ${desc}`).join('\n')}
-
----
-
-## ERROR TYPES TO USE
-
-When classifying user's error, use one of these codes:
-${getErrorCodes().join(', ')}
-
----
-
-## QUESTION TO ANALYZE
+  return `## QUESTION TO ANALYZE
 
 **Stimulus:**
 ${stimulus}
@@ -81,48 +61,21 @@ ${optionsText}
 ${correctAnswer ? `**Correct answer:** ${correctAnswer}` : ''}
 ${userContext}
 
-**Suggested method based on triggers:** ${suggestedMethod}
-
----
+**Pre-classified:** type=${type}, family=${family}, suggested_methods=[${primaryMethods.join(', ')}]
+(You may override the suggested method based on stimulus content.)
 
 ## YOUR TASK
 
-1. Confirm or override the suggested method based on stimulus content
-2. Draw a diagram using the appropriate template that makes the answer obvious
-3. Identify the gap/key insight
-4. If user chose wrong, provide empathetic feedback (fork_point, user_reasoning, bridge_to_correct)
-5. Output valid JSON following the schema
-
-## OUTPUT FORMAT (JSON only, no markdown wrapper)
-
-{
-  "method": "river_crossing | venn | formula | highlight | ...",
-  "diagram": "ASCII diagram (use template)",
-  "analysis": {
-    "X_bank": "premise/evidence",
-    "Y_bank": "conclusion",
-    "gap": "hidden assumption or key insight",
-    "key_insight": "one sentence why correct answer works"
-  },
-  "correctAnswer": "A|B|C|D|E",
-  "isCorrect": true/false,
-  "correctAnswerExplanation": {
-    "brief": "1-2 sentences",
-    "flipTest": "If this were false, the argument would..."
-  },
-  "userChoiceFeedback": {
-    "errorType": "one of 13 codes or null if correct",
-    "fork_point": "where thinking diverged",
-    "user_reasoning": "why their logic made sense",
-    "bridge_to_correct": "path to correct thinking"
-  },
-  "trapAnalysis": {
-    "option": "letter of trap option",
-    "attraction": "why tempting",
-    "flaw": "why wrong"
-  },
-  "takeaway": "one transferable principle"
-}
+Follow the execution flow strictly:
+1. Step 1: Extract structure (X/Y/Bridge/Gap)
+2. Step 2: Faithfulness check
+3. Step 3: Core judgment (≤25 words, must echo correct answer)
+4. Step 4: Confirm question type
+5. Step 5: Select correct answer + reasoning
+6. Step 6: Label every wrong option with option_error (L1+L2) and user_error (L1+L2)
+7. Select method and draw diagram
+8. Generate narrative (trap/action/next_time) for user's chosen option
+9. Output strict JSON (no markdown wrapper)
 `;
 }
 
@@ -153,8 +106,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Build the prompt
-    const analysisPrompt = buildAnalysisPrompt(
+    // Build messages — SOP as system, question as user
+    const userMessage = buildUserMessage(
       stimulus,
       questionStem,
       options,
@@ -163,7 +116,7 @@ export async function POST(request: NextRequest) {
       { altChoice, rationaleTag, rationaleText, userDifficulty }
     );
 
-    // Call OpenRouter API
+    // Call OpenRouter API with Sonnet 4.5
     const openRouterResponse = await fetch('https://openrouter.ai/api/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -173,15 +126,19 @@ export async function POST(request: NextRequest) {
         'X-Title': 'LogiClue'
       },
       body: JSON.stringify({
-        model: 'anthropic/claude-sonnet-4',
+        model: 'anthropic/claude-sonnet-4.5',
         messages: [
           {
+            role: 'system',
+            content: SOP_SYSTEM_PROMPT
+          },
+          {
             role: 'user',
-            content: analysisPrompt
+            content: userMessage
           }
         ],
         max_tokens: 4000,
-        temperature: 0.3
+        temperature: 0.1
       })
     });
 
@@ -207,7 +164,6 @@ export async function POST(request: NextRequest) {
     // Parse JSON from response
     let analysis;
     try {
-      // Remove potential markdown code blocks
       const jsonStr = content.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
       analysis = JSON.parse(jsonStr);
     } catch (parseError) {
@@ -223,13 +179,11 @@ export async function POST(request: NextRequest) {
     // SAVE TO DATABASE
     // ============================================
     
-    // Generate content hash for deduplication
     const contentHash = crypto
       .createHash('md5')
       .update(stimulus + questionStem)
       .digest('hex');
 
-    // Check if question already exists
     const { data: existingQuestion } = await supabase
       .from('questions')
       .select('id')
@@ -238,7 +192,6 @@ export async function POST(request: NextRequest) {
 
     let questionId = existingQuestion?.id;
 
-    // Create question if not exists
     if (!questionId) {
       const { data: newQuestion, error: questionError } = await supabase
         .from('questions')
@@ -246,9 +199,9 @@ export async function POST(request: NextRequest) {
           stimulus,
           question_stem: questionStem,
           options,
-          correct_answer: correctAnswer || analysis.correctAnswer,
+          correct_answer: correctAnswer || analysis.correct_option?.label,
           source_type: sourceId ? 'user' : 'llm',
-          answer_conflict: correctAnswer && correctAnswer !== analysis.correctAnswer,
+          answer_conflict: correctAnswer && correctAnswer !== analysis.correct_option?.label,
           source_id: sourceId || null,
           content_hash: contentHash
         })
@@ -262,40 +215,51 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Save analysis
     if (questionId) {
+      // Save analysis
       await supabase.from('analyses').upsert({
         question_id: questionId,
         method: analysis.method || 'unknown',
         diagram: analysis.diagram || '',
-        steps: analysis.analysis || {},
-        summary: analysis.correctAnswerExplanation?.flipTest,
-        skill_point: analysis.takeaway,
-        takeaway: analysis.takeaway
+        steps: analysis.structure || {},
+        summary: analysis.core_judgment,
+        faithfulness_check: analysis.faithfulness_check,
+        takeaway: analysis.narrative?.next_time
       }, { onConflict: 'question_id' });
 
       // Save option analyses
-      if (analysis.correctAnswer && options) {
+      const correctLabel = analysis.correct_option?.label;
+      if (correctLabel && options) {
         for (const letter of Object.keys(options)) {
-          const isCorrect = letter === analysis.correctAnswer;
+          const isCorrect = letter === correctLabel;
+          
+          // Find this option's error data from wrong_options array
+          const wrongOptionData = analysis.wrong_options?.find(
+            (wo: { label: string }) => wo.label === letter
+          );
+
           await supabase.from('option_analyses').upsert({
             question_id: questionId,
             option_letter: letter,
             is_correct: isCorrect,
-            content_brief: isCorrect ? analysis.correctAnswerExplanation?.brief : null,
-            why_correct: isCorrect ? analysis.correctAnswerExplanation : null,
-            error: !isCorrect && letter === userChoice ? { 
-              error_type: analysis.userChoiceFeedback?.errorType,
-              fork_point: analysis.userChoiceFeedback?.fork_point,
-              user_reasoning: analysis.userChoiceFeedback?.user_reasoning,
-              bridge_to_correct: analysis.userChoiceFeedback?.bridge_to_correct
-            } : null
+            content_brief: isCorrect ? analysis.correct_option?.reason : wrongOptionData?.claims,
+            why_correct: isCorrect ? analysis.correct_option : null,
+            error: !isCorrect ? {
+              option_error_L1: wrongOptionData?.option_error?.L1,
+              option_error_L1_zh: wrongOptionData?.option_error?.L1_zh,
+              option_error_L2: wrongOptionData?.option_error?.L2,
+              user_error_L1: wrongOptionData?.user_error?.L1,
+              user_error_L1_zh: wrongOptionData?.user_error?.L1_zh,
+              user_error_L2: wrongOptionData?.user_error?.L2,
+              user_error_source: wrongOptionData?.user_error?.source,
+            } : null,
+            // Keep narrative for user's chosen option
+            narrative: letter === userChoice && !isCorrect ? analysis.narrative : null
           }, { onConflict: 'question_id,option_letter' });
         }
       }
     }
 
-    // Add questionId to response
     analysis.questionId = questionId;
 
     return NextResponse.json({ success: true, data: analysis });

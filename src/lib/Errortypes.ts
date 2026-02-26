@@ -1,199 +1,182 @@
 // File: src/lib/errorTypes.ts
-// 13 Error Types for LogiClue LSAT Analysis
+// LogiClue Error Classification: 7 Option Errors + 3 User Errors
 
-export interface ErrorType {
-    code: string;
-    name: string;
-    trigger: string;
-    diagnosis_template: string;
-    example: string;
-  }
-  
-  export const ERROR_TYPES: Record<string, ErrorType> = {
-    
-    // ============================================
-    // 1. DIRECTION REVERSED
-    // ============================================
-    direction_reversed: {
-      code: 'direction_reversed',
-      name: 'Direction Reversed',
-      trigger: 'User treated A→B as if it means B→A',
-      diagnosis_template: 'You flipped the arrow. "{from}" leads to "{to}", not the other way around.',
-      example: '"All dogs are mammals" doesn\'t mean "All mammals are dogs"'
-    },
-  
-    // ============================================
-    // 2. WRONG TARGET
-    // ============================================
-    wrong_target: {
-      code: 'wrong_target',
-      name: 'Wrong Target',
-      trigger: 'User attacked/supported a different part of the argument than what was asked',
-      diagnosis_template: 'You\'re fixing the wrong bridge. The question targets {correct_target}, but you addressed {wrong_target}.',
-      example: 'Question asks about the conclusion, but you attacked a premise'
-    },
-  
-    // ============================================
-    // 3. TOO STRONG
-    // ============================================
-    too_strong: {
-      code: 'too_strong',
-      name: 'Too Strong',
-      trigger: 'User chose an answer that goes beyond what the argument needs',
-      diagnosis_template: 'The argument doesn\'t need this much. It only requires "{needed}", not "{chosen}".',
-      example: 'Argument needs "some X are Y" but you chose "all X are Y"'
-    },
-  
-    // ============================================
-    // 4. TOO WEAK
-    // ============================================
-    too_weak: {
-      code: 'too_weak',
-      name: 'Too Weak',
-      trigger: 'User chose an answer that doesn\'t fully close the gap',
-      diagnosis_template: 'This doesn\'t go far enough. The gap requires "{needed}", but this only provides "{chosen}".',
-      example: 'Gap needs a direct connection, but answer only suggests possibility'
-    },
-  
-    // ============================================
-    // 5. OFF TOPIC
-    // ============================================
-    off_topic: {
-      code: 'off_topic',
-      name: 'Off Topic',
-      trigger: 'User chose content that doesn\'t relate to the argument\'s core',
-      diagnosis_template: 'This doesn\'t touch the argument\'s core issue. The argument is about {topic}, but this discusses {other_topic}.',
-      example: 'Argument about cost, answer about quality'
-    },
-  
-    // ============================================
-    // 6. SCOPE SHIFT
-    // ============================================
-    scope_shift: {
-      code: 'scope_shift',
-      name: 'Scope Shift',
-      trigger: 'User confused different scopes (time, place, group, etc.)',
-      diagnosis_template: 'The conclusion talks about {scope_1}, but you\'re addressing {scope_2}.',
-      example: 'Conclusion about "all employees", answer about "managers only"'
-    },
-  
-    // ============================================
-    // 7. NECESSARY VS SUFFICIENT
-    // ============================================
-    necessary_vs_sufficient: {
-      code: 'necessary_vs_sufficient',
-      name: 'Necessary vs Sufficient',
-      trigger: 'User confused what\'s required vs what\'s enough',
-      diagnosis_template: 'Required ≠ Enough. {explanation}',
-      example: 'Driver\'s license is necessary to drive legally, but having one doesn\'t mean you\'re currently driving'
-    },
-  
-    // ============================================
-    // 8. PART VS WHOLE
-    // ============================================
-    part_vs_whole: {
-      code: 'part_vs_whole',
-      name: 'Part vs Whole',
-      trigger: 'User assumed what\'s true for parts is true for whole (or vice versa)',
-      diagnosis_template: 'True for some ≠ True for all. {part} having property X doesn\'t mean {whole} has property X.',
-      example: 'Each brick is light → The wall is light (fallacy)'
-    },
-  
-    // ============================================
-    // 9. CORRELATION VS CAUSATION
-    // ============================================
-    correlation_causation: {
-      code: 'correlation_causation',
-      name: 'Correlation vs Causation',
-      trigger: 'User confused happening together with causing',
-      diagnosis_template: 'Happening together ≠ Causing. {A} and {B} correlate, but that doesn\'t mean {A} causes {B}.',
-      example: 'Ice cream sales and drowning both increase in summer (both caused by heat)'
-    },
-  
-    // ============================================
-    // 10. MISSING LINK
-    // ============================================
-    missing_link: {
-      code: 'missing_link',
-      name: 'Missing Link',
-      trigger: 'User didn\'t see a hidden assumption connecting premise to conclusion',
-      diagnosis_template: 'There\'s a gap you didn\'t see. The argument assumes {hidden_assumption} to connect {premise} to {conclusion}.',
-      example: 'Bob is a mechanic + car makes noise → I\'ll owe Bob money (assumes Bob charges for repairs)'
-    },
-  
-    // ============================================
-    // 11. KEYWORD MATCH
-    // ============================================
-    keyword_match: {
-      code: 'keyword_match',
-      name: 'Keyword Match',
-      trigger: 'User matched surface words without checking logical connection',
-      diagnosis_template: 'Same word ≠ Same logic. "{keyword}" appears in both, but they\'re discussing different things.',
-      example: 'Stimulus mentions "growth", answer mentions "growth" but in different context'
-    },
-  
-    // ============================================
-    // 12. EXTREME LANGUAGE
-    // ============================================
-    extreme_language: {
-      code: 'extreme_language',
-      name: 'Extreme Language',
-      trigger: 'User missed qualifiers like "only", "always", "never", "all"',
-      diagnosis_template: 'Watch the extreme words. "{extreme_word}" makes this claim too absolute.',
-      example: '"The only way to succeed" vs "One way to succeed"'
-    },
-  
-    // ============================================
-    // 13. TEMPORAL CONFUSION
-    // ============================================
-    temporal_confusion: {
-      code: 'temporal_confusion',
-      name: 'Temporal Confusion',
-      trigger: 'User confused time sequence with causation',
-      diagnosis_template: 'Before ≠ Because. {event_1} happened before {event_2}, but that doesn\'t mean it caused {event_2}.',
-      example: 'Rooster crows before sunrise, but doesn\'t cause it'
-    },
-  
-  };
-  
-  // ============================================
-  // HELPER: Get error type by code
-  // ============================================
-  export function getErrorType(code: string): ErrorType | undefined {
-    return ERROR_TYPES[code];
-  }
-  
-  // ============================================
-  // HELPER: Get all error codes as array
-  // ============================================
-  export function getErrorCodes(): string[] {
-    return Object.keys(ERROR_TYPES);
-  }
-  
-  // ============================================
-  // HELPER: Format diagnosis with variables
-  // ============================================
-  export function formatDiagnosis(code: string, variables: Record<string, string>): string {
-    const errorType = ERROR_TYPES[code];
-    if (!errorType) return 'Unknown error type';
-    
-    let diagnosis = errorType.diagnosis_template;
-    for (const [key, value] of Object.entries(variables)) {
-      diagnosis = diagnosis.replace(`{${key}}`, value);
-    }
-    return diagnosis;
-  }
-  
-  // ============================================
-  // ERROR FAMILIES (for grouping in stats)
-  // ============================================
-  export const ERROR_FAMILIES = {
-    logical_structure: ['direction_reversed', 'necessary_vs_sufficient', 'part_vs_whole'],
-    scope_issues: ['scope_shift', 'off_topic', 'wrong_target'],
-    strength_issues: ['too_strong', 'too_weak'],
-    causal_issues: ['correlation_causation', 'temporal_confusion'],
-    surface_matching: ['keyword_match', 'extreme_language'],
-    comprehension: ['missing_link'],
-  };
-  
-  export default ERROR_TYPES;
+// ============================================
+// OPTION ERROR: What trick did the wrong option use?
+// ============================================
+
+export type OptionErrorL1 = 
+  | 'extreme'      // 过强 — 程度/范围超出原文
+  | 'too_narrow'   // 过窄 — 范围/条件比原文更限制
+  | 'distortion'   // 扭曲 — 和原文像但含义不同
+  | 'misplaced'    // 错位 — 原文有但不是题目要的角色
+  | 'neighbor'     // 邻居 — 逻辑合理但不是本题的
+  | 'off_target'   // 脱靶 — 和原文论证链没交集
+  | 'opposite'     // 反向 — 效果方向相反
+  | 'correct'      // 正确选项
+  | 'not_target';  // EXCEPT题中逻辑正确但非目标
+
+export interface OptionError {
+  code: OptionErrorL1;
+  name_zh: string;
+  name_en: string;
+  definition: string;
+  anchor: string;  // 一句话判断锚点
+}
+
+export const OPTION_ERRORS: Record<string, OptionError> = {
+  extreme: {
+    code: 'extreme',
+    name_zh: '过强',
+    name_en: 'Extreme',
+    definition: 'Degree or scope exceeds what the stimulus states',
+    anchor: 'Stimulus says "may/could", option says "must/always"',
+  },
+  too_narrow: {
+    code: 'too_narrow',
+    name_zh: '过窄',
+    name_en: 'Too Narrow',
+    definition: 'Scope or conditions more restrictive than the stimulus',
+    anchor: 'Stimulus says "animals", option says "mammals only"',
+  },
+  distortion: {
+    code: 'distortion',
+    name_zh: '扭曲',
+    name_en: 'Distortion',
+    definition: 'Looks similar to the stimulus but meaning differs',
+    anchor: 'Familiar words, but the meaning has been swapped',
+  },
+  misplaced: {
+    code: 'misplaced',
+    name_zh: '错位',
+    name_en: 'Misplaced',
+    definition: 'Content exists in stimulus but not in the role the question asks about',
+    anchor: 'Right content, wrong structural position',
+  },
+  neighbor: {
+    code: 'neighbor',
+    name_zh: '邻居',
+    name_en: 'Neighbor',
+    definition: 'Logically sound reasoning but not what this question is asking',
+    anchor: 'Makes sense, but not the question being asked',
+  },
+  off_target: {
+    code: 'off_target',
+    name_zh: '脱靶',
+    name_en: 'Off Target',
+    definition: 'No intersection with the argument chain in the stimulus',
+    anchor: 'Completely unrelated to the argument',
+  },
+  opposite: {
+    code: 'opposite',
+    name_zh: '反向',
+    name_en: 'Opposite',
+    definition: 'Effect direction is reversed from what the question requires',
+    anchor: 'Question asks to strengthen, option weakens',
+  },
+};
+
+// ============================================
+// USER ERROR: What did the user's thinking do?
+// ============================================
+
+export type UserErrorL1 = 
+  | 'missed'   // 少了 — key info ignored, not replaced
+  | 'added'    // 多了 — new info introduced, not replacing existing
+  | 'swapped'; // 替了 — existing info A replaced by similar B
+
+export interface UserError {
+  code: UserErrorL1;
+  name_zh: string;
+  name_en: string;
+  definition: string;
+}
+
+export const USER_ERRORS: Record<string, UserError> = {
+  missed: {
+    code: 'missed',
+    name_zh: '少了',
+    name_en: 'Missed',
+    definition: 'Key information was ignored, not replaced by anything else',
+  },
+  added: {
+    code: 'added',
+    name_zh: '多了',
+    name_en: 'Added',
+    definition: 'New information was introduced, not replacing existing info',
+  },
+  swapped: {
+    code: 'swapped',
+    name_zh: '替了',
+    name_en: 'Swapped',
+    definition: 'Existing info A was replaced by similar-looking B (similarity bridge between A and B)',
+  },
+};
+
+// ============================================
+// DEFAULT MAPPING: option_error.L1 → user_error.L1
+// Used in Phase A when no user self-report available
+// ============================================
+
+export const DEFAULT_MAPPING: Record<string, UserErrorL1> = {
+  extreme:    'swapped',    // User likely read weak word as strong
+  too_narrow: 'missed',     // User likely missed broader scope
+  distortion: 'swapped',   // User likely fooled by surface similarity
+  misplaced:  'missed',     // User likely didn't notice structural role
+  neighbor:   'added',      // User likely invented a connection
+  off_target: 'added',      // User likely introduced external knowledge
+  opposite:   'swapped',    // User likely reversed the direction
+};
+
+// ============================================
+// L1 JUDGMENT FLOW (for prompt injection)
+// ============================================
+
+export const OPTION_ERROR_JUDGMENT_FLOW = `
+1. Does the option intersect with the stimulus at all?
+   → No → off_target
+2. Is the option's direction consistent with what the question asks?
+   → Opposite → opposite  
+3. Does the option's content exist in the stimulus?
+   → Exists but wrong structural role → misplaced
+   → Exists but meaning has been swapped → distortion
+   → Does not exist but logically reasonable → neighbor
+4. Is the option's degree/scope consistent with the stimulus?
+   → Stronger/broader than stimulus → extreme
+   → Weaker/narrower than stimulus → too_narrow
+`;
+
+export const USER_ERROR_JUDGMENT_FLOW = `
+1. Did the user ignore key information in the stimulus?
+   → Yes, and nothing replaced it → missed
+2. Did the user's judgment include information not in the stimulus?
+   → Yes, and it's not replacing existing info → added
+3. Did the user substitute info A with similar-looking info B?
+   → Yes, A and B have surface similarity → swapped
+`;
+
+// ============================================
+// HELPERS
+// ============================================
+
+export function getOptionError(code: string): OptionError | undefined {
+  return OPTION_ERRORS[code];
+}
+
+export function getUserError(code: string): UserError | undefined {
+  return USER_ERRORS[code];
+}
+
+export function getDefaultUserError(optionErrorL1: string): UserErrorL1 {
+  return DEFAULT_MAPPING[optionErrorL1] || 'missed';
+}
+
+export function getOptionErrorCodes(): string[] {
+  return Object.keys(OPTION_ERRORS);
+}
+
+export function getUserErrorCodes(): string[] {
+  return Object.keys(USER_ERRORS);
+}
+
+export default OPTION_ERRORS;
