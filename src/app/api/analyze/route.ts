@@ -76,6 +76,8 @@ Follow the execution flow strictly:
 7. Select method and draw diagram
 8. Generate narrative (trap/action/next_time) for user's chosen option
 9. Output strict JSON (no markdown wrapper)
+
+CRITICAL: Your ENTIRE response must be a single JSON object. Do NOT output a diagram or any text outside the JSON. The diagram goes INSIDE the "diagram" field of the JSON. Start your response with { and end with }.
 `;
 }
 
@@ -137,7 +139,7 @@ export async function POST(request: NextRequest) {
             content: userMessage
           }
         ],
-        max_tokens: 4000,
+        max_tokens: 8000,
         temperature: 0.1
       })
     });
@@ -245,13 +247,8 @@ export async function POST(request: NextRequest) {
             content_brief: isCorrect ? analysis.correct_option?.reason : wrongOptionData?.claims,
             why_correct: isCorrect ? analysis.correct_option : null,
             error: !isCorrect ? {
-              option_error_L1: wrongOptionData?.option_error?.L1,
-              option_error_L1_zh: wrongOptionData?.option_error?.L1_zh,
-              option_error_L2: wrongOptionData?.option_error?.L2,
-              user_error_L1: wrongOptionData?.user_error?.L1,
-              user_error_L1_zh: wrongOptionData?.user_error?.L1_zh,
-              user_error_L2: wrongOptionData?.user_error?.L2,
-              user_error_source: wrongOptionData?.user_error?.source,
+              why_wrong: wrongOptionData?.why_wrong,
+              match_trigger: wrongOptionData?.match_trigger,
             } : null,
             // Keep narrative for user's chosen option
             narrative: letter === userChoice && !isCorrect ? analysis.narrative : null
