@@ -27,9 +27,9 @@ function buildUserMessage(
   // Pre-classify question type
   const { type, family, primaryMethods } = classifyQuestion(questionStem);
 
-  // Build options string
+  // Build options string (sanitize newlines within option text)
   const optionsText = Object.entries(options)
-    .map(([letter, text]) => `(${letter}) ${text}`)
+    .map(([letter, text]) => `(${letter}) ${String(text).replace(/[\r\n]+/g, ' ').trim()}`)
     .join('\n');
 
   // Build user context

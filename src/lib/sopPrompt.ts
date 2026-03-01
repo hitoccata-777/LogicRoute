@@ -94,8 +94,8 @@ What is factually wrong with this option? Point to the specific node in the argu
 What made this option FEEL right? What cognitive shortcut would lead someone to pick it?
 
 Analyze the text relationship between the option and the stimulus:
-- Does the option echo/repeat words from the stimulus? (echo effect)
-- Does the option reference multiple parties' keywords, creating a sense of "complete picture"? (panorama illusion)
+- Does the option echo/repeat words from the stimulus? (echo effect — SINGLE keyword repeated from one source)
+- Does the option reference multiple parties' keywords, creating a sense of "complete picture"? (panorama illusion — keywords from TWO OR MORE sources/nodes threaded together. This is NOT echo; echo is single-point, panorama is multi-point)
 - Does the option cite a concept that exists in the stimulus but in a different role? (endpoint swap)
 - Does the option mirror the correct answer's sentence structure? (structure mirror)
 - Does the option align with the most recently read information? (recency pull)
@@ -104,6 +104,71 @@ Analyze the text relationship between the option and the stimulus:
 These examples are NOT a fixed enum. Describe what you actually see. New patterns are expected.
 
 ## 3. correct option: just label + reason (no error fields)
+
+---
+
+# Step 7: Guardrail pass (mandatory after wrong-option analysis, before final JSON)
+
+Run this pass on ALL wrong options after Step 6. This is a guardrail layer, not a taxonomy layer. Do NOT ask whether you "may have made a mistake." Instead, apply the checks below using objective triggers.
+
+## Guardrail A — claims fidelity (hard rule, always apply)
+
+The "claims" field must stay semantically faithful to the option text.
+- Keep wording as close to the option text as possible
+- Do NOT upgrade, narrow, soften, abstract, or reorganize the option's meaning
+- Do NOT add relations, causes, dependence, modality, norm language, or degree language not present in the option
+- As a hard cap, claims must not exceed 120% of the original option text length
+- If claims exceed that limit, rewrite more literally
+
+Examples of high-risk added language: depends, causes, requires, should, must, deliberately, at least in part
+
+## Guardrail B — concept drift check (hard rule, always apply)
+
+For EVERY wrong option, explicitly check whether it creates only a surface match rather than a true match.
+You must silently test:
+1. Does the option reuse words or ideas from the stimulus or conclusion?
+2. If yes, do the core relation, scope, actor, and modality still match exactly?
+3. If any of those shift, treat this as concept drift, not restatement, and why_wrong must name which component drifted: relation, scope, actor, or modality.
+
+Definitions:
+- restatement = the option reproduces the same claim with no meaningful change in relation, scope, actor, or modality
+- concept drift = the option overlaps lexically with the stimulus/conclusion, but one or more core components no longer align
+
+If there is overlap but not exact alignment, why_wrong must name the drift precisely.
+
+## Guardrail C — circular/restatement check for justify-type questions
+
+Trigger this check ONLY if:
+- question type is assumption_sufficient or principle_justify AND
+- why_wrong uses any of these ideas: circular, restatement, repeats the conclusion, paraphrases the conclusion
+
+If triggered, you must answer these questions before finalizing why_wrong:
+1. Is the option an exact restatement of the conclusion?
+2. If not exact, which exact terms drift from the conclusion?
+3. If exact, would that make the option formally sufficient rather than flawed?
+
+Rule:
+- In justify-type questions, circular/restatement is NOT by itself a valid reason to reject an option
+- If the option is not exact, explain the concept drift
+- If the option is exact, do not reject it merely for being circular
+
+## Guardrail D — narrow-scope check for inference-type questions
+
+Trigger this check ONLY if:
+- question type is must_be_true or most_supported AND
+- why_wrong uses any of these ideas: narrower, more specific, subset, too narrow, less broad, only some
+
+If triggered, you must answer these questions before finalizing why_wrong:
+1. Is the narrower claim still necessarily supported by the stimulus?
+2. If not, what exact extra narrowing is unsupported?
+3. Do not reject the option for narrowness alone; reject it only if the narrowed claim is not entailed or supported.
+
+Rule:
+- In inference-type questions, narrower scope is NOT by itself a valid reason to reject an option
+
+## Final guardrail requirement
+
+If any triggered check changes your diagnosis, rewrite why_wrong before producing final JSON. Do not mention this guardrail pass in the output.
 
 ---
 
@@ -167,7 +232,7 @@ CRITICAL: Your entire response must be ONE JSON object. No text before or after.
 
   "method": "river_crossing | dual_bridge | river_fork | formula | argument_chain | substitution | lego | venn | parallel_bridge | dispute_locate | abstract_mapping | number_visual | extreme_test | highlight",
 
-  "diagram": "ASCII diagram using selected method's template. Must show both the correct path and where the user's chosen option diverges.",
+  "diagram": "ASCII diagram showing stimulus structure only. Do NOT include option analysis in diagram.",
 
   "correct_option": {
     "label": "A-E",
@@ -214,6 +279,7 @@ CRITICAL: Your entire response must be ONE JSON object. No text before or after.
 5. If core_judgment doesn't echo correct answer → GO BACK, do not proceed
 6. Do NOT use math notation, symbols, or formulas in any output (no ≠, f(x), →, ∈, etc.)
 7. Your ENTIRE response must be a single JSON object — no text outside the JSON
+8. Diagram shows ONLY stimulus structure — do NOT analyze any options inside the diagram
 `;
 
 export default SOP_SYSTEM_PROMPT;
