@@ -10,7 +10,8 @@ export default function ResultPage() {
   const [expandedLayers, setExpandedLayers] = useState<{ [key: number]: boolean }>({
     2: false,
     3: false,
-    4: false
+    4: false,
+    5: false  // Debug panel
   });
 
   useEffect(() => {
@@ -369,6 +370,49 @@ export default function ResultPage() {
             </div>
           )}
         </div>
+
+        {/* ============================================ */}
+        {/* Layer 5: Debug — Options Sent to LLM (Test) */}
+        {/* ============================================ */}
+        {(analysis as any)._debug_options_sent && (
+          <div className="bg-white rounded-2xl shadow-sm border border-dashed border-red-300 mb-6 overflow-hidden">
+            <button
+              onClick={() => toggleLayer(5)}
+              className="w-full flex items-center justify-between p-6 text-left hover:bg-red-50 transition-colors"
+            >
+              <h2 className="text-xl font-bold text-red-700">🔧 Debug: Options Sent to LLM</h2>
+              <svg
+                className={`w-6 h-6 text-red-500 transition-transform duration-300 ${expandedLayers[5] ? 'rotate-180' : ''}`}
+                fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            {expandedLayers[5] && (
+              <div className="px-6 pb-6 space-y-3 border-t border-red-200 pt-4">
+                {Object.entries((analysis as any)._debug_options_sent).map(([letter, data]: [string, any]) => (
+                  <div key={letter} className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <div className="font-bold text-gray-700 mb-2">Option {letter}</div>
+                    <div className="space-y-2">
+                      <div>
+                        <span className="text-xs font-semibold text-gray-500 uppercase">Raw (from input):</span>
+                        <pre className="text-sm text-gray-800 whitespace-pre-wrap bg-white p-2 rounded mt-1 border">{data.raw}</pre>
+                      </div>
+                      <div>
+                        <span className="text-xs font-semibold text-gray-500 uppercase">Sanitized (sent to LLM):</span>
+                        <pre className="text-sm text-gray-800 whitespace-pre-wrap bg-white p-2 rounded mt-1 border">{data.sanitized}</pre>
+                      </div>
+                      {data.raw !== data.sanitized && (
+                        <div className="text-xs text-red-600 font-medium">⚠ Newlines were removed during sanitization</div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Bottom Buttons */}
         <div className="flex gap-4 justify-center">

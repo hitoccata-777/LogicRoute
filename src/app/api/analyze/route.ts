@@ -259,6 +259,16 @@ export async function POST(request: NextRequest) {
 
     analysis.questionId = questionId;
 
+    // Debug: echo back options - raw vs sanitized
+    const debugOptionsSent: Record<string, { raw: string; sanitized: string }> = {};
+    for (const [letter, text] of Object.entries(options)) {
+      debugOptionsSent[letter] = {
+        raw: String(text),
+        sanitized: String(text).replace(/[\r\n]+/g, ' ').trim()
+      };
+    }
+    analysis._debug_options_sent = debugOptionsSent;
+
     return NextResponse.json({ success: true, data: analysis });
 
   } catch (error: unknown) {

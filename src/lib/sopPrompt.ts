@@ -113,12 +113,12 @@ Run this pass on ALL wrong options after Step 6. This is a guardrail layer, not 
 
 ## Guardrail A — claims fidelity (hard rule, always apply)
 
-The "claims" field must stay semantically faithful to the option text.
-- Keep wording as close to the option text as possible
-- Do NOT upgrade, narrow, soften, abstract, or reorganize the option's meaning
+The "claims" field must be a verbatim copy of the option text. Do NOT summarize, shorten, rephrase, or abstract.
+- Copy the original option text exactly as given
+- The ONLY permitted change is removing the option letter prefix (e.g. remove "(A)")
+- If the option text is longer than one sentence, copy ALL of it
+- Do NOT drop trailing clauses, prepositional phrases, or qualifiers
 - Do NOT add relations, causes, dependence, modality, norm language, or degree language not present in the option
-- As a hard cap, claims must not exceed 120% of the original option text length
-- If claims exceed that limit, rewrite more literally
 
 Examples of high-risk added language: depends, causes, requires, should, must, deliberately, at least in part
 
