@@ -239,6 +239,18 @@ CRITICAL: Your entire response must be ONE JSON object. No text before or after.
     "reason": "Echoes core_judgment"
   },
 
+  "_reasoning_trace": {
+    "step3_gap_isolated": "State the argument's gap/assumption ONLY — no chaining forward to conclusion",
+    "step5_elimination": [
+      {"option": "A", "verdict": "keep|eliminate", "because": "1 sentence"},
+      {"option": "B", "verdict": "keep|eliminate", "because": "1 sentence"},
+      {"option": "C", "verdict": "keep|eliminate", "because": "1 sentence"},
+      {"option": "D", "verdict": "keep|eliminate", "because": "1 sentence"},
+      {"option": "E", "verdict": "keep|eliminate", "because": "1 sentence"}
+    ],
+    "step5_final_choice": "If >1 kept: compare survivors head-to-head. Which one aligns with core_judgment without presupposing something the stimulus never stated?"
+  },
+
   "isCorrect": true/false,
 
   "wrong_options": [

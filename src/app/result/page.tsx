@@ -11,7 +11,8 @@ export default function ResultPage() {
     2: false,
     3: false,
     4: false,
-    5: false  // Debug panel
+    5: false,  // Debug: options sent
+    6: false   // Debug: reasoning trace
   });
 
   useEffect(() => {
@@ -391,6 +392,18 @@ export default function ResultPage() {
 
             {expandedLayers[5] && (
               <div className="px-6 pb-6 space-y-3 border-t border-red-200 pt-4">
+
+                {/* LLM Thinking Chain */}
+                {(analysis as any)._debug_thinking && (
+                  <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-300 mb-4">
+                    <div className="font-bold text-yellow-800 mb-2">🧠 LLM Thinking Chain (Extended Thinking)</div>
+                    <pre className="text-sm text-gray-800 whitespace-pre-wrap max-h-[600px] overflow-y-auto leading-relaxed">
+                      {(analysis as any)._debug_thinking}
+                    </pre>
+                  </div>
+                )}
+
+                {/* Options sent to LLM */}
                 {Object.entries((analysis as any)._debug_options_sent).map(([letter, data]: [string, any]) => (
                   <div key={letter} className="bg-gray-50 p-4 rounded-lg border border-gray-200">
                     <div className="font-bold text-gray-700 mb-2">Option {letter}</div>
@@ -409,6 +422,72 @@ export default function ResultPage() {
                     </div>
                   </div>
                 ))}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* ============================================ */}
+        {/* Layer 6: Debug — LLM Reasoning Trace         */}
+        {/* ============================================ */}
+        {(analysis as any)._reasoning_trace && (
+          <div className="bg-white rounded-2xl shadow-sm border border-dashed border-orange-300 mb-6 overflow-hidden">
+            <button
+              onClick={() => toggleLayer(6)}
+              className="w-full flex items-center justify-between p-6 text-left hover:bg-orange-50 transition-colors"
+            >
+              <h2 className="text-xl font-bold text-orange-700">🧠 Debug: LLM Reasoning Trace</h2>
+              <svg
+                className={`w-6 h-6 text-orange-500 transition-transform duration-300 ${expandedLayers[6] ? 'rotate-180' : ''}`}
+                fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            {expandedLayers[6] && (
+              <div className="px-6 pb-6 space-y-4 border-t border-orange-200 pt-4">
+
+                {/* Gap isolation */}
+                <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                  <div className="text-xs font-bold text-yellow-700 uppercase mb-2">Step 3: Gap Isolated</div>
+                  <p className="text-gray-800 text-sm">{(analysis as any)._reasoning_trace.step3_gap_isolated}</p>
+                </div>
+
+                {/* Elimination trace */}
+                <div className="space-y-2">
+                  <div className="text-xs font-bold text-gray-500 uppercase">Step 5: Option Elimination</div>
+                  {(analysis as any)._reasoning_trace.step5_elimination?.map((item: any) => (
+                    <div
+                      key={item.option}
+                      className={`p-3 rounded-lg border text-sm ${
+                        item.verdict === 'keep'
+                          ? 'bg-green-50 border-green-200'
+                          : 'bg-gray-50 border-gray-200'
+                      }`}
+                    >
+                      <span className={`font-bold mr-2 ${item.verdict === 'keep' ? 'text-green-700' : 'text-gray-500'}`}>
+                        {item.option}
+                      </span>
+                      <span className={`text-xs px-2 py-0.5 rounded mr-2 ${
+                        item.verdict === 'keep'
+                          ? 'bg-green-200 text-green-800'
+                          : 'bg-gray-200 text-gray-600'
+                      }`}>
+                        {item.verdict}
+                      </span>
+                      <span className="text-gray-700">{item.because}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Final choice reasoning */}
+                {(analysis as any)._reasoning_trace.step5_final_choice && (
+                  <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                    <div className="text-xs font-bold text-blue-700 uppercase mb-2">Final Decision</div>
+                    <p className="text-gray-800 text-sm">{(analysis as any)._reasoning_trace.step5_final_choice}</p>
+                  </div>
+                )}
               </div>
             )}
           </div>

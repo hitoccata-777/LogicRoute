@@ -89,6 +89,37 @@ export default function InputPage() {
     }
   };
 
+  /**
+   * Parse answer choices text into options object.
+   * Handles multi-line options where continuation lines
+   * don't start with (A-E) pattern.
+   */
+  const parseOptionsFromText = (text: string): Record<string, string> => {
+    const options: Record<string, string> = {};
+    const lines = text.split('\n');
+    let currentLetter = '';
+
+    for (const line of lines) {
+      const trimmed = line.trim();
+      if (!trimmed) continue;
+
+      // Check if this line starts a new option
+      const match = trimmed.match(/^\(([A-E])\)\s*(.+)|^([A-E])[.)\s]+(.+)/);
+      if (match) {
+        currentLetter = match[1] || match[3];
+        const lineText = match[2] || match[4];
+        if (currentLetter && lineText) {
+          options[currentLetter] = lineText.trim();
+        }
+      } else if (currentLetter) {
+        // Continuation line: append to current option
+        options[currentLetter] = (options[currentLetter] + ' ' + trimmed).trim();
+      }
+    }
+
+    return options;
+  };
+
   const handleClear = () => {
     setDescription('');
     setQuestion('');
@@ -123,19 +154,8 @@ export default function InputPage() {
     setIsLoading(true);
 
     try {
-      // Parse answer choices into options object
-      const options: { [key: string]: string } = {};
-      const lines = answerChoices.split('\n');
-      lines.forEach(line => {
-        const match = line.match(/\(([A-E])\)\s*(.+)|^([A-E])[.)\s]+(.+)/);
-        if (match) {
-          const letter = match[1] || match[3];
-          const text = match[2] || match[4];
-          if (letter && text) {
-            options[letter] = text.trim();
-          }
-        }
-      });
+      // Parse answer choices using multi-line aware parser
+      const options = parseOptionsFromText(answerChoices);
 
       const requestBody = {
         stimulus: description,
@@ -237,7 +257,7 @@ export default function InputPage() {
                 className="w-full min-h-[160px] p-4 bg-slate-50 border-2 border-slate-300 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:bg-white resize-y text-base text-slate-900 font-mono transition-all duration-200"
               />
               <p className="text-sm text-slate-500 mt-2">
-                Format: (A) option text, one per line
+                Format: (A) option text, one per line. Multi-line options are supported.
               </p>
             </div>
           </div>
