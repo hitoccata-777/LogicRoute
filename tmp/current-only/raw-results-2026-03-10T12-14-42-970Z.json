@@ -1,0 +1,1533 @@
+[
+  {
+    "questionId": "PT17-S2-Q22",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Argument evaluation (response analysis)\",\n  \"method\": \"Identify whether the response addresses the original argument’s actual reasoning or attacks a mischaracterized version of it.\",\n  \"core_judgment\": \"The advertising-sales director’s argument fails because it responds to a claim about readers’ reactions to advertisements, whereas the editor’s argument concerns loss of readership due to compromised editorial integrity, not readers’ response to ads.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"The editor’s argument does not rely on any assumption about how readers respond to advertisements; it concerns readership loss due to compromised integrity, so the director’s response misses the point.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1922
+  },
+  {
+    "questionId": "PT17-S2-Q22",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "E",
+    "isCorrect": false,
+    "rawText": "{\n  \"question_family\": \"Argument evaluation (response analysis)\",\n  \"method\": \"Identify the editor’s actual reasoning, then determine whether the director’s response addresses that reasoning or mischaracterizes it.\",\n  \"core_judgment\": \"The editor argues that compromising editorial integrity would reduce loyal readership, thereby making the magazine a less effective advertising vehicle. The director responds by claiming that readers’ responses to advertisements do not depend on their views of editorial integrity, which misunderstands the editor’s point. The editor’s argument concerns loss of readership, not how readers evaluate advertisements once seen. Thus, the director’s response fails due to a misunderstanding.\",\n  \"correct_option\": {\n    \"label\": \"E\",\n    \"reason\": \"The advertising-sales director bases the response on a misunderstanding of the editor’s view, incorrectly treating the argument as being about readers’ responses to advertisements rather than about maintaining loyal readership.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 428
+  },
+  {
+    "questionId": "PT17-S2-Q22",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "E",
+    "isCorrect": false,
+    "rawText": "{\n  \"question_family\": \"Argument evaluation (response assessment)\",\n  \"method\": \"Identify the editor’s core claim and test whether the director addresses that claim or misinterprets it.\",\n  \"core_judgment\": \"The editor argues that compromising editorial integrity would reduce readership, thereby making the magazine a less effective advertising vehicle. The advertising-sales director responds by claiming that readers’ responses to advertisements do not depend on editorial integrity, which misinterprets the editor’s argument. The editor’s concern is about losing readership, not about how readers evaluate specific ads.\",\n  \"correct_option\": {\n    \"label\": \"E\",\n    \"reason\": \"The director’s argument fails because it is based on a misunderstanding of the editor’s view about how readers respond to advertisements; the editor’s argument concerns loss of readership, not readers’ direct response to ads.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 541
+  },
+  {
+    "questionId": "PT158-S2-Q10",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "E",
+    "predictedAnswer": "D",
+    "isCorrect": false,
+    "rawText": "{\n  \"question_family\": \"Flaw\",\n  \"method\": \"Identify unwarranted assumption (alternative cause / common origin)\",\n  \"core_judgment\": \"The argument infers that Swahili culture was influenced by Oromo culture solely from the presence of a shared architectural feature unique to the Oromo among Swahili contacts, while overlooking the possibility that both cultures inherited the feature from a third civilization.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"The argument assumes there was no third civilization responsible for originating the tomb style found in both cultures, ignoring a plausible common source explanation.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 465
+  },
+  {
+    "questionId": "PT158-S2-Q10",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "E",
+    "predictedAnswer": null,
+    "isCorrect": false,
+    "rawText": "",
+    "latencyMs": 0,
+    "error": "fetch failed"
+  },
+  {
+    "questionId": "PT158-S2-Q10",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Flaw\",\n  \"method\": \"Identify necessary assumption for causal/influence claim\",\n  \"core_judgment\": \"The historian concludes that Swahili culture was influenced by Oromo culture without establishing that the Oromo constructed such tombs earlier than the Swahili did, a necessary condition for cultural influence.\",\n  \"correct_option\": {\n    \"label\": \"E\",\n    \"reason\": \"The argument assumes, without evidence, that the Oromo began constructing these tombs before the Swahili, which is required to support the claim of influence.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1047
+  },
+  {
+    "questionId": "PT158-S2-Q2",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Flaw\",\n  \"method\": \"Identify whether the reasoning attacks the argument’s content or instead targets its source.\",\n  \"core_judgment\": \"The council president dismisses the proposed ordinance solely because of Smith’s past behavior, rather than evaluating the merits of the ordinance itself.\",\n  \"correct_option\": {\n    \"label\": \"A\",\n    \"reason\": \"The president rejects the ordinance based on its source (Smith’s past use of bait-and-switch tactics) rather than addressing the substance of the proposal.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 405
+  },
+  {
+    "questionId": "PT158-S2-Q2",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Flaw\",\n  \"method\": \"Identify whether the reasoning attacks the argument’s content or instead targets the person proposing it.\",\n  \"core_judgment\": \"The council president dismisses the ordinance solely because of Smith’s past behavior, rather than evaluating the merits of the proposed ordinance itself.\",\n  \"correct_option\": {\n    \"label\": \"A\",\n    \"reason\": \"The president rejects the proposal based on its source (Smith’s alleged hypocrisy) rather than addressing the substance of the ordinance.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 648
+  },
+  {
+    "questionId": "PT158-S2-Q2",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Flaw\",\n  \"method\": \"Identify whether the reasoning attacks the argument's content or instead attacks its source (ad hominem/source-based dismissal).\",\n  \"core_judgment\": \"The council president dismisses the proposed ordinance solely because of Smith’s past behavior, rather than evaluating the merits of the ordinance itself.\",\n  \"correct_option\": {\n    \"label\": \"A\",\n    \"reason\": \"The president rejects the ordinance based on its source (Smith’s past conduct) rather than addressing the substance of the proposal.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 399
+  },
+  {
+    "questionId": "PT158-S3-Q14",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Parallel Flaw\",\n  \"method\": \"Match abstract logical form and preserve flawed term structure\",\n  \"core_judgment\": \"The stimulus has the form: Some A are B. No C are B. Therefore, some C are not A—an invalid inference that reverses the warranted conclusion (which would be some A are not C).\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"It mirrors the flawed structure: Some students prefer history (Some A are B). No Calculus Club members prefer history (No C are B). Therefore, some Calculus Club members are not students (Some C are not A).\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 425
+  },
+  {
+    "questionId": "PT158-S3-Q14",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Flawed Parallel Reasoning\",\n  \"method\": \"Abstract the stimulus into categorical form and match the same quantifier structure and mistaken inference pattern.\",\n  \"core_judgment\": \"The argument has the form: Some A are B. No C are B. Therefore, some C are not A. This is flawed because the premises only support the conclusion that some A are not C, not that some C are not A.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"It mirrors the flawed structure: Some students prefer history. No Calculus Club members prefer history. Therefore, some Calculus Club members are not students—invalidly inferring from 'some A not C' to 'some C not A.'\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 475
+  },
+  {
+    "questionId": "PT158-S3-Q14",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Flawed parallel reasoning\",\n  \"method\": \"Abstract the stimulus to its quantifier structure and match the same invalid inference pattern.\",\n  \"core_judgment\": \"The stimulus has the form: Some A are B; No C are B; therefore, Some C are not A—an invalid reversal, since the premises only support that some A are not C, not that some C are not A.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"It matches the same flawed structure: Some A are B; No C are B; therefore, Some C are not A.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 416
+  },
+  {
+    "questionId": "PT158-S3-Q07",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Weaken\",\n  \"method\": \"Identify and undermine the key assumption that Dr. Faris's statement was deceptive by showing the statement could have been true.\",\n  \"core_judgment\": \"The argument assumes that because medication A has no known sleep-inducing properties, telling the patient it would help him sleep was deceptive. If medication A can indirectly promote sleep (e.g., by relieving pain), then the statement may have been truthful and not a violation of the ethics code.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"If medication A reduces pain and thereby indirectly helps the patient sleep, then Dr. Faris's statement that it would help him sleep may not have been deceptive, seriously weakening the claim that he violated the ethics code.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 431
+  },
+  {
+    "questionId": "PT158-S3-Q07",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Weaken\",\n  \"method\": \"Undermine the assumption that telling the patient the medication would help him sleep was deceptive by showing the statement could have been true in a relevant sense.\",\n  \"core_judgment\": \"If medication A can indirectly help a patient sleep by relieving pain, then informing the patient that it would help him sleep would not necessarily be deceptive, so Dr. Faris may not have violated the ethics code.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"It shows that medication A can indirectly promote sleep by reducing discomfort, which weakens the claim that Dr. Faris deceived the patient about its effects.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 467
+  },
+  {
+    "questionId": "PT158-S3-Q07",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Weaken\",\n  \"method\": \"Undermine the key assumption that Dr. Faris's statement was deceptive by showing the medication could genuinely help with sleep.\",\n  \"core_judgment\": \"If medication A can indirectly promote sleep (e.g., by relieving pain), then telling the patient it would help him sleep would not be deceptive, so Dr. Faris would not be violating the ethics code.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"It shows that medication A can indirectly lead to sleep by reducing discomfort, which undermines the claim that Dr. Faris deceived the patient.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 474
+  },
+  {
+    "questionId": "PT158-S3-Q17",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Parallel reasoning (analysis applicability / EXCEPT)\",\n  \"method\": \"Identify whether success in the first objective would plausibly bring about success in the second; select the option where this causal relationship does NOT hold.\",\n  \"core_judgment\": \"In the original analysis, achieving the first goal (greater enjoyment) would lead to achieving the second goal (more practice time). The correct answer must be the situation where achieving the first objective would NOT plausibly lead to achieving the second.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"Successfully constructing a new, larger warehouse would not in itself bring about employees helping to plan the expansion of the old warehouse; the two objectives are not causally connected.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 371
+  },
+  {
+    "questionId": "PT158-S3-Q17",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Parallel reasoning (applicability of analysis)\",\n  \"method\": \"Test whether success in the first objective would plausibly bring about success in the second; select the case where this causal relationship does not hold.\",\n  \"core_judgment\": \"In option D, successfully constructing a new, larger warehouse would not bring about employees helping to plan expansion of the old warehouse; the two goals are not causally connected.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"Building a new warehouse would not itself cause employees to help plan expansion of the old one, so the stated analysis does not apply.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 448
+  },
+  {
+    "questionId": "PT158-S3-Q17",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Parallel reasoning (principle application)\",\n  \"method\": \"Test whether achieving the first objective would plausibly bring about achieving the second; identify the option where no such causal relationship holds.\",\n  \"core_judgment\": \"In the stimulus, success in achieving the first goal would directly lead to success in achieving the second. The correct answer must be the situation in which accomplishing the first objective would not bring about accomplishment of the second.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"Constructing a new, larger warehouse would not bring about employees helping to plan the expansion of the old warehouse; the two goals are not causally connected.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 483
+  },
+  {
+    "questionId": "PT147-S3-Q12",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Inference / Most Strongly Supported Exception\",\n  \"method\": \"Identify which option is directly contradicted by the stimulus.\",\n  \"core_judgment\": \"The scene depicts Demosthenes looking at a written tablet and reacting to its contents before explaining them aloud, which indicates that silent reading occurred; therefore, the claim that people in ancient Greece did not read silently is contradicted.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"The stimulus describes Demosthenes reading the tablet and reacting before speaking, contradicting the claim that people in ancient Greece did not read silently.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 510
+  },
+  {
+    "questionId": "PT147-S3-Q12",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Must Be False / Justifiably Rejected\",\n  \"method\": \"Identify the option that is directly undermined by a specific detail in the stimulus.\",\n  \"core_judgment\": \"The scene describes Demosthenes looking at the tablet and reacting with amazement before explaining its contents, which indicates he was reading silently to himself; therefore, the claim that people in ancient Greece did not read silently is contradicted.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"The stimulus depicts a character reading from a tablet silently before speaking, which directly undermines the claim that people in ancient Greece did not read silently to themselves.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 384
+  },
+  {
+    "questionId": "PT147-S3-Q12",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Most Justifiably Rejected (Inference)\",\n  \"method\": \"Counterexample\",\n  \"core_judgment\": \"The scene depicts Demosthenes looking at a written tablet and reacting with amazement before explaining its contents, which indicates he was reading silently to himself; thus the claim that people in ancient Greece did not read silently is contradicted.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"The stimulus provides an example of a character apparently reading silently before speaking, directly undermining the claim that silent reading did not occur in ancient Greece.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 446
+  },
+  {
+    "questionId": "PT147-S1-Q3",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Point at Issue / Disagreement\",\n  \"method\": \"Identify each speaker’s stance and locate a proposition where one affirms and the other denies.\",\n  \"core_judgment\": \"Enrique believes the transit authority should continue operating without service cuts or fare increases until it exhausts its funds, whereas Cynthia believes it should not pursue that strategy because it risks going out of business.\",\n  \"correct_option\": {\n    \"label\": \"A\",\n    \"reason\": \"Enrique supports continuing operations without cuts or fare increases until funds are exhausted, while Cynthia argues against attempting that strategy.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 405
+  },
+  {
+    "questionId": "PT147-S1-Q3",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Point at issue (disagreement)\",\n  \"method\": \"Identify each speaker’s position and locate the proposition one affirms and the other rejects.\",\n  \"core_judgment\": \"Enrique believes the transit authority should continue operating without service cuts or fare increases until it exhausts its funds, whereas Cynthia believes that attempting this would be too risky and should not be done.\",\n  \"correct_option\": {\n    \"label\": \"A\",\n    \"reason\": \"Enrique supports continuing operations without cuts or fare increases until funds are exhausted; Cynthia argues that this maneuver is too risky, showing direct disagreement.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 447
+  },
+  {
+    "questionId": "PT147-S1-Q3",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Point at issue (disagreement)\",\n  \"method\": \"Identify each speaker’s position and locate a clear contradiction in their stances.\",\n  \"core_judgment\": \"Enrique believes the transit authority should continue operating without cuts or fare increases until funds are exhausted, whereas Cynthia believes attempting that strategy is too risky and should not be pursued.\",\n  \"correct_option\": {\n    \"label\": \"A\",\n    \"reason\": \"Enrique supports continuing operations without cuts or fare increases until funds are exhausted; Cynthia opposes trying that maneuver because she believes it risks the authority going out of business.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 490
+  },
+  {
+    "questionId": "PT158-S3-Q21",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "E",
+    "predictedAnswer": "C",
+    "isCorrect": false,
+    "rawText": "{\n  \"question_family\": \"Necessary Assumption\",\n  \"method\": \"Identify the gap between dismissing the hypothesis and the claim that the phenomenon is already explained; apply the support principle and negate test.\",\n  \"core_judgment\": \"The argument assumes that a phenomenon supports a hypothesis only if that phenomenon is not already adequately explained by an existing theory.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"It states that a hypothesis is likely correct when it explains a phenomenon not adequately accounted for by an existing theory—matching the assumption that if the phenomenon is already explained, it provides no support for the new hypothesis.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 388
+  },
+  {
+    "questionId": "PT158-S3-Q21",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "E",
+    "predictedAnswer": "C",
+    "isCorrect": false,
+    "rawText": "{\n  \"question_family\": \"Necessary Assumption\",\n  \"method\": \"Identify the principle required to move from 'already explained by existing theory' to 'no reason to believe alternative hypothesis.'\",\n  \"core_judgment\": \"The argument assumes that a hypothesis gains credibility only if it explains a phenomenon that is not already adequately explained by an existing theory.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"It provides the needed principle that a hypothesis is supported only when it explains something not already adequately explained by an existing theory; without this, the professor’s conclusion would not follow.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 450
+  },
+  {
+    "questionId": "PT158-S3-Q21",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "E",
+    "predictedAnswer": "C",
+    "isCorrect": false,
+    "rawText": "{\n  \"question_family\": \"Necessary Assumption\",\n  \"method\": \"Identify the gap between 'already explained by existing theory' and 'no reason to believe new hypothesis'; find the principle that removes evidential support when a phenomenon is already adequately explained.\",\n  \"core_judgment\": \"The argument assumes that a hypothesis gains credibility from explaining a phenomenon only if that phenomenon is not already adequately explained by an existing theory.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"It states that a hypothesis is likely to be correct if it explains a phenomenon not adequately accounted for by an existing theory, which underlies the professor’s reasoning that no support is provided when the phenomenon is already completely explained.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 372
+  },
+  {
+    "questionId": "PT158-S2-Q01",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Main Conclusion\",\n  \"method\": \"Identify the claim supported by the premises (using the support indicator “After all”) and select the statement that captures that supported claim.\",\n  \"core_judgment\": \"The argument concludes that popular music serves purposes beyond mere entertainment, specifically expressing religious and political messages.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"It accurately captures the conclusion that popular music has purposes other than mere entertainment, namely religious and political expression.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 441
+  },
+  {
+    "questionId": "PT158-S2-Q01",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Main Conclusion\",\n  \"method\": \"Identify the claim supported by the explanatory evidence about social movements’ use of popular music\",\n  \"core_judgment\": \"Popular music serves purposes beyond mere entertainment, including expressing religious and political messages.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"It accurately captures the main conclusion that popular music has purposes other than mere entertainment.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 419
+  },
+  {
+    "questionId": "PT158-S2-Q01",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Main Conclusion\",\n  \"method\": \"Identify the claim supported by the 'After all' premise indicator; treat the first sentence as the conclusion and the following sentence as supporting evidence.\",\n  \"core_judgment\": \"Popular music serves purposes beyond mere entertainment, including expressing religious and political messages.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"It captures the conclusion that popular music has purposes other than mere entertainment, which is supported by the evidence about its use in social movements.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 408
+  },
+  {
+    "questionId": "PT158-S4-Q25",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Sufficient Assumption (Fill-in-the-Blank)\",\n  \"method\": \"Link overlapping majorities to guarantee at least some intersection\",\n  \"core_judgment\": \"If most members of Bargaining Unit 17 are computer programmers and most members of that unit work in the Hanson Building, then at least some people who work in the Hanson Building must be computer programmers.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"It states that most of the members of Bargaining Unit Number 17 work in the Hanson Building, which guarantees overlap with the majority who are computer programmers.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 394
+  },
+  {
+    "questionId": "PT158-S4-Q25",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Sufficient Assumption (Complete the Argument)\",\n  \"method\": \"Link two 'most' claims about the same group to guarantee overlap\",\n  \"core_judgment\": \"If most members of Bargaining Unit 17 are computer programmers and most members of that same unit work in the Hanson Building, then there must be at least some individuals who both work in the Hanson Building and are computer programmers.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"By stating that most members of Bargaining Unit 17 work in the Hanson Building, it guarantees overlap with the group of whom most are computer programmers, ensuring some Hanson Building employees are programmers.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 381
+  },
+  {
+    "questionId": "PT158-S4-Q25",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Sufficient Assumption\",\n  \"method\": \"Use quantitative overlap reasoning: if most of a group are A and most of that same group are B, then some members must be both A and B.\",\n  \"core_judgment\": \"To guarantee that some government employees in the Hanson Building are computer programmers, we must ensure that a majority of Bargaining Unit 17 members work in the Hanson Building, since most of that unit are computer programmers; overlapping majorities guarantee at least some overlap.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"If most members of Bargaining Unit 17 work in the Hanson Building and most members of that unit are computer programmers, then at least some members must both work in the Hanson Building and be computer programmers.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 421
+  },
+  {
+    "questionId": "PT147-S3-Q5",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Strengthen\",\n  \"method\": \"Strengthen causal inference by providing within-population correlation that reduces alternative explanations\",\n  \"core_judgment\": \"Evidence that regions within India with higher curry (turmeric) consumption have lower Alzheimer’s incidence strengthens the claim that turmeric consumption helps prevent Alzheimer’s disease.\",\n  \"correct_option\": {\n    \"label\": \"E\",\n    \"reason\": \"It provides a within-country correlation between higher curry consumption and lower Alzheimer’s incidence, reinforcing the proposed causal link and reducing the likelihood that broader international differences explain the effect.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 403
+  },
+  {
+    "questionId": "PT147-S3-Q5",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Strengthen\",\n  \"method\": \"Strengthen causal inference by reinforcing correlation and reducing alternative explanations\",\n  \"core_judgment\": \"Evidence that regions within India with higher curry consumption have lower Alzheimer’s incidence strengthens the claim that turmeric consumption helps prevent Alzheimer’s disease by reinforcing the correlation in a more controlled comparison.\",\n  \"correct_option\": {\n    \"label\": \"E\",\n    \"reason\": \"It shows that within India, higher curry consumption is associated with lower Alzheimer’s incidence, directly strengthening the proposed causal link between turmeric consumption and reduced Alzheimer’s risk.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1332
+  },
+  {
+    "questionId": "PT147-S3-Q5",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Strengthen\",\n  \"method\": \"Strengthen causal inference by reinforcing correlation and reducing alternative explanations\",\n  \"core_judgment\": \"Evidence showing that higher turmeric consumption is associated with lower Alzheimer’s incidence within India would strengthen the claim that turmeric helps prevent Alzheimer’s.\",\n  \"correct_option\": {\n    \"label\": \"E\",\n    \"reason\": \"It shows that within India, areas with higher curry (and thus turmeric) consumption have lower Alzheimer’s incidence, reinforcing the proposed causal relationship.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 397
+  },
+  {
+    "questionId": "PT158-S4-Q26",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Parallel Flaw\",\n  \"method\": \"Match flawed causal reasoning that treats a necessary condition as the sole cause and dismisses an alternative explanation\",\n  \"core_judgment\": \"The argument assumes that because training is necessary for good behavior, it must be the cause rather than genetics, falsely treating a necessary condition as the sole explanatory factor and creating a false dichotomy.\",\n  \"correct_option\": {\n    \"label\": \"B\",\n    \"reason\": \"It argues that because carelessness is necessary for car crashes, it—not icy roads—causes crashes in snowy conditions, mirroring the flawed move of treating a necessary condition as the sole cause.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 424
+  },
+  {
+    "questionId": "PT158-S4-Q26",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Parallel Flaw\",\n  \"method\": \"Match the flawed causal reasoning pattern: treating a necessary condition as the true or sole cause and dismissing an alternative explanation.\",\n  \"core_judgment\": \"The argument assumes that because training is necessary for good behavior, it must be the factor that accounts for the Labradors' behavior, thereby wrongly dismissing genetics as a possible contributing cause. This confuses a necessary condition with the sole or primary cause.\",\n  \"correct_option\": {\n    \"label\": \"B\",\n    \"reason\": \"It argues that since carelessness is necessary for car crashes, icy roads are not the cause, mirroring the flaw of treating a necessary condition as the sole cause and dismissing an alternative explanation.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 528
+  },
+  {
+    "questionId": "PT158-S4-Q26",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Parallel Flaw\",\n  \"method\": \"Match the flawed causal reasoning: treating a necessary condition as the sole cause and dismissing an alternative cause.\",\n  \"core_judgment\": \"The argument wrongly infers that because training is necessary for good behavior, it must be the cause rather than genetics—mistakenly treating a necessary condition as the sole causal factor and excluding an alternative explanation.\",\n  \"correct_option\": {\n    \"label\": \"B\",\n    \"reason\": \"It argues that since car crashes would not occur without carelessness (a necessary condition), icy roads are not the cause—mirroring the flawed move of treating a necessary condition as the sole cause while dismissing an alternative.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 797
+  },
+  {
+    "questionId": "PT158-S2-Q16",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Resolve an apparent contradiction\",\n  \"method\": \"Identify the underlying condition in the general rule (stable political systems enabling intellectual advances) and show that the counterexample possessed the relevant enabling condition despite lacking overall stability.\",\n  \"core_judgment\": \"Although ancient Athens was politically unstable, it still provided the kind of financial support for intellectual work that is typically absent in unstable environments, thereby explaining how significant intellectual advances could occur there.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"It explains that despite political instability, ancient Athens provided financial support for intellectual endeavors, a key condition usually missing in unstable systems, thereby reconciling the apparent exception with the general rule.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 408
+  },
+  {
+    "questionId": "PT158-S2-Q16",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Paradox / Reconciliation\",\n  \"method\": \"Identify the underlying assumption behind the general rule (stable political systems provide conditions necessary for intellectual advances) and show that those conditions were present in the apparent counterexample despite political instability.\",\n  \"core_judgment\": \"Although Athens was politically unstable, it still provided a key condition typically supplied by stable systems—financial support for intellectual work—thereby allowing significant intellectual advances to occur without contradicting the general rule.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"It explains that despite political instability, Athens still provided financial support for intellectual endeavors, preserving the necessary condition that usually accompanies stable political systems.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 415
+  },
+  {
+    "questionId": "PT158-S2-Q16",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Resolve/Explain\",\n  \"method\": \"Identify a distinguishing factor that shows why the apparent counterexample does not actually undermine the general rule.\",\n  \"core_judgment\": \"Although ancient Athens experienced political instability, it still had conditions—specifically financial support for intellectual work—that are typically absent in unstable environments, thereby explaining how major intellectual advances could still occur there.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"It explains that despite political instability, Athens provided financial support for intellectual endeavors, removing a key obstacle that usually prevents significant intellectual advances in unstable environments.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 410
+  },
+  {
+    "questionId": "PT158-S2-Q09",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Role of a statement\",\n  \"method\": \"Argument structure analysis (identify main conclusion and supporting premises)\",\n  \"core_judgment\": \"The statement defines the purpose of a law and serves as a foundational premise supporting the later reasoning that a successful legal system must limit the number of prohibited behaviors.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"The statement is a premise that supports the overall conclusion about what a successful legal system must do.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 917
+  },
+  {
+    "questionId": "PT158-S2-Q09",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Role of a statement\",\n  \"method\": \"Identify the main conclusion and determine whether the referenced statement functions as a premise, intermediate conclusion, or main conclusion.\",\n  \"core_judgment\": \"The statement defining the purpose of a law as deterring actions through threats of punishment serves as a foundational premise supporting the argument’s reasoning toward its final conclusion about limiting prohibited behaviors.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"The statement is presented as a starting assumption that supports the subsequent reasoning and ultimate conclusion, making it a premise of the argument.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1434
+  },
+  {
+    "questionId": "PT158-S2-Q09",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"role_of_statement\",\n  \"method\": \"argument_structure_analysis\",\n  \"core_judgment\": \"The statement defines the purpose of a law and serves as a foundational premise that supports the reasoning leading to the conclusion about what a successful legal system must prohibit.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"The statement functions as a premise that supports the overall argument by establishing the purpose of a law, which is used to justify the conclusion.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 421
+  },
+  {
+    "questionId": "PT158-S3-Q22",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Method of reasoning\",\n  \"method\": \"Explaining away apparent counterexamples by citing a psychological fact that reconciles them with the original generalization\",\n  \"core_judgment\": \"The argument defends a generalization by suggesting that apparent counterexamples can be explained by a psychological fact about how some people perceive certain words, thereby reconciling the generalization with seemingly disconfirming evidence.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"The argument cites a psychological fact (how some people perceive certain words) to reconcile a generalization with apparently disconfirming evidence.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 446
+  },
+  {
+    "questionId": "PT158-S3-Q22",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Method of Reasoning\",\n  \"method\": \"Explaining away apparent counterexamples by citing a psychological fact that reconciles them with the original generalization\",\n  \"core_judgment\": \"The argument responds to apparent disconfirming cases by citing a psychological fact that explains why those cases do not genuinely undermine the generalization.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"The argument cites a psychological fact about how some people perceive certain words in order to reconcile an apparent exception with the researchers’ generalization.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 411
+  },
+  {
+    "questionId": "PT158-S3-Q22",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Method of Reasoning\",\n  \"method\": \"citing a psychological fact to reconcile a generalization with apparently disconfirming evidence\",\n  \"core_judgment\": \"The argument defends a general correlation against apparent counterexamples by citing a psychological fact (that some people interpret certain abstract words as physical actions), thereby explaining why the correlation may still hold despite seeming exceptions.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"The argument uses a psychological fact to reconcile the generalization with apparently disconfirming evidence.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 469
+  },
+  {
+    "questionId": "PT158-S4-Q17",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Principle (Justify the Argument)\",\n  \"method\": \"Identify the needed normative bridge linking causal contribution to financial liability and select the principle that directly establishes that link.\",\n  \"core_judgment\": \"If an industry manufactures a product whose use contributes to costly damage to others, that industry should be liable for the resulting damage; since automobile pollution contributes to global warming that caused the villagers' relocation, the automotive industry should help pay for it.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"It directly states that an industry whose product’s use contributes to costly damage should be liable for that damage, which justifies holding the automotive industry responsible for relocation costs.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 617
+  },
+  {
+    "questionId": "PT158-S4-Q17",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Principle-Justify\",\n  \"method\": \"Identify the missing normative bridge linking contribution to harm with financial liability\",\n  \"core_judgment\": \"If an industry manufactures a product whose use contributes to costly damage suffered by others, then that industry should be liable for that damage; since automobile use contributes to global warming that caused the villagers' relocation costs, the automotive industry should help pay.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"It directly establishes that industries whose products contribute to costly damage are liable for that damage, which justifies requiring the automotive industry to pay for relocation costs caused by global warming.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 449
+  },
+  {
+    "questionId": "PT158-S4-Q17",
+    "model": "openai/gpt-5.2-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Principle-Strengthen (Justify the Argument)\",\n  \"method\": \"Identify the gap between contributing to global warming and financial responsibility for resulting damage; select the principle that directly links contributing to harmful damage with liability for costs.\",\n  \"core_judgment\": \"If an industry manufactures a product whose use contributes to costly damage for others, then that industry should be liable for the resulting damage; since automobile use contributes to global warming that caused the villages’ relocation, the automotive industry should help pay.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"It directly establishes that an industry whose product’s use contributes to costly damage is liable for that damage, which justifies requiring the automotive industry to pay for relocation costs.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 453
+  },
+  {
+    "questionId": "PT17-S2-Q22",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "E",
+    "isCorrect": false,
+    "rawText": "{\n  \"question_family\": \"Argument Evaluation\",\n  \"method\": \"Argument Structure Analysis\",\n  \"core_judgment\": \"The advertising-sales director misunderstands the editor's argument. The editor argues that compromising editorial integrity would lose readership, which would harm advertisers because the magazine would be less effective as an advertising vehicle. The director responds by saying readers distinguish ads from articles and their response to ads doesn't depend on editorial integrity. However, the editor never claimed readers would confuse ads with articles or that readers' direct response to ads depends on editorial integrity. The editor's point was about losing readership altogether (making the magazine less valuable for advertising), not about readers' opinions of individual advertisements.\",\n  \"correct_option\": {\n    \"label\": \"E\",\n    \"reason\": \"The advertising-sales director fails to address the editor's actual argument. The editor's concern is that compromising editorial integrity would cause the magazine to lose readers, thereby reducing its value as an advertising platform. The director misinterprets this as a claim about how readers respond to individual advertisements based on editorial integrity, when the editor's point is actually about maintaining overall readership levels to preserve advertising effectiveness.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1198
+  },
+  {
+    "questionId": "PT17-S2-Q22",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "E",
+    "isCorrect": false,
+    "rawText": "{\n  \"question_family\": \"Argument Evaluation\",\n  \"method\": \"Argument Structure Analysis\",\n  \"core_judgment\": \"The advertising-sales director misunderstands the editor's argument. The editor argues that compromising editorial integrity would lose readership, which would harm advertisers because the magazine would be less effective as an advertising vehicle. The director responds by saying readers distinguish ads from articles and their response to ads doesn't depend on editorial integrity. However, the editor's point was not about how readers respond to advertisements themselves, but rather about how compromising editorial integrity would cause readers to stop reading the magazine altogether, thereby reducing the audience for advertisements. The director has misunderstood what the editor meant by 'effective advertising vehicle' - it's about maintaining readership numbers, not about readers' attitudes toward individual ads.\",\n  \"correct_option\": {\n    \"label\": \"E\",\n    \"reason\": \"The director fails to address the editor's actual concern. The editor's argument is that pandering to advertisers would lose readership (people would stop reading the magazine), making it a less effective advertising vehicle due to reduced audience size. The director misinterprets this as a claim about how readers evaluate individual advertisements based on editorial integrity, when the editor's point was about losing readers entirely. This is a fundamental misunderstanding of the editor's view.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1228
+  },
+  {
+    "questionId": "PT17-S2-Q22",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "E",
+    "isCorrect": false,
+    "rawText": "{\n  \"question_family\": \"Argument Evaluation\",\n  \"method\": \"Argument Structure Analysis\",\n  \"core_judgment\": \"The advertising-sales director misunderstands the editor's argument. The editor argues that compromising editorial integrity would lose readership, which would harm advertisers because the magazine would be less effective as an advertising vehicle. The director responds by saying readers distinguish ads from articles and their response to ads doesn't depend on editorial integrity. However, the editor's point was not about how readers respond to individual advertisements, but rather about maintaining readership overall - if readers lose trust in editorial integrity, they'll stop reading the magazine entirely, making it a poor advertising vehicle regardless of whether readers can distinguish ads from articles.\",\n  \"correct_option\": {\n    \"label\": \"E\",\n    \"reason\": \"The director misunderstands the editor's argument. The editor's concern is that pandering to advertisers would cause readers to stop reading the magazine altogether (losing readership), which would make it ineffective as an advertising vehicle. The director incorrectly interprets this as a claim about how readers evaluate individual advertisements based on editorial integrity. The editor never claimed readers can't distinguish ads from articles or that their response to specific ads depends on editorial integrity - the claim was about maintaining loyal readership as a whole.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1516
+  },
+  {
+    "questionId": "PT158-S2-Q10",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 1,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Flaw\",\n  \"method\": \"Flaw Identification\",\n  \"core_judgment\": \"The historian concludes that Swahili culture was influenced by Oromo culture based on the presence of similar tomb structures in both cultures. However, this reasoning assumes that the Oromo people built these structures first (i.e., before the Swahili), which is necessary for the direction of influence to flow from Oromo to Swahili. The historian never establishes the temporal priority of Oromo construction over Swahili construction.\",\n  \"correct_option\": {\n    \"label\": \"E\",\n    \"reason\": \"The argument's conclusion that Swahili was influenced by Oromo depends critically on the unstated assumption that the Oromo built these structures first. Without establishing this temporal sequence, the influence could have gone in the opposite direction (Swahili to Oromo) or occurred simultaneously. Option E correctly identifies this unwarranted assumption as the argument's key vulnerability.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1108
+  },
+  {
+    "questionId": "PT158-S2-Q10",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 2,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Flaw\",\n  \"method\": \"Flaw Identification\",\n  \"core_judgment\": \"The historian concludes that Swahili culture was influenced by Oromo culture based on the presence of similar tomb structures in both cultures. However, this reasoning assumes that the Oromo people built these structures first (i.e., before the Swahili), which is necessary for the direction of influence to flow from Oromo to Swahili. The historian never establishes the temporal priority of Oromo construction.\",\n  \"correct_option\": {\n    \"label\": \"E\",\n    \"reason\": \"The argument's conclusion that Swahili was influenced by Oromo requires that Oromo built these structures first. The historian provides no evidence about which civilization constructed these tombs earlier, yet assumes the direction of influence flows from Oromo to Swahili. This is a critical unwarranted assumption that the argument takes for granted.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1022
+  },
+  {
+    "questionId": "PT158-S2-Q10",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 3,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Flaw\",\n  \"method\": \"Flaw Identification\",\n  \"core_judgment\": \"The historian concludes that Swahili culture was influenced by Oromo culture based on the presence of similar tomb structures in both cultures. However, this reasoning assumes that the Oromo people built these structures first (i.e., before the Swahili), which is necessary for the direction of influence claimed. The historian never establishes the temporal priority - which culture built these structures first - yet concludes influence flowed from Oromo to Swahili.\",\n  \"correct_option\": {\n    \"label\": \"E\",\n    \"reason\": \"The argument's conclusion that Swahili was influenced by Oromo requires that Oromo built these structures first. The historian provides no evidence about which civilization constructed these tombs earlier, yet assumes the direction of influence goes from Oromo to Swahili. This is a critical unwarranted assumption that the argument takes for granted.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1289
+  },
+  {
+    "questionId": "PT158-S2-Q2",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 1,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Flaw\",\n  \"method\": \"Flaw Identification\",\n  \"core_judgment\": \"The council president rejects Smith's proposed ordinance not based on the merits of the ordinance itself, but solely because Smith previously engaged in the practice the ordinance would prohibit. This is an ad hominem attack that dismisses a proposal based on its source rather than evaluating its actual content or merit.\",\n  \"correct_option\": {\n    \"label\": \"A\",\n    \"reason\": \"This directly identifies the flaw in the reasoning. The president concludes that Smith's ordinance 'does not even merit consideration' purely because Smith used to own a store that employed bait-and-switch tactics. The president attacks the source (Smith's past behavior) rather than evaluating whether the ordinance itself is good policy. This is a classic ad hominem fallacy where the argument is rejected based on who proposed it rather than what it proposes.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1163
+  },
+  {
+    "questionId": "PT158-S2-Q2",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 2,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Flaw\",\n  \"method\": \"Flaw Identification\",\n  \"core_judgment\": \"The council president rejects Smith's proposed ordinance not based on the merits of the ordinance itself, but solely because Smith previously engaged in the practice the ordinance would prohibit. This is an ad hominem attack that dismisses a proposal based on its source rather than evaluating its actual content or merit.\",\n  \"correct_option\": {\n    \"label\": \"A\",\n    \"reason\": \"This directly matches the core flaw. The president explicitly states the ordinance 'does not even merit consideration' based entirely on Smith's past ownership of a store that used bait-and-switch tactics, rather than examining whether the ordinance itself is good policy. The president attacks the source (Smith's hypocrisy) rather than addressing the content of the proposal.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1187
+  },
+  {
+    "questionId": "PT158-S2-Q2",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 3,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Flaw\",\n  \"method\": \"Flaw Identification\",\n  \"core_judgment\": \"The council president rejects Smith's proposed ordinance not based on the merits of the ordinance itself, but solely because Smith previously engaged in the practice the ordinance would prohibit. This is an ad hominem attack that dismisses a proposal based on its source rather than evaluating its actual content or merit.\",\n  \"correct_option\": {\n    \"label\": \"A\",\n    \"reason\": \"This directly matches the core flaw. The president explicitly states the ordinance 'does not even merit consideration' based entirely on Smith's past ownership of a store that used bait-and-switch tactics, rather than examining whether the ordinance itself is good policy. The president attacks the source (Smith's hypocrisy) rather than addressing the content of the proposal.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1227
+  },
+  {
+    "questionId": "PT158-S3-Q14",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 1,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Parallel Flaw\",\n  \"method\": \"Structural Analysis\",\n  \"core_judgment\": \"The stimulus commits a categorical reasoning error. It has the form: Some A are B. No C are B. Therefore, some C are not A. This is invalid because it reverses the proper conclusion. The valid conclusion from 'Some A are B' and 'No C are B' would be 'Some A are not C' (not 'Some C are not A'). The flaw is concluding about the wrong category - it should conclude about freelance journalists (the subject of the first premise), not about self-respecting writers (the subject of the second premise).\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"Option C displays the identical flawed pattern: Some A (students) are B (prefer history to math). No C (Calculus Club members) are B (prefer history to math). Therefore, some C (Calculus Club members) are not A (students). This commits the same error of reversing the conclusion - it should conclude 'some students are not Calculus Club members' rather than 'some Calculus Club members are not students.' The structural flaw is identical to the stimulus.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 779
+  },
+  {
+    "questionId": "PT158-S3-Q14",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 2,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Parallel Flaw\",\n  \"method\": \"Structural Analysis\",\n  \"core_judgment\": \"The stimulus commits a categorical reasoning error. It has the form: Some A are B. No C are B. Therefore, some C are not A. This is invalid because it reverses the proper conclusion. The valid conclusion from 'Some A are B' and 'No C are B' would be 'Some A are not C' (not 'Some C are not A'). The flaw is switching the subject and predicate in the conclusion.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"Option C has the identical flawed structure: Some students prefer history to mathematics (Some A are B). No member of the Calculus Club prefers history to mathematics (No C are B). Thus, some members of the Calculus Club are not students (Some C are not A). This commits the same error of reversing the terms in the conclusion. The valid conclusion would be 'some students are not members of the Calculus Club,' not 'some members of the Calculus Club are not students.'\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1053
+  },
+  {
+    "questionId": "PT158-S3-Q14",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 3,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Parallel Flaw\",\n  \"method\": \"Structural Analysis\",\n  \"core_judgment\": \"The stimulus commits a categorical reasoning error. It has the form: Some A are B. No C are B. Therefore, some C are not A. This is invalid because it reverses the proper conclusion. The valid conclusion from 'Some A are B' and 'No C are B' would be 'Some A are not C' (some freelance journalists are not self-respecting writers), not 'Some C are not A' (some self-respecting writers are not freelance journalists). The flaw is concluding about the wrong category - it switches the subject and predicate of what should be concluded.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"Option C has the identical flawed structure: Some A are B (Some students prefer history to mathematics). No C are B (No Calculus Club members prefer history to mathematics). Therefore, some C are not A (some Calculus Club members are not students). This commits the same error of reversing the proper conclusion - it should conclude 'some students are not Calculus Club members' but instead concludes 'some Calculus Club members are not students.' The flaw pattern matches exactly.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 954
+  },
+  {
+    "questionId": "PT158-S3-Q07",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 1,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Weaken\",\n  \"method\": \"Identify the argument's reasoning gap and find which option exploits it\",\n  \"core_judgment\": \"The ethicist concludes Dr. Faris violated the ethics code (no deception) because he told a patient medication A would help him sleep when it has no known sleep-inducing properties. The gap is assuming that telling a patient a medication will help them sleep when it lacks sleep-inducing properties necessarily constitutes deception. This fails if the medication could legitimately help sleep through another mechanism.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"If medication A is a pain reliever that indirectly leads to sleep by reducing discomfort, then Dr. Faris's statement that it would help the patient sleep was truthful, not deceptive. The medication would indeed help sleep, just not through direct sleep-inducing properties. This directly undermines the claim that Dr. Faris deceived the patient, thus weakening the conclusion that he violated the ethics code.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1228
+  },
+  {
+    "questionId": "PT158-S3-Q07",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 2,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Weaken\",\n  \"method\": \"Identify the argument's reasoning gap and find which option exploits it\",\n  \"core_judgment\": \"The ethicist concludes Dr. Faris violated the ethics code (no deception) because he told a patient medication A would help him sleep when it has no known sleep-inducing properties. The gap is assuming that telling a patient a medication will help them sleep when it lacks direct sleep-inducing properties constitutes deception. This fails if the medication could legitimately help sleep through indirect means.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"If medication A is a pain reliever that indirectly leads to sleep by reducing discomfort, then Dr. Faris's statement that it would help the patient sleep was truthful, not deceptive. The medication would indeed help sleep, just through an indirect mechanism rather than direct sleep-inducing properties. This directly undermines the claim that Dr. Faris deceived the patient and violated the ethics code.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1457
+  },
+  {
+    "questionId": "PT158-S3-Q07",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 3,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Weaken\",\n  \"method\": \"Identify the argument's reasoning gap and find which option exploits it\",\n  \"core_judgment\": \"The ethicist concludes Dr. Faris violated the ethics code (no deception) because he told a patient medication A would help him sleep when it has no known sleep-inducing properties. The gap is assuming that telling a patient a medication will help them sleep when it lacks sleep-inducing properties necessarily constitutes deception. This fails if the medication could legitimately help sleep through another mechanism.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"If medication A is a pain reliever that indirectly leads to sleep by reducing discomfort, then Dr. Faris's statement that it would help the patient sleep was truthful, not deceptive. The medication would indeed help sleep, just not through direct sleep-inducing properties. This directly undermines the claim that Dr. Faris deceived the patient, thus weakening the conclusion that he violated the ethics code.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1107
+  },
+  {
+    "questionId": "PT158-S3-Q17",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "```json\n{\n  \"question_family\": \"Parallel Reasoning (Exception/Least)\",\n  \"method\": \"Structural Pattern Matching\",\n  \"core_judgment\": \"The original analysis states that achieving the first objective (patients deriving more enjoyment) will cause achievement of the second objective (spending more time practicing). We need to find the option where achieving the first objective does NOT logically lead to achieving the second objective.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"In option D, constructing a new, larger warehouse (first objective) does not logically bring about employees helping to plan expansion of the OLD warehouse (second objective). These are contradictory or unrelated goals - if you're building a new warehouse, you wouldn't be expanding the old one. The causal relationship present in the original analysis (first objective leads to second) is absent here. In all other options, achieving the first objective plausibly leads to achieving the second: understanding math principles leads to applying them (A), customer satisfaction leads to fewer service calls (B), fewer lost/stolen books correlates with more timely returns as both reflect patron responsibility (C), and varied repertoire attracts new patrons (E).\"\n  },\n  \"faithfulness_check\": \"pass\"\n}\n```",
+    "latencyMs": 914
+  },
+  {
+    "questionId": "PT158-S3-Q17",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "```json\n{\n  \"question_family\": \"Parallel Reasoning (Exception/EXCEPT)\",\n  \"method\": \"Structural Pattern Matching\",\n  \"core_judgment\": \"The original analysis states that achieving the first objective (patients deriving more enjoyment from the challenge) will cause achievement of the second objective (spending more time practicing). This is a causal relationship where success in the first goal leads to success in the second goal. The correct answer will be the option where this causal relationship does NOT hold - where achieving the first objective would not naturally bring about the second objective.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"In option D, constructing a new, larger warehouse (first objective) does not cause or bring about employees helping to plan expansion of the old warehouse (second objective). These are contradictory or at least independent goals - if you're building a new warehouse, you wouldn't need to expand the old one. The two objectives don't have the causal relationship present in the original and in all other options. In contrast: A (understanding principles leads to applying them), B (satisfaction leads to fewer service calls), C (fewer lost/stolen books and more timely returns are related goals where one supports the other), and E (varied repertoire attracts new patrons) all show the first objective naturally leading to or supporting the second.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}\n```",
+    "latencyMs": 1091
+  },
+  {
+    "questionId": "PT158-S3-Q17",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "```json\n{\n  \"question_family\": \"Parallel Reasoning (Exception/Least)\",\n  \"method\": \"Structural Pattern Matching\",\n  \"core_judgment\": \"The original analysis states that achieving the first objective (patients deriving more enjoyment) will cause achievement of the second objective (spending more time practicing). We need to find the option where achieving the first objective does NOT logically lead to achieving the second objective.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"In option D, the first objective is constructing a new, larger warehouse and the second is having employees help plan expansion of the OLD warehouse. These are contradictory goals - if you're building a new warehouse, you wouldn't need to expand the old one. Success in the first objective (building new warehouse) would actually make the second objective (planning old warehouse expansion) unnecessary or irrelevant, not bring it about. This breaks the causal relationship pattern present in the original and all other options.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}\n```",
+    "latencyMs": 1127
+  },
+  {
+    "questionId": "PT147-S3-Q12",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Must Be False / Can Be Rejected\",\n  \"method\": \"Direct Contradiction Detection\",\n  \"core_judgment\": \"The stimulus describes Demosthenes looking at a tablet and expressing amazement at its contents before explaining them aloud to his companion. This demonstrates that Demosthenes read the tablet silently to himself first (evidenced by his continuous amazement while looking at it) before reading it aloud. This directly contradicts the claim that people in ancient Greece did not read silently to themselves.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"The stimulus provides direct evidence that contradicts option D. Demosthenes opens the tablet, looks at it, and expresses amazement at its contents before his companion presses him for information and he explains what was written. This sequence shows he read the contents silently to himself first. Therefore, the claim that 'In ancient Greece, people did not read silently to themselves' can be justifiably rejected based on this evidence.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1109
+  },
+  {
+    "questionId": "PT147-S3-Q12",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "```json\n{\n  \"question_family\": \"Inference/Must Be False\",\n  \"method\": \"Contradiction Detection\",\n  \"core_judgment\": \"The stimulus describes Demosthenes looking at a tablet and expressing amazement at its contents before explaining them aloud to his companion. This demonstrates that Demosthenes read the tablet silently to himself first (evidenced by his amazement while looking at it) before reading it aloud. This directly contradicts the claim that people in ancient Greece did not read silently to themselves.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"The stimulus explicitly shows Demosthenes reading the tablet silently (he looks at it and expresses amazement at its contents) before explaining what it says to his companion. This provides direct evidence that silent reading occurred in ancient Greece, making option D the claim that can most justifiably be rejected.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}\n```",
+    "latencyMs": 1126
+  },
+  {
+    "questionId": "PT147-S3-Q12",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "```json\n{\n  \"question_family\": \"Inference/Must Be False\",\n  \"method\": \"Contradiction Detection\",\n  \"core_judgment\": \"The stimulus describes Demosthenes looking at a tablet and expressing amazement at its contents before explaining them aloud to his companion. This demonstrates that Demosthenes read the tablet silently to himself first (evidenced by his amazement while looking at it) before reading it aloud. This directly contradicts the claim that people in ancient Greece did not read silently to themselves.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"The stimulus provides direct evidence that contradicts option D. Demosthenes opens the tablet, looks at it, and expresses amazement at its contents before explaining them to his companion. This sequence shows he read the contents silently first. The claim that 'people did not read silently to themselves' in ancient Greece can therefore be justifiably rejected based on this evidence from the play.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}\n```",
+    "latencyMs": 1093
+  },
+  {
+    "questionId": "PT147-S1-Q3",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 1,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "```json\n{\n  \"question_family\": \"Point of Disagreement\",\n  \"method\": \"Double-Check Test\",\n  \"core_judgment\": \"Enrique and Cynthia disagree over whether the transit authority should continue operating without cuts/increases until funds are exhausted. Enrique says it should do this because the federal government will then provide funding. Cynthia says if the authority tries this maneuver, the federal government will likely let it go out of business, and the authority cannot risk this - implying it should NOT pursue this strategy.\",\n  \"correct_option\": {\n    \"label\": \"A\",\n    \"reason\": \"Enrique explicitly states the transit authority 'should continue operating without service cuts or fare increases until it has exhausted its funds.' Cynthia responds that 'if the transit authority tries that maneuver' the federal government will probably let it go out of business, and 'the transit authority cannot risk allowing that to happen' - clearly indicating she believes the authority should NOT pursue this course of action. This is a direct disagreement on the question posed in option A.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}\n```",
+    "latencyMs": 1141
+  },
+  {
+    "questionId": "PT147-S1-Q3",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 2,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "```json\n{\n  \"question_family\": \"Point of Disagreement\",\n  \"method\": \"Double-Check Test\",\n  \"core_judgment\": \"Enrique and Cynthia disagree over whether the transit authority should continue operating without cuts/increases until funds are exhausted. Enrique says it should do this because the federal government will then provide funding. Cynthia says if the authority tries this maneuver, the federal government will likely let it go out of business, and the authority cannot risk this - implying it should NOT pursue this strategy.\",\n  \"correct_option\": {\n    \"label\": \"A\",\n    \"reason\": \"Enrique explicitly states the transit authority 'should continue operating without service cuts or fare increases until it has exhausted its funds.' Cynthia responds that 'if the transit authority tries that maneuver' the federal government will probably let it go out of business, and 'the transit authority cannot risk allowing that to happen' - clearly indicating she believes the authority should NOT pursue this course of action. This is a direct disagreement on the exact proposition in option A.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}\n```",
+    "latencyMs": 1244
+  },
+  {
+    "questionId": "PT147-S1-Q3",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 3,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "```json\n{\n  \"question_family\": \"Point of Disagreement\",\n  \"method\": \"Double-Check Test\",\n  \"core_judgment\": \"Enrique and Cynthia disagree about whether the transit authority should continue operating without service cuts or fare increases until funds are exhausted. Enrique explicitly says it should do this because the federal government will then provide funding. Cynthia explicitly opposes this strategy, saying the federal government will probably let the authority go out of business and the authority cannot risk this outcome.\",\n  \"correct_option\": {\n    \"label\": \"A\",\n    \"reason\": \"Enrique explicitly advocates that 'the transit authority should continue operating without service cuts or fare increases until it has exhausted its funds.' Cynthia directly opposes this maneuver, saying 'If the transit authority tries that maneuver, the federal government will probably just let the authority go out of business. The transit authority cannot risk allowing that to happen.' This is a clear disagreement where Enrique says YES (should do it) and Cynthia says NO (should not do it).\"\n  },\n  \"faithfulness_check\": \"pass\"\n}\n```",
+    "latencyMs": 1319
+  },
+  {
+    "questionId": "PT158-S3-Q21",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 1,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Necessary Assumption\",\n  \"method\": \"Negation Test\",\n  \"core_judgment\": \"The professor argues that we have no reason to believe in the light-absorbing medium because general relativity already completely explains low visibility. This reasoning assumes that general relativity's explanation is independent of (doesn't depend on) the light-absorbing medium hypothesis. If general relativity actually required the medium hypothesis, then the professor couldn't use it as an alternative explanation to reject the medium.\",\n  \"correct_option\": {\n    \"label\": \"E\",\n    \"reason\": \"Applying the negation test: If general relativity DOES depend on the invisible light-absorbing medium hypothesis, then the professor's argument collapses. The professor uses general relativity as an alternative explanation to dismiss the need for the medium hypothesis. But if general relativity itself depends on that hypothesis, then it's not truly an alternative explanation - it would be circular reasoning. The professor must assume E for the argument to work. Negating E destroys the argument, confirming it's a necessary assumption.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1278
+  },
+  {
+    "questionId": "PT158-S3-Q21",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 2,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Necessary Assumption\",\n  \"method\": \"Negation Test\",\n  \"core_judgment\": \"The professor argues that we have no reason to believe in the light-absorbing medium because general relativity already completely explains low visibility. This reasoning assumes that general relativity's explanation is independent of (doesn't depend on) the light-absorbing medium hypothesis. If general relativity actually required the medium to exist, then the professor couldn't use it as an alternative explanation that makes the medium unnecessary.\",\n  \"correct_option\": {\n    \"label\": \"E\",\n    \"reason\": \"Negating E: If general relativity DOES depend on the invisible light-absorbing medium, then the professor's argument collapses. The professor claims general relativity provides an alternative explanation that makes the medium hypothesis unnecessary, but if general relativity itself requires the medium, it cannot serve as an independent competing explanation. This negation destroys the argument, confirming E is a necessary assumption.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 928
+  },
+  {
+    "questionId": "PT158-S3-Q21",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 3,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Necessary Assumption\",\n  \"method\": \"Negation Test\",\n  \"core_judgment\": \"The professor argues that we have no reason to believe in the light-absorbing medium because general relativity already completely explains low visibility. This reasoning assumes that general relativity's explanation is independent of (doesn't depend on) the light-absorbing medium hypothesis. If general relativity actually required the medium hypothesis, then the professor couldn't use it as an alternative explanation to reject the medium.\",\n  \"correct_option\": {\n    \"label\": \"E\",\n    \"reason\": \"Applying the negation test: If general relativity DOES depend on the invisible light-absorbing medium hypothesis, then the professor's argument collapses. The professor uses general relativity as an alternative explanation to dismiss the need for the medium hypothesis. But if general relativity itself depends on that hypothesis, then it's not truly an alternative explanation - it would be circular reasoning. The professor must assume E for the argument to work. Negating E destroys the argument, confirming it's a necessary assumption.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 890
+  },
+  {
+    "questionId": "PT158-S2-Q01",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Main Conclusion\",\n  \"method\": \"Conclusion Identification\",\n  \"core_judgment\": \"The argument's main conclusion is stated in the opening sentence: many people who enjoy popular music don't realize it has been used to express religious and political messages. This is supported by the subsequent explanation that popular music has been adopted by social movements for various purposes (conversion, morale, solidarity). The core point is that popular music serves purposes beyond entertainment - specifically, expressing messages and serving social movements - which many listeners don't recognize.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"Option D captures the main conclusion that popular music has purposes other than mere entertainment. The stimulus establishes that people who 'simply enjoy listening' (entertainment) don't realize popular music has been used for religious and political messages (other purposes). The supporting evidence about social movements demonstrates these non-entertainment purposes. This directly matches the argument's main point.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1191
+  },
+  {
+    "questionId": "PT158-S2-Q01",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Main Conclusion\",\n  \"method\": \"Conclusion Identification\",\n  \"core_judgment\": \"The argument's main conclusion is stated in the opening sentence: many people who enjoy popular music don't realize it has been used to express religious and political messages. This is supported by the subsequent explanation that popular music has been adopted by social movements for various purposes (conversion, morale, solidarity). The core point is that popular music serves purposes beyond entertainment - specifically, expressing messages and serving social movements - which many listeners don't recognize.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"Option D captures the main conclusion that popular music has purposes other than mere entertainment. The stimulus establishes that people who 'simply enjoy listening' (entertainment) don't realize popular music has been used for religious and political messages (other purposes). The supporting evidence about social movements demonstrates these non-entertainment purposes. This directly matches the argument's main point.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1053
+  },
+  {
+    "questionId": "PT158-S2-Q01",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Main Conclusion\",\n  \"method\": \"Conclusion Identification\",\n  \"core_judgment\": \"The argument's main conclusion is stated in the opening sentence: many people who enjoy popular music don't realize it has been used to express religious and political messages. This is supported by the subsequent explanation that popular music has been adopted by social movements for various purposes (conversion, morale, solidarity). The core point is that popular music serves purposes beyond entertainment - specifically, expressing messages and serving social movements - which many listeners don't recognize.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"Option D captures the main conclusion that popular music has purposes other than mere entertainment. The stimulus establishes that people who 'simply enjoy listening' (entertainment) don't realize popular music has been used for religious and political messages (other purposes). The supporting evidence about social movements demonstrates these non-entertainment purposes. This directly matches the argument's main point.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1214
+  },
+  {
+    "questionId": "PT158-S4-Q25",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Sufficient Assumption\",\n  \"method\": \"Formal Logic Analysis\",\n  \"core_judgment\": \"The argument needs to connect 'most members of BU17 are programmers' to 'some Hanson employees are programmers'. The missing premise must establish that members of BU17 work in Hanson. If most BU17 members work in Hanson (D), and most BU17 members are programmers, then by overlapping majorities, some Hanson workers must be programmers. This is the only option that guarantees the conclusion through valid logical inference.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"When most of BU17 are programmers AND most of BU17 work in Hanson, these two majorities must overlap - meaning some people who work in Hanson must be programmers. This is the only completion that makes the conclusion logically follow with certainty.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 786
+  },
+  {
+    "questionId": "PT158-S4-Q25",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Sufficient Assumption\",\n  \"method\": \"Formal Logic Analysis\",\n  \"core_judgment\": \"The argument needs to connect 'most members of BU17 are programmers' to 'some Hanson employees are programmers'. The missing premise must establish that some programmers from BU17 work in Hanson. If most BU17 members work in Hanson (option D), and most BU17 members are programmers, then by overlapping majorities, some programmers must work in Hanson. This is the only option that guarantees the conclusion through valid logical inference.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"When most of BU17 are programmers AND most of BU17 work in Hanson, these two majorities must overlap - meaning some programmers from BU17 must work in Hanson. This makes them government employees who work in Hanson and are programmers, which is exactly what the conclusion requires.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 855
+  },
+  {
+    "questionId": "PT158-S4-Q25",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Sufficient Assumption\",\n  \"method\": \"Formal Logic Analysis\",\n  \"core_judgment\": \"The argument needs to connect 'most members of BU17 are programmers' to 'some Hanson employees are programmers'. The missing premise must establish that some programmers from BU17 work in Hanson. If most BU17 members work in Hanson (option D), and most BU17 members are programmers, then by overlapping majorities, some programmers must work in Hanson. This is the only option that guarantees the conclusion through valid logical inference.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"When most of BU17 are programmers AND most of BU17 work in Hanson, these two majorities must overlap - there must be some people who are both programmers and work in Hanson. This makes the conclusion logically certain.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 920
+  },
+  {
+    "questionId": "PT147-S3-Q5",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 1,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Strengthen\",\n  \"method\": \"Argument Analysis\",\n  \"core_judgment\": \"The argument claims turmeric helps prevent Alzheimer's based on: (1) higher turmeric consumption in India correlates with lower Alzheimer's rates, and (2) curcumin in turmeric reduces amyloid proteins in animals. The argument assumes the correlation in India is due to turmeric specifically. To strengthen, we need evidence that more directly links turmeric consumption to lower Alzheimer's rates, ruling out alternative explanations or showing a dose-response relationship.\",\n  \"correct_option\": {\n    \"label\": \"E\",\n    \"reason\": \"This option establishes a dose-response relationship within India itself: areas with highest curry (turmeric) consumption have lowest Alzheimer's rates. This strengthens the causal link by showing the correlation holds even when controlling for other factors that might vary between India and the rest of the world (like genetics, overall diet, age distribution). It provides additional evidence beyond the India-vs-world comparison that specifically ties turmeric consumption levels to Alzheimer's incidence.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 823
+  },
+  {
+    "questionId": "PT147-S3-Q5",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 2,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "```json\n{\n  \"question_family\": \"Strengthen\",\n  \"method\": \"Identify conclusion and premises, find gap between evidence and conclusion, select option that best bridges this gap or adds supporting evidence\",\n  \"core_judgment\": \"The argument concludes turmeric helps prevent Alzheimer's based on: (1) India consumes more turmeric and has lower Alzheimer's rates, and (2) curcumin in turmeric reduces amyloid proteins in animals. The gap is whether the correlation between turmeric consumption and lower Alzheimer's rates in India is actually causal rather than due to other factors. Option E strengthens by showing a dose-response relationship within India itself—areas with highest curry consumption have lowest Alzheimer's rates—which supports causation and controls for other India-specific factors.\",\n  \"correct_option\": {\n    \"label\": \"E\",\n    \"reason\": \"This option establishes a dose-response relationship within India, showing that higher curry/turmeric consumption correlates with lower Alzheimer's rates even when controlling for other factors that might explain India's overall lower rates. This internal correlation strengthens the causal claim that turmeric specifically helps prevent Alzheimer's disease.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}\n```",
+    "latencyMs": 827
+  },
+  {
+    "questionId": "PT147-S3-Q5",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 3,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Strengthen\",\n  \"method\": \"Argument Analysis - Identify gap between evidence and conclusion, find answer that bridges gap or adds supporting evidence\",\n  \"core_judgment\": \"The argument concludes turmeric helps prevent Alzheimer's based on: (1) India consumes more turmeric and has lower Alzheimer's rates, and (2) curcumin in turmeric reduces amyloid proteins in animals. The key gap is whether the correlation between turmeric consumption and lower Alzheimer's rates in India is actually causal rather than due to other factors. The strongest support would show a dose-response relationship within India itself - that higher turmeric consumption correlates with even lower Alzheimer's rates, eliminating alternative explanations that would affect all of India equally.\",\n  \"correct_option\": {\n    \"label\": \"E\",\n    \"reason\": \"This establishes a dose-response relationship within India: areas with highest curry/turmeric consumption have lowest Alzheimer's rates. This strengthens the causal link by showing the pattern holds even when controlling for other factors that might distinguish India from the rest of the world (genetics, other dietary factors, healthcare differences). It demonstrates that variation in turmeric consumption correlates with variation in Alzheimer's rates within the same population.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1139
+  },
+  {
+    "questionId": "PT158-S4-Q26",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 1,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Parallel Flaw\",\n  \"method\": \"Structural Analysis\",\n  \"core_judgment\": \"The stimulus commits the following flaw: It observes that (1) all X have property Y, (2) nothing would have Y without condition Z, and concludes that (3) Z, not the inherent nature of X, causes Y. This is flawed because Z being necessary for Y doesn't mean the inherent nature of X is irrelevant - both could be necessary conditions. The argument falsely treats a necessary condition as the sole sufficient cause while dismissing another potential contributing factor. The parallel flaw should have the same structure: observing a universal property in a group, noting a necessary condition for that property, then concluding the necessary condition (not the group's inherent nature) is the sole cause.\",\n  \"correct_option\": {\n    \"label\": \"B\",\n    \"reason\": \"Option B perfectly mirrors the flawed structure: (1) When it snows, there are more car crashes [all instances of snow-crashes have the crash property], (2) crashes wouldn't occur without carelessness [necessary condition], (3) therefore carelessness, not icy roads, causes the crashes [dismissing one factor in favor of the necessary condition]. Like the stimulus, it treats a necessary condition as the exclusive cause while dismissing another contributing factor (icy roads/genetic makeup), when both could be necessary conditions working together.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 909
+  },
+  {
+    "questionId": "PT158-S4-Q26",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 2,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Parallel Flaw\",\n  \"method\": \"Structural Analysis\",\n  \"core_judgment\": \"The stimulus commits the following flaw: It observes that (1) all X have property Y, (2) nothing would have Y without condition Z, and concludes that (3) Z, not the inherent nature of X, causes Y. This is flawed because Z being necessary for Y doesn't mean the inherent nature of X is irrelevant - both could be necessary conditions. The argument falsely treats a necessary condition as the sole sufficient cause while dismissing another potential contributing factor. The parallel flaw should have the same structure: observing a universal property in a group, noting a necessary condition for that property, then concluding the necessary condition (not the group's inherent nature) is the sole cause.\",\n  \"correct_option\": {\n    \"label\": \"B\",\n    \"reason\": \"Option B perfectly mirrors the flawed structure: (1) When it snows, there are more crashes [all instances of snow-crashes have the crash property], (2) crashes wouldn't occur without carelessness [necessary condition], (3) therefore carelessness, not icy roads, causes the crashes [dismissing one factor in favor of the necessary condition]. Like the stimulus, it treats a necessary condition as the exclusive cause while dismissing another contributing factor (icy roads/genetic makeup), when both could be necessary conditions working together.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 920
+  },
+  {
+    "questionId": "PT158-S4-Q26",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 3,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "```json\n{\n  \"question_family\": \"Parallel Flaw\",\n  \"method\": \"Structural Analysis\",\n  \"core_judgment\": \"The stimulus commits the following flaw: It observes that all X have property Y, notes that a necessary condition Z must be present for Y to occur, then concludes that Z (not some other factor like genetics) is THE cause of Y. This illegitimately moves from 'necessary condition' to 'sufficient explanation' while dismissing an alternative explanation without justification. The structure is: All observed X are Y. Y requires Z. Therefore Z, not alternative A, explains why X are Y.\",\n  \"correct_option\": {\n    \"label\": \"B\",\n    \"reason\": \"Option B perfectly mirrors the flawed structure: All observed cases (snowy conditions) have outcome Y (more crashes). Y requires condition Z (carelessness). Therefore Z (carelessness), not alternative A (icy roads), explains Y. Like the stimulus, it moves from a necessary condition to claiming it as the sole cause while dismissing another plausible contributing factor. Both arguments fail to recognize that multiple factors can contribute and that a necessary condition doesn't exclude other causal factors.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}\n```",
+    "latencyMs": 781
+  },
+  {
+    "questionId": "PT158-S2-Q16",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 1,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Paradox Resolution\",\n  \"method\": \"Find Missing Link\",\n  \"core_judgment\": \"The apparent contradiction is that the general rule states significant intellectual advances occur in stable political systems, yet Athens had major intellectual advances during political instability. To reconcile this, we need an explanation showing why Athens was an exception - specifically, what special condition in Athens allowed intellectual progress despite political instability. Option C provides this: while unstable political environments typically lack financial support for intellectual work (which would explain the general rule), Athens was different because wealthy citizens provided such support anyway. This explains both why the general rule usually holds (unstable systems lack funding) and why Athens was an exception (it had funding despite instability).\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"This option reconciles the apparent counterexample by identifying a special condition in Athens that compensated for the political instability. It explains that while financial support is typically unavailable in unstable environments (supporting the general rule), Athens had wealthy citizens who provided this support anyway, allowing intellectual advances to occur despite the political unrest. This makes Athens a genuine exception without invalidating the general pattern.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1164
+  },
+  {
+    "questionId": "PT158-S2-Q16",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 2,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Paradox Resolution\",\n  \"method\": \"Find Missing Link\",\n  \"core_judgment\": \"The apparent contradiction is that the general rule states significant intellectual advances occur in stable political systems, yet Athens had major intellectual advances during political instability. To reconcile this, we need a factor that explains why Athens was an exception - something present in Athens that typically accompanies stable systems but was unusually present despite the instability. Option C provides this: financial support for intellectual work, which is normally unavailable in unstable environments, was exceptionally provided by wealthy citizens in Athens. This explains why Athens could produce intellectual advances despite lacking political stability.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"This option reconciles the paradox by identifying a critical factor (financial support) that is normally associated with stable political systems but was present in Athens despite its instability. It explains why Athens was an exception to the general rule without contradicting either the rule or the counterexample.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1208
+  },
+  {
+    "questionId": "PT158-S2-Q16",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 3,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "```json\n{\n  \"question_family\": \"Paradox Resolution\",\n  \"method\": \"Find the answer that explains how both seemingly contradictory facts can be true simultaneously\",\n  \"core_judgment\": \"The apparent contradiction is that historians claim intellectual advances require political stability, yet Athens had major intellectual advances during political instability. The resolution must explain why Athens was an exception - what special condition allowed intellectual progress despite the instability that normally prevents it.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"This option explains why Athens was an exception to the general rule. The general rule holds because unstable political environments typically lack financial support for intellectual work. However, Athens had wealthy citizens who provided this support despite the political instability, thus allowing intellectual advances to occur. This reconciles the counterexample with the rule by identifying a compensating factor unique to Athens.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}\n```",
+    "latencyMs": 827
+  },
+  {
+    "questionId": "PT158-S2-Q09",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 1,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Argument Structure/Role\",\n  \"method\": \"Structural Analysis\",\n  \"core_judgment\": \"The statement 'the purpose of a law is to deter certain actions by threatening to punish those performing the actions' is the foundational premise that begins the argument's logical chain. It establishes the basic principle from which all subsequent reasoning flows: (1) laws deter through punishment threats → (2) this requires belief in likely punishment → (3) too many prohibitions reduce punishment likelihood → (4) therefore, successful systems prohibit only few intolerable behaviors. This statement is not derived from other claims in the argument; rather, it serves as the starting point that supports the reasoning leading to the final conclusion.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"The statement is a premise because it is presented as a foundational claim that is not argued for but is used to support subsequent reasoning. It initiates the logical chain that leads to the argument's conclusion about successful legal systems. It is neither the main conclusion (B), nor an intermediate conclusion requiring support from other premises (D), nor something the argument seeks to discredit (E), nor does it support a conclusion about police officers (A).\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1160
+  },
+  {
+    "questionId": "PT158-S2-Q09",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 2,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Argument Structure/Role\",\n  \"method\": \"Structural Analysis\",\n  \"core_judgment\": \"The statement 'the purpose of a law is to deter certain actions by threatening to punish those performing the actions' serves as the foundational premise that establishes what laws are meant to do. The argument then builds from this premise through intermediate steps (threat works only if violators believe they'll be punished → likelihood of punishment decreases as prohibited actions increase) to reach the final conclusion that successful legal systems prohibit only few behaviors citizens find intolerable. This opening statement is not derived from other claims but rather supports the reasoning chain that follows.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"The statement is a premise - it is the starting point of the argument that is not supported by other statements in the passage. All subsequent reasoning depends on accepting this initial claim about the purpose of law. It is not the conclusion (which is about what successful legal systems prohibit), not an intermediate conclusion (it doesn't follow from prior claims), not something being discredited (the argument accepts it as true), and doesn't support a claim about police officers.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 861
+  },
+  {
+    "questionId": "PT158-S2-Q09",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 3,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Argument Structure/Role\",\n  \"method\": \"Structural Analysis\",\n  \"core_judgment\": \"The statement 'the purpose of a law is to deter certain actions by threatening to punish those performing the actions' serves as the foundational premise that establishes what laws are meant to do. The argument then builds on this premise through a chain of reasoning: deterrence requires belief in punishment → belief decreases as prohibited actions increase → therefore successful systems prohibit only few intolerable behaviors. This opening statement is not derived from other claims in the argument; rather, it is the starting point from which the rest of the reasoning flows.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"The statement is a premise - it is presented as a foundational claim about the purpose of law that is not argued for but is used as the basis for the subsequent reasoning. The argument uses this premise to build toward the conclusion that successful legal systems prohibit only few behaviors. It is neither the main conclusion (which is about what successful legal systems prohibit), nor an intermediate conclusion (as nothing in the argument is offered to support it), nor something to be discredited.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 903
+  },
+  {
+    "questionId": "PT158-S3-Q22",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 1,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Method of Reasoning\",\n  \"method\": \"Structural Analysis\",\n  \"core_judgment\": \"The argument defends the researchers' claim (that people gesture less for abstract vs physical concepts) against a potential objection (that the correlation isn't universal) by explaining why the objection fails: some people perceive abstract words as physical actions, which means apparent counterexamples aren't actually disconfirming the claim. This is reconciling a generalization with seemingly contradictory evidence by citing a psychological fact about perception.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"The argument cites a psychological fact (that some people perceive abstract words like 'comprehension' as expressing physical actions) to reconcile the researchers' generalization (less gesturing for abstract concepts) with apparently disconfirming evidence (the correlation isn't universal). This matches the structure exactly: a psychological fact is used to explain why apparent counterexamples don't actually disconfirm the claim.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1146
+  },
+  {
+    "questionId": "PT158-S3-Q22",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 2,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Method of Reasoning\",\n  \"method\": \"Structural Analysis\",\n  \"core_judgment\": \"The argument defends the researchers' claim (that people gesture less for abstract vs physical concepts) against a potential counterexample (that the correlation isn't universal) by explaining why the counterexample doesn't actually refute the claim: some people perceive abstract words as physical actions, which would explain why they still gesture. This is reconciling the general claim with apparently contradictory evidence by citing a psychological fact about how people perceive certain words.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"The argument cites a psychological fact (that some people perceive abstract words like 'comprehension' as expressing physical actions) to reconcile the researchers' generalization (less gesturing for abstract concepts) with apparently disconfirming evidence (the correlation isn't universal). This matches the structure perfectly: the psychological fact explains why apparent counterexamples don't actually disconfirm the generalization.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1126
+  },
+  {
+    "questionId": "PT158-S3-Q22",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 3,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Method of Reasoning\",\n  \"method\": \"Structural Analysis\",\n  \"core_judgment\": \"The argument defends the researchers' claim (that people gesture less for abstract vs physical concepts) against a potential counterexample (that the correlation isn't universal) by explaining why the counterexample doesn't actually refute the claim: some people perceive abstract words as physical actions, which would explain why they still gesture. This is reconciling the general claim with apparently contradictory evidence by citing a psychological fact about perception.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"The argument cites a psychological fact (that some people perceive abstract words like 'comprehension' as expressing physical actions) to reconcile the researchers' generalization (less gesturing for abstract concepts) with apparently disconfirming evidence (the correlation isn't universal). This matches the structure perfectly: psychological fact → reconciles generalization with counterevidence.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 912
+  },
+  {
+    "questionId": "PT158-S4-Q17",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Principle-Justify\",\n  \"method\": \"Principle Matching\",\n  \"core_judgment\": \"Mateo's argument requires a principle linking an industry's contribution to damage (through products whose use causes harm) to financial responsibility for that damage. The argument moves from: (1) auto pollution contributes to global warming, (2) global warming caused permafrost melting and relocation costs, to (3) the automotive industry should help pay. The needed principle must connect manufacturing products whose use causes damage to liability for that damage.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"Option D provides the exact principle needed: 'Any industry manufacturing a product whose use contributes to costly damage for others should be liable for any damage generated by that product's use.' This directly supports Mateo's reasoning that the automotive industry (which manufactures automobiles) should pay for relocation costs (damage) because automobile use (pollution) contributes to global warming which caused the damage. The principle captures both the causal chain (product use → damage) and the liability conclusion without adding unsupported requirements like 'should have known' (A), focusing only on manufacturing methods (B), involving government payment conditions (C), or requiring general obligations for all global warming damage (E).\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 788
+  },
+  {
+    "questionId": "PT158-S4-Q17",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Principle-Justify\",\n  \"method\": \"Principle Matching\",\n  \"core_judgment\": \"Mateo's argument requires a principle that connects an industry manufacturing a product (automobiles) whose use (pollution) contributes to costly damage (relocation expenses from permafrost melting) to that industry's obligation to help pay for that damage. The principle must bridge from 'automotive industry makes cars' → 'car use causes pollution' → 'pollution contributes to global warming' → 'global warming causes costly relocation' → 'automotive industry should help pay.'\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"Option D provides the exact principle needed: 'Any industry manufacturing a product whose use contributes to costly damage for others should be liable for any damage generated by that product's use.' This directly supports Mateo's reasoning chain: the automotive industry manufactures automobiles, the use of automobiles (pollution) contributes to costly damage (relocation from permafrost melting), therefore the industry should be liable. This principle perfectly bridges the gap between manufacturing the product and responsibility for damage caused by its use.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1437
+  },
+  {
+    "questionId": "PT158-S4-Q17",
+    "model": "anthropic/claude-sonnet-4.5",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Principle-Justify\",\n  \"method\": \"Principle Matching\",\n  \"core_judgment\": \"Mateo's argument requires a principle linking an industry's contribution to damage (through products whose use causes harm) to financial responsibility for that damage. The argument moves from: (1) auto pollution contributes to global warming, (2) global warming caused permafrost melting and relocation costs, to (3) the automotive industry should help pay. The needed principle must connect manufacturing products whose use causes damage to liability for that damage.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"Option D provides the exact principle needed: 'Any industry manufacturing a product whose use contributes to costly damage for others should be liable for any damage generated by that product's use.' This directly supports Mateo's reasoning that the automotive industry (which manufactures automobiles) should pay for relocation costs (damage) because automobile use (pollution) contributes to global warming which caused the damage. Option A fails because it requires the industry 'should have known' about the specific damage. Option B addresses how to manufacture, not liability. Option C introduces irrelevant conditions about government payment. Option E actually undermines Mateo by requiring general obligation before specific obligation.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 800
+  },
+  {
+    "questionId": "PT17-S2-Q22",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Argument Evaluation\",\n  \"method\": \"Assess the logical adequacy of a counterargument in relation to the original argument's structure and assumptions\",\n  \"core_judgment\": \"The advertising-sales director’s argument fails because it does not address the editor’s central concern—that editorial integrity, if compromised, would erode reader trust in the magazine as a whole, thereby undermining its effectiveness as an advertising vehicle. The director incorrectly assumes the editor’s argument depends on readers conflating ads with articles or being influenced in their ad response by editorial integrity, but the editor’s point is about long-term readership loyalty and the magazine’s overall credibility, not immediate ad response.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"The editor’s argument is based on the idea that compromising editorial integrity would lead to loss of loyal readership, which in turn would make the magazine less effective for advertisers. The advertising-sales director responds by saying readers distinguish ads from articles and their ad response doesn’t depend on editorial integrity. However, this misses the editor’s point: the threat is not to ad effectiveness per se, but to the magazine’s overall credibility and readership loyalty. Thus, the director’s argument fails because the editor’s argument does not depend on assumptions about readers’ immediate response to ads.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 942
+  },
+  {
+    "questionId": "PT17-S2-Q22",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "）\n{\n  \"question_family\": \"Argument Evaluation\",\n  \"method\": \"Assess the logical adequacy of a counter-argument in response to a prior argument\",\n  \"core_judgment\": \"The advertising-sales director’s argument fails because it misrepresents the editor’s concern: the editor is not claiming that readers will respond negatively to ads based on editorial integrity, but rather that readers will lose trust in the magazine’s editorial content if they perceive it as influenced by advertisers, which would erode readership and thus the magazine’s value as an advertising vehicle. The director’s response addresses only the distinction between ads and articles, not the editor’s actual claim about editorial content being compromised.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"The editor’s argument is about the effect of advertiser influence on editorial content (not ads) and how that could damage reader trust in the magazine’s integrity, leading to loss of readership. The advertising-sales director incorrectly assumes the editor is making a claim about how readers respond to advertisements, when the editor is actually concerned about how readers perceive the articles. Therefore, the director’s argument fails because it does not engage with the actual basis of the editor’s argument.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1937
+  },
+  {
+    "questionId": "PT17-S2-Q22",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Argument Evaluation\",\n  \"method\": \"Assess the logical adequacy of a counterargument in relation to the original argument's structure and assumptions\",\n  \"core_judgment\": \"The advertising-sales director’s argument fails because it does not address the editor’s central concern—that editorial integrity, if compromised, would erode reader trust in the magazine as a whole, thereby undermining its effectiveness as an advertising vehicle. The director incorrectly assumes the editor’s argument depends on readers conflating ads with articles or judging ads based on editorial integrity, but the editor’s point is about long-term readership loyalty and the magazine’s overall credibility, not about how readers respond to ads per se.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"The editor’s argument is based on the idea that compromising editorial integrity would cause readers to lose trust in the magazine, leading to a loss of readership, which in turn would make the magazine a less effective advertising vehicle. The advertising-sales director responds by saying readers distinguish ads from articles and don’t judge ads based on editorial integrity. However, this misses the editor’s point: the issue is not how readers respond to ads, but how they respond to the magazine’s overall credibility. The editor’s argument does not depend on assumptions about readers’ response to advertisements, so the director’s rebuttal is irrelevant to the core logic. Thus, the argument fails, and D correctly identifies this flaw.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1176
+  },
+  {
+    "questionId": "PT158-S2-Q10",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "E",
+    "predictedAnswer": "D",
+    "isCorrect": false,
+    "rawText": "{\n  \"question_family\": \"flawed reasoning\",\n  \"method\": \"identify assumption or alternative explanation\",\n  \"core_judgment\": \"The argument assumes that the presence of a similar architectural feature in two cultures, with no known intermediary, implies direct cultural influence from one to the other, without considering the possibility of a common third source or independent development.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"The argument assumes that because the Swahili and Oromo share a unique tomb style not found in other contacted cultures, the Oromo must have influenced the Swahili. However, it does not rule out the possibility that a third, now unknown, civilization developed the style and influenced both, or that both inherited it from a common ancestor. This is a classic flaw of ignoring a potential common cause.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 865
+  },
+  {
+    "questionId": "PT158-S2-Q10",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "E",
+    "predictedAnswer": "D",
+    "isCorrect": false,
+    "rawText": "\"\n\n{\n  \"question_family\": \"Flawed Assumption\",\n  \"method\": \"Identify unstated assumption that undermines causal inference\",\n  \"core_judgment\": \"The argument assumes that the architectural similarity between Swahili and Oromo tombs implies Oromo influence on Swahili culture, without ruling out the possibility that a third, earlier civilization influenced both, or that the feature originated independently in both cultures.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"The argument assumes that because the tomb style is unique to the Swahili and Oromo among known contacts, the Oromo must have influenced the Swahili. But it does not consider that a third, now-unknown civilization could have introduced the tomb style to both, which would undermine the claim of direct Oromo influence.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1578
+  },
+  {
+    "questionId": "PT158-S2-Q10",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "E",
+    "predictedAnswer": "D",
+    "isCorrect": false,
+    "rawText": "{\n  \"question_family\": \"causal reasoning\",\n  \"method\": \"identify alternative explanation\",\n  \"core_judgment\": \"The argument assumes that the Swahili adopted the tomb style from the Oromo without considering that a third civilization could have introduced the style to both, or that the Oromo adopted it from the Swahili, or that both independently developed it.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"The argument is vulnerable because it fails to consider the possibility that a third civilization, not the Oromo, was the source of the tomb style found in both cultures, which would undermine the claim of direct Oromo influence on Swahili culture.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1349
+  },
+  {
+    "questionId": "PT158-S2-Q2",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Flawed Reasoning\",\n  \"method\": \"Identify the flaw in the argument by analyzing the reasoning structure and the basis for dismissal\",\n  \"core_judgment\": \"The council president rejects the proposed ordinance solely based on the past behavior of its proposer, not on the merits or content of the ordinance itself, which constitutes an ad hominem fallacy.\",\n  \"correct_option\": {\n    \"label\": \"A\",\n    \"reason\": \"The president dismisses the ordinance because it was proposed by Smith, who previously used the tactic, rather than evaluating the ordinance on its own merits or content.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 938
+  },
+  {
+    "questionId": "PT158-S2-Q2",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Flawed Reasoning\",\n  \"method\": \"Identify the flaw in the argument by analyzing the reasoning pattern and determining the most accurate description of the logical error\",\n  \"core_judgment\": \"The council president rejects the proposed ordinance based solely on the past behavior of its proposer, not on the merits or content of the proposal itself, which constitutes an ad hominem fallacy.\",\n  \"correct_option\": {\n    \"label\": \"A\",\n    \"reason\": \"The president dismisses the ordinance because Smith previously used the tactic, not because of any defect in the ordinance itself. This is a classic case of rejecting an argument based on its source rather than its content.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 666
+  },
+  {
+    "questionId": "PT158-S2-Q2",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Flawed Reasoning\",\n  \"method\": \"Identify the flaw in the argument's structure and evaluate which option most accurately describes that flaw\",\n  \"core_judgment\": \"The council president rejects the proposed ordinance solely because of Smith's past behavior, not because of any defect in the ordinance itself, which constitutes an ad hominem fallacy.\",\n  \"correct_option\": {\n    \"label\": \"A\",\n    \"reason\": \"The president dismisses the ordinance based on Smith's prior use of the tactic, not on the merits or content of the proposal, making A the most accurate description of the flaw.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 921
+  },
+  {
+    "questionId": "PT158-S3-Q14",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"flawed reasoning\",\n  \"method\": \"identify parallel flawed structure in categorical syllogism\",\n  \"core_judgment\": \"The argument commits a logical error by assuming that because some members of a group (freelance journalists) do something (sell to lax magazines), and no self-respecting writers do that thing, then some self-respecting writers must not be freelance journalists. This is invalid because the 'some' in the first premise does not guarantee overlap with the set of self-respecting writers; the conclusion illegitimately infers a negative existential from a partial overlap and a universal exclusion. The flaw is in misapplying quantifier scope and invalidly negating a category membership based on a shared negative property.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"Option C replicates the flawed structure: 'Some students prefer history to mathematics' (some S are P), 'No member of the Calculus Club prefers history to mathematics' (no C are P), therefore 'some members of the Calculus Club are not students' (some C are not S). This is invalid because the premises do not establish that any Calculus Club member is a student; the conclusion assumes a negative existential about category membership based on a shared exclusion from a preference, just as the original argument does. The flaw is identical: invalidly inferring a negative existential about group membership from a partial overlap and a universal exclusion.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1226
+  },
+  {
+    "questionId": "PT158-S3-Q14",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"flawed reasoning\",\n  \"method\": \"identify matching logical structure (invalid categorical syllogism with illicit contraposition or misattribution of negation)\",\n  \"core_judgment\": \"The argument invalidly concludes that some members of a group (self-respecting writers) are not members of another group (freelance journalists) based on the premises that some freelance journalists sell to low-standard magazines and no self-respecting writer does. This confuses the contrapositive and misapplies negation across categories, committing a formal fallacy in categorical logic: from 'Some A are B' and 'No C are B', it invalidly concludes 'Some C are not A'.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"Option C replicates the flawed structure: 'Some students prefer history' (Some A are B), 'No member of the Calculus Club prefers history' (No C are B), therefore 'Some members of the Calculus Club are not students' (Some C are not A). This matches the original argument's invalid inference pattern, where the conclusion improperly negates membership based on a shared negative relation to a third category.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 800
+  },
+  {
+    "questionId": "PT158-S3-Q14",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"flawed reasoning\",\n  \"method\": \"identify parallel flawed structure\",\n  \"core_judgment\": \"The argument commits a categorical fallacy: it assumes that because some freelance journalists are not self-respecting writers (due to selling to lax magazines), and no self-respecting writer sells to such magazines, it follows that some self-respecting writers are not freelance journalists. This reverses the quantifier improperly—it moves from 'some freelance journalists are not self-respecting' to 'some self-respecting writers are not freelance journalists', which is not logically valid. The flaw is in illicitly reversing a partial exclusion between two groups based on a third attribute.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"Option C mirrors the flawed structure: 'Some students prefer history to math' (some S are H), 'No Calculus Club member prefers history to math' (no C are H), therefore 'some Calculus Club members are not students' (some C are not S). This illicitly reverses the quantifier—just as the original argument wrongly infers a partial exclusion in the reverse direction, so does C. The other options either use different quantifiers (e.g., 'most', 'few') or draw conclusions about properties rather than group membership, or lack the same flawed reversal pattern.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 862
+  },
+  {
+    "questionId": "PT158-S3-Q07",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"weaken\",\n  \"method\": \"identify the assumption in the causal and definitional reasoning\",\n  \"core_judgment\": \"The ethicist assumes that informing a patient that medication A will help them sleep, when it has no known sleep-inducing properties, constitutes deception under the ethics code. To weaken the argument, one must show that the statement was not deceptive because the medication could reasonably be expected to help sleep, even if not directly.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"If medication A is a pain reliever that can indirectly lead to sleep by reducing discomfort, then telling the patient it will help them sleep is not deceptive, as it has a plausible, indirect sleep-promoting effect. This undermines the claim that Dr. Faris violated the ethics code by deceiving the patient.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1125
+  },
+  {
+    "questionId": "PT158-S3-Q07",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"weaken\",\n  \"method\": \"identify the assumption in the argument and find the option that undermines it\",\n  \"core_judgment\": \"The ethicist assumes that informing a patient that medication A will help them sleep, when it has no known sleep-inducing properties, constitutes deception. To weaken the argument, a statement must show that the claim was not deceptive because the medication could reasonably be expected to help with sleep, even if not directly.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"C weakens the argument by showing that medication A can indirectly lead to sleep by reducing discomfort, meaning Dr. Faris's statement was not deceptive, as the medication could legitimately be expected to help the patient sleep. This directly undermines the claim of deception.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 820
+  },
+  {
+    "questionId": "PT158-S3-Q07",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"weaken\",\n  \"method\": \"undermine the causal or definitional link between action and violation\",\n  \"core_judgment\": \"The ethicist assumes that informing a patient that medication A will help them sleep, when it has no known sleep-inducing properties, constitutes deception. To weaken the argument, we must show that the statement was not deceptive because the medication could reasonably be expected to help with sleep, even if not directly.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"C shows that medication A can indirectly lead to sleep by reducing discomfort, meaning Dr. Faris's statement was not deceptive, as the medication could legitimately be expected to help with sleep. This undermines the claim that Dr. Faris violated the ethics code by deceiving the patient.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 854
+  },
+  {
+    "questionId": "PT158-S3-Q17",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"EXCEPT\",\n  \"method\": \"Identify the structural relationship in the stimulus and find the option that does NOT match it\",\n  \"core_judgment\": \"The stimulus describes a situation where achieving the first goal (enjoyment from challenge) directly causes or leads to the second goal (more practice time). The correct EXCEPT option is the one where the two goals are not causally linked in this way, or where the first does not bring about the second.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"In option D, the two goals—constructing a new warehouse and having employees help plan the expansion of the old one—are not causally linked; the first does not bring about the second. The goals are parallel or logistical, not where one success leads to the other. In all other options, the first goal's success plausibly leads to the second (e.g., understanding math leads to routine application; customer satisfaction leads to fewer service calls; varied repertoire leads to attracting new patrons; fewer lost books may correlate with timely returns via better systems). Only D lacks the causal dependency described in the stimulus.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1173
+  },
+  {
+    "questionId": "PT158-S3-Q17",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"EXCEPT\",\n  \"method\": \"Identify the structural relationship in the stimulus and find the option that does NOT share it\",\n  \"core_judgment\": \"The stimulus describes a situation where achieving the first objective (enjoyment from challenge) directly causes or leads to achieving the second (more practice time). The correct EXCEPT option is the one where the first objective does not plausibly cause or lead to the second; instead, the objectives are independent, unrelated, or even in tension.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"In the stimulus, enjoyment (first goal) leads to more practice (second goal). In option D, wanting to build a new warehouse and wanting employees to help plan the expansion of the old one are two separate, parallel goals with no causal link—employee involvement in planning does not result from or cause the construction of a new warehouse. The objectives are administratively related but not causally connected in the way the analysis requires. In all other options, achieving the first goal plausibly leads to or enables the second (e.g., understanding math leads to applying it; customer satisfaction leads to fewer service calls; varied repertoire leads to attracting new patrons; fewer lost books may correlate with better return habits). Only D lacks the required causal dependency.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 724
+  },
+  {
+    "questionId": "PT158-S3-Q17",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"EXCEPT\",\n  \"method\": \"Identify the structural relationship in the stimulus and find the option that does NOT share it\",\n  \"core_judgment\": \"The stimulus describes a situation where achieving the first objective (enjoyment from challenge) directly causes or leads to achieving the second (more practice time). The correct EXCEPT option is the one where the first objective does not plausibly cause or bring about the second.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"In option D, wanting to construct a new warehouse and wanting employees to help plan the expansion of the old warehouse are parallel goals, not causally linked—employee involvement in planning does not result from or cause the construction of a new warehouse. In all other options, the first goal plausibly leads to or enables the second (e.g., understanding math leads to applying it; customer satisfaction leads to fewer service calls; varied repertoire leads to attracting new patrons; fewer lost books may correlate with better care, leading to on-time returns). Only D lacks the causal dependency described in the stimulus.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 659
+  },
+  {
+    "questionId": "PT147-S3-Q12",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"most justifiably rejected\",\n  \"method\": \"inference rejection based on direct evidence\",\n  \"core_judgment\": \"The stimulus describes Demosthenes reading a written prophecy silently and then explaining it verbally, which directly contradicts the claim that people in ancient Greece did not read silently to themselves.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"The scene explicitly shows Demosthenes reading silently (he looks at the tablet and reacts without speaking aloud), then later explains the content, which directly contradicts the claim that people in ancient Greece did not read silently.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 913
+  },
+  {
+    "questionId": "PT147-S3-Q12",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Weaken/Reject\",\n  \"method\": \"Direct contradiction with stimulus or necessary implication\",\n  \"core_judgment\": \"The stimulus describes a scene in which Demosthenes reads silently from a writing tablet and then verbally explains the contents to his companion, which directly contradicts the claim that people in ancient Greece did not read silently to themselves.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"The stimulus shows Demosthenes reading silently (he looks at the tablet and reacts before speaking), which provides direct evidence against the claim that people in ancient Greece did not read silently. This claim can therefore be most justifiably rejected based on the passage.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 770
+  },
+  {
+    "questionId": "PT147-S3-Q12",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Weaken/Reject\",\n  \"method\": \"Direct contradiction with stimulus or necessary implication\",\n  \"core_judgment\": \"The stimulus describes Demosthenes reading a written prophecy silently and reacting to it before explaining it aloud, which directly contradicts the claim that people in ancient Greece did not read silently to themselves.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"The stimulus shows Demosthenes silently reading the tablet and reacting to its contents before speaking, which provides direct evidence that silent reading did occur, thus allowing the claim that 'people did not read silently to themselves' to be most justifiably rejected.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 663
+  },
+  {
+    "questionId": "PT147-S1-Q3",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"disagreement\",\n  \"method\": \"identify conflicting beliefs about a conditional outcome (federal funding after exhaustion of funds)\",\n  \"core_judgment\": \"Enrique believes that if the transit authority operates until funds are exhausted without cuts or fare hikes, the federal government will then provide funding; Cynthia believes that if the authority does this, the federal government will likely let it fail, making the maneuver too risky.\",\n  \"correct_option\": {\n    \"label\": \"A\",\n    \"reason\": \"The core disagreement is whether the transit authority should continue operating without cuts or fare increases until funds are exhausted—Enrique supports this strategy based on his belief about future federal funding, while Cynthia opposes it because she believes the federal government will not step in, risking collapse. This is the action they directly disagree on, and the rest of their views follow from this divergence.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 786
+  },
+  {
+    "questionId": "PT147-S1-Q3",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"disagreement\",\n  \"method\": \"identify conflicting beliefs about a conditional outcome (federal funding after exhaustion of funds)\",\n  \"core_judgment\": \"Enrique believes that if the transit authority operates until funds are exhausted, the federal government will then provide funding; Cynthia believes that if the authority does so, the federal government will likely let it go out of business, so the authority cannot take that risk.\",\n  \"correct_option\": {\n    \"label\": \"A\",\n    \"reason\": \"The core disagreement is whether the transit authority should continue operating without cuts or fare increases until funds are exhausted—Enrique supports this action based on his belief that federal funding will follow; Cynthia opposes it because she believes the federal government will not step in and the authority cannot risk collapse. This is a direct conflict over the advisability of that specific course of action, which is option A.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 930
+  },
+  {
+    "questionId": "PT147-S1-Q3",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"disagreement\",\n  \"method\": \"identify conflicting beliefs about a conditional outcome\",\n  \"core_judgment\": \"Enrique believes that continuing operations without cuts or fare increases until funds are exhausted will lead the federal government to provide funding, while Cynthia believes that doing so will likely result in the federal government allowing the transit authority to go out of business, making the maneuver too risky.\",\n  \"correct_option\": {\n    \"label\": \"A\",\n    \"reason\": \"The core of the disagreement is whether the transit authority should continue operating without cuts or fare increases until funds are exhausted, based on opposing beliefs about the federal government's likely response. Enrique supports this action; Cynthia opposes it due to the risk of failure. This is directly supported by their statements.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 920
+  },
+  {
+    "questionId": "PT158-S3-Q21",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "E",
+    "predictedAnswer": "B",
+    "isCorrect": false,
+    "rawText": "{\n  \"question_family\": \"assumption\",\n  \"method\": \"negation test\",\n  \"core_judgment\": \"The professor's argument assumes that the general theory of relativity's complete explanation of low visibility undermines the need for the light-absorbing medium hypothesis, which only holds if the medium's proposed explanatory role is not necessary or superior given the existing explanation.\",\n  \"correct_option\": {\n    \"label\": \"B\",\n    \"reason\": \"The professor argues that there is no reason to believe the light-absorbing medium hypothesis because the phenomenon it aims to explain is already fully explained by relativity. This reasoning assumes that the hypothesis is only justified if it is needed to explain the phenomenon—i.e., that the hypothesis is correct only if it adequately explains something not already explained by existing theory. Negating B ('The hypothesis can be correct even if it does not adequately explain the low visibility...') destroys the professor's argument, confirming B is required.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 639
+  },
+  {
+    "questionId": "PT158-S3-Q21",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "E",
+    "predictedAnswer": "B",
+    "isCorrect": false,
+    "rawText": "{\n  \"question_family\": \"assumption\",\n  \"method\": \"negation test\",\n  \"core_judgment\": \"The professor's argument assumes that the general theory of relativity's complete explanation of low visibility undermines the need for the light-absorbing medium hypothesis, which only holds if the medium's proposed explanatory role is not necessary or superior given the existing explanation.\",\n  \"correct_option\": {\n    \"label\": \"B\",\n    \"reason\": \"The professor argues that there is no reason to believe the light-absorbing medium hypothesis because the phenomenon it aims to explain is already fully explained by relativity. This reasoning assumes that the hypothesis is only justified if it provides an adequate explanation for a phenomenon not already explained by existing theory. Negating B — 'The hypothesis can be correct even if it does not adequately explain the low visibility that is already explained by relativity' — undermines the professor's dismissal, confirming B is required.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 831
+  },
+  {
+    "questionId": "PT158-S3-Q21",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "E",
+    "predictedAnswer": "B",
+    "isCorrect": false,
+    "rawText": "{\n  \"question_family\": \"assumption\",\n  \"method\": \"negation test\",\n  \"core_judgment\": \"The professor's argument assumes that the general theory of relativity's complete explanation of low visibility undermines the need for the light-absorbing medium hypothesis, which only holds if the medium's proposed explanatory role is not necessary or superior given the existing explanation.\",\n  \"correct_option\": {\n    \"label\": \"B\",\n    \"reason\": \"The professor argues that there is no reason to believe the light-absorbing medium hypothesis because the phenomenon it aims to explain is already completely explained by relativity. This reasoning assumes that the hypothesis is only justified if it is needed to explain the phenomenon—i.e., that the hypothesis is correct only if it adequately explains something not already explained by existing theory. Negating B ('The hypothesis can be correct even if it does not adequately explain the low visibility...') destroys the professor's argument, confirming it is a required assumption.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 686
+  },
+  {
+    "questionId": "PT158-S2-Q01",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Main Conclusion\",\n  \"method\": \"Identify the claim that the rest of the argument supports, particularly focusing on the author's primary point about the underappreciated roles of popular music.\",\n  \"core_judgment\": \"The main conclusion is that popular music serves purposes beyond entertainment, specifically expressing religious and political messages and supporting social movements, which many people fail to recognize.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"Option D directly captures the central claim that popular music has functions beyond mere entertainment, which is supported by the evidence about its use in social movements for conversion, morale, and solidarity. The other options either overstate (A, C), misrepresent (B), or are too narrow (E) compared to the argument's scope.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 899
+  },
+  {
+    "questionId": "PT158-S2-Q01",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Main Conclusion\",\n  \"method\": \"Identify the claim that the rest of the argument supports or leads to, focusing on the author's primary point rather than intermediate claims or examples.\",\n  \"core_judgment\": \"The argument's main conclusion is that popular music serves purposes beyond entertainment, specifically in expressing religious and political messages and supporting social movements.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"Option D directly captures the main conclusion: that popular music has purposes other than mere entertainment, which is supported by the evidence about its use in social movements to express viewpoints, convert nonmembers, and build solidarity.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 899
+  },
+  {
+    "questionId": "PT158-S2-Q01",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Main Conclusion\",\n  \"method\": \"Identify the claim that the rest of the argument supports, particularly the point that ties together the evidence about social movements and conversion/morale/solidarity.\",\n  \"core_judgment\": \"The main conclusion is that popular music serves purposes beyond entertainment, specifically in expressing religious and political messages and supporting social movements.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"The stimulus argues that popular music is used by social movements to express viewpoints, convert nonmembers, raise morale, and express solidarity—functions beyond mere entertainment. This directly supports D as the main conclusion. The other options either overstate (A, C), are too narrow (E), or are not the main point (B).\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1116
+  },
+  {
+    "questionId": "PT158-S4-Q25",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "：\n{\n  \"question_family\": \"sufficient assumption\",\n  \"method\": \"bridge the gap between premises and conclusion using necessary overlap\",\n  \"core_judgment\": \"To conclude that some government employees in the Hanson Building are computer programmers, it must be the case that at least some computer programmers from Bargaining Unit Number 17 work in the Hanson Building. Since most of the unit are programmers, if most of the unit works in the Hanson Building, then most of those in the building from the unit are likely programmers, ensuring that some programmers are present. This is the only option that guarantees overlap between the group (Bargaining Unit 17) and the location (Hanson Building) sufficient to support the conclusion.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"If most members of Bargaining Unit Number 17 work in the Hanson Building, and most of those members are computer programmers, then it follows that some of the government employees in the Hanson Building are computer programmers. This directly supports the conclusion by ensuring that the group with a majority of programmers overlaps sufficiently with the location.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1699
+  },
+  {
+    "questionId": "PT158-S4-Q25",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"sufficient assumption\",\n  \"method\": \"bridge the gap between premises and conclusion using necessary overlap\",\n  \"core_judgment\": \"To conclude that some government employees in the Hanson Building are computer programmers, it must be the case that at least some members of Bargaining Unit Number 17 (who are mostly computer programmers) work in the Hanson Building, creating an overlap between the unit and the building.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"If most members of Bargaining Unit Number 17 work in the Hanson Building, and most of those members are computer programmers, then it follows that some computer programmers from the unit are in the building, which directly supports the conclusion that some government employees in the Hanson Building are computer programmers.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 897
+  },
+  {
+    "questionId": "PT158-S4-Q25",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Sufficient Assumption\",\n  \"method\": \"Identify the gap between the premises and the conclusion, and select the option that, if assumed, makes the conclusion logically follow.\",\n  \"core_judgment\": \"The conclusion that some government employees in the Hanson Building are computer programmers follows only if there is an overlap between members of Bargaining Unit Number 17 (most of whom are computer programmers) and employees in the Hanson Building. The necessary assumption is that a significant portion of Bargaining Unit Number 17 works in the Hanson Building, ensuring that at least some of the computer programmers are located there.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"If most members of Bargaining Unit Number 17 work in the Hanson Building, and most of those members are computer programmers, then it is certain that some computer programmers (who are government employees) work in the Hanson Building. This bridges the gap between the premise and the conclusion.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 980
+  },
+  {
+    "questionId": "PT147-S3-Q5",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Strengthen\",\n  \"method\": \"Causal correlation with mechanism support\",\n  \"core_judgment\": \"The argument claims turmeric consumption likely prevents Alzheimer’s, based on a correlation between high turmeric intake in India and low Alzheimer’s incidence, plus a biological mechanism (curcumin reducing amyloid plaques). To strengthen this, the correct option must reinforce the link between turmeric (or curcumin) and reduced Alzheimer’s, ideally by showing a more direct or localized correlation, or by ruling out confounding factors.\",\n  \"correct_option\": {\n    \"label\": \"E\",\n    \"reason\": \"E strengthens the argument by showing a within-country correlation: regions in India with the highest curry (and thus turmeric) consumption have the lowest Alzheimer’s incidence. This supports a dose-response relationship, making the causal link more plausible and reducing the likelihood that the national correlation is due to broad cultural or genetic factors.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 651
+  },
+  {
+    "questionId": "PT147-S3-Q5",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Strengthen\",\n  \"method\": \"Causal correlation with mechanism and geographic/epidemiological support\",\n  \"core_judgment\": \"The argument claims turmeric consumption likely prevents Alzheimer’s, based on lower incidence in India, higher turmeric intake, and curcumin’s effect on amyloid plaques. The strongest support would be evidence that within India, higher turmeric consumption correlates with lower Alzheimer’s incidence, reinforcing the causal link.\",\n  \"correct_option\": {\n    \"label\": \"E\",\n    \"reason\": \"E provides direct within-country evidence that higher curry (turmeric) consumption correlates with lower Alzheimer’s incidence, strengthening the causal inference by showing a dose-response pattern in the population where the initial correlation was observed.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1067
+  },
+  {
+    "questionId": "PT147-S3-Q5",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Strengthen\",\n  \"method\": \"Causal correlation with supporting mechanism\",\n  \"core_judgment\": \"The argument claims that turmeric consumption likely prevents Alzheimer’s, based on a correlation between high turmeric intake in India and low Alzheimer’s incidence, plus a biological mechanism (curcumin reducing amyloid plaques). The best strengthener would reinforce the link between turmeric consumption and reduced Alzheimer’s by showing a more direct or localized correlation, especially one that reduces the influence of confounding variables.\",\n  \"correct_option\": {\n    \"label\": \"E\",\n    \"reason\": \"Option E strengthens the argument by showing a within-country correlation: regions in India with higher curry (and thus turmeric) consumption have lower Alzheimer’s incidence. This supports a dose-response relationship and reduces the likelihood that the national correlation is due to broad demographic or genetic differences, thereby reinforcing the causal link between turmeric and reduced Alzheimer’s.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 708
+  },
+  {
+    "questionId": "PT158-S4-Q26",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Flawed Reasoning (Parallel Reasoning)\",\n  \"method\": \"Identify causal flaw: dismissing a potential cause (genetics) based on the necessity of another factor (training), despite no evidence that the dismissed cause is irrelevant\",\n  \"core_judgment\": \"The argument incorrectly infers that because training is necessary for good behavior, genetics cannot be the reason for the Labradors' good behavior, ignoring the possibility that both training and genetics could play causal roles.\",\n  \"correct_option\": {\n    \"label\": \"B\",\n    \"reason\": \"It mirrors the flaw: it dismisses icy roads (a potential cause) as the reason for increased car crashes during snow, based on the necessity of carelessness, even though both factors could contribute. Like the original, it wrongly assumes that because one factor is necessary, another cannot be the primary cause.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 765
+  },
+  {
+    "questionId": "PT158-S4-Q26",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Flawed Reasoning (Parallel Flaw)\",\n  \"method\": \"Identify causal reasoning that dismisses a potential cause based on a necessary condition, while ignoring the actual causal mechanism or conflating necessary and sufficient conditions\",\n  \"core_judgment\": \"The argument incorrectly concludes that training (a necessary condition for good behavior) is the actual cause of good behavior in Labradors, while dismissing genetics, despite the possibility that genetics may enable or enhance trainability. The flaw is treating a necessary condition as the exclusive cause, ignoring interaction or underlying factors.\",\n  \"correct_option\": {\n    \"label\": \"B\",\n    \"reason\": \"Option B mirrors the flaw: it observes that snow correlates with more crashes, but then asserts that carelessness (a necessary condition for crashes) is the cause, dismissing icy roads (a contextual factor that may interact with carelessness). Like the original, it treats a necessary condition (carelessness) as the exclusive cause, ignoring that snow/icy roads may be the enabling or contributing factor, just as genetics may enable training effectiveness in Labradors.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 716
+  },
+  {
+    "questionId": "PT158-S4-Q26",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Flawed Reasoning (Parallel Flaw)\",\n  \"method\": \"Identify causal reasoning flaw: dismissing a potential cause (genetics) based on the necessity of another factor (training), despite both possibly contributing; the flaw lies in assuming that because training is necessary, it is the sole explanatory factor, ignoring possible interaction or contribution from other factors.\",\n  \"core_judgment\": \"The argument incorrectly infers that training alone explains the good behavior of Labrador retrievers by noting that training is necessary for good behavior, while dismissing genetics despite no evidence that genetics does not also contribute. The parallel flaw must involve dismissing a potential causal factor (e.g., environmental condition, inherent trait) based solely on the necessity of another factor, without ruling out joint causation.\",\n  \"correct_option\": {\n    \"label\": \"B\",\n    \"reason\": \"Option B mirrors the flaw: it dismisses icy roads (a potential contributing factor) as the cause of car crashes during snow, based on the observation that carelessness is necessary for crashes. It wrongly concludes that carelessness alone causes crashes, ignoring that icy roads and carelessness may both be necessary and jointly sufficient. This parallels the original argument's dismissal of genetics despite training being necessary.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 715
+  },
+  {
+    "questionId": "PT158-S2-Q16",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"resolve a discrepancy\",\n  \"method\": \"identify a differentiating factor that explains why the exception does not invalidate the general rule\",\n  \"core_judgment\": \"The general rule links stable political systems to intellectual advances, but Athens achieved such advances during unrest; a reconciling fact would show that despite political instability, conditions functionally equivalent to stability (e.g., support for intellectual work) were present.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"It explains how intellectual advances could occur in Athens despite political instability—because wealthy citizens provided financial support, which is typically absent in unstable environments, thus preserving the underlying condition (support for intellectual endeavors) that the rule implicitly depends on.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1024
+  },
+  {
+    "questionId": "PT158-S2-Q16",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"resolve a paradox\",\n  \"method\": \"identify a differentiating factor that explains why the general rule does not apply in the counterexample case\",\n  \"core_judgment\": \"The apparent counterexample of intellectual progress in politically unstable ancient Athens can be reconciled with the general rule if there was a compensating condition—such as private financial support—that enabled intellectual advances despite political instability.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"It provides a specific condition (financial support from wealthy citizens) that allowed intellectual progress in Athens despite political unrest, thus explaining how the general rule (stable political systems foster intellectual advances) can still hold, as the exception is due to a mitigating factor.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 813
+  },
+  {
+    "questionId": "PT158-S2-Q16",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"resolve a paradox\",\n  \"method\": \"identify a differentiating factor that explains why the general rule does not apply in the exceptional case\",\n  \"core_judgment\": \"The apparent counterexample of intellectual progress in politically unstable ancient Athens can be reconciled with the general rule if there was a compensating condition—such as private financial support—that enabled intellectual advances despite political instability.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"It provides a specific condition (financial support from wealthy citizens) that explains how intellectual progress could occur in Athens despite political unrest, thereby reconciling the exception with the general rule about stable political systems.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 724
+  },
+  {
+    "questionId": "PT158-S2-Q09",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Role in Argument\",\n  \"method\": \"Identify function of statement within argument structure\",\n  \"core_judgment\": \"The statement 'the purpose of a law is to deter certain actions by threatening to punish those performing the actions' is a foundational claim used to support the reasoning that leads to the conclusion about limiting prohibited behaviors; it is not the final conclusion, nor an intermediate one, but a premise that sets up the logic of deterrence.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"The statement is a premise because it provides a definition of the purpose of law that is used to support the subsequent reasoning about deterrence, belief in punishment, and the effect of increasing prohibited acts. It is not the conclusion (B), nor an intermediate conclusion (D), nor does it support a claim about police numbers (A), nor is it a view the argument seeks to discredit (E).\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 886
+  },
+  {
+    "questionId": "PT158-S2-Q09",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Role in Argument\",\n  \"method\": \"Identify the function of a specific claim within the argument structure\",\n  \"core_judgment\": \"The statement 'the purpose of a law is to deter certain actions by threatening to punish those performing the actions' is a foundational claim used to support the reasoning that leads to the conclusion about limiting prohibited behaviors; it is not the conclusion itself, nor is it intermediate, but rather a starting premise that explains the mechanism of deterrence, which is then linked to the likelihood of punishment and the number of prohibited acts.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"The statement is a premise because it provides a definition of the purpose of law that the rest of the argument builds upon—specifically, that deterrence depends on perceived likelihood of punishment, which in turn depends on the number of prohibited acts. It is not the conclusion (B), nor intermediate (D), nor does it support a claim about police numbers (A), nor is it a view the argument seeks to discredit (E).\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 819
+  },
+  {
+    "questionId": "PT158-S2-Q09",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Role in Argument\",\n  \"method\": \"Identify the function of a specific claim within the logical structure of the argument\",\n  \"core_judgment\": \"The statement 'the purpose of a law is to deter certain actions by threatening to punish those performing the actions' is a foundational assumption that supports the reasoning about how deterrence depends on perceived likelihood of punishment, and thus functions as a premise in the argument.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"The statement is used to establish the mechanism of deterrence, which is then built upon to argue that increasing the number of prohibited actions reduces the perceived likelihood of punishment, ultimately supporting the conclusion about limiting prohibited behaviors. It is not the conclusion, nor an intermediate conclusion, nor a view to be discredited, nor does it support the number of police officers. It is a premise.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 901
+  },
+  {
+    "questionId": "PT158-S3-Q22",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Method of Reasoning\",\n  \"method\": \"Reconciling a generalization with counterevidence by citing a psychological fact\",\n  \"core_judgment\": \"The argument defends a generalization (that people gesture less when articulating abstract concepts) against apparent counterevidence by citing a psychological fact: some people perceive abstract words as physical actions, which explains why the correlation is not universal without invalidating the claim.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"The argument cites the psychological fact that some people perceive abstract concepts as physical actions to explain why the correlation is not universal, thereby reconciling the generalization with seemingly disconfirming evidence.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 881
+  },
+  {
+    "questionId": "PT158-S3-Q22",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Method of Reasoning\",\n  \"method\": \"Identify how the argument responds to counterevidence by explaining why apparent exceptions do not invalidate the generalization\",\n  \"core_judgment\": \"The argument defends a generalization about gesture use by citing a psychological fact (that some people perceive abstract words as physical actions) to explain why some cases that seem to contradict the correlation are not actually counterexamples.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"The argument acknowledges that the correlation is not universal (i.e., there is apparently disconfirming evidence) but cites the fact that some people perceive abstract concepts as physical to reconcile that evidence with the researchers' claim, thus supporting the generalization rather than rejecting it.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 947
+  },
+  {
+    "questionId": "PT158-S3-Q22",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"method of reasoning\",\n  \"method\": \"reconciling a generalization with counterevidence by citing a psychological fact\",\n  \"core_judgment\": \"The argument defends a generalization (that people gesture less when articulating abstract concepts) against apparent counterexamples by citing the fact that some people perceive abstract words as physical actions, thus explaining why the correlation may still hold despite seeming exceptions.\",\n  \"correct_option\": {\n    \"label\": \"C\",\n    \"reason\": \"The argument cites the psychological fact that some people perceive abstract terms like 'comprehension' as physical actions to explain why the generalization about gesturing and abstract concepts is not refuted by apparent counterexamples, thereby reconciling the generalization with disconfirming evidence.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 1740
+  },
+  {
+    "questionId": "PT158-S4-Q17",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Principle\",\n  \"method\": \"Identify the principle that bridges the gap between the causal claim (automotive industry contributes to global warming) and the normative conclusion (automotive industry should help pay for relocation).\",\n  \"core_judgment\": \"A valid principle must establish that an industry contributing to global warming through its product's use is liable for specific, costly damages caused by that contribution, even if indirectly.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"Option D directly links an industry's product use to costly damage and assigns liability for that damage, which matches Mateo's reasoning: automobiles contribute to global warming, which causes permafrost melt and relocation costs, so the industry should help pay. It does not require intent or foreseeability (unlike A), nor does it limit liability to cases of general obligation (unlike E), and it is more directly tied to product use than B or C.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 618
+  },
+  {
+    "questionId": "PT158-S4-Q17",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Principle\",\n  \"method\": \"Identify the causal and normative link between automotive industry's contribution to global warming and obligation to pay for relocation\",\n  \"core_judgment\": \"The argument requires a principle that ties an industry's contribution to a harmful process (global warming) to a duty to help pay for specific, resulting damages (relocation costs), even if the damage is indirect and widespread.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"Option D directly supports the argument by establishing that an industry should be liable for damage caused by the use of its product when that use contributes to costly damage for others. This matches Mateo's claim that the automotive industry, through pollution from automobiles, contributes to global warming and thus should help pay for the resulting relocation costs.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 888
+  },
+  {
+    "questionId": "PT158-S4-Q17",
+    "model": "meituan/longcat-flash-chat",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"question_family\": \"Principle\",\n  \"method\": \"Identify the principle that bridges the gap between the causal claim (automotive industry contributes to global warming) and the normative conclusion (automotive industry should help pay for relocation).\",\n  \"core_judgment\": \"A valid principle must establish that an industry contributing to a harmful process (like global warming) through its product's use is liable for specific, costly damages caused by that process, even if indirectly.\",\n  \"correct_option\": {\n    \"label\": \"D\",\n    \"reason\": \"Option D directly links an industry's product use to costly damage and assigns liability for that damage, which matches Mateo's reasoning: automobiles contribute to global warming, which causes costly relocation, so the industry should help pay. It does not require intent or foreseeability (unlike A), nor does it limit liability to cases of general obligation (unlike E), and it is more directly tied to product use than B or C.\"\n  },\n  \"faithfulness_check\": \"pass\"\n}",
+    "latencyMs": 772
+  }
+]

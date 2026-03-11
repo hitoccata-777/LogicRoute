@@ -200,6 +200,12 @@ export default function ResultPage() {
                   <h3 className="text-lg font-bold text-gray-900">Structure</h3>
                   {Object.entries(analysis.structure).map(([key, value]) => {
                     if (!value) return null;
+                    
+                    // Handle nested objects (e.g., {premises, conclusion})
+                    const displayValue = typeof value === 'object' && value !== null
+                      ? JSON.stringify(value, null, 2)
+                      : String(value);
+                    
                     // Color coding by key type
                     const colors: Record<string, string> = {
                       x: 'blue', y: 'purple', bridge: 'teal', gap: 'red',
@@ -212,7 +218,7 @@ export default function ResultPage() {
                         <div className={`text-sm font-semibold text-${color}-800 mb-1`}>
                           {key.replace(/_/g, ' ').toUpperCase()}
                         </div>
-                        <div className="text-gray-700">{value}</div>
+                        <div className="text-gray-700 whitespace-pre-wrap">{displayValue}</div>
                       </div>
                     );
                   })}

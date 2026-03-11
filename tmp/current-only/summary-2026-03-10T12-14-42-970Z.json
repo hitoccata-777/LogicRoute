@@ -1,0 +1,35 @@
+[
+  {
+    "model": "openai/gpt-5.2-chat",
+    "totalRuns": 51,
+    "correctRuns": 44,
+    "accuracyRate": "86.3%",
+    "parseFail": 1,
+    "avgLatencyMs": 528,
+    "totalQuestions": 17,
+    "stableQuestions": 15,
+    "stabilityRate": "88.2%"
+  },
+  {
+    "model": "anthropic/claude-sonnet-4.5",
+    "totalRuns": 51,
+    "correctRuns": 48,
+    "accuracyRate": "94.1%",
+    "parseFail": 0,
+    "avgLatencyMs": 1069,
+    "totalQuestions": 17,
+    "stableQuestions": 17,
+    "stabilityRate": "100.0%"
+  },
+  {
+    "model": "meituan/longcat-flash-chat",
+    "totalRuns": 51,
+    "correctRuns": 45,
+    "accuracyRate": "88.2%",
+    "parseFail": 0,
+    "avgLatencyMs": 939,
+    "totalQuestions": 17,
+    "stableQuestions": 17,
+    "stabilityRate": "100.0%"
+  }
+]

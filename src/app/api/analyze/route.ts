@@ -1,21 +1,75 @@
 // File: src/app/api/analyze/route.ts
-// LogiClue Analyze API — SOP v1.0
 
 import { NextRequest, NextResponse } from 'next/server';
 import { supabase } from '../../../lib/supabase';
 import crypto from 'crypto';
-import SOP_SYSTEM_PROMPT from '../../../lib/sopPrompt';
 import { classifyQuestion } from '../../../lib/questionClassifier';
+import JUDGE_SYSTEM_PROMPT from '../../../lib/judgePrompt';
+import TUTOR_SYSTEM_PROMPT from '../../../lib/tutorPrompt';
 
 // ============================================
-// BUILD USER MESSAGE (question-specific content only)
+// HELPERS
 // ============================================
-function buildUserMessage(
+
+function sanitizeOptions(options: Record<string, string>) {
+  return Object.fromEntries(
+    Object.entries(options).map(([letter, text]) => [
+      letter,
+      String(text).replace(/[\r\n]+/g, ' ').trim()
+    ])
+  );
+}
+
+function buildJudgeUserMessage(
   stimulus: string,
   questionStem: string,
   options: Record<string, string>,
   userChoice: string,
-  correctAnswer?: string,
+  correctAnswer?: string
+): string {
+  const { type, family, primaryMethods } = classifyQuestion(questionStem);
+  const sanitizedOptions = sanitizeOptions(options);
+
+  const optionsText = Object.entries(sanitizedOptions)
+    .map(([letter, text]) => `(${letter}) ${text}`)
+    .join('\n');
+
+  return `## QUESTION
+
+Stimulus:
+${stimulus}
+
+Question:
+${questionStem}
+
+Options:
+${optionsText}
+
+User selected: ${userChoice}
+${correctAnswer ? `Correct answer provided by user: ${correctAnswer}` : ''}
+
+Pre-classification:
+type=${type}
+family=${family}
+suggested_methods=[${primaryMethods.join(', ')}]
+
+Task:
+- determine question_family
+- select method
+- extract structure
+- run faithfulness-check
+- produce core_judgment
+- select correct_option
+
+Return strict JSON only.`;
+}
+
+function buildTutorUserMessage(
+  stimulus: string,
+  questionStem: string,
+  options: Record<string, string>,
+  userChoice: string,
+  judgeResult: any,
   additionalContext?: {
     altChoice?: string;
     rationaleTag?: string;
@@ -23,67 +77,100 @@ function buildUserMessage(
     userDifficulty?: number;
   }
 ): string {
+  const sanitizedOptions = sanitizeOptions(options);
 
-  // Pre-classify question type
-  const { type, family, primaryMethods } = classifyQuestion(questionStem);
-
-  // Build options string (sanitize newlines within option text)
-  const optionsText = Object.entries(options)
-    .map(([letter, text]) => `(${letter}) ${String(text).replace(/[\r\n]+/g, ' ').trim()}`)
+  const optionsText = Object.entries(sanitizedOptions)
+    .map(([letter, text]) => `(${letter}) ${text}`)
     .join('\n');
 
-  // Build user context
   let userContext = '';
-  if (additionalContext) {
-    if (additionalContext.altChoice) {
-      userContext += `\nUser was torn between ${userChoice} and ${additionalContext.altChoice}.`;
-    }
-    if (additionalContext.rationaleTag) {
-      userContext += `\nUser's self-reported issue: ${additionalContext.rationaleTag}`;
-    }
-    if (additionalContext.rationaleText) {
-      userContext += `\nUser's explanation: "${additionalContext.rationaleText}"`;
-    }
+  if (additionalContext?.altChoice) {
+    userContext += `\nUser was torn between ${userChoice} and ${additionalContext.altChoice}.`;
+  }
+  if (additionalContext?.rationaleTag) {
+    userContext += `\nUser's self-reported issue: ${additionalContext.rationaleTag}`;
+  }
+  if (additionalContext?.rationaleText) {
+    userContext += `\nUser's explanation: "${additionalContext.rationaleText}"`;
+  }
+  if (additionalContext?.userDifficulty) {
+    userContext += `\nUser difficulty: ${additionalContext.userDifficulty}`;
   }
 
-  return `## QUESTION TO ANALYZE
+  return `## ORIGINAL QUESTION
 
-**Stimulus:**
+Stimulus:
 ${stimulus}
 
-**Question:**
+Question:
 ${questionStem}
 
-**Options:**
+Options:
 ${optionsText}
 
-**User selected:** ${userChoice}
-${correctAnswer ? `**Correct answer:** ${correctAnswer}` : ''}
+User selected: ${userChoice}
 ${userContext}
 
-**Pre-classified:** type=${type}, family=${family}, suggested_methods=[${primaryMethods.join(', ')}]
-(You may override the suggested method based on stimulus content.)
+## JUDGE RESULT (MUST FOLLOW)
 
-## YOUR TASK
+${JSON.stringify(judgeResult, null, 2)}
 
-Follow the execution flow strictly:
-1. Step 1: Extract structure (X/Y/Bridge/Gap)
-2. Step 2: Faithfulness check
-3. Step 3: Core judgment (≤25 words, must echo correct answer)
-4. Step 4: Confirm question type
-5. Step 5: Select correct answer + reasoning
-6. Step 6: Label every wrong option with option_error (L1+L2) and user_error (L1+L2)
-7. Select method and draw diagram
-8. Generate narrative (trap/action/next_time) for user's chosen option
-9. Output strict JSON (no markdown wrapper)
+Task:
+- do NOT re-solve the question
+- do NOT change method
+- do NOT change correct answer
+- explain the wrong options, especially the user's chosen option
+- generate final user-facing diagram using Judge-selected method
+- generate narrative.trap / action / next_time
 
-CRITICAL: Your ENTIRE response must be a single JSON object. Do NOT output a diagram or any text outside the JSON. The diagram goes INSIDE the "diagram" field of the JSON. Start your response with { and end with }.
-`;
+Return strict JSON only.`;
+}
+
+async function callOpenRouter(model: string, systemPrompt: string, userPrompt: string, temperature = 0.1, max_tokens = 8000) {
+  const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
+      'Content-Type': 'application/json',
+      'HTTP-Referer': process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+      'X-Title': 'LogiClue'
+    },
+    body: JSON.stringify({
+      model,
+      messages: [
+        { role: 'system', content: systemPrompt },
+        { role: 'user', content: userPrompt }
+      ],
+      max_tokens,
+      temperature
+    })
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`OpenRouter error (${model}): ${errorText}`);
+  }
+
+  const responseData = await response.json();
+  const content = responseData.choices?.[0]?.message?.content;
+
+  if (!content) {
+    throw new Error(`Empty response from model: ${model}`);
+  }
+
+  try {
+    const jsonStr = content.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
+    return JSON.parse(jsonStr);
+  } catch (err) {
+    console.error(`JSON parse error for ${model}:`, content);
+    throw new Error(`Failed to parse ${model} response`);
+  }
 }
 
 // ============================================
 // MAIN API HANDLER
 // ============================================
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -100,7 +187,6 @@ export async function POST(request: NextRequest) {
       userDifficulty,
     } = body;
 
-    // Validate required fields
     if (!stimulus || !questionStem || !options || !userChoice) {
       return NextResponse.json(
         { success: false, error: 'Missing required fields: stimulus, questionStem, options, userChoice' },
@@ -108,88 +194,103 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Build messages — SOP as system, question as user
-    const userMessage = buildUserMessage(
+    const sanitizedOptions = sanitizeOptions(options);
+
+    // --------------------------------------------
+    // 1) Judge
+    // --------------------------------------------
+    const judgeUserMessage = buildJudgeUserMessage(
       stimulus,
       questionStem,
-      options,
+      sanitizedOptions,
       userChoice,
-      correctAnswer,
+      correctAnswer
+    );
+
+    const judgeResult = await callOpenRouter(
+      'meituan/longcat-flash-chat',
+      JUDGE_SYSTEM_PROMPT,
+      judgeUserMessage,
+      0.1,
+      5000
+    );
+
+    // Minimal validation
+    if (
+      !judgeResult?.question_family ||
+      !judgeResult?.method ||
+      !judgeResult?.core_judgment ||
+      !judgeResult?.correct_option?.label
+    ) {
+      return NextResponse.json(
+        { success: false, error: 'Judge result missing required fields', judgeResult },
+        { status: 500 }
+      );
+    }
+
+    // --------------------------------------------
+    // 2) Tutor
+    // --------------------------------------------
+    const tutorUserMessage = buildTutorUserMessage(
+      stimulus,
+      questionStem,
+      sanitizedOptions,
+      userChoice,
+      judgeResult,
       { altChoice, rationaleTag, rationaleText, userDifficulty }
     );
 
-    // Call OpenRouter API with Sonnet 4.5
-    const openRouterResponse = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
-        'Content-Type': 'application/json',
-        'HTTP-Referer': process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-        'X-Title': 'LogiClue'
-      },
-      body: JSON.stringify({
-        model: 'anthropic/claude-sonnet-4.5',
-        messages: [
-          {
-            role: 'system',
-            content: SOP_SYSTEM_PROMPT
-          },
-          {
-            role: 'user',
-            content: userMessage
-          }
-        ],
-        max_tokens: 8000,
-        temperature: 0.1
-      })
-    });
+    const tutorResult = await callOpenRouter(
+      'meituan/longcat-flash-chat',
+      TUTOR_SYSTEM_PROMPT,
+      tutorUserMessage,
+      0.1,
+      6000
+    );
 
-    if (!openRouterResponse.ok) {
-      const errorText = await openRouterResponse.text();
-      console.error('OpenRouter error:', errorText);
+    if (!tutorResult?.diagram || !tutorResult?.narrative) {
       return NextResponse.json(
-        { success: false, error: 'Analysis service error: ' + errorText },
+        { success: false, error: 'Tutor result missing required fields', tutorResult },
         { status: 500 }
       );
     }
 
-    const responseData = await openRouterResponse.json();
-    const content = responseData.choices?.[0]?.message?.content;
+    // --------------------------------------------
+    // 3) Compose final payload (compat mode)
+    // --------------------------------------------
+    const finalAnalysis = {
+      question_family: judgeResult.question_family,
+      method: judgeResult.method,
+      core_judgment: judgeResult.core_judgment,
+      correct_option: judgeResult.correct_option,
 
-    if (!content) {
-      return NextResponse.json(
-        { success: false, error: 'Empty response from analysis service' },
-        { status: 500 }
-      );
-    }
+      structure: judgeResult.structure || {},
+      faithfulness_check: judgeResult.faithfulness_check || '',
+      _reasoning_trace: judgeResult._reasoning_trace || {},
 
-    // Parse JSON from response
-    let analysis;
-    try {
-      const jsonStr = content.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
-      analysis = JSON.parse(jsonStr);
-    } catch (parseError) {
-      console.error('JSON parse error:', parseError);
-      console.error('Raw content:', content);
-      return NextResponse.json(
-        { success: false, error: 'Failed to parse analysis response', rawContent: content },
-        { status: 500 }
-      );
-    }
+      isCorrect: judgeResult.correct_option.label === userChoice,
+      userChoice,
 
-    // ============================================
-    // SAVE TO DATABASE
-    // ============================================
-    
+      diagram: tutorResult.diagram || '',
+      wrong_options: tutorResult.wrong_options || [],
+      narrative: tutorResult.narrative || {},
+
+      // keep compatibility
+      questionId: null as string | null,
+    };
+
+    // --------------------------------------------
+    // 4) Save to DB
+    // --------------------------------------------
     const contentHash = crypto
       .createHash('md5')
-      .update(stimulus + questionStem)
+      .update(questionStem + JSON.stringify(sanitizedOptions))
       .digest('hex');
 
     const { data: existingQuestion } = await supabase
       .from('questions')
       .select('id')
-      .eq('content_hash', contentHash)
+      .eq('source_id', sourceId || contentHash)
       .single();
 
     let questionId = existingQuestion?.id;
@@ -198,14 +299,11 @@ export async function POST(request: NextRequest) {
       const { data: newQuestion, error: questionError } = await supabase
         .from('questions')
         .insert({
-          stimulus,
-          question_stem: questionStem,
-          options,
-          correct_answer: correctAnswer || analysis.correct_option?.label,
-          source_type: sourceId ? 'user' : 'llm',
-          answer_conflict: correctAnswer && correctAnswer !== analysis.correct_option?.label,
-          source_id: sourceId || null,
-          content_hash: contentHash
+          question_type: classifyQuestion(questionStem).type,
+          question_family: judgeResult.question_family,
+          source_id: sourceId || contentHash,
+          user_description: stimulus,
+          user_question: questionStem,
         })
         .select('id')
         .single();
@@ -218,25 +316,21 @@ export async function POST(request: NextRequest) {
     }
 
     if (questionId) {
-      // Save analysis
       await supabase.from('analyses').upsert({
         question_id: questionId,
-        method: analysis.method || 'unknown',
-        diagram: analysis.diagram || '',
-        steps: analysis.structure || {},
-        summary: analysis.core_judgment,
-        faithfulness_check: analysis.faithfulness_check,
-        takeaway: analysis.narrative?.next_time
+        method: judgeResult.method || 'unknown',
+        steps: judgeResult.structure || {},
+        summary: judgeResult.core_judgment || null,
+        faithfulness_check: judgeResult.faithfulness_check || null,
+        takeaway: tutorResult.narrative?.next_time || null
       }, { onConflict: 'question_id' });
 
-      // Save option analyses
-      const correctLabel = analysis.correct_option?.label;
-      if (correctLabel && options) {
-        for (const letter of Object.keys(options)) {
+      const correctLabel = judgeResult.correct_option?.label;
+
+      if (correctLabel && sanitizedOptions) {
+        for (const letter of Object.keys(sanitizedOptions)) {
           const isCorrect = letter === correctLabel;
-          
-          // Find this option's error data from wrong_options array
-          const wrongOptionData = analysis.wrong_options?.find(
+          const wrongOptionData = tutorResult.wrong_options?.find(
             (wo: { label: string }) => wo.label === letter
           );
 
@@ -244,22 +338,21 @@ export async function POST(request: NextRequest) {
             question_id: questionId,
             option_letter: letter,
             is_correct: isCorrect,
-            content_brief: isCorrect ? analysis.correct_option?.reason : wrongOptionData?.claims,
-            why_correct: isCorrect ? analysis.correct_option : null,
+            content_brief: isCorrect ? judgeResult.correct_option?.reason : wrongOptionData?.claims,
+            why_correct: isCorrect ? judgeResult.correct_option : null,
             error: !isCorrect ? {
               why_wrong: wrongOptionData?.why_wrong,
               match_trigger: wrongOptionData?.match_trigger,
             } : null,
-            // Keep narrative for user's chosen option
-            narrative: letter === userChoice && !isCorrect ? analysis.narrative : null
+            narrative: letter === userChoice && !isCorrect ? tutorResult.narrative : null
           }, { onConflict: 'question_id,option_letter' });
         }
       }
     }
 
-    analysis.questionId = questionId;
+    finalAnalysis.questionId = questionId;
 
-    // Debug: echo back options - raw vs sanitized
+    // keep debug compatibility
     const debugOptionsSent: Record<string, { raw: string; sanitized: string }> = {};
     for (const [letter, text] of Object.entries(options)) {
       debugOptionsSent[letter] = {
@@ -267,9 +360,9 @@ export async function POST(request: NextRequest) {
         sanitized: String(text).replace(/[\r\n]+/g, ' ').trim()
       };
     }
-    analysis._debug_options_sent = debugOptionsSent;
+    (finalAnalysis as any)._debug_options_sent = debugOptionsSent;
 
-    return NextResponse.json({ success: true, data: analysis });
+    return NextResponse.json({ success: true, data: finalAnalysis });
 
   } catch (error: unknown) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';

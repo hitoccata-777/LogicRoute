@@ -1,0 +1,80 @@
+[
+  {
+    "model": "openai/gpt-5.2-chat",
+    "promptMode": "minimal",
+    "totalRuns": 51,
+    "correctRuns": 45,
+    "accuracyRate": "88.2%",
+    "parseFail": 0,
+    "avgLatencyMs": 541,
+    "totalQuestions": 17,
+    "stableQuestions": 17,
+    "unstableQuestions": 0,
+    "stabilityRate": "100.0%"
+  },
+  {
+    "model": "openai/gpt-5.2-chat",
+    "promptMode": "current",
+    "totalRuns": 51,
+    "correctRuns": 5,
+    "accuracyRate": "9.8%",
+    "parseFail": 9,
+    "avgLatencyMs": 411,
+    "totalQuestions": 17,
+    "stableQuestions": 10,
+    "unstableQuestions": 7,
+    "stabilityRate": "58.8%"
+  },
+  {
+    "model": "anthropic/claude-sonnet-4.5",
+    "promptMode": "minimal",
+    "totalRuns": 51,
+    "correctRuns": 47,
+    "accuracyRate": "92.2%",
+    "parseFail": 1,
+    "avgLatencyMs": 1140,
+    "totalQuestions": 17,
+    "stableQuestions": 16,
+    "unstableQuestions": 1,
+    "stabilityRate": "94.1%"
+  },
+  {
+    "model": "anthropic/claude-sonnet-4.5",
+    "promptMode": "current",
+    "totalRuns": 51,
+    "correctRuns": 6,
+    "accuracyRate": "11.8%",
+    "parseFail": 1,
+    "avgLatencyMs": 1136,
+    "totalQuestions": 17,
+    "stableQuestions": 1,
+    "unstableQuestions": 16,
+    "stabilityRate": "5.9%"
+  },
+  {
+    "model": "meituan/longcat-flash-chat",
+    "promptMode": "minimal",
+    "totalRuns": 51,
+    "correctRuns": 46,
+    "accuracyRate": "90.2%",
+    "parseFail": 0,
+    "avgLatencyMs": 902,
+    "totalQuestions": 17,
+    "stableQuestions": 16,
+    "unstableQuestions": 1,
+    "stabilityRate": "94.1%"
+  },
+  {
+    "model": "meituan/longcat-flash-chat",
+    "promptMode": "current",
+    "totalRuns": 51,
+    "correctRuns": 12,
+    "accuracyRate": "23.5%",
+    "parseFail": 0,
+    "avgLatencyMs": 834,
+    "totalQuestions": 17,
+    "stableQuestions": 11,
+    "unstableQuestions": 6,
+    "stabilityRate": "64.7%"
+  }
+]

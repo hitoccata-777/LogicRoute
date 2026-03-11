@@ -1,0 +1,223 @@
+[
+  {
+    "id": "PT17-S2-Q22",
+    "stimulus": "Magazine editor: I know that some of our regular advertisers have been pressuring us to give favorable mention to their products in our articles, but they should realize that for us to yield to their wishes would actually be against their interests. To remain an effective advertising vehicle we must have loyal readership, and we would soon lose that readership if our readers suspect that our editorial integrity has been compromised by pandering to advertisers. Advertising-sales director: You underestimate the sophistication of our readers. They recognize that the advertisements we carry are not articles, so their response to the advertisements has never depended on their opinion of the editorial integrity of the magazine as a whole.",
+    "questionStem": "Which one of the following is the most accurate assessment of the advertising-sales director’s argument as a response to the magazine editor’s argument?",
+    "options": {
+      "A": "It succeeds because it shows that the editor’s argument depends on an unwarranted assumption about factors affecting an advertisement’s effectiveness.",
+      "B": "It succeeds because it exposes as mistaken the editor’s estimation of the sophistication of the magazine’s readers.",
+      "C": "It succeeds because it undermines the editor’s claim about how the magazine’s editorial integrity would be affected by allowing advertisers to influence articles.",
+      "D": "It fails because the editor’s argument does not depend on any assumption about readers’ response to the advertisements they see in the magazine.",
+      "E": "It fails because it is based on a misunderstanding of the editor’s view about how readers respond to advertisements they see in the magazine."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "id": "PT158-S2-Q10",
+    "stimulus": "Historian: In the fourteenth and fifteenth centuries, the Swahili civilization of East Africa built tombs with large pillars and paneled facades. Such structures are widespread among the Oromo people of Somalia and Kenya, but are unknown among any other people with whom the Swahili civilization had contact. This indicates that Swahili culture was, to some extent, influenced by Oromo culture.",
+    "questionStem": "The historian's argument is most vulnerable to criticism on the grounds that it",
+    "options": {
+      "A": "fails to address adequately the possibility that the Oromo people did not use the structures as tombs",
+      "B": "concludes, simply because one event occurred earlier than another event, that the first event caused the second event",
+      "C": "draws a restricted conclusion from premises that provide strong support for a much broader conclusion",
+      "D": "takes for granted that there was no third civilization responsible for creating the first tombs of the kind found in both the Oromo and Swahili cultures",
+      "E": "takes for granted that the Oromo people began constructing tombs with large pillars and paneled facades earlier than the Swahili civilization did"
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "id": "PT158-S2-Q2",
+    "stimulus": "Council president: Councilmember Smith has proposed a new city ordinance prohibiting the use of the \"bait-and-switch\" sales tactic. Smith must have amnesia. Four years ago he owned an appliance store that was famous for its use of bait-and switch. Clearly, Smith's proposed ordinance does not even merit consideration.",
+    "questionStem": "The council president's reasoning is most vulnerable to criticism on the grounds that the president",
+    "options": {
+      "A": "dismisses the proposed ordinance because of its source rather than because of its content",
+      "B": "takes a single fact that is incompatible with a claim as enough to show that claim to be false",
+      "C": "fails to make a needed distinction between deceptive sales tactics and legitimate methods of increasing sales",
+      "D": "draws a conclusion that simply restates a claim presented in support of that conclusion",
+      "E": "generalizes from a limited number of instances of a certain kind to all instances of that kind"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "id": "PT158-S3-Q14",
+    "stimulus": "Some freelance journalists sell their work to magazines that have lax editorial standards. No self-respecting writer sells his or her work to magazines that have lax editorial standards. Therefore, some self-respecting writers are not freelance journalists. journalists.",
+    "questionStem": "Which one of the following displays a flawed pattern of reasoning most similar to the one in the argument above?",
+    "options": {
+      "A": "Some high school teachers teach biology. No kindergarten teachers teach biology. Therefore, biology is not taught by all teachers.",
+      "B": "Most school board members were once teachers. No one who was once a teacher prefers administrative work to teaching. Hence, few school board members prefer administrative work to teaching.",
+      "C": "Some students prefer history to mathematics. No member of the Calculus Club prefers history to mathematics. Thus, some members of the Calculus Club are not students.",
+      "D": "Some principals are harsh disciplinarians. No adviser to a debate team is a harsh disciplinarian. Hence, some principals are not advisers to a debate team.",
+      "E": "Some teachers who let their students leave early are popular. No coaches allow their students to leave before three o'clock. Therefore, some popular teachers are not coaches."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "id": "PT158-S3-Q07",
+    "stimulus": "Ethicist: This hospital's ethics code states that hospital staff must not deceive patients about their medical treatment. But we know that Dr. Faris administered medication A to a patient and informed him that it would help him sleep. Medication A has no known sleep-inducing properties. So, Dr. Faris is clearly in violation of the ethics code, despite the fact that the patient's sleep did improve after taking medication A.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the ethicist's argument?",
+    "options": {
+      "A": "Dr. Faris was aware that medication A had no known sleep-inducing properties.",
+      "B": "A committee at the hospital is currently considering revisions to the hospital's ethics code.",
+      "C": "Medication A is a pain reliever that can indirectly lead to sleep due to a reduction in the patient's discomfort.",
+      "D": "Several other members of the hospital staff prescribed medication A to patients who had trouble sleeping.",
+      "E": "Dr. Faris knew that the patient was not taking any other medications that have sleep-inducing properties"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "id": "PT158-S3-Q17",
+    "stimulus": "Situation: A physical therapist wants her patients to derive more enjoyment from the challenge of developing physical skills. She also wants them to spend more time practicing those skills. Analysis: Success in meeting the first objective will bring about success in meeting the second.",
+    "questionStem": "The analysis provided for the situation above could be appropriate for each of the following situations EXCEPT:",
+    "options": {
+      "A": "A math teacher wants her students to understand the mathematical principles taught in her course and wants them to apply these principles routinely in everyday life.",
+      "B": "A software manufacturer wants its customers to be more satisfied with its product, and it wants them to place fewer calls to the service representative about how to use the product.",
+      "C": "A librarian wants fewer of the books borrowed from the library to be lost or stolen, and he wants more of the library's books to be returned on time.",
+      "D": "A hardware retail company wants to construct a new, larger warehouse and wants its employees to help plan how the old warehouse will be expanded to meet any need for more space.",
+      "E": "A concert series director wants to present a more varied repertoire and wants to attract new patrons"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "id": "PT147-S3-Q12",
+    "stimulus": "In a scene in an ancient Greek play, Knights, the character Demosthenes opens a writing tablet on which an oracle had written a prophecy, and while looking at the tablet, he continuously expresses his amazement at its contents. His companion presses him for information, whereupon Demosthenes explains what the oracle had written.",
+    "questionStem": "Of the following claims, which one can most justifiably be rejected on the basis of the statements above?",
+    "options": {
+      "A": "In ancient Greek plays, characters are presumed to know how to read unless their illiteracy is specifically mentioned.",
+      "B": "The character of Demosthenes in Knights is not based on a historical figure.",
+      "C": "In ancient Greek plays, the reading aloud of written texts commonly occurred as part of the on-stage action.",
+      "D": "In ancient Greece, people did not read silently to themselves.",
+      "E": "Only rarely in ancient Greece were prophecies written down on writing tablets."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "id": "PT147-S1-Q3",
+    "stimulus": "Enrique: The city’s transit authority does not have enough money to operate for the next twelve months without cutting service or increasing fares, and the federal government has so far failed to provide additional funding. Nonetheless, the service or increasing fares, and the federal government has so far failed to provide additional funding. Nonetheless, the transit authority should continue operating without service cuts or fare increases until it has exhausted its funds. At that point, the federal government will be willing to provide funding to save the authority. Cynthia: If the transit authority tries that maneuver, the federal government will probably just let the authority go out of business. The transit authority cannot risk allowing that to happen.",
+    "questionStem": "The dialogue most strongly supports the claim that Enrique and Cynthia disagree over whether",
+    "options": {
+      "A": "the transit authority should continue operating without cutting service or increasing fares until it has exhausted its funds",
+      "B": "the federal government should provide additional funding to the transit authority",
+      "C": "it would be better for the transit authority to cut services than it would be to raise fares",
+      "D": "the federal government is willing to provide additional funding to the transit authority now",
+      "E": "the transit authority can afford to operate for the next twelve months without cutting service even if it does not receive additional funding"
+    },
+    "correctAnswer": "A"
+  },
+  {
+    "id": "PT158-S3-Q21",
+    "stimulus": "Professor: Many scientists hypothesize that there is an invisible \"light-absorbing medium\" in outer space. In support, they argue that the medium's existence would explain the low visibility of other star systems from Earth. But there is actually no reason to believe that the hypothesis is correct, since the low visibility in question is already completely explained by the general theory of relativity.",
+    "questionStem": "Which one of the following is an assumption required by the professor's argument?",
+    "options": {
+      "A": "The low visibility of other star systems from Earth would not be adequately explained by the existence of an invisible light-absorbing medium in outer space, even if there were such a medium.",
+      "B": "The hypothesis of an invisible light-absorbing medium in outer space is correct only if it adequately explains the low visibility of other star systems from Earth.",
+      "C": "A hypothesis is likely to be correct if there is some phenomenon that it adequately accounts for and that is not adequately accounted for by an existing theory.",
+      "D": "Most scientists who posit the invisible light-absorbing medium accept the general theory of relativity.",
+      "E": "The general theory of relativity does not depend upon the hypothesis that there exists an invisible light-absorbing medium in outer space."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "id": "PT158-S2-Q01",
+    "stimulus": "Many people who simply enjoy listening to popular music do not realize that it has been used to express religious and political messages. After all, popular music has repeatedly been adopted by social movements to express their viewpoints, since it has the potential to contribute to the \"conversion\" of nonmembers to the movement's position, as well as to raise the morale and to express the solidarity of the movement's participants.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion of the argument?",
+    "options": {
+      "A": "Popular music accounts for the success of social movements.",
+      "B": "Popular music's entertainment value has been overemphasized.",
+      "C": "Popular music is the most effective way of converting people to social movements.",
+      "D": "Popular music has purposes other than mere entertainment.",
+      "E": "Popular music has a profound emotional impact on its listeners."
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "id": "PT158-S4-Q25",
+    "stimulus": "Most of the members of Bargaining Unit Number 17 of the government employees' union are computer programmers. Thus it is certain that some of the government employees who work in the Hanson Building are computer programmers, since _______.",
+    "questionStem": "The conclusion of the argument follows logically if which one of the following completes the passage?",
+    "options": {
+      "A": "most of the government employees who belong to Bargaining Unit Number 17 but are not computer programmers work in the Hanson Building",
+      "B": "most members of the executive committee of Bargaining Unit Number 17 work in the Hanson Building",
+      "C": "most of the government employees who work in the Hanson Building are members of Bargaining Unit Number 17",
+      "D": "most of the members of Bargaining Unit Number 17 work in the Hanson Building",
+      "E": "most of the people who work in the Hanson building are government employees"
+    },
+    "correctAnswer": "D"
+  },
+  {
+    "id": "PT147-S3-Q5",
+    "stimulus": "Eating turmeric, a spice commonly found in curries, probably helps prevent Alzheimer’s disease. More turmeric is consumed per capita in India than in the rest of the world, and the incidence of Alzheimer’s disease is much lower there than it is worldwide. Furthermore, Alzheimer’s disease is characterized by the buildup of amyloid protein plaques in the brain, and studies on animals found that curcumin—a compound found in turmeric—reduces the accumulation of amyloid proteins.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "options": {
+      "A": "Rosemary and ginger, which contain compounds that affect amyloid protein accumulation much like curcumin does, are commonly found in the diets of people living in India.",
+      "B": "Many scientists believe that the buildup of amyloid protein plaques in the brain is a symptom of Alzheimer’s disease rather than a cause.",
+      "C": "The proportion of people living in India who fall within the age group that is most prone to developing Alzheimer’s disease is smaller than the proportion of people worldwide who fall within that age group.",
+      "D": "None of the other compounds found in turmeric have been studied to see whether they affect the accumulation of amyloid proteins.",
+      "E": "The parts of India that have the highest per capita rates of curry consumption have the lowest incidence of Alzheimer’s disease."
+    },
+    "correctAnswer": "E"
+  },
+  {
+    "id": "PT158-S4-Q26",
+    "stimulus": "Every Labrador retriever in my neighborhood is a well-behaved dog. However, no pet would be well behaved if it were not trained. Thus it is training, not the genetic makeup of the breed, that accounts for these Labrador retrievers' good behavior.",
+    "questionStem": "The flawed reasoning in which one of the following is most closely parallel to the flawed reasoning in the argument above?",
+    "options": {
+      "A": "All the students at Bryker School excel in their studies. However, students at Bryker School would not excel if they did not have good teachers. Thus, all schools should hire good teachers if they want their students to excel.",
+      "B": "Whenever it snows there are relatively more car crashes on the highways. Yet in general, there would not be car crashes unless people were careless. So it is not icy roads, but carelessness, that causes car crashes when it snows.",
+      "C": "Every musician I know is a good dancer. Every mathematician I know is a bad dancer. Thus, it is a sense of rhythm, not the ability to count, that is most responsible for good dancing.",
+      "D": "All of the good cooks in my country use butter, not margarine, in their cooking. Thus, if you want to be a good cook, you must use butter, not margarine, in your cooking.",
+      "E": "All of the students in my algebra class received an A, even though none of them can solve word problems. No student who is unable to solve word problems has an adequate understanding of algebra. It follows that the students in my class received A's not because they did any good work"
+    },
+    "correctAnswer": "B"
+  },
+  {
+    "id": "PT158-S2-Q16",
+    "stimulus": "Historians have found that significant intellectual advances generally occur in cities or countries that have a stable political system. But these same historians acknowledge that in ancient Athens, Plato and Aristotle made unparalleled intellectual progress during a period of great political and social unrest.",
+    "questionStem": "Which one of the following, if true, most helps to reconcile the historians' apparent counterexample with their general rule?",
+    "options": {
+      "A": "The political systems that have emerged since the time of Plato and Aristotle have in various ways been different from the political system in ancient Athens.",
+      "B": "The citizens of ancient Athens generally held in high esteem people who were accomplished intellectually.",
+      "C": "Financial support for intellectual endeavors is typically unavailable in unstable political environments, but in ancient Athens such support was provided by wealthy citizens.",
+      "D": "Significant intellectual advances sometimes, though not always, lead to stable political environments.",
+      "E": "Many thinkers besides Plato and Aristotle contributed to the intellectual achievements of ancient Athens."
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "id": "PT158-S2-Q09",
+    "stimulus": "Scholar: The purpose of a law is to deter certain actions by threatening to punish those performing the actions. This threat works only if potential violators believe that they are likely to be punished. But the likelihood that someone will be apprehended and punished for committing a prohibited act decreases as the number of types of prohibited actions increases. Therefore, a successful legal system prohibits only those few behaviors that citizens find absolutely intolerable.",
+    "questionStem": "Which one of the following most accurately describes the role played in the scholar's argument by the statement that the purpose of a law is to deter certain actions by threatening to punish those performing the actions?",
+    "options": {
+      "A": "It is offered in support of the implicit conclusion that a legal system needs a significant number of police officers.",
+      "B": "It is the conclusion of the argument.",
+      "C": "It is a premise of the argument.",
+      "D": "It is an intermediate conclusion.",
+      "E": "It is the view that the argument as a whole is designed to discredit"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "id": "PT158-S3-Q22",
+    "stimulus": "Some researchers claim that people tend to gesture less when they articulate what would typically be regarded as abstract rather than physical concepts. To point out that such a correlation is far from universal is insufficient reason to reject the researchers' claim, because some people perceive words like \"comprehension\" as expressing a physical action, like grasping something, rather than a state of understanding, which is abstract.",
+    "questionStem": "Which one of the following most accurately describes the method of reasoning used in the argument?",
+    "options": {
+      "A": "appealing to the ambiguity of a word in an attempt to show that a correlation is universal",
+      "B": "appealing to a universal psychological generalization in an attempt to support a claim about the use of gestures",
+      "C": "citing a psychological fact to try to reconcile a generalization with apparently disconfirming evidence",
+      "D": "advocating an explanation for a phenomenon by attempting to demonstrate that other possible explanations are implausible",
+      "E": "offering a reason for believing that a widely accepted generalization requires still more supporting evidence"
+    },
+    "correctAnswer": "C"
+  },
+  {
+    "id": "PT158-S4-Q17",
+    "stimulus": "Mateo: Global warming has caused permafrost to melt under several arctic villages, forcing all their inhabitants to relocate at great expense. Since pollution from automobiles is a major contributor to global warming, the automotive industry should be required to help pay for the villagers' relocation.",
+    "questionStem": "Which one of the following principles, if valid, would most help to justify Mateo's argument?",
+    "options": {
+      "A": "Any industry has an obligation to pay for any damage that it should have known would result from its activities.",
+      "B": "Manufacturers should be required to produce goods in a way that minimizes harm to people and the environment.",
+      "C": "When the use of a product causes damage, governments should not be required to help pay for the damage unless those responsible for manufacturing the product are also required to help pay for them.",
+      "D": "Any industry manufacturing a product whose use contributes to costly damage for others should be liable for any damage generated by that product's use.",
+      "E": "An industry that contributes to global warming should be required to help pay for resulting damage to specific communities only if it has a general obligation to help pay for all damage produced by global warming"
+    },
+    "correctAnswer": "D"
+  }
+]
