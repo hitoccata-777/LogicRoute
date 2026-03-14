@@ -1,0 +1,35 @@
+[
+  {
+    "questionId": "PT90-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"A\",\n  \"reason\": \"The smoker challenges the reasonableness of targeting only smokers, implying the politician’s proposal is inconsistent and thus unreasonable.\"\n}",
+    "latencyMs": 2478
+  },
+  {
+    "questionId": "PT90-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"A\",\n  \"reason\": \"The smoker challenges the reasonableness of the politician's proposal by arguing that applying the same logic to another group would be inconsistent.\"\n}",
+    "latencyMs": 1367
+  },
+  {
+    "questionId": "PT90-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"A\",\n  \"reason\": \"The smoker challenges the reasonableness of targeting only smokers, while the politician defends the proposal’s reasonableness.\"\n}",
+    "latencyMs": 1230
+  }
+]

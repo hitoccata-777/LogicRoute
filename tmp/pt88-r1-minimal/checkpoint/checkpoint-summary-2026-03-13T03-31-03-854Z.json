@@ -1,0 +1,13 @@
+{
+  "model": "deepseek/deepseek-r1",
+  "promptMode": "minimal",
+  "totalRuns": 69,
+  "correctRuns": 66,
+  "accuracyRate": "95.7%",
+  "parseFail": 2,
+  "avgLatencyMs": 1672,
+  "totalQuestions": 23,
+  "stableQuestions": 20,
+  "unstableQuestions": 3,
+  "stabilityRate": "87.0%"
+}

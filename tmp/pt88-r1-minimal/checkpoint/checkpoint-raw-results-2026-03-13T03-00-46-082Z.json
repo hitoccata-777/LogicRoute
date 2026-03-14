@@ -1,0 +1,35 @@
+[
+  {
+    "questionId": "PT89-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"A\",\n  \"reason\": \"Option A suggests a change (receiving help) that could improve performance, weakening the prediction of a B.\"\n}",
+    "latencyMs": 3081
+  },
+  {
+    "questionId": "PT89-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"A\",\n  \"reason\": \"Option A suggests improved support, potentially leading to a higher grade, which undermines the prediction of a B.\"\n}",
+    "latencyMs": 1340
+  },
+  {
+    "questionId": "PT89-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"A\",\n  \"reason\": \"Option A weakens the argument by introducing a new factor that could improve the student's grade, while the other options support the prediction of receiving another B.\"\n}",
+    "latencyMs": 1823
+  }
+]

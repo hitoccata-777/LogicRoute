@@ -1,0 +1,35 @@
+[
+  {
+    "questionId": "PT92-S2-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"A\",\n  \"reason\": \"The psychiatrist concludes that understanding neurochemical influences promotes compassion, matching option A.\"\n}",
+    "latencyMs": 3356
+  },
+  {
+    "questionId": "PT92-S2-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"A\",\n  \"reason\": \"The psychiatrist concludes that understanding neurochemical roles in behavior will increase empathy, supported by premises about imbalances and mental health definitions.\"\n}",
+    "latencyMs": 1368
+  },
+  {
+    "questionId": "PT92-S2-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"A\",\n  \"reason\": \"The psychiatrist's conclusion is that the findings will promote compassion and tolerance, which aligns with fostering empathy toward others.\"\n}",
+    "latencyMs": 1816
+  }
+]

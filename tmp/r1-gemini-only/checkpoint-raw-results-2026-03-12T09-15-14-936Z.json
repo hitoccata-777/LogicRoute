@@ -1,0 +1,35 @@
+[
+  {
+    "questionId": "PT17-S2-Q22",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"D\",\n  \"reason\": \"The editor’s argument hinges on losing readership due to compromised integrity, not readers’ response to ads. The director’s response addresses ad effectiveness, which the editor’s argument doesn’t depend on.\"\n}",
+    "latencyMs": 3402
+  },
+  {
+    "questionId": "PT17-S2-Q22",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"D\",\n  \"reason\": \"The editor’s argument hinges on losing readership quantity, not readers’ ad response. The director’s focus on ad response does not address the core issue.\"\n}",
+    "latencyMs": 1290
+  },
+  {
+    "questionId": "PT17-S2-Q22",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"D\",\n  \"reason\": \"The editor’s argument hinges on losing readership, not ad effectiveness. The director’s focus on ad response is irrelevant to the editor’s point.\"\n}",
+    "latencyMs": 1269
+  }
+]

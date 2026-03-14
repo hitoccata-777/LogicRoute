@@ -1,0 +1,4 @@
+questionId,model,promptMode,repeatIndex,correctAnswer,predictedAnswer,isCorrect,latencyMs,error
+PT92-S2-Q01,deepseek/deepseek-r1,minimal,1,A,A,true,3356,
+PT92-S2-Q01,deepseek/deepseek-r1,minimal,2,A,A,true,1368,
+PT92-S2-Q01,deepseek/deepseek-r1,minimal,3,A,A,true,1816,

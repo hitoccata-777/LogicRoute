@@ -1,0 +1,1038 @@
+[
+  {
+    "section": 1,
+    "qnum": 1,
+    "id": "PT93-S1-Q01",
+    "stimulus": "Jorge: It is obvious that a shift in economic policy is needed, so why not proceed with the necessary changes all at once? If one wants to jump over a chasm, one would do it with one leap. Christina: I disagree with your view, even though I agree that a shift in economic policy is needed. If one wants to teach a horse to jump fences, one should train it to jump lower heights first.",
+    "questionStem": "Jorge and Christina disagree over whether",
+    "options": {
+      "A": "a shift in economic policy is not needed",
+      "B": "revising current economic policy incrementally is like teaching a horse to jump fences",
+      "C": "the faster current economic policy is revised, the less painful the initial changes will be",
+      "D": "the economic changes should not all be made at the same time",
+      "E": "the current economic situation is grave"
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 2,
+    "id": "PT93-S1-Q02",
+    "stimulus": "John: For 40 years, fluoride has been added to public drinking water. According to a study, fluoridated public drinking water when given to laboratory rats causes bone cancer. Ninety percent of all the male rats in the test sample were affected, but the female rats were unaffected. Even though I am healthy now, I should nevertheless stop drinking fluoridated water; only then will I be sure not to develop bone cancer.",
+    "questionStem": "Which one of the following is the strongest criticism of John's reasoning?",
+    "options": {
+      "A": "John does not consider how others besides himself are affected by fluoridation of water.",
+      "B": "John does not consider whether fluoridated water causes other diseases.",
+      "C": "John does not consider whether there were any brief periods during the 40 years in which fluoride was not added to the water.",
+      "D": "John does not focus on the positive effects that fluoridated water has on people",
+      "E": "John does not consider the possibility of other causes of bone cancer."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 3,
+    "id": "PT93-S1-Q03",
+    "stimulus": "Columnist: Polls can influence voters' decisions, and they may distort the outcome of an election since their results are much less reliable than the public believes. Furthermore, the publication of polls immediately prior to an election allows no response from those wishing to dispute the polls' findings. A ban on publishing polls during the week prior to an election only minimally impairs freedom of expression, and thus should be implemented.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the columnist's argument?",
+    "options": {
+      "A": "Few people are influenced by the results of polls published during the two weeks immediately prior to an election.",
+      "B": "The publication of poll results would not decide the winner of an uneven election race.",
+      "C": "The publication of poll results may remove some voters' motivation to vote because of the certainty that a particular candidate will win.",
+      "D": "The publication of poll results in the last weeks before an election draws attention to candidates' late gains in popularity.",
+      "E": "Countries in which such a ban is in effect do not generally have better informed citizens than do countries in which such a ban is not in effect."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 4,
+    "id": "PT93-S1-Q04",
+    "stimulus": "High cholesterol levels are highly correlated with cardiovascular disease. In the Italian town of Limone, however, each of the residents has had high cholesterol levels for many years, and yet they have not developed cardiovascular disease.",
+    "questionStem": "Which one of the following, if true, most helps to explain the unusual health condition of the residents of Limone?",
+    "options": {
+      "A": "Persons who come from families that have enjoyed great longevity tend not to develop cardiovascular disease.",
+      "B": "The stress and pollution found in large cities exacerbate existing cardiovascular disease, but there is little stress or pollution in Limone.",
+      "C": "The residents of Limone have normal blood sugar levels, and very low blood sugar levels tend to cancel out the cardiovascular effects of a high cholesterol level.",
+      "D": "The residents of Limone inherited from common ancestors a blood protein that prevents vascular blockage, which is a cause of cardiovascular disease.",
+      "E": "Olive oil is a staple of the diet in some parts of Italy, but unlike butter, olive oil is a monosaturated fat, and monosaturated fats do not contribute to cardiovascular disease."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 5,
+    "id": "PT93-S1-Q05",
+    "stimulus": "Smith's new grazing land consists entirely of fescue grass. Half of the grass contains a species of fungus that makes cows ill when they eat it. Smith's cows will most likely learn to graze exclusively on the grass that does not contain the fungus, since, like many other animals, cows will avoid eating a patch of grass if they sense a substance in it that has made them ill.",
+    "questionStem": "Which one of the following is an assumption required by the argument?",
+    "options": {
+      "A": "At least one other species of fungus is contained in the fescue grass that does not contain the fungus that makes cows ill.",
+      "B": "At least some cows that have been made ill by the fungus are capable of sensing the fungus in fescue grass.",
+      "C": "The fungus that makes cows ill cannot be found in any variety of grass other than fescue grass.",
+      "D": "The cows are the only animals grazing on the new land who become ill after eating the fungus contained in the fescue grass.",
+      "E": "The fungus that is contained in the fescue grass cannot be eradicated without destroying the grass itself."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 6,
+    "id": "PT93-S1-Q06",
+    "stimulus": "News item: The result of a recent public survey has been called into question because one of the pollsters admitted to falsifying data. The survey originally concluded that most people in the country favor investing more money in information technologies. Because falsified data were included in the survey, its conclusion is not true; a majority does not favor more investment in information technologies.",
+    "questionStem": "The news item's argument is vulnerable to criticism because it fails to consider the possibility that",
+    "options": {
+      "A": "the conclusion of the survey would be verified if the falsified data were excluded",
+      "B": "the conclusion of the survey will be accepted by the public even though falsified data were used",
+      "C": "other pollsters in other surveys also may have falsified data",
+      "D": "some people who responded to the survey were lying",
+      "E": "people's opinions about investing in information technologies can change as new technologies are developed"
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 7,
+    "id": "PT93-S1-Q07",
+    "stimulus": "When an invading insect threatens an ant colony's territory or food sources, the ants will vigorously swarm over the invader, biting or stinging it. This defensive tactic can effectively deter even aggressive flying insects, such as wasps. Ants do not attack all insects within their territory, however. For example, riodinid caterpillars commonly live harmoniously among South American ants. These caterpillars, which are a favorite prey of wasps, produce secretions the ants consume as food.",
+    "questionStem": "Which one of the following is most strongly supported by the information above?",
+    "options": {
+      "A": "The secretions produced by riodinid caterpillars are chemically identical to substances secreted by plants on which South American ants also feed.",
+      "B": "South American ants are more likely to be successful in defending their food sources and territory against intruders than are ants that live elsewhere.",
+      "C": "With the sole exception of riodinid caterpillars, South American ants will vigorously attack any organism other than ants that use riodinids as a source of food.",
+      "D": "Among insect species that inhabit South America, wasps are the only kinds of organism other than ants that use riodinid caterpillars as a source of food.",
+      "E": "Riodinid caterpillars in South America that live among ants are less likely to be attacked by wasps than those that do not live among ants."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 8,
+    "id": "PT93-S1-Q08",
+    "stimulus": "The traditional way to define the difference between rural and urban lifestyles is geographically. But with the impact of communications technology it makes more sense to draw the distinction in informational terms. People who rarely communicate electronically with anyone are living rural lifestyles, irrespective of where they live, while people who communicate daily with dozens of people via fax or modem are living urban lifestyles, even if they live in the country.",
+    "questionStem": "The situation described above most closely illustrates which one of the following propositions?",
+    "options": {
+      "A": "Frequency of electronic communication with others is superseding geographical considerations in defining our lifestyles.",
+      "B": "Many people who use electronic technology find urban lifestyles more satisfying than they find rural lifestyles.",
+      "C": "People who live rural lifestyles communicate less frequently than do people who live urban lifestyles.",
+      "D": "We are unable to foresee the magnitude of the changes that the information revolution may have in defining our lives.",
+      "E": "People are choosing to live in different regions of the nation than previously because of the impact of electronic communications technology."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 9,
+    "id": "PT93-S1-Q09",
+    "stimulus": "Very powerful volcanic eruptions send large amounts of ash high into the atmosphere, blocking sunlight and causing abnormally cold temperatures for a year or more after the eruption. In 44 B.C. there was a powerful eruption of Mount Etna in Sicily. In the following year, Chinese historians recorded summer frosts and dimmed sunlight in China, thousands of miles east of Sicily. If these phenomena were caused by volcanic ash in the atmosphere, then the ash sent into the atmosphere by Mount Etna's eruption must have spread over great distances.",
+    "questionStem": "In evaluating the support given for the conclusion advanced in the last sentence of the passage, it would be most important to determine whether",
+    "options": {
+      "A": "modern monitoring equipment can detect the precise path of volcanic ash in the atmosphere",
+      "B": "the abnormal weather in China lasted for a full year or longer",
+      "C": "temperatures in Sicily were abnormally cold after Mount Etna erupted",
+      "D": "there were any volcanic eruptions near China around the time of Mount Etna's eruption",
+      "E": "subsequent eruptions of Mount Etna were as powerful as the one in 44 B.C."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 10,
+    "id": "PT93-S1-Q10",
+    "stimulus": "Mario: The field of cognitive science is not a genuinely autonomous discipline since it addresses issues also addressed by the disciplines of computer science, linguistics, and psychology. A genuinely autonomous discipline has a domain of inquiry all its own. Lucy: Nonsense. You've always acknowledged that philosophy is a genuinely autonomous discipline and that, like most people, you think of philosophy as addressing issues also addressed by the disciplines of linguistics, mathematics, and psychology. A field of study is a genuinely autonomous discipline by virtue of its having a unique methodology rather than by virtue of its addressing issues that no other field of study addresses.",
+    "questionStem": "Lucy responds to Mario by",
+    "options": {
+      "A": "questioning Mario's expertise in cognitive science",
+      "B": "demonstrating that Mario confuses the notion of a field of study with that of a genuinely autonomous discipline",
+      "C": "showing that some of Mario's beliefs are not compatible with the principle on which he bases his conclusion",
+      "D": "disputing the accuracy of Mario's description of cognitive science as addressing issues also addressed by other disciplines",
+      "E": "establishing that Mario is not a philosopher"
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 11,
+    "id": "PT93-S1-Q11",
+    "stimulus": "Mario: The field of cognitive science is not a genuinely autonomous discipline since it addresses issues also addressed by the disciplines of computer science, linguistics, and psychology. A genuinely autonomous discipline has a domain of inquiry all its own. Lucy: Nonsense. You've always acknowledged that philosophy is a genuinely autonomous discipline and that, like most people, you think of philosophy as addressing issues also addressed by the disciplines of linguistics, mathematics, and psychology. A field of study is a genuinely autonomous discipline by virtue of its having a unique methodology rather than by virtue of its addressing issues that no other field of study addresses.",
+    "questionStem": "On the basis of their statements, Mario and Lucy are committed to disagreeing about the truth of which one of the following?",
+    "options": {
+      "A": "If a field of study that has a unique methodology lacks a domain of inquiry all its own, it can nonetheless be a genuinely autonomous discipline.",
+      "B": "If a field of study is not a genuinely autonomous discipline, it can still have a unique methodology.",
+      "C": "All fields of study that are characterized by a unique methodology and by a domain of inquiry all their own are genuinely autonomous disciplines.",
+      "D": "Any field of study that is not a genuinely autonomous discipline lacks both a unique domain of inquiry and a unique methodology.",
+      "E": "Any field of study that is not a genuinely autonomous discipline addresses issues also addressed by disciplines that are genuinely autonomous."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 12,
+    "id": "PT93-S1-Q12",
+    "stimulus": "Undoubtedly, one's freedom is always worth the risk of losing one's life. Consider a person who is locked in a bare cement room with no hope of escape. This person is not really living and has nothing to lose.",
+    "questionStem": "A flaw in the argument's reasoning is that the argument",
+    "options": {
+      "A": "presumes, without providing justification, that nothing can have greater value than one's own freedom",
+      "B": "fails to consider that it is not always possible to rebel physically against an encroachment on one's freedom",
+      "C": "generalizes inappropriately from a single extreme case to a universal claim",
+      "D": "fails to establish that the freedom of others is worth taking risks for",
+      "E": "overlooks the possibility that some people do not have the courage to take risks for freedom"
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 13,
+    "id": "PT93-S1-Q13",
+    "stimulus": "Ramona: One of the primary values of a university education is the intellectual growth that results from exposure to a wide range of ideas. Too many students miss this because they choose technical majors only to improve their chances on the job market. Recent pressures to graduate as quickly as possible only make matters worse. Martin: But we have to be realistic. My brother graduated last year as an English major, but he's working as a waiter. Anyway, you are forgetting that even students in technical majors are required to take some liberal arts classes.",
+    "questionStem": "The conversation most strongly supports the claim that Ramona and Martin agree with each other that",
+    "options": {
+      "A": "students are stimulated to grow intellectually only in English classes",
+      "B": "only graduates with degrees in technical subjects get good jobs",
+      "C": "not every university class exposes students to a wide range of ideas",
+      "D": "intellectual growth is more important than financial security",
+      "E": "financial security is more important than intellectual growth"
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 14,
+    "id": "PT93-S1-Q14",
+    "stimulus": "Essayist: Some researchers criticize British governmental security agencies for not releasing enough information about sightings of unidentified flying objects (UFOs) made by these military and intelligence agencies. Requests for information by civilian researchers are brushed aside. This leads one to suspect that there have been spacecraft sighted near Earth that are extraterrestrial in origin.",
+    "questionStem": "Which one of the following, if true, would most strengthen the essayist's argument?",
+    "options": {
+      "A": "The British government is generally not forthcoming with secure information.",
+      "B": "The British government would withhold information pertaining to UFOs only if it were established that they were from other planets.",
+      "C": "The British government would deny the requests by civilian researchers to have access to the data only if this government had something to hide.",
+      "D": "The British government is less trusting of civilian researchers than it is of military researchers.",
+      "E": "The British government has always attempted to deny the existence of UFOs."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 15,
+    "id": "PT93-S1-Q15",
+    "stimulus": "Each of two drugs, S and T, greatly reduces the effects of potentially fatal heart attacks if given as soon as possible after the attack begins, but a trial has shown that use of drug T instead of drug S would prevent death in one additional case out of 120. Drug T, however, costs $2,000 more per treatment than drug S. Therefore society is presented with a stark policy decision: whether or not to pay the $240,000 it would cost to use drug T in order to save one additional patient.",
+    "questionStem": "Which one of the following is an assumption on which the argument relies?",
+    "options": {
+      "A": "Drug S has certain side effects not shared by drug T.",
+      "B": "Drug T is much newer than drug S, and had far higher development costs.",
+      "C": "After a heart attack, drug T remains relatively effective if given at a time at which drug S is no longer effective.",
+      "D": "There is no quick, practical, and relatively inexpensive way of telling for any individual case whether drug S will be as effective as drug T.",
+      "E": "Drug T works significantly faster than drug S."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 16,
+    "id": "PT93-S1-Q16",
+    "stimulus": "Researcher: Results indicate that the higher their educational level, the better are students' mathematical skills. These results do not prove that education improves mathematical skills, however, since it is possible that students who have better mathematical skills to start with are the students who reach higher educational levels.",
+    "questionStem": "The reasoning of the researcher's argument is most similar to that of which one of the following arguments?",
+    "options": {
+      "A": "Results indicate that the quality of papers submitted for publication varies significantly from university to university. This may say nothing about the quality of education offered at different schools, but may only reflect a defect in the review process.",
+      "B": "Results from competition indicate that professional athletes outperform amateur athletes. These results do not prove that becoming a professional athlete improves one's athletic performance, since it is possible that the athletes who become professionals are those whose performance is better to begin with.",
+      "C": "Studies indicate that students who graduate from more prestigious schools often get good jobs. These studies do not show that these schools prepare students well for the job market, since it is possible that employers are impressed by the mere fact that the students are from more prestigious schools.",
+      "D": "Surveys indicate that politicians with law degrees are better at what they do than politicians without law degrees. These surveys do not prove that having a law degree makes one a better politician, since it is possible that many politicians without law degrees were left out of the survey.",
+      "E": "Studies suggest that some people who are gifted in higher mathematics are inept at performing simple arithmetical calculations. These studies do not show that being good at mathematics precludes being good at arithmetic, since there are also many people who are good at both."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 17,
+    "id": "PT93-S1-Q17",
+    "stimulus": "Two hundred randomly selected subjects were asked, \"Have you ever awakened, seemingly paralyzed, with a sense of a strange presence in the room?\" Forty percent answered yes. A randomly selected control group of 200 different subjects in the same study were asked simply if they remembered ever waking up seemingly paralyzed. Only 14 percent of the control group answered yes.",
+    "questionStem": "Which one of the following statements is most supported by the information above?",
+    "options": {
+      "A": "Experiencing a sense of a strange presence in a room in some way causes subjects to feel as though they are paralyzed.",
+      "B": "The number of subjects who had awakened with a sense of a strange presence in the room was greater in the first group than in the control group.",
+      "C": "If the reports of the first group of subjects were accurate, approximately 60 percent of them had never awakened with a sense of a strange presence in the room.",
+      "D": "At least some of the randomly selected subjects of the study gave inconsistent reports.",
+      "E": "The tendency of subjects to report a recollection of an event can sometimes be increased by suggesting circumstances that accompanied the event."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 18,
+    "id": "PT93-S1-Q18",
+    "stimulus": "Sid: The sign says \"Keep off the grass.\" Micki: I know, but just one person walking across the grass doesn't hurt it. Sid: Your statement is false. If everyone believed as you do, everyone would walk across the grass, and the grass would die.",
+    "questionStem": "Sid's argument is questionable in that it",
+    "options": {
+      "A": "attempts to use a statement about the consequences of actions to disprove a statement about the actions themselves",
+      "B": "treats a statement about the consequences of an action as though it were instead about the consequences of everyone believing the statement",
+      "C": "contradicts itself by treating a statement that the arguer does not believe as though it were a statement believed by everyone",
+      "D": "discounts the fact that there may be circumstances under which hurting the grass is justified",
+      "E": "attempts to undermine a statement by calling into question the character of the person making the statement"
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 19,
+    "id": "PT93-S1-Q19",
+    "stimulus": "Newspaper editorial: Many pharmaceutical companies develop \"me too\" drugs, drugs designed to duplicate, more or less, the effect of another company's product that is already on the market. Some critics object that such development constitutes an unnecessary, redundant use of resources that provides no new benefits to consumers. However, the entry of \"me too\" drugs into the market can result in a price reduction for the drugs they resemble. Therefore, \"me too\" drugs can indeed benefit consumers.",
+    "questionStem": "Which one of the following, if true, most strengthens the editorial's argument?",
+    "options": {
+      "A": "Some \"me too\" drugs turn out to be more effective than the drugs they were designed to imitate.",
+      "B": "If \"me too\" drugs were prohibited, more money would be available for the development of innovative drugs.",
+      "C": "Pharmaceutical companies often make more money on a \"me too\" drug than on an original drug.",
+      "D": "If all pharmaceutical companies developed \"me too\" drugs, fewer innovative drugs would be developed.",
+      "E": "Some pharmaceutical companies lose money on the development of innovative drugs because of the development by other companies of \"me too\" drugs."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 20,
+    "id": "PT93-S1-Q20",
+    "stimulus": "One of the most important events for modern astronomy was the series of collisions, during a single week in 1994, of more than a dozen large objects with Jupiter. The collision of these objects, which once formed most of the comet Shoemaker Levy 9, resulted in formations that showed no signs of water. There was thus no water involved in the collisions, so we know that none of the comet's fragments penetrated to Jupiter's lower atmosphere and that the comet was composed of rock rather than ice.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "options": {
+      "A": "Comets tend to be composed largely of ice while asteroids are composed mainly of rock.",
+      "B": "If Jupiter's lower atmosphere had been penetrated by the comet's fragments, the resulting formations would show signs of water.",
+      "C": "A larger explosion would occur upon collision with Jupiter if Shoemaker-Levy 9 were composed of rock than if it were composed of ice.",
+      "D": "The post-collision analysis of Jupiter showed that the formations all had exactly the same composition.",
+      "E": "The deeper the explosion occurred in Jupiter's atmosphere, the more difficult it would be to detect from Earth."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 21,
+    "id": "PT93-S1-Q21",
+    "stimulus": "The experts who now assure us that genetically engineered plants are harmless are the same experts who claimed that introducing non-native plants into the wild was a good idea. It is too late to be skeptical now that some non-native plants have become a serious problem. But we should conclude, while we still have time, that genetically engineered plants will also be harmful.",
+    "questionStem": "The flawed reasoning in which one of the following most closely parallels the flawed reasoning in the argument above?",
+    "options": {
+      "A": "The same people who complain that taxes are too high complain that the government does not provide enough services. We should conclude that high taxes and big government go together.",
+      "B": "The film critics who called Meisner's last film brilliant are the same ones who are calling her new film confused and boring. But because Meisner's last film was excellent I conclude that this one will be also.",
+      "C": "The economists who tell us that the current economic expansion will soon be over are the same economists who failed to predict the end of the last recession. Wise investors will conclude that the expansion will continue for some time.",
+      "D": "Children who beg and plead with their parents to buy them trendy toys are the same children who begged for trendy toys last year. I conclude that parents ought to ignore such pleadings and simply buy traditional toys.",
+      "E": "The population experts who are predicting world food shortages in the next decade are the same ones who have erroneously predicted such shortages in the past. Therefore, if there are food shortages in the next decade, it will not be because population experts predicted them."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 22,
+    "id": "PT93-S1-Q22",
+    "stimulus": "One can be at home and be in the backyard, that is, not in one's house at all. One can also be in one's house but not at home, if one owns the house but rents it out to others, for example. So one's being at home is not required for one's being in one's own house.",
+    "questionStem": "Which one of the following most accurately describes the relationship between the argument's conclusion and its claim that one can be at home without being in one's own house?",
+    "options": {
+      "A": "The claim is required to establish the conclusion.",
+      "B": "The claim represents the point the conclusion is intended to refute.",
+      "C": "The claim is compatible with the truth or falsity of the conclusion.",
+      "D": "The claim points out an ambiguity in the phrase \"at home.\"",
+      "E": "The claim inadvertently contradicts the conclusion."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 23,
+    "id": "PT93-S1-Q23",
+    "stimulus": "Economist: In any country, inflation occurs when the money supply grows more than the production of goods and services grows. Similarly, deflation occurs when the production of goods and services grows more than does the money supply. In my country, gold anchors the money supply, so the money supply is very stable. Hence, my country is very unlikely to experience significant inflation or deflation.",
+    "questionStem": "Which one of the following is an assumption on which the economist's argument depends?",
+    "options": {
+      "A": "Having stability in the production of goods and services is the most effective means of preventing inflation or deflation.",
+      "B": "Having an anchor such as gold is necessary for the stability of a country's money supply.",
+      "C": "The production of goods and services in the economist's country is unlikely to grow markedly.",
+      "D": "Inflation is no more likely to occur in the economist's country than is deflation.",
+      "E": "A stable money supply is the most effective means of preventing inflation."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 24,
+    "id": "PT93-S1-Q24",
+    "stimulus": "Agricultural economist: We can increase agricultural production without reducing biodiversity, but only if we abandon conventional agriculture. Thus, if we choose to sustain economic growth, which requires increasing agricultural production, we should radically modify agricultural techniques.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the agricultural economist's reasoning?",
+    "options": {
+      "A": "Agricultural production should be reduced if doing so would increase biodiversity.",
+      "B": "Economic growth should not be pursued at the expense of a loss of biodiversity.",
+      "C": "Economic growth should be sustained only as long as agricultural production continues to increase.",
+      "D": "Preserving biodiversity is no more important than increasing agricultural production.",
+      "E": "Agricultural techniques should be radically modified only if doing so would further the extent to which we can increase agricultural production."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 1,
+    "id": "PT93-S2-Q01",
+    "stimulus": "Insurance that was to become effective at 9 A.M. on a certain date was taken out on the life of a flight attendant. He died on that date at 10 A.M. local time, which was two hours before 9 A.M. in the time zone where the policy had been purchased. The insurance company contended that the policy had not become effective; a representative of the flight attendant's beneficiary, his mother, countered by arguing that the policy amount should be paid because the attendant had been his mother's sole support, and she was ill.",
+    "questionStem": "The representative's argument is flawed as a counter to the insurance company's contention because",
+    "options": {
+      "A": "the conclusion is no more than a paraphrase of the evidence offered in support of it",
+      "B": "it appeals to the emotion of pity rather than addressing the issue raised",
+      "C": "it makes an unwarranted distinction between family obligations and business obligations",
+      "D": "it substitutes an attack on a person for the giving of reasons",
+      "E": "a cause and its effect are mistaken for each other"
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 2,
+    "id": "PT93-S2-Q02",
+    "stimulus": "Once a child's imagination becomes developed, a host of imaginary creatures may torment the child. But this newly developed cognitive capacity may also be used to render these creatures harmless. For instance, a child's new toy may be imagined as an ally, powerful enough to ward off any imaginary threats. The type of situation described above most closely conforms to",
+    "questionStem": "which one of the following propositions?",
+    "options": {
+      "A": "Some newly developed capacities only give rise to problems.",
+      "B": "Sometimes the cause of a problem may also provide its solution.",
+      "C": "Children are not able to distinguish between real and imaginary threats.",
+      "D": "The most effective way for children to address their fears is to acknowledge them.",
+      "E": "Most problems associated with child-rearing can be solved with a little imagination."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 3,
+    "id": "PT93-S2-Q03",
+    "stimulus": "Trisha: Today's family is declining in its ability to carry out its functions of child-rearing and providing stability for adult life. There must be a return to the traditional values of commitment and responsibility. Jerod: We ought to leave what is good enough alone. Contemporary families may be less stable than traditionally, but most people do not find that to be bad. Contemporary criticisms of the family are overblown and destructive.",
+    "questionStem": "Trisha and Jerod disagree over whether the institution of the family is",
+    "options": {
+      "A": "adequate as it is",
+      "B": "changing over time",
+      "C": "valued by most people",
+      "D": "not going to survive",
+      "E": "no longer traditional"
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 4,
+    "id": "PT93-S2-Q04",
+    "stimulus": "Politician P: My opponent claims that the government is obligated to raise taxes to increase funding for schools and health care. Because raising taxes to increase funding for schools and health care would make taxpayers upset over their loss of buying power, my opponent is simply mistaken.",
+    "questionStem": "Politician P's reasoning is questionable because it involves",
+    "options": {
+      "A": "presupposing that a claim is mistaken on the grounds that the person defending it advocates other unpopular views",
+      "B": "assuming that a claim is false on the grounds that the person defending it is of questionable character",
+      "C": "concluding that a view is false on the grounds that its implementation would lead to unhappiness",
+      "D": "appealing to wholly irrelevant issues to deflect attention away from the real issue",
+      "E": "insisting that an obligation exists without offering any evidence that it exists"
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 5,
+    "id": "PT93-S2-Q05",
+    "stimulus": "In defending the Hyperion School of Journalism from charges that its program is of little or no value to its students, the dean of the school pointed to its recent success in placing students: 65 percent of its graduates went on to internships or jobs in print or broadcast journalism.",
+    "questionStem": "Which one of the following, if true, most seriously undermines the defense offered by the dean?",
+    "options": {
+      "A": "More than half of the school's students came from jobs in journalism to improve their skills.",
+      "B": "Some newspaper editors do not regard journalism schools as a necessary part of the training of a journalist.",
+      "C": "The number of cities with more than one major newspaper has declined sharply over the last 25 years.",
+      "D": "The program offered by the Hyperion School of Journalism is similar in quality and content to those offered by its peer institutions.",
+      "E": "The proportion of applicants to the Hyperion School of Journalism that are admitted is lower than it was ten years ago."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 6,
+    "id": "PT93-S2-Q06",
+    "stimulus": "The largest volcano on Mars rises 27 kilometers above the surrounding plain and covers an area roughly the size of Romania. Even if the Earth's gravity were as low as the gravity of Mars is, no volcano of such size could exist on Earth, for the Earth's crust, although of essentially the same composition as that of Mars, is too thin to support even a small fraction of that mass and would buckle under it, causing the mountain to sink. If the statements above are true,",
+    "questionStem": "which one of the following must also be true on the basis of them?",
+    "options": {
+      "A": "The surface of Mars is less subject to forces of erosion than is the surface of the Earth.",
+      "B": "The highest volcanoes on Mars occur where its crust is thickest.",
+      "C": "On average, volcanoes on Mars are higher than those on Earth.",
+      "D": "The crust of Mars, at least at certain points on the planet, is thicker than the crust of the Earth.",
+      "E": "At least some of the Earth's volcanoes would be larger than they actually are if the Earth's crust were thicker than it is."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 7,
+    "id": "PT93-S2-Q07",
+    "stimulus": "Speakers of the Caronian language constitute a minority of the population in several large countries. An international body has recommended that the regions where Caronian-speakers live be granted autonomy as an independent nation in which Caronian-speakers would form a majority. But Caronian-speakers live in several, widely scattered areas that cannot be united within a single continuous boundary while at the same time allowing Caronian-speakers to be the majority population. Hence, the recommendation cannot be satisfied. The argument relies on",
+    "questionStem": "which one of the following assumptions?",
+    "options": {
+      "A": "A nation once existed in which Caronian- speakers formed the majority of the population.",
+      "B": "Caronian-speakers tend to perceive themselves as constituting a single community.",
+      "C": "The recommendation would not be satisfied by the creation of a nation formed of disconnected regions.",
+      "D": "The new Caronian nation will not include as citizens anyone who does not speak Caronian.",
+      "E": "In most nations several different languages are spoken."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 8,
+    "id": "PT93-S2-Q08",
+    "stimulus": "Sociologist: The welfare state cannot be successfully implemented because it rests on the assumption that human beings are unselfish—a seemingly false assumption. The welfare state is feasible only if wage earners are prepared to have their hard-earned funds used to help others in greater need, and that requires an unselfish attitude. But people innately seek their own well-being, especially when the interest of others threaten it.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion of the sociologist's argument?",
+    "options": {
+      "A": "The welfare state will not work.",
+      "B": "The welfare state unfairly asks those who work hard to help those in greater need.",
+      "C": "The assumption that human beings are unselfish is false.",
+      "D": "The interests of the less fortunate impinge on the interests of others.",
+      "E": "The welfare state relies on the generosity of wage earners."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 9,
+    "id": "PT93-S2-Q09",
+    "stimulus": "Early pencil leads were made of solid graphite mined in Cumberland, in Britain. Modern methods of manufacturing pencil leads from powdered graphite are the result of research sponsored by the government of France in the 1790s, when France was at war with Britain and thus had no access to Cumberland graphite. The information above most strongly supports",
+    "questionStem": "which one of the following?",
+    "options": {
+      "A": "The world's only deposit of graphite suitable for manufacture of pencils is in Cumberland, in Britain.",
+      "B": "In the 1790s, France's government did not know of any accessible source of solid graphite appropriate to meet France's need for pencils.",
+      "C": "One of the causes of war between France and Britain in the 1790s was the British government's attempt to limit the amount of Cumberland graphite being exported to France.",
+      "D": "Government-sponsored research frequently gives rise to inventions that are of great benefit to society.",
+      "E": "Even today, all pencil leads contain Cumberland graphite."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 10,
+    "id": "PT93-S2-Q10",
+    "stimulus": "Commercial passenger airplanes can be equipped with a collision-avoidance radar system that provides pilots with information about the proximity of other airplanes. Because the system warns pilots to take evasive action when it indicates a possible collision, passengers are safer on airplanes equipped with the system than on comparable airplanes not so equipped, even though the system frequently warns pilots to evade phantom airplanes.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "options": {
+      "A": "Passengers feel no safer on airplanes equipped with the radar system than on comparable airplanes not so equipped.",
+      "B": "Warnings given by a collision-avoidance system about phantom airplanes are not caused by distorted radar signals.",
+      "C": "The frequency of invalid warnings will not cause pilots routinely to disregard the system's warnings.",
+      "D": "Commercial passenger airplanes are not the only planes that can be equipped with a collision-avoidance system",
+      "E": "The greatest safety risk for passengers traveling on commercial passenger airplanes is that of a midair collision."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 11,
+    "id": "PT93-S2-Q11",
+    "stimulus": "Commercial passenger airplanes can be equipped with a collision-avoidance radar system that provides pilots with information about the proximity of other airplanes. Because the system warns pilots to take evasive action when it indicates a possible collision, passengers are safer on airplanes equipped with the system than on comparable airplanes not so equipped, even though the system frequently warns pilots to evade phantom airplanes.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "options": {
+      "A": "Evasive action taken in response to the system's warnings poses no risk to the passengers.",
+      "B": "Commercial passenger airplanes are in greater danger of colliding with other airplanes while on the ground than they are while in flight.",
+      "C": "Commercial passenger airplanes are rarely involved in collisions while in flight.",
+      "D": "A study by ground-based air traffic controllers found that 63 percent of the warnings by the system were invalid.",
+      "E": "The collision-avoidance radar system is run by a computerized device on the plane that scans the sky and calculates the distances between planes."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 12,
+    "id": "PT93-S2-Q12",
+    "stimulus": "The higher the average fat intake among the residents of a country, the higher the incidence of cancer in that country; the lower the average fat intake, the lower the incidence of cancer. So individuals who want to reduce their risk of cancer should reduce their fat intake.",
+    "questionStem": "Which one of the following, if true, most weakens the argument?",
+    "options": {
+      "A": "The differences in average fat intake between countries are often due to the varying makeup of traditional diets.",
+      "B": "The countries with a high average fat intake tend to be among the wealthiest in the world.",
+      "C": "Cancer is a prominent cause of death in countries with a low average fat intake.",
+      "D": "The countries with high average fat intake are also the countries with the highest levels of environmental pollution.",
+      "E": "An individual resident of a country whose population has a high average fat intake may have a diet with a low fat intake."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 13,
+    "id": "PT93-S2-Q13",
+    "stimulus": "A local television station is considering a plan to create a panel of child psychologists to review programs in advance of their airing and rate the level of violence. A program that portrays a high level of violence would be listed in newspapers with four guns after the title. On the other hand, if a show has little violence, one gun would appear after its listing. The station believes that this remedy would forewarn parents about the level of violence in any given program.",
+    "questionStem": "Which one of the following must the television station assume in order to conclude that the plan will meet its stated purpose?",
+    "options": {
+      "A": "Parents would read and pay attention to the ratings listed in the newspapers.",
+      "B": "There would be fewer shows rated with one gun than with four guns.",
+      "C": "The rating system described in the passage is the most effective system available.",
+      "D": "The local television station has an obligation to forewarn parents of the level of violence in television shows.",
+      "E": "Television producers of programs rated as having high levels of violence would make an effort to reduce those levels."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 14,
+    "id": "PT93-S2-Q14",
+    "stimulus": "The common ancestors of Australian land- and tree- dwelling kangaroos had prehensile (grasping) tails and long opposable thumbs, attributes that are well- adapted to tree-dwelling but offer kangaroos few advantages on land. It is hardly surprising, therefore, that land-dwelling kangaroos eventually lost these attributes; what is puzzling is the fact that all modern tree-dwelling kangaroos now lack them as well.",
+    "questionStem": "Which one of the following, if true, most helps explain the puzzling fact cited above?",
+    "options": {
+      "A": "Modern tree-dwelling kangaroos must back down tree trunks slowly and carefully, but the common ancestors of modern tree-and land- dwelling kangaroos used their opposable thumbs to descend trees quickly headfirst.",
+      "B": "Modern tree-dwelling kangaroos are smaller than most modern land-dwelling kangaroos but larger than their common ancestors.",
+      "C": "Modern tree-dwelling kangaroos' tails cannot grasp branches, but they are somewhat longer and more flexible than those of modern land- dwelling kangaroos.",
+      "D": "Modern tree-dwelling kangaroos are descended from species of land-dwelling kangaroos that had been land-dwellers for many generations before modern tree- dwelling kangaroos started to develop.",
+      "E": "Modern tree-dwelling kangaroos have smaller and weaker hind legs than modern land- dwelling kangaroos, and they move more slowly on land than do modern land-dwelling kangaroos."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 15,
+    "id": "PT93-S2-Q15",
+    "stimulus": "Editorialist: Society is obligated to bestow the privileges of adulthood upon its members once they are mature enough to accept the corresponding responsibilities. But science has established that physiological development is completed in most persons by age seventeen. Since this maturing process has been completed by most seventeen-year-olds, there is no reason not to grant these citizens all of the privileges of adulthood.",
+    "questionStem": "The editorialist's argument is most vulnerable to criticism on the ground that it",
+    "options": {
+      "A": "assumes what it is trying to prove",
+      "B": "too hastily reaches a general conclusion on the basis of a few examples",
+      "C": "equivocates with respect to a central concept",
+      "D": "too readily accepts a claim by appeal to inappropriate authority",
+      "E": "ignores the fact that some people are mature at age sixteen"
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 16,
+    "id": "PT93-S2-Q16",
+    "stimulus": "Every new play that runs for more than three months is either a commercial or a critical success. Last year, all new plays that were critical successes were also commercial successes. Therefore, every new play that ran for more than three months last year was a commercial success. The pattern of reasoning in",
+    "questionStem": "which one of the following arguments is most similar to that in the argument above?",
+    "options": {
+      "A": "Most new restaurants require either good publicity or a good location in order to succeed. But most restaurants with a good location also receive good publicity. Hence, a restaurant that has a good location is guaranteed to succeed.",
+      "B": "Every best-selling cookbook published last year is both well written and contains beautiful photographs. The cookbook Cynthia Cleveland published last year is well written and contains beautiful photographs. Therefore, Cleveland's cookbook is a best seller.",
+      "C": "All students at the Freeman School of Cooking study either desserts or soups in their second year. This year, all Freeman students studying soups are also studying desserts. Therefore, every second-year student at Freeman is studying desserts this year.",
+      "D": "Chefs who become celebrities either open their own restaurants or write books about their craft, but not both. John Endicott is a celebrated chef who opened his own restaurant. Therefore, Endicott does not write books about his craft.",
+      "E": "Every catering service in Woodside Township will accept both residential and business catering assignments. Peggy's"
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 17,
+    "id": "PT93-S2-Q17",
+    "stimulus": "Fine Foods is a catering service that will not accept business catering assignments. Hence, Peggy's Fine Foods is not in Woodside Township.",
+    "questionStem": "Commissioner: I have been incorrectly criticized for having made my decision on the power plant issue prematurely. I based my decision on the report prepared by the neighborhood association and, although I have not studied it thoroughly, I am sure that the information it contains is accurate. Moreover, you may recall that when I received input from the neighborhood association on jail relocation, I agreed with its recommendation. The commissioner's argument is LEAST vulnerable to which one of the following criticisms?",
+    "options": {
+      "A": "It takes for granted that the association's information is not distorted by bias.",
+      "B": "It draws a conclusion about the recommendations of the association from incomplete recollections.",
+      "C": "It takes for granted that the association's report is the only direct evidence that needed to be considered.",
+      "D": "It hastily concludes that the association's report is accurate, without having studied it in detail.",
+      "E": "It takes for granted that agreeing with the association's past recommendation helps to justify agreeing with its current recommendation."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 18,
+    "id": "PT93-S2-Q18",
+    "stimulus": "Each child in a group of young children read aloud both a short paragraph and a list of randomly ordered words from the paragraph. The more experienced readers among them made fewer pronunciation errors in whichever task they performed second, whether it was the list or the paragraph. The order in which the two tasks were performed, however, had no effect on the performance of beginning readers, who always made fewer pronunciation errors when reading the paragraph than when reading the list.",
+    "questionStem": "Which one of the following, if true, most helps to explain why the order in which the tasks were performed was not significant for the beginning readers?",
+    "options": {
+      "A": "Because several words were used more than once in the paragraph but only once in the list, the list was shorter than the paragraph.",
+      "B": "In reading the paragraph, the more experienced readers were better at using context to guess at difficult words than were the beginning readers.",
+      "C": "The more experienced readers sounded out difficult words, while the beginning readers relied solely on context to guess at difficult words.",
+      "D": "Both tasks used the same words, so that the words the children read in whichever task was performed first would be recognized in the second task.",
+      "E": "The beginning readers made more pronunciation errors than the more experienced readers did in reading both the paragraph and the list."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 19,
+    "id": "PT93-S2-Q19",
+    "stimulus": "Anthropologist: Violence is an extreme form of aggression, and is distinct from the self- expression sufficient for survival under normal conditions. Human beings in certain situations react to unpleasant stimuli with violence—but only because they are conditioned by their culture to react in this manner.",
+    "questionStem": "Each of the following can be logically inferred from the anthropologist's statements EXCEPT:",
+    "options": {
+      "A": "Not all aggression is violent.",
+      "B": "The self-expression required for survival is generally nonagressive.",
+      "C": "Some behaviors are influenced by the cultures in which human beings live.",
+      "D": "In normal circumstances, human beings can survive by responding nonviolently.",
+      "E": "Violent behavior is a product of one's cultural environment."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 20,
+    "id": "PT93-S2-Q20",
+    "stimulus": "Martha's friend, who is very knowledgeable about edible flowers, told Martha that there are no edible daisies, at least not any that are palatable. Martha, however, reasons that since there are daisies that are a kind of chrysanthemum and since there are edible chrysanthemums that are quite palatable, what her friend told her must be incorrect.",
+    "questionStem": "Which one of the following has a flawed pattern of reasoning most like that in Martha's reasoning?",
+    "options": {
+      "A": "Jeanne is a member of the city chorus, and the city chorus is renowned. So Jeanne is an excellent singer.",
+      "B": "Rolfe belongs to the library reading group, and all members of that group are avid readers. So Rolfe is an avid reader.",
+      "C": "Some of Noriko's sisters are on the debate team, and some members of the debate team are poor students. So at least one of Noriko's sisters must be a poor student.",
+      "D": "Most of Leon's friends are good swimmers, and good swimmers are quite strong. So it is likely that at least some of Leon's friends are quite strong.",
+      "E": "Many of Teresa's colleagues have written books. Most of the books they have written are on good writing. So some of"
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 21,
+    "id": "PT93-S2-Q21",
+    "stimulus": "Teresa's colleagues are good writers.",
+    "questionStem": "Attorney for Ziegler: My client continued to do consulting work between the time of his arrest for attempted murder and the start of this trial. But I contend that Ziegler was insane at the time that he fired the shot. This is the only reasonable conclusion to draw from the fact that the accusers have submitted no evidence that he was sane at the time he pulled the trigger, only that he was sane some time after he did so. Which one of the following most accurately describes a flaw in the reasoning of Ziegler's attorney?",
+    "options": {
+      "A": "It presumes that being a well-educated professional is relevant to being guilty or innocent.",
+      "B": "It concludes on the basis of evidence against Ziegler's being sane that there is a lack of evidence for Ziegler's being sane.",
+      "C": "It fails to consider that Ziegler might have been insane when he worked as a consultant.",
+      "D": "It presumes that whether one is sane is relevant to whether one is morally responsible for one's actions.",
+      "E": "It fails to consider the possibility that Ziegler's being sane after the shooting is an indication that he was sane at the time of the shooting."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 22,
+    "id": "PT93-S2-Q22",
+    "stimulus": "Most students are bored by history courses as they are usually taught, primarily because a large amount of time is spent teaching dates and statistics. The best way to teach history, therefore, is to spend most class time recounting the lives of historical figures and very little on dates and statistics.",
+    "questionStem": "Each of the following is an assumption on which the argument depends EXCEPT:",
+    "options": {
+      "A": "One should avoid boring one's students when teaching a history course.",
+      "B": "It is not incompatible with the attainable goals of teaching history to spend very little class time on dates and statistics.",
+      "C": "It is possible to recount the lives of historical figures without referring to dates and statistics.",
+      "D": "It is compatible with the attainable goals of teaching history to spend most class time recounting the lives of historical figures.",
+      "E": "Students are more bored by history courses as they are usually taught than they would be by courses that spend most class time recounting the lives of historical figures."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 23,
+    "id": "PT93-S2-Q23",
+    "stimulus": "In a certain municipality, a judge overturned a suspect's conviction for possession of an illegal weapon. The suspect had fled upon seeing police and subsequently discarded the illegal weapon after the police gave chase. The judge reasoned as follows: the only cause for the police giving chase was the suspect's flight; by itself, flight from the police does not create a reasonable suspicion of a criminal act; evidence collected during an illegal chase is inadmissible; therefore, the evidence in this case was inadmissible.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the judge's decision that the evidence was inadmissible?",
+    "options": {
+      "A": "Flight from the police could create a reasonable suspicion of a criminal act as long as other significant factors are involved.",
+      "B": "People can legally flee from the police only when those people are not involved in a criminal act at the time.",
+      "C": "Police can legally give chase to a person only when the person's actions have created a reasonable suspicion of a criminal act.",
+      "D": "Flight from the police should not itself be considered a criminal act.",
+      "E": "In all cases in which a person's actions have created a reasonable suspicion of a criminal act, police can legally give chase to that person."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 24,
+    "id": "PT93-S2-Q24",
+    "stimulus": "Monica: The sculpture commissioned for our town plaza has been scorned by the public ever since it went up. But since the people in our town do not know very much about contemporary art, the unpopularity of the work says nothing about its artistic merit and thus gives no reason for removing it. Hector: You may be right about what the sculpture's popularity means about its artistic merit. However, a work of art that was commissioned for a public space ought to benefit the public, and popular opinion is ultimately the only way of determining what the public feels is to its benefit. Thus, if public opinion of this sculpture is what you say, then it certainly ought to be removed.",
+    "questionStem": "Monica's and Hector's statements commit them to disagreeing about which one of the following principles?",
+    "options": {
+      "A": "Public opinion of a work of art is an important consideration in determining the work's artistic merit.",
+      "B": "Works of art commissioned for public spaces ought at least to have sufficient artistic merit to benefit the public.",
+      "C": "The only reason for removing a work of art commissioned for a public space would be that the balance of public opinion is against the work.",
+      "D": "The sculpture cannot benefit the public by remaining in the town plaza unless the sculpture has artistic merit.",
+      "E": "In determining whether the sculpture should remain in the town plaza, the artistic merit of the sculpture should be a central consideration."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 25,
+    "id": "PT93-S2-Q25",
+    "stimulus": "Monica: The sculpture commissioned for our town plaza has been scorned by the public ever since it went up. But since the people in our town do not know very much about contemporary art, the unpopularity of the work says nothing about its artistic merit and thus gives no reason for removing it. Hector: You may be right about what the sculpture's popularity means about its artistic merit. However, a work of art that was commissioned for a public space ought to benefit the public, and popular opinion is ultimately the only way of determining what the public feels is to its benefit. Thus, if public opinion of this sculpture is what you say, then it certainly ought to be removed.",
+    "questionStem": "The argument Hector makes in responding to Monica depends on the assumption that",
+    "options": {
+      "A": "no matter what the public's opinion is on an issue affecting the public good, that public opinion ought to be acted on, even though the opinion may not be a knowledgeable one",
+      "B": "Monica's assessment of the public's opinion of the sculpture is accurate",
+      "C": "if the sculpture had artistic merit, then even a public that was not knowledgeable about modern art would not scorn the sculpture",
+      "D": "works of art commissioned for public spaces ought not to be expected to have artistic merit",
+      "E": "if the public feels that it does not benefit from the sculpture, this shows that the public does not in fact benefit from the sculpture From the tenth century until around the year 1500, there were Norse settlers living in Greenland. During that time, average yearly temperatures fell slightly worldwide, and some people claim that this temperature drop wiped out the Norse settlements by rendering Greenland too cold for human habitation. But this explanation cannot be correct, because Inuit settlers from North America, who were living in Greenland during the time the Norse settlers were there, continued to thrive long after 1500."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 1,
+    "id": "PT93-S3-Q01",
+    "stimulus": "From the tenth century until around the year 1500, there were Norse settlers living in Greenland. During that time, average yearly temperatures fell slightly worldwide, and some people claim that this temperature drop wiped out the Norse settlements by rendering Greenland too cold for human habitation. But this explanation cannot be correct, because Inuit settlers from North America, who were living in Greenland during the time the Norse settlers were there, continued to thrive long after 1500.",
+    "questionStem": "Which one of the following if true, most helps explain why the Norse settlements in Greenland disappeared while the Inuit settlements survived?",
+    "options": {
+      "A": "The drop in average yearly temperature was smaller in Greenland than it was in the world as a whole.",
+      "B": "The Norse settlers' diet, unlike that of the Inuit, was based primarily on livestock and crops that were unable to survive the temperature drop.",
+      "C": "There were settlements in North America during the fifteenth century that were most likely founded by Norse settlers who had come from Greenland.",
+      "D": "The Inuit and the Norse settlements were typically established in coastal areas.",
+      "E": "The Norse community in Norway continued to thrive long after 1500."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 2,
+    "id": "PT93-S3-Q02",
+    "stimulus": "From the tenth century until around the year 1500, there were Norse settlers living in Greenland. During that time, average yearly temperatures fell slightly worldwide, and some people claim that this temperature drop wiped out the Norse settlements by rendering Greenland too cold for human habitation. But this explanation cannot be correct, because Inuit settlers from North America, who were living in Greenland during the time the Norse settlers were there, continued to thrive long after 1500.",
+    "questionStem": "Which one of the following is a technique of reasoning used in the argument?",
+    "options": {
+      "A": "denying the relevance of an analogy",
+      "B": "producing evidence that is inconsistent with the claim being opposed",
+      "C": "presenting an alternative explanation that purports to account for more of the known facts",
+      "D": "citing a general rule that undermines the claim being opposed",
+      "E": "redefining a term in a way that is favorable to the argument's conclusion"
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 3,
+    "id": "PT93-S3-Q03",
+    "stimulus": "Even though trading in ivory has been outlawed by international agreement, some piano makers still use ivory, often obtained illegally, to cover piano keys. Recently, experts have devised a synthetic ivory that, unlike earlier ivory substitutes, has found favor with concert pianists throughout the world. But because piano makers have never been major consumers of ivory, the development of the synthetic ivory will therefore probably do little to help curb the killing of elephants, from whose tusks most natural ivory is obtained.",
+    "questionStem": "Which one of the following, if true, most helps to strengthen the argument?",
+    "options": {
+      "A": "Most people who play the piano but are not concert pianists can nonetheless easily distinguish between the new synthetic ivory and inferior ivory substitutes.",
+      "B": "The new synthetic ivory can be manufactured to resemble in color and surface texture any of the various types of natural ivory that have commercial uses.",
+      "C": "Other natural products such as bone or tortoise shell have not proven to be acceptable substitutes for natural ivory in piano keys.",
+      "D": "The most common use for natural ivory is in ornamental carvings, which are prized not only for the quality of their workmanship but also for the authenticity of their materials.",
+      "E": "It costs significantly less to produce the new synthetic ivory then it does to produce any of the ivory substitutes that scientists had developed previously."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 4,
+    "id": "PT93-S3-Q04",
+    "stimulus": "The government has spent heavily to clean groundwater contaminated by toxic chemical spills. Yet not even one spill site has been completely cleaned, and industrial accidents are spilling more toxic chemicals annually than are being cleaned up. More of the government's budget should be redirected to preventing spills. Since prevention is far more effective than cleanup, it makes little sense that the entire annual budget for prevention is less than the amount spent annually on one typical cleanup site. The proposal about how the government's budget should be redirected plays",
+    "questionStem": "which one of the following roles in the argument?",
+    "options": {
+      "A": "It represents an unsupported speculation.",
+      "B": "It both supports another claim in the argument and is supported by others.",
+      "C": "It is the claim that the argument as a whole is structured to support.",
+      "D": "It is a presupposition on which the argument is explicitly based.",
+      "E": "It presents an objection to another proposal mentioned in the argument."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 5,
+    "id": "PT93-S3-Q05",
+    "stimulus": "Consumer: I would like to have the features contained in the latest upgrade to your computer software package, but I am leery of installing the upgrade because a friend has told me he had a problem with it. Company representative: We have distributed nearly 3,000 copies of the upgrade and we have received fewer than 100 calls saying that it has caused problems. So it is very unlikely that you will experience any problems with the upgrade.",
+    "questionStem": "The reasoning in the company representative's argument is most vulnerable to criticism because it fails to consider the possibility that",
+    "options": {
+      "A": "the company will issue another upgrade that corrects the problems with the current upgrade",
+      "B": "some of the problems people have experienced with the upgrade have been quite serious",
+      "C": "a significant number of people have experienced problems with the upgrade but have not reported them",
+      "D": "the consumer will experience software problems if the upgrade is not installed",
+      "E": "some of the reported problems were a result of users failing to follow instructions"
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 6,
+    "id": "PT93-S3-Q06",
+    "stimulus": "First legislator: Medical research is predominantly done on groups of patients that include only men. For example, the effects of coffee drinking on health are evaluated only for men, and studies are lacking on hormone treatments for older women. Government-sponsored medical research should be required to include studies of women. Second legislator: Considerations of male/female balance such as this are inappropriate with respect to research; they have no place in science.",
+    "questionStem": "Which one of the following rejoinders, if true, most directly counters the second legislator's objection?",
+    "options": {
+      "A": "Government-sponsored research is supported by all taxpayers, both male and female.",
+      "B": "Serving as a subject for medical research can provide a patient access to new treatments but also can subject the patient to risks.",
+      "C": "Government-sponsored medical research is often done in military hospitals or prisons that hold only male residents.",
+      "D": "The training of male and female scientists does not differ according to their sex.",
+      "E": "Restriction to males of the patient base on which data are collected results in inadequate science."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 7,
+    "id": "PT93-S3-Q07",
+    "stimulus": "Lack of exercise produces the same or similar bodily effects as aging. In fact, the physical changes that accompany aging can often be slowed down by appropriate exercise. No drug, however, holds any promise for slowing down the changes associated with aging. Therefore, .",
+    "questionStem": "Which one of the following provides a logical completion to the passage above?",
+    "options": {
+      "A": "taking drugs has the same effect on aging as does a lack of exercise",
+      "B": "people who do not exercise are likely to need drugs to sustain their health",
+      "C": "appropriate exercise can prevent the physical changes associated with aging",
+      "D": "people who do not exercise when they are young will gain few benefits from beginning to exercise at a later age",
+      "E": "if the physical changes of aging are to be slowed, it is more practical to rely on exercise than on drugs"
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 8,
+    "id": "PT93-S3-Q08",
+    "stimulus": "Grasses and woody plants are planted on dirt embankments to keep the embankments from eroding. The embankments are mowed to keep the grasses from growing too tall; as a result, clippings pile up. These piles of clippings smother the woody plants, causing their roots, which serve to keep the embankments from eroding, to rot; they also attract rodents that burrow into the dirt and damage the woody plants' roots. Therefore, bringing in predators to eradicate the rodents will prevent erosion of the embankments.",
+    "questionStem": "Which one of the following is an error of reasoning in the argument?",
+    "options": {
+      "A": "Two events that merely co-occur are treated as if one caused the other.",
+      "B": "A highly general proposal is based only on an unrepresentative set of facts.",
+      "C": "The conclusion is no more than a restatement of one of the pieces of evidence provided to support it.",
+      "D": "One possible solution to a problem is claimed to be the only possible solution to that problem.",
+      "E": "An action that would eliminate one cause of a problem is treated as if it would solve the entire problem."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 9,
+    "id": "PT93-S3-Q09",
+    "stimulus": "Scientific and technological discoveries have considerable effects on the development of any society. It follows that predictions of the future condition of societies in which scientific and technological discovery is particularly frequent are particularly untrustworthy. The argument depends on assuming",
+    "questionStem": "which one of the following?",
+    "options": {
+      "A": "Predictions of scientific and technological discoveries or predictions of their effects have harmful consequences in some societies.",
+      "B": "The development of a society requires scientific and technological discoveries.",
+      "C": "Forecasts of scientific and technological discoveries, or forecasts of their effects, are not entirely reliable.",
+      "D": "An advanced scientific and technological society frequently benefits from new discoveries.",
+      "E": "It is not as difficult to predict scientific and technological discoveries in a technologically more advanced society as it is in a technologically less advanced society."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 10,
+    "id": "PT93-S3-Q10",
+    "stimulus": "Tires may be either underinflated, overinflated, or neither. We are pretty safe in assuming that underinflation or overinflation of tires harms their tread. After all, no one has been able to show that these do not harm tire tread.",
+    "questionStem": "Which one of the following most accurately describes a flaw in the argument's reasoning?",
+    "options": {
+      "A": "The argument assumes what it is attempting to demonstrate.",
+      "B": "The argument overlooks that what is not in principle susceptible to proof might be false.",
+      "C": "The argument fails to specify how it is that underinflation or overinflation harms tire tread.",
+      "D": "The argument rejects the possibility that what has not been proven is nevertheless true.",
+      "E": "The argument fails to precisely define the terms \"underinflation\" and \"overinflation.\""
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 11,
+    "id": "PT93-S3-Q11",
+    "stimulus": "Lindsey has been judged to be a bad songwriter simply because her lyrics typically are disjointed and subjective. This judgment is ill founded, however, since the writings of many modern novelists typically are disjointed and subjective and yet these novelists are widely held to be good writers.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "options": {
+      "A": "Disjointed and subjective writing has a comparable effect in modern novels and in songs.",
+      "B": "Some readers do not appreciate the subtleties of the disjointed and subjective style adopted by modern novelists.",
+      "C": "Song lyrics that are disjointed and subjective have at least as much narrative structure as any other song lyrics do.",
+      "D": "A disjointed and subjective style of writing is usually more suitable for novels and song lyrics than it is for any other written works.",
+      "E": "The quality of Linsey's songs is better judged by the quality of their lyrics than by the quality of their musical form."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 12,
+    "id": "PT93-S3-Q12",
+    "stimulus": "The Levant—the area that borders the eastern Mediterranean-was heavily populated in prehistoric times. The southern Levant was abandoned about 6,000 years ago, although the northern Levant, which shared the same climate, remained heavily populated. Recently archaeologists have hypothesized that the sudden depopulation in the southern Levant was due to an economic collapse resulting from deforestation. If the statements above are true and the archaeologists' hypothesis is correct,",
+    "questionStem": "which one of the following CANNOT be true?",
+    "options": {
+      "A": "The sheep and goats herded by the peoples of the southern Levant until 6,000 years ago grazed extensively on the seedlings and saplings of indigenous tree species.",
+      "B": "Trees were used in the production of lime plaster, a building material used extensively throughout the southern Levant until 6,000 year ago.",
+      "C": "Organic remains from the northern Levant reliably indicate that tree species flourished there without interruption during the period when the southern Levant was being abandoned.",
+      "D": "Carbon dating of organic remains from the southern Levant reliably demonstrates that there were no forests present in that area prior to 6,000 years ago.",
+      "E": "Since there are few traces of either quarried stone or of mud brick in buildings excavated in the southern Levant, it is likely that the buildings built there prior to 6,000 years ago were made almost entirely of timber."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 13,
+    "id": "PT93-S3-Q13",
+    "stimulus": "Using rational argument in advertisements does not persuade people to buy the products being advertised. Therefore, advertisers who replace rational argument with nonrational appeals to emotion in advertisements will persuade people to buy the products being advertised.",
+    "questionStem": "Which one of the following contains flawed reasoning most similar to the flawed reasoning in the argument above?",
+    "options": {
+      "A": "People who ask others for favors are refused. Therefore, anyone who has not had the experience of being refused has never asked for a favor.",
+      "B": "In the past, people who have tried to solve their problems by discussing them have often failed. Therefore, in the future, people who try to solve their problems by discussing them will often fail.",
+      "C": "Using a computer has not improved students' writing skills. Thus, students should to try to improve their writing skills by using a computer.",
+      "D": "A person who does to have positive letters of reference cannot get a good job. Therefore, the better the letters of reference a person has, the better the job that person will get.",
+      "E": "People never learn to program a computer by reading poorly written directions. Therefore, if people read well-written directions, they will learn to program a computer."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 14,
+    "id": "PT93-S3-Q14",
+    "stimulus": "A commercial insect trap consists of a small box containing pesticide mixed with glucose, a sweet substance known to attract insect pests. Yet in households where this type of trap has been used regularly for the past several years, recently installed traps are far less effective in eliminating insect pests than were traps of that type installed several years ago. Research scientists have hypothesized that traps in those households decreased in effectiveness because successive generations of the pests developed a resistance to the pesticide in the traps.",
+    "questionStem": "Which one of the following, if true, most seriously undermines the hypothesis?",
+    "options": {
+      "A": "In households where the traps have been used regularly, the proportion of insect pests that have a natural aversion to eating glucose has increased with each successive generation.",
+      "B": "Even when only a few individuals out of an entire generation of insects survive the effects of a pesticide, the offspring of those individuals are usually resistant to that pesticide.",
+      "C": "After eating glucose mixed with the pesticide, insects that live in households that do not use the trap tend to die in greater numbers than do insects from households where the traps have been used regularly.",
+      "D": "After the manufacturer of the traps increased the concentration of the pesticide used in the traps, the traps were no more effective in eliminating household insect pests than were the original traps.",
+      "E": "The kind of glucose used to bait the traps is one of several different kinds of glucose that occur naturally."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 15,
+    "id": "PT93-S3-Q15",
+    "stimulus": "A person's dietary consumption of cholesterol and fat is one of the most important factors determining the level of cholesterol in the person's blood (serum cholesterol). Serum cholesterol levels rise proportionally to increased cholesterol and fat consumption until that consumption reaches a threshold, but once consumption of these substances exceeds that threshold, serum cholesterol levels rise only gradually, even with dramatic increases in consumption. The threshold is one fourth the consumption level of cholesterol and fat in today's average North American diet. The statements above, if true, most strongly support",
+    "questionStem": "which one of the following?",
+    "options": {
+      "A": "The threshold can be lowered by lowering the dietary consumption of cholesterol and fat.",
+      "B": "People who consume an average North American diet cannot increase their consumption of cholesterol and fat without dramatically increasing their serum cholesterol levels.",
+      "C": "People who consume half as much cholesterol and fat as in the average North American diet will not necessarily have half the average serum cholesterol level.",
+      "D": "Serum cholesterol levels cannot be affected by nondietary modifications in behavior, such as exercising more or smoking less.",
+      "E": "People who consume less cholesterol and fat than the threshold cannot reduce their serum cholesterol levels."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 16,
+    "id": "PT93-S3-Q16",
+    "stimulus": "The recently negotiated North American Free Trade Agreement among Canada, Mexico, and the United States is misnamed, because it would not result in truly free trade. Adam Smith, the economist who first articulated the principles of free trade held that any obstacle placed in the way of the free movement of goods, investment, or labor would defeat free trade. So since under the agreement workers would be restricted by national boundaries from seeking the best conditions they could find, the resulting obstruction of the flow of trade would, from a free- trade perspective, be harmful.",
+    "questionStem": "The argument proceeds by",
+    "options": {
+      "A": "ruling out alternatives",
+      "B": "using a term in two different senses",
+      "C": "citing a nonrepresentative instance",
+      "D": "appealing to a relevant authority",
+      "E": "responding to a different issue from the one posed"
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 17,
+    "id": "PT93-S3-Q17",
+    "stimulus": "Parents who wish to provide a strong foundation for the musical ability of their children should provide them with a good musical education. Since formal instruction is often a part of a good musical education, parents who wish to provide this strong foundation need to ensure that their children receive formal instruction.",
+    "questionStem": "The reasoning is most vulnerable to criticism on the grounds that it fails to consider that",
+    "options": {
+      "A": "parents might not be the only source of a child's musical education",
+      "B": "some children might not be interested in receiving a strong foundation for their musical ability",
+      "C": "there are many examples of people with formal instruction whose musical ability is poor",
+      "D": "formal instruction might not always be a part of a good musical education",
+      "E": "some children might become good musicians even if they have not had good musical educations"
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 18,
+    "id": "PT93-S3-Q18",
+    "stimulus": "A stingray without parasites is healthier than it would be if it had parasites. Nevertheless, the lack of parasites in stingrays is an indicator that the ecosystem in which the stingrays live is under environmental stress such as pollution.",
+    "questionStem": "Which one of the following, if true, most helps to reconcile the discrepancy indicated above?",
+    "options": {
+      "A": "During part of their life cycles, the parasites of stingrays require as hosts shrimp or oysters, which are environmentally vulnerable organisms.",
+      "B": "A stingray is a free-ranging predator that feeds on smaller organisms but has few predators itself.",
+      "C": "A parasite drains part of the vitality of its host by drawing nourishment from the host.",
+      "D": "An ecosystem can be considered stressed if only a few species of very simple organisms can live there.",
+      "E": "Since the life of parasites depends on that of their host, they need to live without killing their host or else not reproduce and infect other individuals before their own host dies."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 19,
+    "id": "PT93-S3-Q19",
+    "stimulus": "Over the past 20 years, skiing has become a relatively safe sport due to improvements in ski equipment. There has been a 50 percent drop in the number of ski injuries over the last 20 years. Clearly, however, there have not been decreases in the number of injuries in all categories, as statistical data readily show, for although broken legs and ankle injuries have decreased by an astounding 90 percent, knee injuries now represent 16 percent of all ski injuries, up significantly from the 11 percent of 20 years ago. The reasoning in the argument is flawed because the argument does",
+    "questionStem": "which one of the following?",
+    "options": {
+      "A": "It fails to allow for there being ski injuries other than broken legs, ankle injuries, and knee injuries.",
+      "B": "It infers disparate effects from the same single cause.",
+      "C": "It ignores the possibility that the number of skiers has increased over the past 20 years.",
+      "D": "It assumes that an increase in the proportion of knee injuries rules out a decrease in the number of knee injuries.",
+      "E": "It proceeds as though there could be a greater decrease in injuries in each category on injury than there is in injuries overall."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 20,
+    "id": "PT93-S3-Q20",
+    "stimulus": "Only poetry cannot be translated well, and therefore it is poets who preserve languages, for we would not bother to learn a language if we could get everything written in it from translation. So, since we cannot witness the beauty of poetry except in the language in which it is composed, we have motivation to learn the language. The information above provides the LEAST support for",
+    "questionStem": "which one of the following?",
+    "options": {
+      "A": "All nonpoetic literature can be translated well.",
+      "B": "One purpose of writing poetry is to preserve the language in which it is written.",
+      "C": "Some translations do not capture all that was expressed in the original language.",
+      "D": "The beauty of poetry is not immediately accessible to people who do not understand the language in which the poetry was written.",
+      "E": "Perfect translation from one language to another is sometimes impossible."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 21,
+    "id": "PT93-S3-Q21",
+    "stimulus": "The companies that are the prime purchasers of computer software will not buy a software package if the costs of training staff to use it are high, and we know that it is expensive to teach people a software package that demands the memorization of unfamiliar commands. As a result, to be successful, commercial computer software cannot require users to memorize unfamiliar commands. The conclusion above follows logically if",
+    "questionStem": "which one of the following is assumed?",
+    "options": {
+      "A": "If most prime purchasers of computer software buy a software product, that product will be successful.",
+      "B": "Commercial computer software that does not require users to memorize unfamiliar commands is no more expensive than software that does.",
+      "C": "Commercial computer software will not be successful unless prime purchasers buy it.",
+      "D": "If the initial cost of computer software is high, but the cost of training users is low, prime purchasers will still buy that software.",
+      "E": "The more difficult it is to learn how to use a piece of software, the more expensive it is to teach a person to use that software."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 22,
+    "id": "PT93-S3-Q22",
+    "stimulus": "Whenever she considers voting in an election to select one candidate for a position and there is at least one issue important to her, Kay uses the following principle in choosing which course of action to take: it is acceptable for me to vote for a candidate whose opinions differ from mine on at least one issue important to me whenever I disagree with each of the other candidates on even more such issues; it is otherwise unacceptable to vote for that candidate. In the upcoming mayoral election, the three candidates are Legrand, Medina, and Norton. There is only one issue important to Kay, and only Medina shares her opinion on that issue.",
+    "questionStem": "If the statements in the passage are true, which one of the following must also be true about Kay's course of action in any election to select one candidate for a position?",
+    "options": {
+      "A": "If there are no issues important to her, it is unacceptable for her to vote for any candidate in the election.",
+      "B": "If she agrees with each of the candidates on most of the issues important to her, it is unacceptable for her to vote for any candidate in the election.",
+      "C": "If she agrees with a particular candidate on only one issue important to her, it is unacceptable for her to vote for that candidate.",
+      "D": "If she disagrees with each of the candidates on exactly three issues important to her, it is unacceptable for her to vote for any candidate in the election.",
+      "E": "If there are more issues important to her on which she disagrees with a particular candidate than there are such issues on which she agrees with that candidate, it is unacceptable for her to vote for that candidate."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 23,
+    "id": "PT93-S3-Q23",
+    "stimulus": "Whenever she considers voting in an election to select one candidate for a position and there is at least one issue important to her, Kay uses the following principle in choosing which course of action to take: it is acceptable for me to vote for a candidate whose opinions differ from mine on at least one issue important to me whenever I disagree with each of the other candidates on even more such issues; it is otherwise unacceptable to vote for that candidate. In the upcoming mayoral election, the three candidates are Legrand, Medina, and Norton. There is only one issue important to Kay, and only Medina shares her opinion on that issue.",
+    "questionStem": "According to the principle stated in the passage, in the upcoming mayoral election",
+    "options": {
+      "A": "it is acceptable for Kay to vote for either Medina or Legrand, but it is unacceptable for her to vote for Norton",
+      "B": "the only unacceptable courses of action are for Kay to vote for Norton and for her to vote for Legrand",
+      "C": "it is unacceptable for Kay to vote for any of the candidates",
+      "D": "the only unacceptable course of action is for Kay to vote for Medina",
+      "E": "it is acceptable for Kay to vote for any of the candidates"
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 24,
+    "id": "PT93-S3-Q24",
+    "stimulus": "Over the last 25 years, the average price paid for a new car has steadily increased in relation to average individual income. This increase indicates that individuals who buy new cars today spend, on average, a larger amount relative to their incomes buying a car than their counterparts did 25 years ago.",
+    "questionStem": "Which one of the following, if true, most weakens the argument?",
+    "options": {
+      "A": "There has been a significant increase over the last 25 years in the proportion of individuals in households with more than one wage earner.",
+      "B": "The number of used cars sold annually is the same as it was 25 years ago.",
+      "C": "Allowing for inflation, average individual income has significantly declined over the last 25 years.",
+      "D": "During the last 25 years, annual new-car sales and the population have both increased, but new-car sales have increased by a greater percentage.",
+      "E": "Sales to individuals make up a smaller proportion of all new-car sales than they did 25 years ago."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 25,
+    "id": "PT93-S3-Q25",
+    "stimulus": "Credit card companies justify charging cardholders additional fees for late payments by asserting the principle that those who expose other individuals, companies, or institutions to financial risk should pay for that risk, and by pointing out that late-paying cardholders present a greater risk of default than other cardholders. Without late fees, the companies argue, they would have to spread the cost of the risk over all cardholders. The principle invoked by the credit card companies would, if established, be most usefully invoked in",
+    "questionStem": "which one of the following arguments?",
+    "options": {
+      "A": "School authorities should use student activity funds to pay for student-caused damages to school property since, even though only a few students cause any significant damage, authorities cannot in most instances determine which students caused the damage.",
+      "B": "Insurance companies should demand higher insurance rates of drivers of sports cars than of other drivers, since sports car divers are more likely to cause accidents and thus are more likely to require the companies to pay out money in claims.",
+      "C": "Libraries should charge high fines for overdue books, since if they did not do so some people would keep books out indefinitely, risking inconvenience to other library users who might want to use the books.",
+      "D": "Cities should impose high fines for littering. The risk of being caught littering is quite low, so the fine for those who are caught must be correspondingly high in order to deter people from littering.",
+      "E": "Municipalities should use tax money to pay for the maintenance of municipal roads, since if individuals paid for only those roads they used, some important roads in remote areas would be inadequately maintained"
+    }
+  }
+]

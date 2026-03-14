@@ -1,0 +1,233 @@
+[
+  {
+    "questionId": "PT89-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"A\",\n  \"reason\": \"Option A suggests a change (receiving help) that could improve performance, weakening the prediction of a B.\"\n}",
+    "latencyMs": 3081
+  },
+  {
+    "questionId": "PT89-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"A\",\n  \"reason\": \"Option A suggests improved support, potentially leading to a higher grade, which undermines the prediction of a B.\"\n}",
+    "latencyMs": 1340
+  },
+  {
+    "questionId": "PT89-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"A\",\n  \"reason\": \"Option A weakens the argument by introducing a new factor that could improve the student's grade, while the other options support the prediction of receiving another B.\"\n}",
+    "latencyMs": 1823
+  },
+  {
+    "questionId": "PT89-S1-Q02",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"B\",\n  \"reason\": \"The argument assumes that the decrease in private funding would outweigh the increase in government funding, otherwise overall funding might not be depressed.\"\n}",
+    "latencyMs": 1694
+  },
+  {
+    "questionId": "PT89-S1-Q02",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"B\",\n  \"reason\": \"The argument assumes that the decrease in private funding would outweigh the increase in government funding, otherwise overall funding might not be depressed.\"\n}",
+    "latencyMs": 1750
+  },
+  {
+    "questionId": "PT89-S1-Q02",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"B\",\n  \"reason\": \"The argument assumes that the decrease in private funding would outweigh the increase in government funding, otherwise overall funding might not be depressed.\"\n}",
+    "latencyMs": 1795
+  },
+  {
+    "questionId": "PT89-S1-Q03",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"A\",\n  \"reason\": \"Both assume that individually low probabilities for each item mean collectively none will occur, ignoring the necessity of at least one success.\"\n}",
+    "latencyMs": 1299
+  },
+  {
+    "questionId": "PT89-S1-Q03",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"A\",\n  \"reason\": \"Both arguments mistakenly infer that because each individual case is unlikely, the entire set will have none occurring.\"\n}",
+    "latencyMs": 1075
+  },
+  {
+    "questionId": "PT89-S1-Q03",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"A\",\n  \"reason\": \"Both arguments incorrectly infer a collective outcome (no win/ace) from individual low probabilities, ignoring that one must occur.\"\n}",
+    "latencyMs": 1074
+  },
+  {
+    "questionId": "PT89-S1-Q04",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"C\",\n  \"reason\": \"The principle aligns with avoiding harmful treatments for conditions that are only potentially harmful, matching the researcher's argument against unnecessary fillings.\"\n}",
+    "latencyMs": 1567
+  },
+  {
+    "questionId": "PT89-S1-Q04",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"C\",\n  \"reason\": \"The principle states that a potentially harmful condition (cavity) should not be treated with a definitely harmful method (filling), aligning with the conclusion to avoid unnecessary damage.\"\n}",
+    "latencyMs": 1126
+  },
+  {
+    "questionId": "PT89-S1-Q04",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"C\",\n  \"reason\": \"The principle matches the argument by advising against harmful treatments for conditions that are only potentially harmful, aligning with the researcher's caution against unnecessary fillings.\"\n}",
+    "latencyMs": 1298
+  },
+  {
+    "questionId": "PT89-S1-Q05",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"D\",\n  \"reason\": \"If cod and seals compete for the same food (capelin), seal population growth could reduce cod's food supply, weakening the argument that seals don't affect cod.\"\n}",
+    "latencyMs": 1592
+  },
+  {
+    "questionId": "PT89-S1-Q05",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"D\",\n  \"reason\": \"If seals and cod compete for capelin, increased seals reduce cod's food supply indirectly, weakening the argument that seals don't impact cod.\"\n}",
+    "latencyMs": 1518
+  },
+  {
+    "questionId": "PT89-S1-Q05",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"D\",\n  \"reason\": \"If cod and seals compete for capelin, seal population growth reduces cod's food supply, weakening the argument that seals don't affect cod.\"\n}",
+    "latencyMs": 1550
+  },
+  {
+    "questionId": "PT89-S1-Q06",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"D\",\n  \"reason\": \"The auditor claims the clinic violates donation terms by funding research instead of direct patient care, while the administrator argues the research reduces suffering long-term. Their dispute centers on compliance with the Rodriguez family's conditions.\"\n}",
+    "latencyMs": 1600
+  },
+  {
+    "questionId": "PT89-S1-Q06",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "```json\n{\n  \"correct_answer\": \"D\",\n  \"reason\": \"The auditor argues the clinic violates the donation terms by using funds for research, while the administrator defends compliance by claiming research minimizes suffering long-term. Their dispute centers on adherence to the stipulated conditions.\"\n}\n```",
+    "latencyMs": 1683
+  },
+  {
+    "questionId": "PT89-S1-Q06",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"D\",\n  \"reason\": \"They disagree on whether using funds for research complies with the donation terms aiming to minimize suffering.\"\n}",
+    "latencyMs": 1549
+  },
+  {
+    "questionId": "PT89-S1-Q07",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"E\",\n  \"reason\": \"The administrator reinterprets 'minimize suffering' to include long-term benefits from research, undermining the auditor's assumption that funds must flow directly to patients.\"\n}",
+    "latencyMs": 1288
+  },
+  {
+    "questionId": "PT89-S1-Q07",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"E\",\n  \"reason\": \"The administrator reinterprets 'minimize suffering' to include long-term benefits from research, undermining the auditor's assumption that funds must flow directly to patients.\"\n}",
+    "latencyMs": 1385
+  },
+  {
+    "questionId": "PT89-S1-Q07",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"E\",\n  \"reason\": \"The administrator reinterprets 'minimize suffering' to include long-term strategies, undermining the auditor's assumption that funds must flow directly to patients.\"\n}",
+    "latencyMs": 3407
+  }
+]

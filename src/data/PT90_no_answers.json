@@ -1,0 +1,702 @@
+[
+  {
+    "section": 1,
+    "qnum": 1,
+    "id": "PT90-S1-Q01",
+    "stimulus": "Politician: The funding for the new nationwide health- awareness campaign should come from an increase in taxes on cigarettes. It is well established that cigarette smoking causes many serious health problems, and it is only reasonable that people whose unhealthful habits cause so many health problems should bear the costs of that campaign. Smoker: But it is equally well established that regularly eating high-fat, high-cholesterol foods causes as many serious health problems as does smoking, yet it would be manifestly unreasonable to force those who purchase such foods to bear the burden of financing this campaign.",
+    "questionStem": "Which one of the following is the point at issue between the politician and the smoker?",
+    "options": {
+      "A": "whether the politician’s proposal for financing the health-awareness campaign is an unreasonable one",
+      "B": "whether smokers are more aware of the harmful effects of their habit than are people who regularly eat high-fat, high-cholesterol foods",
+      "C": "whether the effects of smoking constitute a greater health hazard than do the effects of regularly eating high-fat, high-cholesterol foods",
+      "D": "whether it is unreasonable to require people who do not benefit from certain governmental programs to share the costs of those programs",
+      "E": "whether the proposed increase on cigarette taxes is an efficient means of financing the health-awareness campaign"
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 2,
+    "id": "PT90-S1-Q02",
+    "stimulus": "Politician: The funding for the new nationwide health- awareness campaign should come from an increase in taxes on cigarettes. It is well established that cigarette smoking causes many serious health problems, and it is only reasonable that people whose unhealthful habits cause so many health problems should bear the costs of that campaign. Smoker: But it is equally well established that regularly eating high-fat, high-cholesterol foods causes as many serious health problems as does smoking, yet it would be manifestly unreasonable to force those who purchase such foods to bear the burden of financing this campaign.",
+    "questionStem": "The smoker’s response to the politician’s argument",
+    "options": {
+      "A": "offers a counterexample that calls into question the politician’s reasoning",
+      "B": "presents an alternative solution to that proposed by the politician",
+      "C": "argues that the method proposed by the politician would be inadequate for its intended purpose",
+      "D": "questions the accuracy of the information cited by the politician in reaching a conclusion",
+      "E": "illustrates how the politician’s proposal could aggravate the problem it is intended to solve"
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 3,
+    "id": "PT90-S1-Q03",
+    "stimulus": "There should be a greater use of gasohol. Gasohol is a mixture of alcohol and gasoline, and has a higher octane rating and fewer carbon monoxide emissions than straight gasoline. Burning gasohol adds no more carbon dioxide to the atmosphere than plants remove by photosynthesis.",
+    "questionStem": "Each of the following, if true, strengthens the argument above EXCEPT:",
+    "options": {
+      "A": "Cars run less well on gasoline than they do on gasohol.",
+      "B": "Since less gasoline is needed with the use of gasohol, an energy shortage is less likely.",
+      "C": "Cars burn on the average slightly more gasohol per kilometer than they do gasoline.",
+      "D": "Gasohol is cheaper to produce and hence costs less at the pump than gasoline.",
+      "E": "Burning gasoline adds more carbon dioxide to the atmosphere than plants can remove."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 4,
+    "id": "PT90-S1-Q04",
+    "stimulus": "Cats spend much of their time sleeping; they seem to awaken only to stretch and yawn. Yet they have a strong, agile musculature that most animals would have to exercise strenuously to acquire.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent paradox described above?",
+    "options": {
+      "A": "Cats have a greater physiological need for sleep than other animals.",
+      "B": "Many other animals also spend much of their time sleeping yet have a strong, agile musculature.",
+      "C": "Cats are able to sleep in apparently uncomfortable positions.",
+      "D": "Cats derive ample exercise from frequent stretching.",
+      "E": "Cats require strength and agility in order to be effective predators."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 5,
+    "id": "PT90-S1-Q05",
+    "stimulus": "Barnes: The two newest employees at this company have salaries that are too high for the simple tasks normally assigned to new employees and duties that are too complex for inexperienced workers. Hence, the salaries and the complexity of the duties of these two newest employees should be reduced.",
+    "questionStem": "Which one of the following is an assumption on which Barnes’s argument depends?",
+    "options": {
+      "A": "The duties of the two newest employees are not less complex than any others in the company.",
+      "B": "It is because of the complex duties assigned that the two newest employees are being paid more than is usually paid to newly hired employees.",
+      "C": "The two newest employees are not experienced at their occupations.",
+      "D": "Barnes was not hired at a higher-than-average starting salary.",
+      "E": "The salaries of the two newest employees are no higher than the salaries that other companies pay for workers with a similar level of experience."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 6,
+    "id": "PT90-S1-Q06",
+    "stimulus": "These days, drug companies and health professionals alike are focusing their attention on cholesterol in the blood. The more cholesterol we have in our blood, the higher the risk that we shall die of a heart attack. The issue is pertinent since heart disease kills more North Americans every year than any other single cause. At least three factors—smoking, drinking, and exercise— can each influence levels of cholesterol in the blood.",
+    "questionStem": "Which one of the following can be properly concluded from the passage?",
+    "options": {
+      "A": "If a person has low blood cholesterol, then that person’s risk of fatal heart disease is low.",
+      "B": "Smoking in moderation can entail as great a risk of fatal heart disease as does heavy smoking.",
+      "C": "A high-cholesterol diet is the principal cause of death in North America.",
+      "D": "The only way that smoking increases one’s risk of fatal heart disease is by influencing the levels of cholesterol in the blood.",
+      "E": "The risk of fatal heart disease can be altered by certain changes in lifestyle."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 7,
+    "id": "PT90-S1-Q07",
+    "stimulus": "In Debbie’s magic act, a volunteer supposedly selects a card in a random fashion, looks at it without showing it to her, and replaces it in the deck. After several shuffles, Debbie cuts the deck and supposedly reveals the same selected card, A skeptic conducted three trials. In the first, Debbie was videotaped, and no sleight of hand was found. In the second, the skeptic instead supplied a standard deck of cards. For the third trial, the skeptic selected the card. Each time, Debbie apparently revealed the selected card. The skeptic concluded that Debbie uses neither sleight of hand, nor a trick deck, nor a planted \"volunteer\" to achieve her effect.",
+    "questionStem": "Which one of the following most accurately describes a flaw in the skeptic’s reasoning?",
+    "options": {
+      "A": "The skeptic failed to consider the possibility that Debbie did not always use the same method to achieve her effect.",
+      "B": "The skeptic failed to consider the possibility that sleight of hand could also be detected by some means other than videotaping.",
+      "C": "The skeptic failed to consider the possibility that Debbie requires both sleight of hand and a trick deck to achieve her effect.",
+      "D": "The skeptic failed to consider the possibility that Debbie used something other than sleight of hand, a trick deck, or a planted \"volunteer\" to achieve her effect.",
+      "E": "The skeptic failed to consider the possibility that Debbie’s success in the three trials was something other than a coincidence."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 8,
+    "id": "PT90-S1-Q08",
+    "stimulus": "Nutritionist: Many people claim that simple carbohydrates are a reasonable caloric replacement for the fatty foods forbidden to those on law-fat diets. This is now in doubt. New studies show that, for many people, a high intake of simple carbohydrates stimulates an overproduction of insulin, a hormone that is involved in processing sugars and starches to create energy when the body requires energy, or, when energy is not required, to store the resulting by-products as fat.",
+    "questionStem": "Which one of the following is most strongly supported by the nutritionist’s statements?",
+    "options": {
+      "A": "People on low-fat diets should avoid consumption of simple carbohydrates if they wish to maintain the energy that their bodies require.",
+      "B": "People who produce enough insulin to process their intake of simple carbohydrates should not feel compelled to adopt low-fat diets.",
+      "C": "People who consume simple carbohydrates should limit their intake of foods high in fat.",
+      "D": "People who wish to avoid gaining body fat should limit their intake of foods high in simple carbohydrates.",
+      "E": "People who do not produce an excessive amount of insulin when they consume foods high in simple carbohydrates will not lose weight if they restrict only their intake of these foods."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 9,
+    "id": "PT90-S1-Q09",
+    "stimulus": "Jean: Our navigational equipment sells for $1,100 and dominates the high end of the market, but more units are sold by our competitors in the $700 to $800 range. We should add a low-cost model, which would allow us to increase our overall sales while continuing to dominate the high end. Tracy: I disagree. Our equipment sells to consumers who associate our company with quality. Moving into the low-cost market would put our competitors in the high-cost market on an equal footing with us, which could hurt our overall sales. Jean’s and Tracy’s statements most strongly suggest that they disagree over",
+    "questionStem": "which one of the following propositions?",
+    "options": {
+      "A": "There is a greater potential for profits in the low-cost market than there is in the high-cost market.",
+      "B": "The proposed cheaper model, if it were made available, would sell to customers who would otherwise be buying the company’s present model.",
+      "C": "The company could dominate the low-cost market in the same way it has dominated the high-cost market.",
+      "D": "The company would no longer dominate the high-cost market if it began selling a low-cost model.",
+      "E": "Decreased sales of the high-cost model would result in poor sales for the proposed low-cost model."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 10,
+    "id": "PT90-S1-Q10",
+    "stimulus": "The symptoms of hepatitis A appear no earlier than 60 days after a person has been infected. In a test of a hepatitis A vaccine, 50 people received the vaccine and 50 people received a harmless placebo. Although some people from each group eventually exhibited symptoms of hepatitis A, the vaccine as used in the test is completely effective in preventing infection with the hepatitis A virus.",
+    "questionStem": "Which one of the following, if true, most helps resolve the apparent discrepancy in the information above?",
+    "options": {
+      "A": "The placebo did not produce any side effects that resembled any of the symptoms of hepatitis A.",
+      "B": "More members of the group that had received the placebo recognized their symptoms as symptoms of hepatitis A than did members of the group that had received the vaccine.",
+      "C": "The people who received the placebo were in better overall physical condition than were the people who received the vaccine.",
+      "D": "The vaccinated people who exhibited symptoms of hepatitis A were infected with the hepatitis A virus before being vaccinated.",
+      "E": "Of the people who developed symptoms of hepatitis A, those who received the vaccine recovered more quickly, on average, than those who did not."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 11,
+    "id": "PT90-S1-Q11",
+    "stimulus": "It is well known that many species adapt to their environment, but it is usually assumed that only the most highly evolved species alter their environment in ways that aid their own survival. However, this characteristic is actually quite common. Certain species of plankton, for example, generate a gas that is converted in the atmosphere into particles of sulfate. These particles cause water vapor to condense, thus forming clouds. Indeed, the formation of clouds over the ocean largely depends on the presence of these particles. More cloud cover means more sunlight is reflected, and so the Earth absorbs less heat. Thus plankton cause the surface of the Earth to be cooler and this benefits the plankton. Of the following, which one most accurately expresses",
+    "questionStem": "the main point of the argument?",
+    "options": {
+      "A": "The Earth would be far warmer than it is now if certain species of plankton became extinct.",
+      "B": "By altering their environment in ways that improve their chances of survival, certain species of plankton benefit the Earth as a whole.",
+      "C": "Improving their own chances of survival by altering the environment is not limited to the most highly evolved species.",
+      "D": "The extent of the cloud cover over the oceans is largely determined by the quantity of plankton in those oceans.",
+      "E": "Species such as plankton alter the environment in ways that are less detrimental to the well-being of other species than are the alterations to the environment made by more highly evolved species."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 12,
+    "id": "PT90-S1-Q12",
+    "stimulus": "It is well known that many species adapt to their environment, but it is usually assumed that only the most highly evolved species alter their environment in ways that aid their own survival. However, this characteristic is actually quite common. Certain species of plankton, for example, generate a gas that is converted in the atmosphere into particles of sulfate. These particles cause water vapor to condense, thus forming clouds. Indeed, the formation of clouds over the ocean largely depends on the presence of these particles. More cloud cover means more sunlight is reflected, and so the Earth absorbs less heat. Thus plankton cause the surface of the Earth to be cooler and this benefits the plankton.",
+    "questionStem": "Which one of the following accurately describes the argumentative strategy employed?",
+    "options": {
+      "A": "A general principle is used to justify a claim made about a particular case to which that principle has been shown to apply.",
+      "B": "An explanation of how a controversial phenomenon could have come about is given in order to support the claim that this phenomenon did in fact come about.",
+      "C": "A generalization about the conditions under which a certain process can occur is advanced on the basis of an examination of certain cases in which that process did occur.",
+      "D": "A counterexample to a position being challenged is presented in order to show that this position is incorrect.",
+      "E": "A detailed example is used to illustrate the advantage of one strategy over another."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 13,
+    "id": "PT90-S1-Q13",
+    "stimulus": "The top priority of the school administration should be student attendance. No matter how good the teachers, texts, and facilities are, none of these does any good if few students come to school. The pattern of reasoning in the argument above is LEAST similar to that in",
+    "questionStem": "which one of the following?",
+    "options": {
+      "A": "The top priority of a salesperson should be not to alienate customers. Honesty and a good knowledge of the product line are useful to a salesperson only if the customer feels at ease.",
+      "B": "The top priority of a person lost in the wilderness should be food-gathering. Knowing how to find one’s way back or how to build a comfortable shelter does one no good if one does not have enough food to survive.",
+      "C": "The top priority of a detective should be to gather physical evidence. High-tech crime lab equipment and the most sophisticated criminological analysis are of no use if crucial clues are not gathered.",
+      "D": "The top priority of a library should be to maintain its collection of books. A knowledgeable staff and beautiful facilities are of no value if there is an inadequate supply of books to lend.",
+      "E": "The top priority of a criminal defense lawyer should be to ensure that innocent clients are found not guilty. Such clients can justly be released from jail and resume their normal lives if they are found not guilty."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 14,
+    "id": "PT90-S1-Q14",
+    "stimulus": "Prosecutor: Dr. Yuge has testified that, had the robbery occurred after 1:50 A.M., then, the moon having set at 1:45 A.M., it would have been too dark for Klein to recognize the perpetrator. But Yuge acknowledged that the moon was full enough to provide considerable light before it set. And we have conclusively shown that the robbery occurred between 1:15 and 1:30 A.M. So there was enough light for Klein to make a reliable identification. The prosecutor’s reasoning is most vulnerable to criticism because it overlooks",
+    "questionStem": "which one of the following possibilities?",
+    "options": {
+      "A": "Klein may be mistaken about the time of the robbery and so it may have taken place after the moon had set.",
+      "B": "The perpetrator may closely resemble someone who was not involved in the robbery.",
+      "C": "Klein may have been too upset to make a reliable identification even in good light.",
+      "D": "Without having been there, Dr. Yuge has no way of knowing whether the light was sufficient.",
+      "E": "During the robbery the moon’s light may have been interfered with by conditions such as cloud cover."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 15,
+    "id": "PT90-S1-Q15",
+    "stimulus": "Ordinary mountain sickness, a common condition among mountain climbers, and one from which most people can recover, is caused by the characteristic shortage of oxygen in the atmosphere at high altitudes. Cerebral edema, a rarer disruption of blood circulation in the brain that quickly becomes life- threatening if not correctly treated from its onset, can also be caused by a shortage of oxygen. Since the symptoms of cerebral edema resemble those of ordinary mountain sickness, cerebral edema is especially dangerous at high altitudes.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "options": {
+      "A": "The treatment for ordinary mountain sickness differs from the treatment for cerebral edema.",
+      "B": "Cerebral edema can cause those who suffer from it to slip into a coma within a few hours.",
+      "C": "Unlike cerebral edema, ordinary mountain sickness involves no disruption of blood circulation in the brain.",
+      "D": "Shortage of oxygen at extremely high altitudes is likely to affect thinking processes and cause errors of judgment.",
+      "E": "Most people who suffer from ordinary mountain sickness recover without any special treatment."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 16,
+    "id": "PT90-S1-Q16",
+    "stimulus": "We can learn about the living conditions of a vanished culture by examining its language. Thus, it is likely that the people who spoke Proto-Indo- European, the language from which all Indo- European languages descended, lived in a cold climate, isolated from ocean or sea, because Proto- Indo-European lacks a word for \"sea,\" yet contains words for \"winter,\" \"snow,\" and \"wolf.\"",
+    "questionStem": "Which one of the following, if true, most seriously weakens the argument?",
+    "options": {
+      "A": "A word meaning \"fish\" was used by the people who spoke Proto-Indo-European.",
+      "B": "Some languages lack words for prominent elements of the environments of their speakers.",
+      "C": "There are no known languages today that lack a word for \"sea.\"",
+      "D": "Proto-Indo-European possesses words for \"heat.\"",
+      "E": "The people who spoke Proto-Indo-European were nomadic."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 17,
+    "id": "PT90-S1-Q17",
+    "stimulus": "Columnist: It is impossible for there to be real evidence that lax radiation standards that were once in effect at nuclear reactors actually contributed to the increase in cancer rates near such sites. The point is a familiar one: who can say if a particular case of cancer is due to radiation, exposure to environmental toxins, smoking, poor diet, or genetic factors. The argument’s reasoning is most vulnerable to criticism on",
+    "questionStem": "which one of the following grounds?",
+    "options": {
+      "A": "The argument fails to recognize that there may be convincing statistical evidence even if individual causes cannot be known.",
+      "B": "The argument inappropriately presupposes that what follows a certain phenomenon was caused by that phenomenon.",
+      "C": "The argument inappropriately draws a conclusion about causes of cancer in general from evidence drawn from a particular case of cancer.",
+      "D": "The argument ignores other possible causes of the increase in cancer rates near the nuclear reactor complexes.",
+      "E": "The argument concludes that a claim about a causal connection is false on the basis of a lack of evidence for the claim."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 18,
+    "id": "PT90-S1-Q18",
+    "stimulus": "Some planning committee members—those representing the construction industry—have significant financial interests in the committee’s decisions. No one who is on the planning committee lives in the suburbs, although many of them work there. If the statements above are true,",
+    "questionStem": "which one of the following must also be true?",
+    "options": {
+      "A": "No persons with significant financial interests in the planning committee’s decisions are not in the construction industry.",
+      "B": "No person who has significant financial interest in the planning committee’s decisions lives in the suburbs.",
+      "C": "Some persons with significant financial interests in the planning committee’s decisions work in the suburbs.",
+      "D": "Some planning committee members who represent the construction industry do not work in the suburbs.",
+      "E": "Some persons with significant financial interests in the planning committee’s decisions do not live in the suburbs."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 19,
+    "id": "PT90-S1-Q19",
+    "stimulus": "Arbitrator: The shipping manager admits that he decided to close the old facility on October 14 and to schedule the new facility’s opening for October 17, the following Monday. But he also claims that he is not responsible for the business that was lost due to the new facility’s failing to open as scheduled. He blames the contractor for not finishing on time, but he too, is to blame, for he was aware of the contractor’s typical delays and should have planned for this contingency.",
+    "questionStem": "Which one of the following principles underlies the arbitrator’s argument?",
+    "options": {
+      "A": "A manager should take foreseeable problems into account when making decisions.",
+      "B": "A manager should be able to depend on contractors to do their jobs promptly.",
+      "C": "A manager should see to it that contractors do their jobs promptly.",
+      "D": "A manager should be held responsible for mistakes made by those whom the manager directly supervises.",
+      "E": "A manager, and only a manager, should be held responsible for a project’s failure."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 20,
+    "id": "PT90-S1-Q20",
+    "stimulus": "The price of a full-fare coach ticket from Toronto to Dallas on Breezeway Airlines is the same today as it was a year ago, if inflation is taken into account by calculating prices in constant dollars. However, today 90 percent of the Toronto-to-Dallas coach tickets that Breezeway sells are discount tickets and only 10 percent are full-fare tickets, whereas a year ago half were discount tickets and half were full-fare tickets. Therefore, on average, people pay less today in constant dollars for a Breezeway Toronto-to-Dallas coach ticket than they did a year ago.",
+    "questionStem": "Which one of the following, if assumed, would allow the conclusion above to be properly drawn?",
+    "options": {
+      "A": "A Toronto-to-Dallas full-fare coach ticket on Breezeway Airlines provides ticket-holders with a lower level of service today than such a ticket provided a year ago.",
+      "B": "A Toronto-to-Dallas discount coach ticket on Breezeway Airlines costs about the same amount in constant dollars today as it did a year ago.",
+      "C": "All full-fare coach tickets on Breezeway Airlines cost the same in constant dollars as they did a year ago.",
+      "D": "The average number of coach passengers per flight that Breezeway Airlines carries from Toronto to Dallas today is higher than the average number per flight a year ago.",
+      "E": "The criteria that Breezeway Airlines uses for permitting passengers to buy discount coach tickets on the Toronto-to-Dallas route are different today than they were a year ago."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 21,
+    "id": "PT90-S1-Q21",
+    "stimulus": "Editorial: The government claims that the country’s nuclear power plants are entirely safe and hence that the public’s fear of nuclear accidents at these plants is groundless. The government also contends that its recent action to limit the nuclear industry’s financial liability in the case of nuclear accidents at power plants is justified by the need to protect the nuclear industry from the threat of bankruptcy. But even the government says that unlimited liability poses such a threat only if injury claims can be sustained against the industry; and the government admits that for such claims to be sustained, injury must result from a nuclear accident. The public’s fear, therefore, is well founded. If all of the statements offered in support of the editorial’s conclusion correctly describe the government’s position,",
+    "questionStem": "which one of the following must also be true on the basis of those statements?",
+    "options": {
+      "A": "The government’s claim about the safety of the country’s nuclear power plants is false.",
+      "B": "The government’s position on nuclear power plants is inconsistent.",
+      "C": "The government misrepresented its reasons for acting to limit the nuclear industry’s liability.",
+      "D": "Unlimited financial liability in the case of nuclear accidents poses no threat to the financial security of the country’s nuclear industry.",
+      "E": "The only serious threat posed by a nuclear accident would be to the financial security of the nuclear industry."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 22,
+    "id": "PT90-S1-Q22",
+    "stimulus": "Editorial: The government claims that the country’s nuclear power plants are entirely safe and hence that the public’s fear of nuclear accidents at these plants is groundless. The government also contends that its recent action to limit the nuclear industry’s financial liability in the case of nuclear accidents at power plants is justified by the need to protect the nuclear industry from the threat of bankruptcy. But even the government says that unlimited liability poses such a threat only if injury claims can be sustained against the industry; and the government admits that for such claims to be sustained, injury must result from a nuclear accident. The public’s fear, therefore, is well founded.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the editorial’s argumentation?",
+    "options": {
+      "A": "If the government claims that something is unsafe then, in the absence of overwhelming evidence to the contrary, that thing should be assumed to be unsafe.",
+      "B": "Fear that a certain kind of event will occur is well founded if those who have control over the occurrence of events of that kind stand to benefit financially from such an occurrence.",
+      "C": "If a potentially dangerous thing is safe only because the financial security of those responsible for its operation depends on its being safe, then eliminating that dependence is not in the best interests of the public.",
+      "D": "The government sometimes makes unsupported claims about what situations will arise, but it does not act to prevent a certain kind of situation from arising unless there is a real danger that such a situation will arise.",
+      "E": "If a real financial threat to a major industry exists, then government action to limit that threat is justified."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 23,
+    "id": "PT90-S1-Q23",
+    "stimulus": "Linda says that, as a scientist, she knows that no scientist appreciates poetry. And, since most scientists are logical, at least some of the people who appreciate poetry are illogical.",
+    "questionStem": "Which one of the following is most parallel in its reasoning to the flawed reasoning above?",
+    "options": {
+      "A": "Ralph says that, as an expert in biology, he knows that no marsupial lays eggs. And, since most marsupials are native to Australia, at least some of the animals native to Australia do not lay eggs.",
+      "B": "Franz says that, as a father of four children, he knows that no father wants children to eat candy at bedtime. And, since most fathers are adults, at least some of the people who want children to eat candy at bedtime are children.",
+      "C": "Yuri says that, as a wine connoisseur, he knows that no wine aged in metal containers is equal in quality to the best wine aged in oak. And, since most California wine is aged in metal containers, California wine is inferior to at least the best French wine aged in oak.",
+      "D": "Xi says that, as an experienced photographer, she knows that no color film produces images as sharp as the best black\u0002and-white film. And, since most instant film is color film, at least some instant film produces images less sharp than the best black-and-white film.",
+      "E": "Betty says that, as a corporate executive, she knows that no corporate executives like to pay taxes. And, since most corporate executives are honest people, at least some people who like to pay taxes are honest people."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 24,
+    "id": "PT90-S1-Q24",
+    "stimulus": "Automobile-emission standards are enforced through annual inspection. At those inspections cars are tested while idling; that is, standing still with their engines running. Testing devices measure the levels of various pollutants as exhaust gases leave the tail pipe.",
+    "questionStem": "Which one of the following, if true, most strongly indicates that current enforcement of automobile- emission standards might be ineffective in controlling overall pollutant levels?",
+    "options": {
+      "A": "As an emission-control technology approaches its limits, any additional gains in effectiveness become progressively more expensive.",
+      "B": "The testing devices used must be recalibrated frequently to measure pollutant levels with acceptable accuracy.",
+      "C": "The adjustments needed to make a car idle cleanly make it likely that the car will emit high levels of pollutants when moving at highway speeds.",
+      "D": "Most car owners ask their mechanics to make sure that their cars are in compliance with emission standards.",
+      "E": "When emission standards are set, no allowances are made for older cars."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 25,
+    "id": "PT90-S1-Q25",
+    "stimulus": "The indigenous people of Tasmania are clearly related to the indigenous people of Australia, but were separated from them when the land bridge between Australia and Tasmania disappeared approximately 10,000 years ago. Two thousand years after the disappearance of the land bridge, however, there were major differences between the culture and technology of the indigenous Tasmanians and those of the indigenous Australians. The indigenous Tasmanians, unlike their Australian relatives, had no domesticated dogs, fishing nets, polished stone tools, or hunting implements like the boomerang and the spear-thrower.",
+    "questionStem": "Each of the following, if true, would contribute to an explanation of differences described above EXCEPT:",
+    "options": {
+      "A": "After the disappearance of the land bridge the indigenous Tasmanians simply abandoned certain practices and technologies that they had originally shared with their Australian relatives.",
+      "B": "Devices such as the spear-thrower and the boomerang were developed by the indigenous Tasmanians more than 10,000 years ago.",
+      "C": "Technological innovations such as fishing nets, polished stone tools, and so on, were imported to Australia by Polynesian explorers more recently than 10,000 years ago.",
+      "D": "Indigenous people of Australia developed hunting implements like the boomerang and the spear-thrower after the disappearance of the land bridge.",
+      "E": "Although the technological and cultural innovations were developed in Australia more than 10,000 years ago, they were developed by groups in northern Australia with whom the indigenous Tasmanians had no contact prior to the disappearance of the land bridge."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 1,
+    "id": "PT90-S2-Q01",
+    "stimulus": "Combustion of gasoline in automobile engines produces benzene, a known carcinogen. Environmentalists propose replacing gasoline with methanol, which does not produce significant quantities of benzene when burned. However, combustion of methanol produces formaldehyde, also a known carcinogen. Therefore the environmentalists’ proposal has little merit.",
+    "questionStem": "Which one of the following, if true, most supports the environmentalists’ proposal?",
+    "options": {
+      "A": "The engines of some automobiles now on the road burn diesel fuel rather than gasoline.",
+      "B": "Several large research efforts are underway to formulate cleaner-burning types of gasoline.",
+      "C": "In some regions, the local economy is largely dependent on industries devoted to the production and distribution of automobile fuel.",
+      "D": "Formaldehyde is a less potent carcinogen than benzene.",
+      "E": "Since methanol is water soluble, methanol spills are more damaging to the environment than gasoline spills."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 2,
+    "id": "PT90-S2-Q02",
+    "stimulus": "Economist: To the extent that homelessness arises from a lack of available housing, it should not be assumed that the profit motive is at fault. Private investors will, in general, provide housing if the market allows them to make a profit; it is unrealistic to expect investors to take risks with their property unless they get some benefit in return.",
+    "questionStem": "Which one of the following most accurately describes the role played in the economist’s argument by the phrase \"To the extent that homelessness arises from a lack of available housing\"?",
+    "options": {
+      "A": "It limits the application of the argument to a part of the problem.",
+      "B": "It suggests that the primary cause of homelessness is lack of available housing.",
+      "C": "It is offered as evidence crucial to the conclusion.",
+      "D": "It expresses the conclusion to be argued for.",
+      "E": "It suggests a possible solution to the problem of homelessness."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 3,
+    "id": "PT90-S2-Q03",
+    "stimulus": "Physical education should teach people to pursue healthy, active lifestyles as they grow older. But the focus on competitive sports in most schools causes most of the less competitive students to turn away from sports. Having learned to think of themselves as unathletic, they do not exercise enough to stay healthy.",
+    "questionStem": "Which one of the following is most strongly supported by the statements above, if they are true?",
+    "options": {
+      "A": "Physical education should include noncompetitive activities.",
+      "B": "Competition causes most students to turn away from sports.",
+      "C": "People who are talented at competitive physical endeavors exercise regularly.",
+      "D": "The mental aspects of exercise are as important as the physical ones.",
+      "E": "Children should be taught the dangers of a sedentary lifestyle."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 4,
+    "id": "PT90-S2-Q04",
+    "stimulus": "Political opinion and analysis outside the mainstream rarely are found on television talk shows, and it might be thought that this state of affairs is a product of the political agenda of the television stations themselves. In fact, television stations are driven by the same economic forces as sellers of more tangible goods. Because they must attempt to capture the largest possible share of the television audience for their shows, they air only those shows that will appeal to large numbers of people. As a result, political opinions and analyses aired on television talk shows are typically bland and innocuous.",
+    "questionStem": "An assumption made in the explanation offered by the author of the passage is that",
+    "options": {
+      "A": "most television viewers cannot agree on which elements of a particular opinion or analysis are most disturbing",
+      "B": "there are television viewers who might refuse to watch television talk shows that they knew would be controversial and disturbing",
+      "C": "each television viewer holds some opinion that is outside the political mainstream, but those opinions are not the same for everyone",
+      "D": "there are television shows on which economic forces have an even greater impact than they do on television talk shows",
+      "E": "the television talk shows of different stations resemble one another in most respects"
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 5,
+    "id": "PT90-S2-Q05",
+    "stimulus": "Political opinion and analysis outside the mainstream rarely are found on television talk shows, and it might be thought that this state of affairs is a product of the political agenda of the television stations themselves. In fact, television stations are driven by the same economic forces as sellers of more tangible goods. Because they must attempt to capture the largest possible share of the television audience for their shows, they air only those shows that will appeal to large numbers of people. As a result, political opinions and analyses aired on television talk shows are typically bland and innocuous.",
+    "questionStem": "The explanation offered by the author of the passage makes the assumption that",
+    "options": {
+      "A": "television station executives usually lack a political agenda of their own",
+      "B": "bland and innocuous political opinions and analyses are generally in the mainstream",
+      "C": "political analysts outside the mainstream are relatively indifferent to the effect their analyses have on television viewers",
+      "D": "most television viewers are prepared to argue against allowing the expression of political opinions and analyses with which they disagree",
+      "E": "the political opinions of television station executives are not often reflected in the television shows their stations produce"
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 6,
+    "id": "PT90-S2-Q06",
+    "stimulus": "Some judges complain about statutes that specify mandatory minimum sentences for criminal offenses. These legal restrictions, they complain, are too mechanical and prevent judges from deciding when a given individual can or cannot be rehabilitated. But that is precisely why mandatory minimum sentences are necessary. History amply demonstrates that when people are free to use their own judgment they invariably believe themselves to act wisely when in fact they are often arbitrary and irrational. There is no reason to think that judges are an exception to this rule.",
+    "questionStem": "Which one of the following sentences most accurately expresses the main point of the passage?",
+    "options": {
+      "A": "People believe that they have good judgment but never do.",
+      "B": "Mandatory minimum sentences are too mechanical and reduce judicial discretion.",
+      "C": "Judges should be free to exercise their own judgment.",
+      "D": "Judges are often arbitrary and irrational.",
+      "E": "Mandatory minimum sentences are needed to help prevent judicial arbitrariness."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 7,
+    "id": "PT90-S2-Q07",
+    "stimulus": "Conservationist: The population of a certain wildflower is so small that the species is headed for extinction. However, this wildflower can cross-pollinate with a closely related domesticated daisy, producing viable seeds. Such cross-pollination could result in a significant population of wildflower-daisy hybrids. The daisy should therefore be introduced into the wildflower’s range, since although the hybrid would differ markedly from the wildflower, hybridization is the only means of preventing total loss of the wildflower in its range.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the conservationist’s reasoning?",
+    "options": {
+      "A": "It is better to take measures to preserve a valued type of organism, even if those measures are drastic, than to accept a less valuable substitute for the organism.",
+      "B": "It is better to preserve a type of organism that is in danger of extinction, even if surviving organisms of that type are not vigorous, than to allow something more vigorous to replace it.",
+      "C": "It is better to change a type of organism that would otherwise be lost, even if the changes are radical, than to lose it entirely.",
+      "D": "It is better to destroy one of two competing types of organisms, even if both are irreplaceable, than to allow both of them to be lost.",
+      "E": "It is better to protect an endangered type of organism, even if doing so has some negative effects on another type of organism, than to do nothing at all."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 8,
+    "id": "PT90-S2-Q08",
+    "stimulus": "Conservationist: The population of a certain wildflower is so small that the species is headed for extinction. However, this wildflower can cross-pollinate with a closely related domesticated daisy, producing viable seeds. Such cross-pollination could result in a significant population of wildflower-daisy hybrids. The daisy should therefore be introduced into the wildflower’s range, since although the hybrid would differ markedly from the wildflower, hybridization is the only means of preventing total loss of the wildflower in its range.",
+    "questionStem": "Which one of the following is an assumption on which the conservationist’s reasoning depends?",
+    "options": {
+      "A": "The wildflower currently reproduces only by forming seeds.",
+      "B": "The domesticated daisy was bred from wild plants that once grew in the wildflower’s range.",
+      "C": "Increasing the population of the wildflower will also expand its range.",
+      "D": "Wildflower-daisy hybrids will be able to reproduce.",
+      "E": "The domesticated daisy will cross-pollinate with any daisylike plant."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 9,
+    "id": "PT90-S2-Q09",
+    "stimulus": "Because of increases in the price of oil and because of government policies promoting energy conservation, the use of oil to heat homes fell by 40 percent from 1970 to the present, and many homeowners switched to natural gas for heating. Because switching to natural gas involved investing in equipment, a significant switch back to oil in the near future is unlikely.",
+    "questionStem": "The prediction that ends the passage would be most seriously called into question if it were true that in the last few years",
+    "options": {
+      "A": "the price of natural gas to heat homes has remained constant, while the cost of equipment to heat homes with natural gas has fallen sharply",
+      "B": "the price of home heating oil has remained constant, while the cost of equipment to heat homes with natural gas has risen sharply",
+      "C": "the cost of equipment to heat homes with natural gas has fallen sharply, while the price of home heating oil has fallen to 1970 levels",
+      "D": "the cost of equipment to heat homes with oil has fallen sharply, while the price of heating with oil has fallen below the price of heating with natural gas",
+      "E": "the use of oil to heat homes has continued to decline, while the price of heating oil has fallen to 1970 levels"
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 10,
+    "id": "PT90-S2-Q10",
+    "stimulus": "Parents should not necessarily raise their children in the ways experts recommend, even if some of those experts are themselves parents. After all, parents are the ones who directly experience which methods are successful in raising their own children.",
+    "questionStem": "Which one of the following most closely conforms to the principle that the passage above illustrates?",
+    "options": {
+      "A": "Although music theory is intrinsically interesting and may be helpful to certain musicians, it does not distinguish good music from bad: that is a matter of taste and not of theory.",
+      "B": "One need not pay much attention to the advice of automotive experts when buying a car if those experts are not interested in the mundane factors that concern the average consumer.",
+      "C": "In deciding the best way to proceed, a climber familiar with a mountain might do well to ignore the advice of mountain climbing experts unfamiliar with that mountain.",
+      "D": "A typical farmer is less likely to know what types of soil are most productive than is someone with an advanced degree in agricultural science.",
+      "E": "Unlike society, one’s own conscience speaks with a single voice; it is better to follow the advice of one’s own conscience than the advice of society."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 11,
+    "id": "PT90-S2-Q11",
+    "stimulus": "Sometimes when their trainer gives the hand signal for \"Do something creative together,\" two dolphins circle a pool in tandem and then leap through the air simultaneously. On other occasions the same signal elicits synchronized backward swims or tail-waving. These behaviors are not simply learned responses to a given stimulus. Rather, dolphins are capable of higher cognitive functions that may include the use of language and forethought.",
+    "questionStem": "Which one of the following, if true, most strengthens the argument?",
+    "options": {
+      "A": "Mammals have some resemblance to one another with respect to bodily function and brain structure.",
+      "B": "The dolphins often exhibit complex new responses to the hand signal.",
+      "C": "The dolphins are given food incentives as part of their training.",
+      "D": "Dolphins do not interact with humans the way they interact with one another.",
+      "E": "Some of the behaviors mentioned are exhibited by dolphins in their natural habitat."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 12,
+    "id": "PT90-S2-Q12",
+    "stimulus": "Editorialist: Drivers with a large number of demerit points who additionally have been convicted of a serious driving related offense should either be sentenced to jail or be forced to receive driver re-education, since to do otherwise would be to allow a crime to go unpunished. Only if such drivers are likely to be made more responsible drivers should driver re education be recommended for them. Unfortunately, it is always almost impossible to make drivers with a large number of education be recommended for them. Unfortunately, it is always almost impossible to make drivers with a large number of demerit points more responsible drivers. If the editorialist’s statements are true, they provide the most support for",
+    "questionStem": "which one of the following?",
+    "options": {
+      "A": "Drivers with a large number of demerit points who have been convicted of a serious driving- related offense should be sent to jail.",
+      "B": "Driver re-education offers the best chance of making drivers with a large number of demerit points responsible drivers.",
+      "C": "Driver re-education is not harsh enough punishment for anyone convicted of a serious driving-related offense who has also accumulated a large number of demerit points.",
+      "D": "Driver re-education should not be recommended for those who have committed no serious driving-related offenses.",
+      "E": "Drivers with a large number of demerit points but no conviction for a serious driving- related offense should receive driver re-education rather than jail."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 13,
+    "id": "PT90-S2-Q13",
+    "stimulus": "Plant Manager: We could greatly reduce the amount of sulfur dioxide our copper-smelting plant releases into the atmosphere by using a new process. The new process requires replacing our open furnaces with closed ones and moving the copper from one furnace to the next in solid, not molten, form. However, not only is the new equipment expensive to buy and install, but the new process also costs more to run than the current process, because the copper must be reheated after it has cooled. So overall, adopting the new process will cost much but bring the company no profit. Supervisor: I agree with your overall conclusion, but disagree about one point you make, since the latest closed furnaces are extremely fuel-efficient.",
+    "questionStem": "The point about which the supervisor expresses disagreement with the plant manager is",
+    "options": {
+      "A": "whether the new copper-smelting process releases less sulfur dioxide gas into the atmosphere than the current process",
+      "B": "whether the new copper-smelting process is more expensive to run than the current process",
+      "C": "whether the new process should be adopted in the copper-smelting plant",
+      "D": "whether closed copper-smelting furnaces are more fuel-efficient than open furnaces",
+      "E": "whether cooling and reheating the copper will cost more than moving it in molten form"
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 14,
+    "id": "PT90-S2-Q14",
+    "stimulus": "Plant Manager: We could greatly reduce the amount of sulfur dioxide our copper-smelting plant releases into the atmosphere by using a new process. The new process requires replacing our open furnaces with closed ones and moving the copper from one furnace to the next in solid, not molten, form. However, not only is the new equipment expensive to buy and install, but the new process also costs more to run than the current process, because the copper must be reheated after it has cooled. So overall, adopting the new process will cost much but bring the company no profit. Supervisor: I agree with your overall conclusion, but disagree about one point you make, since the latest closed furnaces are extremely fuel-efficient. The plant manager’s argument is most vulnerable to criticism on",
+    "questionStem": "which one of the following grounds?",
+    "options": {
+      "A": "The overall conclusion is about a net effect but is based solely on evidence about only some of the factors that contribute to the effect.",
+      "B": "The support for the overall conclusion is the authority of the plant manager rather than any independently verifiable evidence.",
+      "C": "The overall conclusion reached merely repeats the evidence offered.",
+      "D": "Evidence that is taken to be only probably true is used as the basis for a claim that something is definitely true.",
+      "E": "Facts that are not directly relevant to the argument are treated as if they supported the overall conclusion."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 15,
+    "id": "PT90-S2-Q15",
+    "stimulus": "Ambiguity inspires interpretation. The saying, \"We are the measure of all things,\" for instance, has been interpreted by some people to imply that humans are centrally important in the universe, while others have interpreted it to mean simply that, since all knowledge is human knowledge, humans must rely on themselves to find the truth. The claim that ambiguity inspires interpretation figures in the argument in",
+    "questionStem": "which one of the following ways?",
+    "options": {
+      "A": "It is used to support the argument’s conclusion.",
+      "B": "It is an illustration of the claim that we are the measure of all things.",
+      "C": "It is compatible with either accepting or rejecting the argument’s conclusion.",
+      "D": "It is a view that other statements in the argument are intended to support.",
+      "E": "It sets out a difficulty the argument is intended to solve."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 16,
+    "id": "PT90-S2-Q16",
+    "stimulus": "Franklin: It is inconsistent to pay sports celebrities ten times what Nobel laureates are paid. Both have rare talents and work hard. Tomeka: What you’ve neglected to consider is that unlike Nobel laureates, sports celebrities earn millions of dollars for their employers in the form of gate receipts and TV rights. Franklin’s and Tomeka’s statements provide the most support for holding that they disagree about the truth of",
+    "questionStem": "which one of the following?",
+    "options": {
+      "A": "Nobel laureates should be taken more seriously.",
+      "B": "Nobel laureates should be paid more than sports celebrities.",
+      "C": "Sports celebrities and Nobel laureates work equally hard for their employers.",
+      "D": "There is no rational basis for the salary difference between sports celebrities and Nobel laureates.",
+      "E": "The social contributions made by sports celebrities should be greater than they currently are."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 17,
+    "id": "PT90-S2-Q17",
+    "stimulus": "Studies of the reliability of eyewitness identifications show little correlation between the accuracy of a witness’s account and the confidence the witness has in the account. Certain factors can increase or undermine witness’s confidence without altering the accuracy of the identification. Therefore, police officers are advised to disallow suspect lineups in which witnesses can hear one another identifying suspects.",
+    "questionStem": "Which one of the following is a principle underlying the advice given to police officers?",
+    "options": {
+      "A": "The confidence people have in what they remember having seen is affected by their awareness of what other people claim to have seen.",
+      "B": "Unless an eyewitness is confronted with more than one suspect at a time, the accuracy of his or her statements cannot be trusted.",
+      "C": "If several eyewitnesses all identify the same suspect in a lineup, it is more likely that the suspect committed the crime than if only one eyewitness identifies the suspect.",
+      "D": "Police officers are more interested in the confidence witnesses have when testifying than in the accuracy of that testimony.",
+      "E": "The accuracy of an eyewitness account is doubtful if the eyewitness contradicts what other eyewitnesses claim to have seen."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 18,
+    "id": "PT90-S2-Q18",
+    "stimulus": "All actions are motivated by self-interest, since any action that is apparently altruistic can be described in terms of self interest. For example, helping someone can be described in terms of self-interest: the motivation is hope for a reward or other personal benefit to be bestowed as a result of the helping action.",
+    "questionStem": "Which one of the following most accurately describes an error in the argument’s reasoning?",
+    "options": {
+      "A": "The term \"self-interest\" is allowed to shift in meaning over the course of the argument.",
+      "B": "The argument takes evidence showing merely that its conclusion could be true to constitute evidence showing that the conclusion is in fact true.",
+      "C": "The argument does not explain what is meant by \"reward\" and \"personal benefit.\"",
+      "D": "The argument ignores the possibility that what is taken to be necessary for a certain interest to be a motivation actually suffices to show that that interest is a motivation.",
+      "E": "The argument depends for its appeal only on the emotional content of the example cited."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 19,
+    "id": "PT90-S2-Q19",
+    "stimulus": "In the decade from the mid-1980s to the mid-1990s, large corporations were rocked by mergers, reengineering, and downsizing. These events significantly undermined employees’ job security. Surprisingly, however, employees’ perception of their own job security hardly changed over that period. Fifty-eight percent of employees surveyed in 1984 and 55 percent surveyed in 1994 stated that their own jobs were very secure.",
+    "questionStem": "Each of the following contributes to an explanation of the surprising survey results described above EXCEPT:",
+    "options": {
+      "A": "A large number of the people in both surveys work in small companies that were not affected by mergers, reengineering, and downsizing.",
+      "B": "Employees who feel secure in their jobs tend to think that the jobs of others are secure.",
+      "C": "The corporate downsizing that took place during this period had been widely anticipated for several years before the mid- 1980s.",
+      "D": "Most of the major downsizing during this period was completed within a year after the first survey.",
+      "E": "In the mid-1990s, people were generally more optimistic about their lives, even in the face of hardship, than they were a decade before."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 20,
+    "id": "PT90-S2-Q20",
+    "stimulus": "Amphibian populations are declining in numbers worldwide. Not coincidentally, the earth’s ozone layer has been continuously depleted throughout the last 50 years. Atmospheric ozone blocks UV-B, a type of ultraviolet radiation that is continuously produced by the sun, and which can damage genes. Because amphibians lack hair, hide, or feathers to shield them, they are particularly vulnerable to UV-B radiation. In addition, their gelatinous eggs lack the protection of leathery or hard shells. Thus, the primary cause of the declining amphibian population is the depletion of the ozone layer.",
+    "questionStem": "Each of the following, if true, would strengthen the argument EXCEPT:",
+    "options": {
+      "A": "Of the various types of radiation blocked by atmospheric ozone, UV-B is the only type that can damage genes.",
+      "B": "Amphibian populations are declining far more rapidly than are the populations of nonamphibian species whose tissues and eggs have more natural protection from UV-B.",
+      "C": "Atmospheric ozone has been significantly depleted above all the areas of the world in which amphibian populations are declining.",
+      "D": "The natural habitat of amphibians has not become smaller over the past century.",
+      "E": "Amphibian populations have declined continuously for the last 50 years."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 21,
+    "id": "PT90-S2-Q21",
+    "stimulus": "All too many weaklings are also cowards, and few cowards fail to be fools. Thus there must be at least one person who is both a weakling and a fool. The flawed pattern of reasoning in the argument above is most similar to that in",
+    "questionStem": "which one of the following?",
+    "options": {
+      "A": "All weasels are carnivores and no carnivores fail to be nonherbivores, so some weasels are nonherbivores.",
+      "B": "Few moralists have the courage to act according to the principles they profess, and few saints have the ability to articulate the principles by which they live, so it follows that few people can both act like saints and speak like moralists.",
+      "C": "Some painters are dancers, since some painters are musicians, and some musicians are dancers.",
+      "D": "If an act is virtuous, then it is autonomous, for acts are not virtuous unless they are free, and acts are not free unless they are autonomous.",
+      "E": "A majority of the voting population favors a total ban, but no one who favors a total ban is opposed to stiffer tariffs, so at least one voter is not opposed to stiffer tariffs."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 22,
+    "id": "PT90-S2-Q22",
+    "stimulus": "Critic: Most chorale preludes were written for the organ, and most great chorale preludes written for the organ were written by J. S. Bach. One of Bach’s chorale preludes dramatizes one hymn’s perspective on the year’s end. This prelude is agonizing and fixed on the passing of the old year, with its dashed hopes and lost opportunities. It does not necessarily reveal Bach’s own attitude toward the change of the year, but does reflect the tone of the hymn’s text. People often think that artists create in order to express their own feelings. Some artists do. Master artists never do, and Bach was a master artist. If the critic’s statements are true, then on the basis of them",
+    "questionStem": "which one of the following CANNOT be true?",
+    "options": {
+      "A": "Bach believed that the close of the year was not a time for optimism and joyous celebration.",
+      "B": "In composing music about a particular subject, Bach did not write the music in order to express his own attitude toward the subject.",
+      "C": "In compositions other than chorale preludes, Bach wrote music in order to express his feelings toward various subjects.",
+      "D": "Most of Bach’s chorale preludes were written for instruments other than the organ.",
+      "E": "Most of the great chorale preludes were written for instruments other than the organ."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 23,
+    "id": "PT90-S2-Q23",
+    "stimulus": "For anything that far away to appear from Earth the way quasars do, it would have to burn steadily at a rate that produces more light than 90 billion suns would produce. But nothing that burns at a rate that produces that much light could exist for more than about 100 million years. If the statements above are true,",
+    "questionStem": "which one of the following must also be true on the basis of them?",
+    "options": {
+      "A": "Instruments in use before 1963 were not sensitive enough to permit quasars to be seen.",
+      "B": "Light from quasars first began reaching Earth in 1963.",
+      "C": "Anything that from Earth appears as bright as a quasar does must produce more light than would be produced by 90 billion suns.",
+      "D": "Nothing that is as far from Earth as quasars are can continue to exist for more than about 100 million years.",
+      "E": "No quasar that has ever been seen from Earth exists any longer."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 24,
+    "id": "PT90-S2-Q24",
+    "stimulus": "Medical researcher: As expected, records covering the last four years of ten major hospitals indicate that babies born prematurely were more likely to have low birth weights and to suffer from health problems than were babies not born prematurely. These records also indicate that mothers who had received adequate prenatal care were less likely to have low birth weight babies than were mothers who had received inadequate prenatal care. Adequate prenatal care, therefore, significantly decreases the risk of low birth weight babies.",
+    "questionStem": "Which one of the following, if true, most weakens the medical researcher’s argument?",
+    "options": {
+      "A": "The hospital records indicate that many babies that are born with normal birth weights are born to mothers who had inadequate prenatal care.",
+      "B": "Mothers giving birth prematurely are routinely classified by hospitals as having received inadequate prenatal care when the record of that care is not available.",
+      "C": "The hospital records indicate that low birth weight babies were routinely classified as having been born prematurely.",
+      "D": "Some babies not born prematurely, whose mothers received adequate prenatal care, have low birth weights.",
+      "E": "Women who receive adequate prenatal care, are less likely to give birth prematurely than are women who do not receive adequate prenatal care."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 25,
+    "id": "PT90-S2-Q25",
+    "stimulus": "Formal performance evaluations in the professional world are conducted using realistic situations. Physicians are allowed to consult medical texts freely, attorneys may refer to law books and case records, and physicists and engineers have their manuals at hand for ready reference. Students, then, should likewise have access to their textbooks whenever they take examinations.",
+    "questionStem": "The reasoning in the argument is questionable because the argument",
+    "options": {
+      "A": "cites examples that are insufficient to support the generalization that performance evaluations in the professional world are conducted in realistic situations",
+      "B": "fails to consider the possibility that adopting its recommendation will not significantly increase most students’ test scores",
+      "C": "neglects to take into account the fact that professionals were once students who also did not have access to textbooks during examinations",
+      "D": "neglects to take into account the fact that, unlike students, professionals have devoted many years of study to one subject",
+      "E": "fails to consider the possibility that the purposes of evaluation in the professional world and in school situations are quite dissimilar"
+    }
+  }
+]

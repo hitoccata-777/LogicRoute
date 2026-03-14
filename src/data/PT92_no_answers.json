@@ -1,0 +1,1080 @@
+[
+  {
+    "section": 2,
+    "qnum": 1,
+    "id": "PT92-S2-Q01",
+    "stimulus": "Psychiatrist: We are learning that neurochemical imbalances can cause behavior ranging from extreme mental illness to less serious but irritating behavior such as obsessive fantasizing, petulance, or embarrassment. These findings will promote compassion and tolerance when looking at a mental illness, quirk, or mere difference between two persons, since being mentally healthy can now begin to be seen as simply having the same neurochemical balances as most people.",
+    "questionStem": "Which one of the following most accurately expresses the conclusion of the psychiatrist’s argument?",
+    "options": {
+      "A": "Understanding the role of the neurochemical in behavior will foster empathy toward others.",
+      "B": "Neurochemical imbalances can cause mental illness and other behaviors.",
+      "C": "Neurochemical balances and imbalances are the main determinants of mental behavior.",
+      "D": "Being mentally healthy is a matter of having the same neurochemical balances as most people.",
+      "E": "Advances in neurochemistry enhance our theories of mental illness."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 2,
+    "id": "PT92-S2-Q02",
+    "stimulus": "No one wants this job as much as Joshua does, but he is not applying for it. It follows that there will not be any applicants, no matter how high the salary that is being offered.",
+    "questionStem": "The flawed reasoning in the argument above most closely parallels that in which one of the following?",
+    "options": {
+      "A": "Beth knows better than anyone else how to spot errors in a computer program, yet even she has not found any in this program so far. So it is clear that the errors must all be in the rest of the program.",
+      "B": "If anyone can decipher this inscription, it is Professor Alvarez, but she is so involved with her new research that it will be impossible to interest her in this sort of task. Therefore, all we can do now is hope to find someone else.",
+      "C": "Although he has the strongest motive of anyone for buying Anna’s plot of land, Manfred is not pursuing the matter. Therefore, regardless of how low a price Anna is prepared to accept, she will be looking for a buyer in vain.",
+      "D": "The person initially most interested in obtaining the contract was Mr. Moore, but he of all people suddenly withdrew his bid. This means that, no matter how discouraged the other bidders had been, they will now redouble their efforts.",
+      "E": "Three times Paul would have liked to take advantage of a special vacation package for himself and his family, but each time he was indispensable at the factory just then. So the more seniority Paul acquires, the greater are the constraints on his personal life."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 3,
+    "id": "PT92-S2-Q03",
+    "stimulus": "Many people limit the intake of calories and cholesterol in their diet in order to lose weight and reduce the level of cholesterol in their blood. When a person loses weight, the fat cells in that person’s body decrease in size but not in number. As they decrease in size, fat cells spill the cholesterol they contain into the bloodstream. Therefore, a person who goes on a low-calorie, low cholesterol diet _____.",
+    "questionStem": "Which one of the following most logically completes the argument?",
+    "options": {
+      "A": "might at first have an increased level of cholesterol in his or her blood",
+      "B": "will not lose weight any faster than will a person whose diet is high in calories",
+      "C": "might lose more weight by going on a low calorie, high-cholesterol diet than by going on the low-calorie, low-cholesterol diet",
+      "D": "will not decrease the size of his or her fat cells",
+      "E": "will both decrease the level of cholesterol in his or her blood and gain weight Advances in photocopying technology allow criminals with no printing expertise to counterfeit paper currency. One standard anticounterfeiting technique, microprinting, prints paper currency with tiny designs that cannot be photocopied distinctly."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 4,
+    "id": "PT92-S2-Q04",
+    "stimulus": "Although counterfeits of microprinted currency can be detected easily by experts, such counterfeits often circulate widely before being detected. An alternative, though more costly, printing technique would print currency with a special ink. Currency printed with the ink would change color depending on how ordinary light strikes it, whereas photocopied counterfeits of such currency would not. Because this technique would allow anyone to detect photocopied counterfeit currency easily, it should be adopted instead of microprinting, despite the expense.",
+    "questionStem": "Which one of the following, if true, provides the most support for the recommendation made by the argument?",
+    "options": {
+      "A": "When an anticounterfeiting technique depends on the detection of counterfeits by experts, the cost of inspection by experts adds significantly to the cost to society of that technique.",
+      "B": "For any anticounterfeiting technique to be effective, the existence of anticounterfeiting techniques should be widely broadcast, but the method by which counterfeits are detected should be kept secret.",
+      "C": "The process of microprinting paper currency involves fewer steps than does the printing of paper currency with the special ink.",
+      "D": "Before photocopying technology existed, most counterfeits of paper currency were accomplished by master engravers.",
+      "E": "Many criminals do not have access to the advanced photocopiers that are needed to produce counterfeits of microprinted paper currency that cashiers will accept as real."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 5,
+    "id": "PT92-S2-Q05",
+    "stimulus": "Advances in photocopying technology allow criminals with no printing expertise to counterfeit paper currency. One standard anticounterfeiting technique, microprinting, prints paper currency with tiny designs that cannot be photocopied distinctly. Although counterfeits of microprinted currency can be detected easily by experts, such counterfeits often circulate widely before being detected. An alternative, though more costly, printing technique would print currency with a special ink. Currency printed with the ink would change color depending on how ordinary light strikes it, whereas photocopied counterfeits of such currency would not. Because this technique would allow anyone to detect photocopied counterfeit currency easily, it should be adopted instead of microprinting, despite the expense.",
+    "questionStem": "Which one of the following, if true, most seriously undermines the argument?",
+    "options": {
+      "A": "The longer the interval between the time a counterfeit bill passes into circulation and the time the counterfeit is detected, the more difficult it is for law enforcement officials to apprehend the counterfeiter.",
+      "B": "Sophisticated counterfeiters could produce currency printed with the special ink but cannot duplicate microprinted currency exactly.",
+      "C": "Further advances in photocopying technology will dramatically increase the level of detail that photocopies can reproduce.",
+      "D": "The largest quantities of counterfeit currency now entering circulation are produced by ordinary criminals who engage in counterfeiting only briefly.",
+      "E": "It is very difficult to make accurate estimates of what the costs to society would be if large amounts of counterfeit currency circulated widely."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 6,
+    "id": "PT92-S2-Q06",
+    "stimulus": "One test to determine whether a person has been infected with tuberculosis consists of injecting the person with proteins extracted from the tuberculosis bacterium. Once a person has been infected by a bacterium, the person’s immune system subsequently recognizes certain proteins present in that bacterium and attacks the bacterium. This recognition also takes place in the test and results in a skin irritation at the injection site. Hence the physicians who designed the test reasoned that anyone who reacts in this manner to an injection with the tuberculosis proteins has been infected with tuberculosis.",
+    "questionStem": "Which one of the following is an assumption on which the physicians’ reasoning depends?",
+    "options": {
+      "A": "All of the proteins present in disease-causing bacteria can be recognized by the body’s immune system.",
+      "B": "Localized skin irritations are a characteristic symptom of tuberculosis in most people.",
+      "C": "The ability of the proteins present in the tuberculosis bacterium to trigger the skin irritation is exclusive to that bacterium.",
+      "D": "Some people who have been injected with proteins extracted from the tuberculosis bacterium will contract tuberculosis as a result of the injection.",
+      "E": "The body’s immune system cannot recognize infectious bacteria unless there are sufficient quantities of the bacteria to cause overt symptoms of disease."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 7,
+    "id": "PT92-S2-Q07",
+    "stimulus": "Generations of European-history students have been taught that a political assassination caused the First World War. Without some qualification, however, this teaching is bound to mislead, since the war would not have happened without the treaties and alliances that were already in effect and the military force that was already amassed. These were the deeper causes of the war, whereas the assassination was a cause only in a trivial sense. It was like the individual spark that happens to ignite a conflagration that was, in the prevailing conditions, inevitable.",
+    "questionStem": "Which one of the following most accurately restates the main point of the passage?",
+    "options": {
+      "A": "The assassination did not cause the war, since the assassination was only the last in a chain of events leading up to the war, each of which had equal claim to being called its \"cause.\"",
+      "B": "The war was destined to happen, since the course of history up to that point could not have been altered.",
+      "C": "Though the statement that the assassination caused the war is true, the term \"cause\" more fundamentally applies to the conditions that made it possible for that event to start the war.",
+      "D": "If the assassination had occurred when it did but less military force had at that time been amassed, then the war’s outbreak might have been considerably delayed or the war might not have occurred at all.",
+      "E": "Although the conditions prevailing at the time the war started made war inevitable, if the war had not been triggered by the assassination it would not have taken the course with which students of history are familiar."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 8,
+    "id": "PT92-S2-Q08",
+    "stimulus": "Toddlers are not being malicious when they bite people. For example, a child may want a toy, and feel that the person he or she bites is preventing him or her from having it.",
+    "questionStem": "The situation as described above most closely conforms to which one of the following generalizations?",
+    "options": {
+      "A": "Biting people is sometimes a way for toddlers to try to solve problems.",
+      "B": "Toddlers sometimes engage in biting people in order to get attention from adults.",
+      "C": "Toddlers mistakenly believe that biting people is viewed as acceptable behavior by adults.",
+      "D": "Toddlers do not recognize that by biting people they often thwart their own ends.",
+      "E": "Resorting to biting people is in some cases an effective way for toddlers to get what they want."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 9,
+    "id": "PT92-S2-Q09",
+    "stimulus": "Consumer advocate: Last year’s worldwide alarm about a computer \"virus\"—a surreptitiously introduced computer program that can destroy other programs and data—was a fraud. Companies selling programs to protect computers against such viruses raised worldwide concern about the possibility that a destructive virus would be activated on a certain date. There was more smoke than fire, however, only about a thousand cases of damage were reported around the world. Multitudes of antivirus programs were sold, so the companies’ warning was clearly only an effort to stimulate sales.",
+    "questionStem": "The reasoning in the consumer advocate’s argument is flawed because this argument",
+    "options": {
+      "A": "restates its conclusion without attempting to offer a reason to accept it",
+      "B": "fails to acknowledge that antivirus programs might protect against viruses other than the particular one described",
+      "C": "asserts that the occurrence of one event after another shows that the earlier event was the cause of the later one",
+      "D": "uses inflammatory language as a substitute for providing any evidence",
+      "E": "overlooks the possibility that the protective steps taken did work and, for many computers, prevented the virus from causing damage"
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 10,
+    "id": "PT92-S2-Q10",
+    "stimulus": "Insects can see ultraviolet light and are known to identify important food sources and mating sites by sensing the characteristic patterns of ultraviolet light that these things reflect. Insects are also attracted to Glomosus spiderwebs, which reflect ultraviolet light. Thus, insects are probably attracted to these webs because of the specific patterns of ultraviolet light that these webs reflect.",
+    "questionStem": "Which one of the following, if true, most strongly supports the argument?",
+    "options": {
+      "A": "When webs of many different species of spider were illuminated with a uniform source of white light containing an ultraviolet component, many of these webs did not reflect the ultraviolet light.",
+      "B": "When the silks of spiders that spin silk only for lining burrows and covering eggs were illuminated with white light containing an ultraviolet component, the silks of these spiders reflected ultraviolet light.",
+      "C": "When webs of the comparatively recently evolved common garden spider were illuminated with white light containing an ultraviolet component, only certain portions of these webs reflected ultraviolet light.",
+      "D": "When Drosophila fruit flies were placed before a Glomosus web and a synthetic web of similar pattern that also reflected ultraviolet light and both webs were illuminated with white light containing an ultraviolet component, many of the fruit flies flew to the Glomosus web.",
+      "E": "When Drosophila fruit flies were placed before two Glomosus webs, one illuminated with white light containing an ultraviolet component and one illuminated with white light without an ultraviolet component, the majority flew to the ultraviolet reflecting web."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 11,
+    "id": "PT92-S2-Q11",
+    "stimulus": "A Habitat Conservation Plan (HCP) is based on a law that allows developers to use land inhabited by endangered species in exchange for a promise to preserve critical habitat or provide replacement land nearby. Some individuals of endangered species are lost in return for assurances by the owner or developer that habitat for those remaining animals will be protected. Environmentalists are pleased that HCPs allow them to win concessions from developers who would otherwise ignore rarely enforced environmental laws. Satisfied property owners prefer HCPs to more restrictive prohibitions of land use.",
+    "questionStem": "The situation described above most closely conforms to which one of the following principles?",
+    "options": {
+      "A": "In order to avoid protracted legal battles environmentalists should compromise with developers.",
+      "B": "Developers should adhere only to those environmental laws that are not overburdensome.",
+      "C": "Laws should not be designed to serve the interests of all the parties concerned since they are often so weak that no one’s interest is served well.",
+      "D": "Laws should be fashioned in such a way as to reconcile the interests of developers and environmentalists.",
+      "E": "The most effective means of preserving endangered species is to refrain from alienating property owners."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 12,
+    "id": "PT92-S2-Q12",
+    "stimulus": "It has long been thought that lizards evolved from a group of amphibians called anthracosaurs, no fossils of which have been found in any rocks older than 300 million years. However, a fossil of a lizard was recently found that is estimated to be 340 million years old. Lizards could not have evolved from creatures that did not exist until after the first lizards. Therefore, lizards could not have evolved from anthracosaurs.",
+    "questionStem": "An assumption made in the argument is that there are no",
+    "options": {
+      "A": "unknown anthracosaur fossils older than 340 million years",
+      "B": "unknown lizard fossils older than 340 million years",
+      "C": "known lizard fossils that predate some anthracosaur fossils",
+      "D": "known anthracosaur fossils that predate some lizard fossils",
+      "E": "known lizard fossils whose age is uncertain Numismatist: In medieval Spain, most gold coins were minted from gold mined in West Africa, in the area that is now Senegal. The gold mined in this region was the purest known. Its gold content of 92 percent allowed coins to be minted without refining the gold, and indeed coins minted from this source of gold can be recognized because they have that gold content."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 13,
+    "id": "PT92-S2-Q13",
+    "stimulus": "The mints could refine gold and produced other kinds of coins that had much purer gold content, but the Senegalese gold was never refined.",
+    "questionStem": "Which one of the following inferences about gold coins minted in medieval Spain is most strongly supported by the information the numismatist gives?",
+    "options": {
+      "A": "Coins minted from Senegalese gold all contained the same weight, as well as the same proportion, of gold.",
+      "B": "The source of some refined gold from which coins were minted was unrefined gold with a gold content of less than 92 percent.",
+      "C": "Two coins could have the same monetary value even though they differed from each other in the percentage of gold they contained.",
+      "D": "No gold coins were minted that had a gold content of less than 92 percent.",
+      "E": "The only unrefined gold from which coins could be minted was Senegalese gold."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 14,
+    "id": "PT92-S2-Q14",
+    "stimulus": "Numismatist: In medieval Spain, most gold coins were minted from gold mined in West Africa, in the area that is now Senegal. The gold mined in this region was the purest known. Its gold content of 92 percent allowed coins to be minted without refining the gold, and indeed coins minted from this source of gold can be recognized because they have that gold content. The mints could refine gold and produced other kinds of coins that had much purer gold content, but the Senegalese gold was never refined. As a preliminary to negotiating prices, merchants selling goods often specified that payment should be in the coins minted from Senegalese gold.",
+    "questionStem": "Which one of the following, if true, most helps to explain this preference?",
+    "options": {
+      "A": "Because refined gold varied considerably in purity, specifying a price as a number of refined-gold coins did not fix the quantity of gold received in payment.",
+      "B": "During this period most day-to-day trading was conducted using silver coins, though gold coins were used for costly transactions and long-distance commerce.",
+      "C": "The mints were able to determine the purity, and hence the value, of gold coins by measuring their density.",
+      "D": "Since gold coins’ monetary value rested on the gold they contained, payments were frequently made using coins minted in several different countries.",
+      "E": "Merchants obtaining gold to resell for use in jewelry could not sell the metal unless it was first refined."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 15,
+    "id": "PT92-S2-Q15",
+    "stimulus": "Some plants have extremely sensitive biological thermometers. For example, the leaves of rhododendrons curl when the temperature of the air around them is below 0°C (Celsius). Similarly, mature crocus blossoms open in temperatures above 2°C. So someone who simultaneously observed rhododendrons with uncurled leaves, crocuses with mature but unopened blossoms, and a thermometer showing 1°C could determine that the thermometer’s reading was accurate to within plus or minus 1°C.",
+    "questionStem": "Which one of the following, if true, most seriously undermines the reasoning above?",
+    "options": {
+      "A": "Neither rhododendrons nor crocuses bloom for more than a few weeks each year, and the blossoms of rhododendrons growing in any area do not appear until at least several weeks after crocuses growing in that area have ceased to bloom.",
+      "B": "Many people find it unpleasant to be outdoors for long periods when the temperature is at or about 1°C.",
+      "C": "The climate and soil conditions that favor the growth of rhododendrons are also favorable to the growth of crocuses.",
+      "D": "Air temperature surrounding rhododendrons, which can grow 12 feet tall, is likely to differ from air temperature surrounding crocuses, which are normally only a few inches high, by more than 2°C, even if the two plants are growing side by side.",
+      "E": "Certain types of thermometers that are commonly used to measure outdoor temperatures can be extremely accurate in moderate temperature ranges but much less accurate in warmer or colder temperature ranges."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 16,
+    "id": "PT92-S2-Q16",
+    "stimulus": "Political scientist: The dissemination of political theories is in principle able to cause change in existing social structures. However, all political theories are formulated in the educationally privileged setting of the university, leading to convoluted language that is alienating to many individuals outside academia who would be important agents of change. It follows that, with respect to political theory, there is a special role for those outside the university context to render it into accessible, clear language.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "options": {
+      "A": "Persons outside academic settings are the most important agents of change to the social structure.",
+      "B": "Persons within academic settings who formulate political theories attempt to change existing social structures.",
+      "C": "Persons outside academic settings are better left out of the initial formulation of political theories.",
+      "D": "Persons outside academic settings stand to gain more from the dissemination of political theories than persons inside.",
+      "E": "Persons within academic settings are less willing or less able than persons outside to write in a straightforward way."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 17,
+    "id": "PT92-S2-Q17",
+    "stimulus": "Nicotine has long been known to cause heart attacks and high blood pressure. Yet a recent study has shown that the incidence of heart attacks and high blood pressure is significantly higher among cigarette smokers who do not chew tobacco than among nonsmokers exposed to an equal amount of nicotine through tobacco chewing.",
+    "questionStem": "Which one of the following, if true, helps LEAST to resolve the apparent discrepancy described above?",
+    "options": {
+      "A": "People who smoke but do not chew tobacco tend to exercise less than those who chew tobacco but do not smoke.",
+      "B": "Chemicals other than nicotine present in chewing tobacco but not present in cigarette smoke mitigate the effects that nicotine has on the cardiovascular system.",
+      "C": "People who chew tobacco but do not smoke tend to have healthier diets than those who smoke but do not chew tobacco.",
+      "D": "Chemicals other than nicotine present in chewing tobacco but not present in cigarette smoke can cause cancer.",
+      "E": "Chemicals other than nicotine present in cigarette smoke but not present in chewing tobacco raise blood pressure."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 18,
+    "id": "PT92-S2-Q18",
+    "stimulus": "President of Central Supply Company: Profits are at an all-time low this fiscal year because of decreased demand for our products. If this situation continues, the company may have to declare bankruptcy. So it is important to prevent any further decrease in profits. Consequently, the only options are to reduce planned expansion or to eliminate some less profitable existing operations.",
+    "questionStem": "Which one of the following most accurately describes a flaw, in the company president’s reasoning?",
+    "options": {
+      "A": "It presumes without giving justification that survival of the company has been a good thing.",
+      "B": "It does not take into account that there are alternatives to declaring bankruptcy.",
+      "C": "It presumes without giving justification that only decreased demand can ever be the cause of decreased profits.",
+      "D": "It does not allow for the possibility that profits will decrease only slightly during the next fiscal year.",
+      "E": "It does not take into account that there may be other ways to stop the decrease in profits."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 19,
+    "id": "PT92-S2-Q19",
+    "stimulus": "In all mammalian species, the period of a young mammal’s life in which it is most frequently playful coincides with the period of most rapid growth of the neural connections in the mammal’s brain that give rise to various complex patterns of movement, posture, and social response. Indeed, the neural connections created by frequent play during this period later become indispensable for the mammal’s survival and well-being as an adult.",
+    "questionStem": "The statements above, if true, serve LEAST well as evidence for which one of the following?",
+    "options": {
+      "A": "Young mammals of species that are preyed on by other animals are likely to engage in forms of sudden mock flight, bolting away from locations where no predators are to be found.",
+      "B": "The young of nonmammalian species such as fish, reptiles, and birds do not normally engage in playful behavior that serves the function served by play in the development of young mammals.",
+      "C": "Adult mammals are more likely to engage in interactive play with their young if they engaged in similar forms of play when they themselves were young.",
+      "D": "Mammals that cannot engage in certain common forms of play when young are likely to show certain deficits that limit their subsequent success as adults.",
+      "E": "Young mammals of predatory species tend to practice in their play inoffensive versions of motions and actions that are useful in finding and catching prey when these mammals become adults."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 20,
+    "id": "PT92-S2-Q20",
+    "stimulus": "Physicist: Determinism is the view that every event has a preceding cause sufficient for its occurrence. That is, if determinism is true, then the events that are presently occurring could not have failed to occur given the state of the universe a moment ago. Determinism, however, is false because it is impossible to know the complete state of the universe at any given time since it is impossible to measure accurately both the position and velocity of any given subatomic particle at a particular time.",
+    "questionStem": "The physicist’s reasoning is most vulnerable to criticism on which one of the following grounds?",
+    "options": {
+      "A": "That it is impossible to measure accurately both the position and velocity of any given subatomic particle does not imply that it is impossible to know either the position or velocity of all subatomic particles.",
+      "B": "That the complete state of the universe at any given time is unknowable does not imply that the states at that time of the individual subatomic particles making it up are unknowable.",
+      "C": "That it is impossible to measure accurately both the position and velocity of any given subatomic particle at a particular time does not imply that its position or velocity cannot be accurately measured separately.",
+      "D": "That it is impossible to know the complete state of the universe at any given time does not imply that there is no complete state of the universe at that time.",
+      "E": "That the position and velocity of any given subatomic particle cannot be jointly measured with accuracy does not imply that this is the case for the position and velocity of all subatomic particles."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 21,
+    "id": "PT92-S2-Q21",
+    "stimulus": "If this parking policy is unpopular with the faculty, then we should modify it. If it is unpopular among students, we 21. If this parking policy is unpopular with the faculty, then we should modify it. If it is unpopular among students, we should adopt a new policy. And, it is bound to be unpopular either with the faculty or among students.",
+    "questionStem": "If the statements above are true, which one of the following must also be true?",
+    "options": {
+      "A": "We should attempt to popularize this parking policy among either the faculty or students.",
+      "B": "We should modify this parking policy only if this will not reduce its popularity among students.",
+      "C": "We should modify this parking policy if modification will not reduce its popularity with the faculty.",
+      "D": "If the parking policy is popular among students, then we should adopt a new policy.",
+      "E": "If this parking policy is popular with the faculty, then we should adopt a new policy."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 22,
+    "id": "PT92-S2-Q22",
+    "stimulus": "It is an absurd idea that whatever artistic endeavor the government refuses to support it does not allow, as one can see by rephrasing the statement to read: No one is allowed to create art without a government subsidy.",
+    "questionStem": "The pattern of reasoning in which one of the following is most similar to that in the argument above?",
+    "options": {
+      "A": "The claim that any driver who is not arrested does not break the law is absurd, as one can see by rewording it: Every driver who breaks the law gets arrested.",
+      "B": "The claim that any driver who is not arrested does not break the law is absurd, as one can see by rewording it: Every driver who gets arrested has broken the law.",
+      "C": "The notion that every scientist who is supported by a government grant will be successful is absurd, as one can see by rewording it: No scientist who is successful is so without a government grant.",
+      "D": "The notion that every scientist who is supported by a government grant will be successful is absurd, as one can see by rewording it: No scientist lacking governmental support will be successful.",
+      "E": "The notion that every scientist who has been supported by a government grant will be successful is absurd, as one can see by rewording it: No scientist is allowed to do research without a government grant."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 23,
+    "id": "PT92-S2-Q23",
+    "stimulus": "Politician: Nobody can deny that homelessness is a problem yet there seems to be little agreement on how to solve it. One thing, however is clear: ignoring the problem will not make it go away. Only if the government steps in and provides the homeless with housing will this problem disappear, and this necessitates increased taxation. For this reason, we should raise taxes.",
+    "questionStem": "Which one of the following principles, if valid, most supports the politician’s argument?",
+    "options": {
+      "A": "Only if a measure is required to solve a problem should it be adopted.",
+      "B": "Only if a measure is sufficient to solve a problem should it be adopted.",
+      "C": "If a measure is required to solve a problem, then it should be adopted.",
+      "D": "If a measure is sufficient to solve a problem, then it should be adopted.",
+      "E": "If a measure is sufficient to solve a problem, any steps necessitated by that measure should be adopted."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 24,
+    "id": "PT92-S2-Q24",
+    "stimulus": "Trade official: Country X deserves economic retribution for its protectionism. However, it is crucial that we recognize that there are overriding considerations in this case. We should still sell to X the agricultural equipment it ordered; there is high demand in our country for agricultural imports from X.",
+    "questionStem": "The argument depends on assuming which one of the following principles?",
+    "options": {
+      "A": "Agricultural components of international trade are more important than nonagricultural commodities.",
+      "B": "The ability to keep popular products available domestically is less important than our being able to enter international markets.",
+      "C": "We should never jeopardize the interests of our people to punish a projectionist country.",
+      "D": "In most cases, punishing a projectionist country should have priority over the interests of our people.",
+      "E": "We should balance the justice of an action with the consequences for our interests of undertaking that action."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 25,
+    "id": "PT92-S2-Q25",
+    "stimulus": "Jack’s aunt gave him her will, asking him to make it public when she died; he promised to do so. After her death, Jack looked at the will; it stipulated that all her money go to her friend George. Jack knew that if he made the will public, George would squander the money, benefiting neither George nor anyone else. Jack also knew that if he did not make the will public, the money would go to his own mother, who would use it to benefit herself and others, harming no one. After reflection, he decided not to make the will public.",
+    "questionStem": "Which one of the following principles, if valid, would require Jack to act as he did in the situation described?",
+    "options": {
+      "A": "Duties to family members take priority over duties to people who are not family members.",
+      "B": "Violating a promise is impermissible whenever doing so would become known by others.",
+      "C": "One must choose an alternative that benefits some and harms no one over an alternative that harms some and benefits no one.",
+      "D": "When faced with alternatives it is obligatory to choose whichever one will benefit the greatest number of people.",
+      "E": "A promise becomes nonbinding when the person to whom the promise was made is no longer living"
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 1,
+    "id": "PT92-S3-Q01",
+    "stimulus": "Despite the best efforts of journalists to be objective, it is inevitable that their own biases will enter their reporting, even if inadvertently. Therefore, it is imperative that a trained editor look over journalists’ work with an eye toward detecting and removing their biases, so as to make reporting as objective as possible.",
+    "questionStem": "Each of the following is an assumption on which the argument depends EXCEPT:",
+    "options": {
+      "A": "Journalists do not eliminate all of the biases that enter their reporting.",
+      "B": "It is imperative that reporting be as objective as possible.",
+      "C": "Objectivity in reporting is undermined by the presence of journalists’ biases.",
+      "D": "Trained editors are able to detect at least some biases of journalists.",
+      "E": "Journalists’ reporting that is not objective is not taken seriously by trained editors."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 2,
+    "id": "PT92-S3-Q02",
+    "stimulus": "Astronomer: Mount Shalko is the perfect site for the proposed astronomical observatory. The summit would accommodate the complex as currently designed, with some room left for expansion. There are no large cities near the mountain, so neither smog nor artificial light interferes with atmospheric transparency. Critics claim that Mount Shalko is a unique ecological site, but the observatory need not be a threat to endemic life-forms. In fact, since it would preclude recreational use of the mountain, it should be their salvation. It is estimated that 20,000 recreational users visit the mountain every year, posing a threat to the wildlife.",
+    "questionStem": "Which one of the following, if true, most weakens the astronomer’s argument?",
+    "options": {
+      "A": "More than a dozen insect and plant species endemic to Mount Shalko are found nowhere else on earth.",
+      "B": "A coalition of 14 different groups, as diverse as taxpayer organizations and hunting associations, opposes the building of the new observatory.",
+      "C": "Having a complex that covers most of the summit, as well as having the necessary security fences and access road on the mountain, could involve just as much ecological disruption as does the current level of recreational use.",
+      "D": "The building of the observatory would not cause the small towns near Mount Shalko eventually to develop into a large city, complete with smog, bright lights, and an influx of recreation seekers.",
+      "E": "A survey conducted by a team of park rangers concluded that two other mountains in the same general area have more potential for recreational use than Mount Shalko."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 3,
+    "id": "PT92-S3-Q03",
+    "stimulus": "The local fair held its annual photography contest and accepted entries from both amateurs and professionals. The contest awarded prizes in each of several categories. As it turned out, most of the prizes in the contest were won by amateurs.",
+    "questionStem": "Each of the following, if true, could by itself constitute an explanation of the outcome of the photography contest EXCEPT:",
+    "options": {
+      "A": "Many more of the entries in the contest were from amateurs than were from professionals.",
+      "B": "The judges in the contest were amateurs, and amateurs tend to prefer photographs taken by other amateurs.",
+      "C": "Amateurs tend to enter their best photographs while professionals tend to save their best work for their clients.",
+      "D": "Each category in the contest was restricted to amateurs only or professionals only, and there were more categories open to amateurs.",
+      "E": "Three times as many amateurs entered the contest as had entered in any previous year."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 4,
+    "id": "PT92-S3-Q04",
+    "stimulus": "The average 40-year-old North American will have watched more than one million TV commercials in his or her lifetime. We may safely conclude, therefore, that the TV commercial has influenced North American habits of thought.",
+    "questionStem": "The conclusion above follows logically if which one of the following is assumed?",
+    "options": {
+      "A": "The habits of thought that people develop are largely determined by external influences.",
+      "B": "Anything people are exposed to in great quantity will influence their habits of thought.",
+      "C": "It is impossible to avoid or ignore television commercials.",
+      "D": "Some people find television commercials more interesting to watch than the programs themselves.",
+      "E": "Certain forms of communication to which people are subjected will affect their habits of thought."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 5,
+    "id": "PT92-S3-Q05",
+    "stimulus": "Researchers have developed a membrane that quickly removes the oxygen from a refrigerator, thereby killing bacteria and enabling food to be stored almost indefinitely. Since food need not be kept as cold to prevent spoilage, energy costs will be greatly reduced. Thus, over the long run, oxygen-removing refrigerators will prove far less expensive than current models.",
+    "questionStem": "The reasoning in the argument is most vulnerable to criticism on the grounds that it does not",
+    "options": {
+      "A": "address the expense of building or refitting a refrigerator with the new technology",
+      "B": "address the possibility of consumer discomfort with the new refrigerators",
+      "C": "explain the technology that enabled the oxygen-removing membrane to be developed",
+      "D": "take into account the effectiveness of current refrigerator technology in preventing food spoilage",
+      "E": "take into account the inconvenience caused by food spoilage in current refrigerators"
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 6,
+    "id": "PT92-S3-Q06",
+    "stimulus": "Shortly after the power plant opened and began discharging its wastewater into the river, there was a decrease in the overall number of bass caught by anglers downstream from the plant.",
+    "questionStem": "Each of the following, if true, could explain the decrease described above EXCEPT:",
+    "options": {
+      "A": "The discharged wastewater made the river more attractive to fish that are the natural predators of bass.",
+      "B": "The discharged water was warmer than the normal river temperature, leading the bass to seek cooler water elsewhere.",
+      "C": "Because of the new plant, access to the part of the river downstream from the plant was improved, leading to an increase in the number of anglers fishing for bass.",
+      "D": "Because of the new plant, the level of noise downstream increased, making that section of the river a less popular place for anglers to fish.",
+      "E": "The discharged wastewater created turbulence that disrupted the vegetation of the river downstream, destroying some of the bass’s natural habitat."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 7,
+    "id": "PT92-S3-Q07",
+    "stimulus": "The existing works of ancient literature, science, and philosophy do not represent the most original work produced in ancient times. The most compelling evidence for this view is that the existing works frequently refer to other works that we no longer have.",
+    "questionStem": "Which one of the following statements, if added to the argument, most helps to justify its conclusion?",
+    "options": {
+      "A": "Works that contain frequent references to other works tend to be derivative.",
+      "B": "Many extant works have laudable things to say about the missing works.",
+      "C": "A surprisingly large number of ancient texts have been irretrievably lost.",
+      "D": "Subversive ideas tend to be suppressed whenever they are proposed.",
+      "E": "Most current ideas regarded as original were already proposed in ancient times."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 8,
+    "id": "PT92-S3-Q08",
+    "stimulus": "A metaphor is the application of a word or phrase to something to which it does not literally apply in order to emphasize or indicate a similarity between that to which it would ordinarily apply and that to which it is—nonliterally—being applied. Some extremists claim that all uses of language are metaphorical. But this cannot be so, for unless some uses of words are literal, there can be no nonliteral uses of any words.",
+    "questionStem": "Which one of the following most accurately expresses the main conclusion of the argument?",
+    "options": {
+      "A": "It is not the case that all uses of language are metaphorical.",
+      "B": "Either all uses of words are literal or all uses of words are metaphorical.",
+      "C": "Nonliteral meaning is possible only if some uses of words employ their literal meanings.",
+      "D": "Metaphors are nonliteral uses of language that can be used to suggest similarities between objects.",
+      "E": "The ordinary meanings of words must be fixed by convention if the similarities between objects are to be representable by language. by language."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 9,
+    "id": "PT92-S3-Q09",
+    "stimulus": "In a recent poll of chief executive officers (CEOs) of 125 large corporations, the overwhelming majority claimed that employee training and welfare is of the same high priority as customer satisfaction. So the popular belief that the top management of large corporations behaves indifferently to the needs and aspirations of employees is unfounded.",
+    "questionStem": "The argument is most vulnerable to criticism on the grounds that it",
+    "options": {
+      "A": "fails to define adequately the term \"top management\"",
+      "B": "presumes, without giving justification, that one is not indifferent to something that one considers a top priority",
+      "C": "presumes, without giving justification, that the CEOs’ priorities tend to be misplaced",
+      "D": "presumes, without giving justification, that the CEOs’ claims are reflected in actual practice",
+      "E": "makes a generalization based on an unrepresentative sample"
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 10,
+    "id": "PT92-S3-Q10",
+    "stimulus": "Many people joke about Friday the thirteenth being an unlucky day, but a study showed that in one year approximately 17 percent of people scheduled to fly canceled or did not show up for their flights on Friday the thirteenth—a rate higher than that on any other day and date in that year. This shows that a significant percentage of the population would rather disrupt their travel plans than risk flying on a supposedly unlucky day.",
+    "questionStem": "Which one of the following statements, if true, most seriously weakens the argument?",
+    "options": {
+      "A": "People who fly tend to be professionals who as a group are less superstitious than the general public.",
+      "B": "Surveys show that less than 5 percent of the population report that they believe that Friday the thirteenth is an unlucky day.",
+      "C": "Weather conditions at several major airports were severe on the Fridays that fell on the thirteenth in the year of the study.",
+      "D": "In the year of the study, automobile traffic was no lighter on Friday the thirteenth than on other Fridays.",
+      "E": "The absentee rate among airline workers was not significantly higher than normal on the Fridays that fell on the thirteenth in the year of the study."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 11,
+    "id": "PT92-S3-Q11",
+    "stimulus": "The everyday behavior of whales is particularly difficult to study because introducing novel stimuli, such as divers or submarines, into the whales’ environment causes whales to behave in unusual ways. Some biologists plan to train sea lions to carry video cameras on their backs and, on command, to swim along with whales. They argue that since whales are accustomed to there being sea lions nearby, using the sea lions to film the whales would allow biologists to study the everyday behavior of the whales.",
+    "questionStem": "Which one of the following is an assumption on which the biologists’ reasoning depends?",
+    "options": {
+      "A": "Whales will often react aggressively in the presence of divers and submarines although aggressive behavior is unusual for whales.",
+      "B": "The behavior of the sea lions under human command will be within the range of sea lion behavior to which the whales are accustomed.",
+      "C": "The trained sea lions will not be aware that they are carrying video cameras on their backs.",
+      "D": "Sea lions carrying video cameras will be able to film whales at a much closer range than divers can.",
+      "E": "Whales prefer the presence of sea lions to that of either divers or submarines."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 12,
+    "id": "PT92-S3-Q12",
+    "stimulus": "Geologist: A geological fault in the mountain under which the proposed nuclear waste storage facility would be buried could, after a few thousand years, cause the contents to seep out or water to seep in. Since nuclear waste remains dangerous for up to 25,000 years, such seepage would be disastrous. So we should not place a nuclear waste storage facility under this mountain until scientists investigate whether this mountain has any geological faults.",
+    "questionStem": "Which one of the following arguments, if true, most strengthens the geologist’s argumentation?",
+    "options": {
+      "A": "In a few thousand years, human civilization may no longer exist.",
+      "B": "The scientists’ investigation would conclusively show whether or not the mountain has any geological faults.",
+      "C": "The proposed facility was not initially intended to be used for the storage of nuclear waste.",
+      "D": "The scientists’ investigation would increase dramatically the cost of storing nuclear waste under the mountain.",
+      "E": "Nuclear waste could be stored in the proposed facility on a temporary basis."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 13,
+    "id": "PT92-S3-Q13",
+    "stimulus": "Mall manager: By congregating in large groups near the stores in our mall, teenagers create an atmosphere in which many adult shoppers feel uncomfortable. As a result, the adults have begun to spend less time shopping than they have in the adult shoppers feel uncomfortable. As a result, the adults have begun to spend less time shopping than they have in the past. The mall’s goal in this situation is to prevent a significant loss in overall sales, so merchants should do their utmost to discourage teenagers from congregating near stores. Merchant: But the amount spent by teenagers who congregate near mall stores constitutes a significant percentage of the total amount spent in those stores.",
+    "questionStem": "The merchant’s response to the manager’s argument is most accurately described as",
+    "options": {
+      "A": "disputing the truth of claims the manager offers as support for the recommendation",
+      "B": "giving information that pertains to the relation between the manager’s recommendation and the mall’s goal",
+      "C": "suggesting that the mall’s goal is an undesirable one",
+      "D": "contending that the manager’s recommendation is sound but for reasons other than those given by the manager",
+      "E": "using the information cited by the manager to make an additional recommendation that would help achieve the goal Wu: Jurgens is dishonest and so should not be elected mayor."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 14,
+    "id": "PT92-S3-Q14",
+    "stimulus": "Miller: I disagree with your conclusion. Jurgens should be elected mayor. Honest people usually are not tough enough to run a city.",
+    "questionStem": "Miller’s questionable reasoning in which one of the following dialogues is most closely parallel to Miller’s questionable reasoning in the dialogue above?",
+    "options": {
+      "A": "Wu: We should not go back to that restaurant. The service is too slow. Miller: Yes, we should. Food that is served quickly is often of poor quality.",
+      "B": "Wu: Bailey should not be the company spokesperson. He is too aggressive. Miller: Yes, he should. Aggressive people generally do not get pushed around.",
+      "C": "Wu: We should not paint the office this shade of yellow. It’s too bright. Miller: Yes, we should. Bright colors keep people feeling wide awake.",
+      "D": "Wu: We should not upgrade the software. It’s too expensive. Miller: Yes, we should. The best normally costs more.",
+      "E": "Wu: This job applicant should be hired. She has experience. Miller: No, we should hire Lyons instead. Everyone lacks experience when first starting out."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 15,
+    "id": "PT92-S3-Q15",
+    "stimulus": "A survey of historians shows that most believe written texts to be the best source for historical understanding. None of the historians regarded painting, architecture, music, dance, or culinary arts as the best source for historical understanding. So these historians neglect many important repositories of historical knowledge.",
+    "questionStem": "The reasoning in the argument is flawed because the argument takes for granted that",
+    "options": {
+      "A": "there are no potential sources for historical understanding other than written texts and the arts",
+      "B": "painting, architecture, music, dance, and culinary arts are important only as sources for historical understanding",
+      "C": "there are no sources for historical understanding that are neither considered best by historians nor neglected by them",
+      "D": "something other than written texts is the best source for historical understanding",
+      "E": "the other sources for historical understanding mentioned by the historians surveyed are not important repositories of historical knowledge"
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 16,
+    "id": "PT92-S3-Q16",
+    "stimulus": "To act responsibly in one’s professional capacity, one must act on the basis of information that one has made a reasonable effort to make sure is accurate and complete.",
+    "questionStem": "Which one of the following judgments most closely conforms to the principle cited above?",
+    "options": {
+      "A": "Peggy acted responsibly in ordering new computers for the school last year because they turned out to be needed due to an unexpected increase in enrollment this year.",
+      "B": "Mary acted responsibly in firing John, for she first examined the details of his work record and listened to negative reports from some of his supervisors and coworkers.",
+      "C": "Toril did not act responsibly in investing the company’s money in Twicycled Ink, for, though the investment yielded a large return, she had not investigated the risks associated with that investment.",
+      "D": "Conchita did not act responsibly in hiring Helmer to do the company’s bookkeeping because Helmer made a mistake that cost the company a lot of money, though he had never been known to make such a mistake in the past.",
+      "E": "Jennifer did not act responsibly in deciding where to go on her vacation because, instead of carefully weighing her options, she waited until the last minute and decided on impulse."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 17,
+    "id": "PT92-S3-Q17",
+    "stimulus": "Radial keratotomy (RK), a surgery that is designed to reshape the cornea so that light focuses correctly on the retina, is Radial keratotomy (RK), a surgery that is designed to reshape the cornea so that light focuses correctly on the retina, is supposed to make eyeglasses or contact lenses that correct for nearsightedness unnecessary. Yet a study of patients who have undergone RK shows that some of them still need to wear glasses or contact lenses.",
+    "questionStem": "Each of the following, if true, would help to resolve the apparent discrepancy in the information above EXCEPT:",
+    "options": {
+      "A": "As the eye heals from an operation to correct nearsightedness, it may in fact overcorrect, causing the person to be farsighted.",
+      "B": "The more severe a patient’s nearsightedness, the less effective the corneal reshaping of RK will be in correcting the problem.",
+      "C": "Occasionally an RK patient’s eyes may heal differently, causing a difference in the two eyes’ visual acuity that can be overcome only with corrective lenses.",
+      "D": "RK patients who originally suffered from only mild nearsightedness may, if the cornea does not heal evenly, develop an astigmatism that requires corrective lenses.",
+      "E": "Those who choose to undergo RK tend to be as nearsighted before this operation as those who choose not to undergo RK."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 18,
+    "id": "PT92-S3-Q18",
+    "stimulus": "Chelas and Stelma are required to leave their respective stations immediately to pursue any prisoner who attempts to escape from their sector. Furthermore, unless they are pursuing such a prisoner, Chelas and Stelma are forbidden to leave their stations until their replacements have arrived. On May 11 at 9 P.M., when Chelas and Stelma finished the four-hour shift in their sector and their replacements arrived, it was discovered that Chelas had violated these rules and Stelma had not.",
+    "questionStem": "If the statements above are true, each of the following could be true EXCEPT:",
+    "options": {
+      "A": "Chelas and Stelma were at their respective stations at 9 P.M.",
+      "B": "Stelma left her station before 9 P.M. but Chelas did not.",
+      "C": "Chelas left his station before 9 P.M. but Stelma did not.",
+      "D": "A prisoner attempted to escape from Chelas and Stelma’s sector at 7 P.M. and neither Chelas nor Stelma left his or her station before 9 P.M.",
+      "E": "A prisoner attempted to escape from Chelas and Stelma’s sector at 7 P.M. and both Chelas and Stelma left their stations before 9 P.M."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 19,
+    "id": "PT92-S3-Q19",
+    "stimulus": "Faden: Most of our exercise machines are still in use after one year. A recent survey of our customers shows this. Greenwall: But many of those customers could easily be lying because they are too embarrassed to admit that they don’t exercise anymore. Faden: You have no way of showing that customers were lying. Your objection is absurd.",
+    "questionStem": "Which one of the following most accurately describes a flaw in the reasoning above?",
+    "options": {
+      "A": "Greenwall takes for granted that many customers have stopped using the equipment but are too embarrassed to admit it.",
+      "B": "Greenwall presumes, without giving justification, that most people are dishonest about their personal habits.",
+      "C": "Faden presumes, without providing justification, that the more conclusive the evidence is for a claim, the less believable the claim becomes.",
+      "D": "Faden presumes, without providing justification, that the evidence for a claim has not been undermined unless that evidence has been proven false.",
+      "E": "Greenwall ignores the possibility that some people stopped using the equipment but were not embarrassed about it."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 20,
+    "id": "PT92-S3-Q20",
+    "stimulus": "Sarah: Reporters, by allotting time to some events rather than others, are exercising their judgment as to what is newsworthy and what is not. In other words, they always interpret the news. Ramon: Reporters should never interpret the news. Once they deem a story to be newsworthy, they are obliged to relay the facts to me untainted.",
+    "questionStem": "Sarah and Ramon’s remarks provide the most support for holding that they disagree about the truth of which one of the following statements?",
+    "options": {
+      "A": "Reporters actually do interpret the news every time they report it.",
+      "B": "Reporters should exercise their own judgment as to which events are newsworthy.",
+      "C": "Reporters’ primary responsibility is to see that people are kept informed of the facts.",
+      "D": "Reporters should not allot time to reporting some events rather than others.",
+      "E": "Reporting on certain events rather than others qualifies as interpreting the news."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 21,
+    "id": "PT92-S3-Q21",
+    "stimulus": "Advertisement for a lactase supplement: Lactase, an enzyme produced by the body, aids in the digestion of lactose, a natural sugar found in dairy foods. Many subjects in an experiment who drank a liter of milk on an empty stomach showed signs of lactose intolerance—difficulty in digesting dairy products because of insufficient lactase. Thus, extrapolating from the number of subjects adversely affected, at least 50 million people in North America alone should take lactase supplements.",
+    "questionStem": "Which one of the following statements, if true, most seriously weakens the argument?",
+    "options": {
+      "A": "Eating solid food when drinking milk can decrease the amount of lactase produced by the body.",
+      "B": "Most people who consume dairy products consume less lactose at each meal than the amount found in a liter of milk.",
+      "C": "The production of lactase by the human body increases with age.",
+      "D": "Lactose intolerance can interfere with proper nutrition.",
+      "E": "Some dairy foods, such as cheese, contain a form of lactose more difficult to digest than that found in milk."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 22,
+    "id": "PT92-S3-Q22",
+    "stimulus": "Jim: I hear that the company is considering giving Fred and Dorothy 25 percent raises. That would make their salaries higher than mine. Since I have worked here longer than they have, it would be unfair to raise their salaries unless mine is raised to at least what theirs will be. Tasha: Thirty-five employees have been here the same length of time you have and earn the same salary you earn. It would be unfair to raise your salary without raising theirs.",
+    "questionStem": "Which one of the following principles most helps to justify both parties’ statements?",
+    "options": {
+      "A": "In order to be fair, a business must pay identical salaries to employees with identical duties.",
+      "B": "In order to be fair, a business must pay an employee a salary commensurate with his or her experience in the field.",
+      "C": "In order to be fair, a business must always pay one employee more than another if the first employee has worked for the company longer than the second has.",
+      "D": "In order to be fair, a business must never pay one employee more than another unless the first employee has worked for the company longer than the second has.",
+      "E": "In order to be fair, a business must always pay employees a salary commensurate with the amount of time they work every day."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 23,
+    "id": "PT92-S3-Q23",
+    "stimulus": "Commentator: A political constitution that provides the framework for the laws of a nation must be interpreted to apply to new situations not envisioned by its authors. Although these interpretations express the moral and political beliefs of the interpreters, they are usually portrayed as embodying the intentions of the authors. This fiction is vital because without it the illusion, so necessary for political stability, that laws are the bequest of a long tradition rather than the preferences of contemporary politicians would vanish.",
+    "questionStem": "Which one of the following is most strongly supported by the commentator’s statements, if they are true?",
+    "options": {
+      "A": "If the people of a nation do not believe that the laws under which they live express the intentions of their political leaders, that nation will become more politically unstable.",
+      "B": "Political instability will increase if the people of a nation cease to believe that their constitution is being interpreted consistently with the intentions of its authors.",
+      "C": "Political instability will ensue if people come to believe there is a divergence between the beliefs of the authors of their constitution and those of their present political leaders.",
+      "D": "A written constitution preserves the illusion that laws are the bequest of a long tradition rather than the creations of modern politicians.",
+      "E": "The perceived lack of a long legal tradition in a nation makes the political stability of that nation dependent upon the fiction that its present political leaders share the intentions of the authors of the constitution of that nation."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 24,
+    "id": "PT92-S3-Q24",
+    "stimulus": "Only if a family manages its finances wisely will it obtain fiscal security. But without realistic projections of financial obligations, a functional budget cannot be devised. So, if either fiscal security is to be obtained or a workable budget devised, finances must be managed wisely or financial obligations must be projected realistically.",
+    "questionStem": "Which one of the following arguments is most similar in its pattern of reasoning to that in the argument above?",
+    "options": {
+      "A": "Without continued use of pesticides it is not possible to grow enough food for the world’s people. But only when researchers develop pesticides harmless to humans will persistent health problems be reduced. Thus, pesticide use must continue or pesticides harmless to humans must be developed if enough food is to be produced or persistent health problems are to be reduced.",
+      "B": "Reasonably healthy people who wish to lose weight must alter their balance of caloric intake and caloric burn off. But without benefit of medical supervision, drastic changes in diet or exercise patterns would be harmful. So, one who wishes to lose weight but does not want to risk health problems should seek medical supervision before beginning a diet or exercise program.",
+      "C": "Many popular, low-maintenance houseplants are available. Yet some of these plants, because they are toxic, are unsuitable for homes where pets are kept indoors. As a result, pet owners should either select nontoxic plants or keep the plants out of a pet’s reach if they want low-maintenance houseplants or cannot keep their pets outside.",
+      "D": "Only employees who work diligently will be retained in this company until they are eligible for retirement. Also, we can retain only those employees who fit the new organizational structure of our proposed redesign process. So, if this redesign process is carried out, any employee who seeks continuing employment here must work diligently and fit the new organizational structure.",
+      "E": "A successful charity drive requires detailed planning. Volunteers must be recruited and trained, and equipment and facilities must be prepared months before the drive is to begin. Thus, if a group is organizing a charity drive, the group must formulate a detailed plan well ahead of time or it can expect failure."
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 25,
+    "id": "PT92-S3-Q25",
+    "stimulus": "Anthropologist: After mapping the complete dominance hierarchy for a troupe of vervet monkeys by examining their pairwise interaction, we successfully predicted more complex forms of their group behavior by assuming that each monkey had knowledge of the complete hierarchy. Since our prediction was so accurate, it follows that the assumption we used to reach it was in fact true. Primatologist: Although I agree that your assumption helped you make those predictions, your conclusion does not follow. You might as well argue that since we can predict the output of some bank cash machines by assuming that these machines actually want to satisfy the customers’ requests, these cash machines must really have desires.",
+    "questionStem": "The primatologist uses which one of the following argumentative techniques in countering the anthropologist’s argument?",
+    "options": {
+      "A": "citing various facts that could not obtain if the anthropologist’s conclusion were correct",
+      "B": "offering another argument that has as its premise the denial of the thesis that the anthropologist defends",
+      "C": "applying one of the anthropologist’s reasoning steps in another argument in an attempt to show that it leads to an absurd conclusion",
+      "D": "attacking the anthropologist’s expertise by suggesting the anthropologist is ignorant of the analogy that can be drawn between animals and machines",
+      "E": "suggesting that the anthropologist’s argument relies on a misinterpretation of a key scientific term"
+    }
+  },
+  {
+    "section": 3,
+    "qnum": 26,
+    "id": "PT92-S3-Q26",
+    "stimulus": "Anthropologist: After mapping the complete dominance hierarchy for a troupe of vervet monkeys by examining their pairwise interaction, we successfully predicted more complex forms of their group behavior by assuming that each monkey had knowledge of the complete hierarchy. Since our prediction was so accurate, it follows that the assumption we used to reach it was in fact true. Primatologist: Although I agree that your assumption helped you make those predictions, your conclusion does not follow. You might as well argue that since we can predict the output of some bank cash machines by assuming that these machines actually want to satisfy the customers’ requests, these cash machines must really have desires.",
+    "questionStem": "Which one of the following is a point about which the anthropologist and the primatologist are committed to disagreeing?",
+    "options": {
+      "A": "whether the anthropologist successfully predicted the behavior of individual monkeys by use of the map of the troupe’s dominance hierarchy",
+      "B": "whether the output of a bank cash machine can be accurately predicted on the basis of knowledge of the requests made to it by customers",
+      "C": "whether vervet monkeys can have knowledge of the complete hierarchy of dominance relations that exists within their own troupe",
+      "D": "whether the fact that the anthropologist’s assumption led to such successful predictions provides sufficient grounds for the claim that the vervet monkeys had knowledge of their dominance hierarchy",
+      "E": "whether the behavior exhibited by vervet monkeys in experimental situations can be used as the basis for a generalization concerning all vervet monkeys"
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 1,
+    "id": "PT92-S4-Q01",
+    "stimulus": "Taxpayer: For the last ten years, Metro City’s bridge-maintenance budget of $1 million annually has been a prime example of fiscal irresponsibility. In a well-run bridge program, the city would spend $15 million a year on maintenance, which would prevent severe deterioration, thus limiting capital expenses for needed bridge reconstruction to $10 million. However, as a result of its attempt to economize, the city is now faced with spending $400 million over two years on emergency reconstruction of its bridges.",
+    "questionStem": "The main point of the taxpayer’s argument is that Metro City",
+    "options": {
+      "A": "should have budgeted substantially more money for maintenance of its bridges",
+      "B": "would have had a well-run bridge program if it had spent more money for reconstruction of its bridges",
+      "C": "is spending more than it needs to on maintenance of its bridges",
+      "D": "is economizing on its bridge program to save money in case of emergencies",
+      "E": "has bridges that are more expensive to maintain than they were to build"
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 2,
+    "id": "PT92-S4-Q02",
+    "stimulus": "Twenty professional income-tax advisors were given identical records from which to prepare an income- tax return. The advisors were not aware that they were dealing with fictitious records compiled by a financial magazine. No two of the completed tax returns agreed with each other, and only one was technically correct.",
+    "questionStem": "If the information above is correct, which one of the following conclusions can be properly drawn on the basis of it?",
+    "options": {
+      "A": "Only one out of every twenty income-tax returns prepared by any given professional income-tax advisor will be correct.",
+      "B": "The fact that a tax return has been prepared by a professional income-tax advisor provides no guarantee that the tax return has been correctly prepared.",
+      "C": "In order to insure that tax returns are correct, it is necessary to hire professional income-tax advisors to prepare them.",
+      "D": "All professional income-tax advisors make mistakes on at least some of the tax returns they prepare.",
+      "E": "People are more likely to have an incorrectly prepared tax return if they prepare their own tax returns than if they hire a professional income-tax advisor."
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 3,
+    "id": "PT92-S4-Q03",
+    "stimulus": "The manager of a nuclear power plant defended the claim that the plant was safe by revealing its rate of injury for current workers: only 3.2 injuries per 200,000 hours of work, a rate less than half the national average for all industrial plants. The manager claimed that, therefore, by the standard of how many injuries occur, the plant was safer than most other plants where the employees could work.",
+    "questionStem": "Which one of the following, if true, most calls into question the manager’s claim?",
+    "options": {
+      "A": "Workers at nuclear power plants are required to receive extra training in safety precautions on their own time and at their own expense.",
+      "B": "Workers at nuclear power plants are required to report to the manager any cases of accidental exposure to radiation.",
+      "C": "The exposure of the workers to radiation at nuclear power plants was within levels the government considers safe.",
+      "D": "Workers at nuclear power plants have filed only a few lawsuits against the management concerning unsafe working conditions.",
+      "E": "Medical problems arising from work at a nuclear power plant are unusual in that they are not likely to appear until after an employee has left employment at the plant."
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 4,
+    "id": "PT92-S4-Q04",
+    "stimulus": "Columnist: The country is presently debating legislation that, if passed, would force manufacturers to increase the number of paid vacation days for employees, to pay higher overtime wages, and to pay all day-care expenses for children of each employee. This legislation is being supported by members of groups that have resorted to violent tactics in the past, and by individuals who are facing indictment on tax-evasion charges. We must defeat this legislation and what it stands for.",
+    "questionStem": "The columnist’s argument is flawed because it",
+    "options": {
+      "A": "attacks legislation by calling into question the integrity of the originators of the legislation",
+      "B": "assails legislation on the basis of the questionable character of supporters of the legislation",
+      "C": "attempts to discredit legislation by appealing to public sentiment for those who would be adversely affected",
+      "D": "presupposes that legislation is bad legislation whenever it has only a small number of supporters outside the country’s national legislative body",
+      "E": "rejects legislation on the grounds that its supporters act inconsistently in seeking to place burdens on manufacturers upon whose business success the supporters depend"
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 5,
+    "id": "PT92-S4-Q05",
+    "stimulus": "If the ivory trade continues, experts believe, the elephant will soon become extinct in Africa, because poaching is rife in many areas. A total ban on ivory trading would probably prevent the extinction. However, the country of Zimbabwe— which has virtually eliminated poaching within its borders and which relies on income from carefully culling elephant herds that threaten to become too big— objects to such a ban. Zimbabwe holds that the problem lies not with the ivory trade but with the conservation policies of other countries.",
+    "questionStem": "Which one of the following principles forms a logical basis for Zimbabwe’s objection to a ban?",
+    "options": {
+      "A": "International measures to correct a problem should not adversely affect countries that are not responsible for the problem.",
+      "B": "Freedom of trade is not a right but a consequence of agreements among nations.",
+      "C": "Respecting a country’s sovereignty is more important than preventing the extinction of a species.",
+      "D": "Prohibitions affecting several countries should be enforced by a supranational agency.",
+      "E": "Effective conservation cannot be achieved without eliminating poaching."
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 6,
+    "id": "PT92-S4-Q06",
+    "stimulus": "The male sage grouse has air sacs that, when not inflated, lie hidden beneath the grouse’s neck feathers. During its spring courtship ritual, the male sage grouse inflates these air sacs and displays them to the female sage grouse. Some scientists hypothesize that this courtship ritual serves as a means for female sage grouse to select healthy mates.",
+    "questionStem": "Which one of the following, if true, most strongly supports the scientists’ hypothesis?",
+    "options": {
+      "A": "Some female sage grouse mate with unhealthy male sage grouse.",
+      "B": "When diseased male sage grouse were treated with antibiotics, they were not selected by female sage grouse during the courtship ritual.",
+      "C": "Some healthy male sage grouse do not inflate their air sacs as part of the courtship ritual.",
+      "D": "Male sage grouse are prone to parasitic infections that exhibit symptoms visible on the birds’ air sacs.",
+      "E": "The sage grouse is commonly afflicted with a strain of malaria that tends to change as the organism that causes it undergoes mutation."
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 7,
+    "id": "PT92-S4-Q07",
+    "stimulus": "Consumers will be hurt by the new lower ceilings on halibut catches. Given the law of supply and demand these restrictions are likely to result in an increase in the price of the fish.",
+    "questionStem": "Which one of the following, if assumed, would do most to justify the claim that the price of halibut will increase?",
+    "options": {
+      "A": "The demand for halibut will not decrease substantially after the new restrictions are imposed.",
+      "B": "There is a connection between the supply of halibut and the demand for it.",
+      "C": "The lost production of halibut will not be replaced by increased production of other fish.",
+      "D": "The demand for other fish will be affected by the new restrictions.",
+      "E": "The amount of halibut consumed represents a very small proportion of all fish consumed."
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 8,
+    "id": "PT92-S4-Q08",
+    "stimulus": "Knowledge of an ancient language is essential for reading original ancient documents. Most ancient historical documents, however, have been translated into modern languages, so scholars of ancient history can read them for their research without learning ancient languages. Therefore, aspirants to careers as ancient-history scholars no longer need to take the time to learn ancient languages.",
+    "questionStem": "The argument is vulnerable to criticism on which one of the following grounds?",
+    "options": {
+      "A": "It concludes that something is never necessary on the grounds that it is not always necessary.",
+      "B": "A statement of fact is treated as if it were merely a statement of opinion.",
+      "C": "The conclusion is no more than a restatement of the evidence provided as support of that conclusion.",
+      "D": "The judgment of experts is applied to a matter in which their expertise is irrelevant.",
+      "E": "Some of the evidence presented in support of the conclusion is inconsistent with other evidence provided."
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 9,
+    "id": "PT92-S4-Q09",
+    "stimulus": "The Board of Trustees of the Federici Art Museum has decided to sell some works from its collection in order to raise the funds necessary to refurbish its galleries. Although this may seem like a drastic remedy, the curator has long maintained that funds necessary to refurbish its galleries. Although this may seem like a drastic remedy, the curator has long maintained that among the paintings that the late Ms. Federici collected for the museum were several unsuccessful immature works by Renoir and Cézanne that should be sold because they are of inferior quality and so add nothing to the overall quality of the museum’s collection. Hence, the board’s action will not detract from the quality of the museum’s collection.",
+    "questionStem": "The conclusion drawn depends on which one of the following assumptions?",
+    "options": {
+      "A": "Art speculators are unable to distinguish an inferior painting by Renoir from a masterpiece by him.",
+      "B": "All of the paintings that the board of trustees sells will be among those that the curator recommends selling.",
+      "C": "All of the paintings by Renior and Cézanne that are owned by the Federici Art Museum were purchased by Ms. Federici herself.",
+      "D": "Only an avid collector of paintings by Cézanne would be willing to pay a high price for early works by this artist.",
+      "E": "A great work of art can be truly appreciated only if it is displayed in a carefully designed and well-maintained gallery."
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 10,
+    "id": "PT92-S4-Q10",
+    "stimulus": "The Board of Trustees of the Federici Art Museum has decided to sell some works from its collection in order to raise the funds necessary to refurbish its galleries. Although this may seem like a drastic remedy, the curator has long maintained that among the paintings that the late Ms. Federici collected for the museum were several unsuccessful immature works by Renoir and Cézanne that should be sold because they are of inferior quality and so add nothing to the overall quality of the museum’s collection. Hence, the board’s action will not detract from the quality of the museum’s collection.",
+    "questionStem": "Which one of the following, if true, most weakens the argument?",
+    "options": {
+      "A": "The directors of an art museum can generally raise funds for refurbishing the building in which the museum’s collection is housed by means other than selling part of its collection.",
+      "B": "The quality of an art collection is determined not just by the quality of its paintings, but by what its collection demonstrates about the development of the artistic talent and ideas of the artists represented.",
+      "C": "The immature works by Renoir and Cézanne that were purchased by Ms. Federici were at that time thought by some critics to be unimportant juvenile works.",
+      "D": "Those people who speculate in art by purchasing artworks merely to sell them at much higher prices welcome inflation in the art market, but curators of art museums regret the inflation in the art market.",
+      "E": "The best work of a great artist demands much higher prices in the art market than the worst work of that same artist."
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 11,
+    "id": "PT92-S4-Q11",
+    "stimulus": "Taken together, some 2,000 stocks recommended on a popular television show over the course of the past 12 years by the show’s guests, most of whom are successful consultants for multibillion-dollar stock portfolios, performed less successfully than the market as a whole for this 12-year period. So clearly, no one should ever follow any recommendations by these so-called experts.",
+    "questionStem": "Each of the following, if true, weakens the argument EXCEPT:",
+    "options": {
+      "A": "Taken together, the stocks recommended on the television show performed better than the market as a whole for the past year.",
+      "B": "Taken together, the stocks recommended on the television show performed better for the past 12-year period than stock portfolios that were actually selected by any other means.",
+      "C": "Performance of the stocks recommended on the telephone show was measured by stock dividends, whereas the performance of the market as a whole was measured by change in share value.",
+      "D": "Performance of the stocks recommended on the television show was measured independently by a number of analysts, and the results of all the measurements concurred.",
+      "E": "The stock portfolios for which the guests were consultants performed better for the past 12- year period than the market as a whole."
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 12,
+    "id": "PT92-S4-Q12",
+    "stimulus": "The school principal insisted that student failures are caused by bad teaching. In a relatively short time failing grades disappeared from the school. The principal happily recognized this as evidence that the teaching had improved at the school.",
+    "questionStem": "The flawed pattern of reasoning in the above is most similar to that in which one of the following?",
+    "options": {
+      "A": "The nutritionist insisted that the weight gain that team members complained of was caused by overeating. In a brief time all the members stopped overeating. The nutritionist was pleased to conclude that they had stopped gaining weight.",
+      "B": "The manager insisted that the workers who filed complaints had too many different tasks. The manager simplified the jobs, and complaints stopped. The manager happily concluded that the working environment has been improved.",
+      "C": "The nutritionist insisted that the weight gain that team members complained of was merely in their imagination. Members were given weight charts for the last three months. The nutritionist was pleased to conclude that the complaints of weight gain had stopped.",
+      "D": "The manager insisted that the workers who filed complaints did not have enough to do. Soon there were no more complaints filed. The manager was pleased to conclude that the workers were now productively filling their time.",
+      "E": "The nutritionist insisted that the weight gain that team members complained of was caused by their thinking of food too often. The nutritionist was happy to conclude that the weight gain had stopped once the team members reported that they had stopped thinking of food so often."
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 13,
+    "id": "PT92-S4-Q13",
+    "stimulus": "Unlike other primroses, self-pollinating primroses do not need to rely on insects for pollination. In many years insect pollinators are scarce, and in those years a typical non-self-pollinating primrose produces fewer seeds than does a typical self-pollinating primrose. In other years, seed production is approximately equal. Thus, self-pollinating primroses have the advantage of higher average seed production. Aside from seed production, these self-pollinating primroses are indistinguishable from non-self-pollinating primroses. Nevertheless, self-pollinating primrose plants remain rare among primroses.",
+    "questionStem": "Which one of the following, if true, most helps to resolve the apparent discrepancy in the information above?",
+    "options": {
+      "A": "Insects that collect pollen from primroses do not discriminate between self-pollinating primroses and non-self-pollinating primroses.",
+      "B": "When insect pollinators are scarce, non-self- pollinating primroses produce larger seeds that are more likely to germinate than are seeds from self-pollinating primroses.",
+      "C": "Self-pollinating primroses that are located in areas with few insects produce no fewer seeds than do self-pollinating primroses that are located in areas with many insects.",
+      "D": "Many primroses are located in areas in which the soil conditions that are optimal for seed germination are not present.",
+      "E": "Self-pollinating primroses can be assisted by insects during pollination but do not require the assistance of insects to be pollinated."
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 14,
+    "id": "PT92-S4-Q14",
+    "stimulus": "We have a moral obligation not to destroy books, even if they belong to us. The reason is quite simple: If preserved, books will almost certainly contribute to the intellectual and emotional enrichment of future generations.",
+    "questionStem": "Which one of the following most accurately expresses the principle underlying the argument?",
+    "options": {
+      "A": "It is morally incumbent upon us to devote effort to performing actions that have at least some chance of improving other people’s lives.",
+      "B": "We are morally obligated to preserve anything that past generations had preserved for our intellectual and emotional enrichment.",
+      "C": "The moral commitments we have to future generations supersede the moral commitments we have to the present generation.",
+      "D": "We are morally obligated not to destroy anything that will most likely enrich, either intellectually or emotionally, for posterity.",
+      "E": "Being morally obligated not to destroy something requires that we be reasonably assured that that thing will lead to the betterment of someone we know."
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 15,
+    "id": "PT92-S4-Q15",
+    "stimulus": "The southern half of a certain region of the earth was covered entirely by water during the Cretaceous period, the last 75 million years of the Mesozoic era, the era when dinosaurs roamed the earth. Dinosaurs lived only on land. Thus, plesiosaurs—swimming reptiles that lived during the Cretaceous period exclusively—were not dinosaurs. No single species of dinosaur lived throughout the entire Mesozoic era.",
+    "questionStem": "If the statements in the passage are true, each of the following could be true EXCEPT:",
+    "options": {
+      "A": "Dinosaurs inhabited the northern half of the region throughout the entire Mesozoic era.",
+      "B": "Plesiosaurs did not inhabit the southern half of the region during the Cretaceous period.",
+      "C": "Plesiosaurs did not inhabit the southern half of the region before the Cretaceous period.",
+      "D": "Dinosaurs did not inhabit the northern half of the region during the Cretaceous period.",
+      "E": "Dinosaurs inhabited the southern half of the region throughout the entire Mesozoic era."
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 16,
+    "id": "PT92-S4-Q16",
+    "stimulus": "Essayist: Wisdom and intelligence are desirable qualities. However, being intelligent does not imply that one is wise, nor does being wise imply that one is intelligent. In my own experience, the people I meet have one or the other of these qualities but not both.",
+    "questionStem": "If the essayist’s statements are true, then each of the following could be true EXCEPT:",
+    "options": {
+      "A": "Most people are neither intelligent or wise.",
+      "B": "Most people are both intelligent and wise.",
+      "C": "No one is both wise and intelligent.",
+      "D": "No one is either wise or intelligent.",
+      "E": "Many people are intelligent and yet lack wisdom."
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 17,
+    "id": "PT92-S4-Q17",
+    "stimulus": "Concerned citizen: The mayor, an outspoken critic of the proposed restoration of city hall, is right when he notes that the building is outdated, but that the restoration would be expensive at a time when the budget is already tight. We cannot afford such a luxury item in this time of financial restraint, he says. However, I respectfully disagree. The building provides the last remaining link to the days of the city’s founding, and preserving a sense of municipal history is crucial to maintaining respect for our city government and its authority.",
+    "questionStem": "So to the question, \"Can we really afford to?\" I can only respond, \"Can we afford not to?\" Which one of the following most accurately characterizes a flaw in the concerned citizen’s argument?",
+    "options": {
+      "A": "The argument is solely an emotional appeal to history.",
+      "B": "The argument ambiguously uses the word \"afford.\"",
+      "C": "The argument inappropriately appeals to the authority of the mayor.",
+      "D": "The argument incorrectly presumes that the restoration would be expensive.",
+      "E": "The argument inappropriately relies on the emotional connotations of words such as \"outdated\" and \"luxury.\""
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 18,
+    "id": "PT92-S4-Q18",
+    "stimulus": "Obviously, we cannot in any real sense mistreat plants. Plants do not have nervous systems, and having a nervous system is necessary to experience pain.",
+    "questionStem": "The conclusion above follows logically if which one of the following is assumed?",
+    "options": {
+      "A": "Any organism that can experience pain can be mistreated.",
+      "B": "Only organisms that have nervous systems can experience pain.",
+      "C": "Any organism that has nervous system can experience pain.",
+      "D": "Only organisms that can experience pain can be mistreated.",
+      "E": "Any organism that has nervous system can be mistreated."
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 19,
+    "id": "PT92-S4-Q19",
+    "stimulus": "Inez: In these poor economic times, people want to be sure they are getting good value for their money. I predict people would be more willing to buy antiques at our fair if we first have the object inspected by professional appraisers who would remove any objects of questionable authenticity. Anika: I disagree with your prediction. Our customers already are antiques experts. Furthermore, hiring professional appraisers would push up our costs considerably, thus forcing us to raise the prices on all our antiques.",
+    "questionStem": "Anika’s response proceeds by",
+    "options": {
+      "A": "indicating that a particular plan would have an effect contrary to the anticipated effect",
+      "B": "claiming that a particular plan should not be adopted because, while effective, it would have at least one undesirable consequence",
+      "C": "arguing that an alternative plan could achieve a desired result more easily than the plan originally proposed",
+      "D": "questioning the assumption that authorities are available who have special knowledge of the problem under discussion",
+      "E": "offering a counterexample in order to show that a particular general claim is too broadly stated"
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 20,
+    "id": "PT92-S4-Q20",
+    "stimulus": "In some ill-considered popularizations of interesting current research, it is argued that higher apes have the capacity for language but have never put it to use—a remarkable biological miracle, given the enormous selectional advantage of even minimal linguistic skills. It is rather like claiming that some animal has wings adequate for flight but has never thought to fly.",
+    "questionStem": "Which one of the following is most similar in its reasoning to the argument above?",
+    "options": {
+      "A": "Arguing that there are some humans who never sleep is rather like discovering a species of lion that does not eat meat.",
+      "B": "Arguing that Earth has been visited by aliens from outer space is rather like claiming that early explorers had visited North America but never founded cities.",
+      "C": "Arguing that the human brain has telekinetic powers that no humans have ever exercised is rather like arguing that some insect has legs but never uses them to walk.",
+      "D": "Claiming that some people raised tobacco but did not smoke it is rather like claiming that a society that knew how to brew alcohol never drank it.",
+      "E": "Arguing that not all people with cars will drive them is rather like claiming that humans invented gasoline long before they used it as fuel for transportation. they used it as fuel for transportation."
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 21,
+    "id": "PT92-S4-Q21",
+    "stimulus": "Sarah: Some schools seek to foster a habit of volunteering in their students by requiring them to perform community service. But since a person who has been forced to do something has not really volunteered and since the habit of volunteering cannot be said to have been fostered in a person who has not yet volunteered for anything, there is no way this policy can succeed by itself. Paul: I disagree. Some students forced to perform community service have enjoyed it so much that they subsequently actually volunteer to do something similar. In such cases, the policy can clearly be said to have fostered a habit of volunteering.",
+    "questionStem": "Paul responds to Sarah’s argument using which one of the following argumentative techniques?",
+    "options": {
+      "A": "He argues that Sarah is assuming just what she sets out to prove.",
+      "B": "He argues that Sarah’s conception of what it means to volunteer excludes certain activities that ought to be considered instances of volunteering.",
+      "C": "He introduces considerations that call into question one of Sarah’s assumptions.",
+      "D": "He questions Sarah’s motives for advancing an argument against the school policy.",
+      "E": "He argues that a policy Sarah fails to consider could accomplish the same aim as the policy that Sarah considers."
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 22,
+    "id": "PT92-S4-Q22",
+    "stimulus": "Sarah: Some schools seek to foster a habit of volunteering in their students by requiring them to perform community service. But since a person who has been forced to do something has not really volunteered and since the habit of volunteering cannot be said to have been fostered in a person who has not yet volunteered for anything, there is no way this policy can succeed by itself. Paul: I disagree. Some students forced to perform community service have enjoyed it so much that they subsequently actually volunteer to do something similar. In such cases, the policy can clearly be said to have fostered a habit of volunteering.",
+    "questionStem": "The main point at issue between Sarah and Paul is whether",
+    "options": {
+      "A": "there are any circumstances under which an individual forced to perform a task can correctly be said to have genuinely volunteered to perform that task",
+      "B": "being forced to perform community service can provide enjoyment to the individual who is forced to perform such service",
+      "C": "being forced to perform community service can by itself encourage a genuine habit of volunteering in those students who are forced to perform such service",
+      "D": "it is possible for schools to develop policies that foster the habit of volunteering in their students",
+      "E": "students who develop a habit of volunteering while in school are inclined to perform community service later in their lives"
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 23,
+    "id": "PT92-S4-Q23",
+    "stimulus": "Only computer scientists understand the architecture of personal computers, and only those who understand the architecture of personal computers appreciate the advances in technology made in the last decade. It follows that only those who appreciate these advances are computer scientists.",
+    "questionStem": "Which one of the following most accurately describes a flaw in the reasoning in the argument?",
+    "options": {
+      "A": "The argument contains no stated or implied relationship between computer scientists and those who appreciate the advances in technology in the last decade.",
+      "B": "The argument ignores the fact that some computer scientists may not appreciate the advances in technology made in the last decade.",
+      "C": "The argument ignores the fact that computer scientists may appreciate other things besides the advances in technology made in the last decade.",
+      "D": "The premises of the argument are stated in such a way that they exclude the possibility of drawing any logical conclusion.",
+      "E": "The premises of the argument presuppose that everyone understands the architecture of personal computers."
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 24,
+    "id": "PT92-S4-Q24",
+    "stimulus": "Sociologist: Research shows, contrary to popular opinion, that, all other things being equal, most people who have pets are less happy than most people who do not. Therefore, any person who wants to be as happy as possible would do well to consider not having a pet.",
+    "questionStem": "Which one of the following, if true, most seriously weakens the sociologist’s argument?",
+    "options": {
+      "A": "Some people who have pets are happier than most people who do not.",
+      "B": "Most people who have no pets occasionally wish that they had pets.",
+      "C": "Most people who have pets are reasonably happy.",
+      "D": "Most people who have pets feel happier because they have pets.",
+      "E": "All people who have no pets admit to feeling unhappy sometimes."
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 25,
+    "id": "PT92-S4-Q25",
+    "stimulus": "The dwarf masked owl, a rare migratory bird of prey, normally makes its winter home on the Baja peninsula, where it nests in the spiny cactus. In fact, there are no other suitable nesting sites for the dwarf masked owl on the Baja peninsula. But a blight last spring destroyed all of the spiny cacti on the Baja peninsula. So unless steps are taken to reestablish the spiny cactus population, the dwarf masked owl will not make its home on the Baja peninsula this winter.",
+    "questionStem": "The argument depends on assuming which one of the following?",
+    "options": {
+      "A": "No birds of prey other than the dwarf masked owl nest in the spiny cactus.",
+      "B": "If the Baja peninsula contains spiny cacti, then the dwarf masked owl makes its winter home there.",
+      "C": "On occasion the dwarf masked owl has been known to make its winter home far from its normal migratory route.",
+      "D": "The dwarf masked owl will not make its winter home on the Baja peninsula only if that region contains no spiny cacti.",
+      "E": "Suitable nesting sites must be present where the dwarf masked owl makes its winter home."
+    }
+  },
+  {
+    "section": 4,
+    "qnum": 26,
+    "id": "PT92-S4-Q26",
+    "stimulus": "At night, a flock of crows will generally perch close together in a small place—often a piece of wooded land—called a roost. Each morning, the crows leave the roost and fan out in small groups to hunt and scavenge the surrounding area. For most flocks, the crows’ hunting extends as far as 100 to 130 kilometers (60 to 80 miles) from the roost. Normally, a flock will continue to occupy the same roost for several consecutive years, and when it abandons a roost site for a new one, the new roost is usually less than eight kilometers (five miles) away:",
+    "questionStem": "Of the following claims, which one can most justifiably be rejected on the basis of the statements above?",
+    "options": {
+      "A": "Crows will abandon their roost site only in response to increases in the population of the flock.",
+      "B": "When there is a shortage of food in the area in which a flock of crows normally hunts and scavenges, some members of the flock will begin to hunt and scavenge outside that area.",
+      "C": "Most of the hunting and scavenging that crows do occurs more than eight kilometers (five miles) from their roost.",
+      "D": "Once a flock of crows has settled on a new roost site, it is extremely difficult to force it to abandon that site for another.",
+      "E": "When a flock of crows moves to a new roost site, it generally does so because the area in which it has hunted and scavenged has been depleted of food sources."
+    }
+  }
+]

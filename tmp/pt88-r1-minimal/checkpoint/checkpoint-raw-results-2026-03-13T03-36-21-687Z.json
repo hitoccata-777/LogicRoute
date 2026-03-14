@@ -1,0 +1,167 @@
+[
+  {
+    "questionId": "PT93-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"D\",\n  \"reason\": \"Jorge argues for making all changes at once, while Christina argues for incremental changes, showing they disagree on whether changes should be made simultaneously.\"\n}",
+    "latencyMs": 5244
+  },
+  {
+    "questionId": "PT93-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"D\",\n  \"reason\": \"Jorge advocates immediate changes (all at once), while Christina supports incremental changes (lower heights first), directly opposing whether changes should be simultaneous.\"\n}",
+    "latencyMs": 1633
+  },
+  {
+    "questionId": "PT93-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"D\",\n  \"reason\": \"Jorge advocates immediate changes (one leap), while Christina supports incremental changes (lower heights first), disagreeing on whether changes should be simultaneous.\"\n}",
+    "latencyMs": 1305
+  },
+  {
+    "questionId": "PT93-S1-Q02",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"E\",\n  \"reason\": \"John's reasoning assumes fluoridated water is the only cause of bone cancer, ignoring other potential causes, which weakens his conclusion.\"\n}",
+    "latencyMs": 2097
+  },
+  {
+    "questionId": "PT93-S1-Q02",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"E\",\n  \"reason\": \"John assumes avoiding fluoride will prevent bone cancer, ignoring other potential causes.\"\n}",
+    "latencyMs": 1230
+  },
+  {
+    "questionId": "PT93-S1-Q02",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"E\",\n  \"reason\": \"John assumes avoiding fluoride prevents cancer, but ignores other potential causes, making his conclusion uncertain.\"\n}",
+    "latencyMs": 1315
+  },
+  {
+    "questionId": "PT93-S1-Q03",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "A",
+    "predictedAnswer": "D",
+    "isCorrect": false,
+    "rawText": "{  \"correct_answer\": \"D\",\n  \"reason\": \"The ban impairs freedom of expression more than minimally by preventing voters from learning about candidates' late gains, weakening the argument's claim that the impairment is trivial.\"\n}",
+    "latencyMs": 1864
+  },
+  {
+    "questionId": "PT93-S1-Q03",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"A\",\n  \"reason\": \"If few people are influenced by polls in the week before an election, the columnist's main premise about polls distorting outcomes is undermined, weakening the argument for a ban.\"\n}",
+    "latencyMs": 1869
+  },
+  {
+    "questionId": "PT93-S1-Q03",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"A\",\n  \"reason\": \"If few people are influenced by polls published in the two weeks prior (including the banned week), the premise that polls significantly distort outcomes by influencing voters is undermined, weakening the argument for the ban.\"\n}",
+    "latencyMs": 1286
+  },
+  {
+    "questionId": "PT93-S1-Q04",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"D\",\n  \"reason\": \"The inherited blood protein prevents vascular blockage caused by high cholesterol, directly resolving the paradox.\"\n}",
+    "latencyMs": 1893
+  },
+  {
+    "questionId": "PT93-S1-Q04",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"D\",\n  \"reason\": \"It directly explains why high cholesterol does not lead to cardiovascular disease in Limone by identifying a genetic protective factor.\"\n}",
+    "latencyMs": 1309
+  },
+  {
+    "questionId": "PT93-S1-Q04",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"D\",\n  \"reason\": \"The inherited blood protein directly prevents vascular blockage caused by high cholesterol, resolving the paradox.\"\n}",
+    "latencyMs": 1398
+  },
+  {
+    "questionId": "PT93-S1-Q05",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"B\",\n  \"reason\": \"The argument assumes sickened cows can sense the fungus to avoid it, linking illness detection to avoidance behavior.\"\n}",
+    "latencyMs": 1393
+  },
+  {
+    "questionId": "PT93-S1-Q05",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"B\",\n  \"reason\": \"The argument assumes cows can sense the fungus after illness to avoid it, linking cause (fungus) to effect (avoidance).\"\n}",
+    "latencyMs": 1444
+  },
+  {
+    "questionId": "PT93-S1-Q05",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"B\",\n  \"reason\": \"The argument assumes cows can sense the fungus to avoid it after illness.\"\n}",
+    "latencyMs": 1346
+  }
+]

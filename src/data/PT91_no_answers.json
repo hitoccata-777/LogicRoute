@@ -1,0 +1,716 @@
+[
+  {
+    "section": 1,
+    "qnum": 1,
+    "id": "PT91-S1-Q01",
+    "stimulus": "Press release: A comprehensive review evaluating the medical studies done up to the present time has found no reason to think that drinking coffee in normal amounts harms the coffee-drinker's heart. So coffee drinkers can relax and enjoy their beverage—it is safe to drink coffee.",
+    "questionStem": "Which one of the following points to a weakness in the reasoning in the press release's argument?",
+    "options": {
+      "A": "The review was only an evaluation of studies and did not itself undertake to study patients.",
+      "B": "The health of the heart is not identical with the general health of the body.",
+      "C": "Coffee drinkers might choose to eat, along with their coffee, foods containing substances that harm the heart.",
+      "D": "Other beverages besides coffee might contain stimulants that have some effect on the heart.",
+      "E": "Drinking unusually large amount of coffee could be caused by stress that itself directly harms the heart."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 2,
+    "id": "PT91-S1-Q02",
+    "stimulus": "All people prefer colors that they can distinguish easily to colors that they have difficulty distinguishing. Infants can easily distinguish bright colors but, unlike adults, have difficulty distinguishing subtle shades. A brightly colored toy for infants sells better than the same toy in subtle shades at the same price.",
+    "questionStem": "Which one of the following conclusions is most strongly supported by the information in the passage?",
+    "options": {
+      "A": "Infants prefer bright primary colors to bright secondary colors.",
+      "B": "Color is the most important factor in determining which toys an infant will prefer to play with.",
+      "C": "Individual infants do not have strong preferences for one particular bright color over other bright colors.",
+      "D": "The sales of toys for infants reflect the preferences of infants in at least one respect.",
+      "E": "Toy makers study infants to determine what colors the infants can distinguish easily."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 3,
+    "id": "PT91-S1-Q03",
+    "stimulus": "A group of unusual meteorites was found in Shergotty, India. Their structure indicates that they originated on one of the geologically active planets, Mercury, Venus, or Mars. Because of Mercury's proximity to the Sun, any material dislodged from that planet's surface would have been captured by the Sun, rather than falling to Earth as meteorites. Nor could Venus be the source of the meteorites, because its gravity would have prevented dislodged material from escaping into space. The meteorites, therefore, probably fell to Earth after being dislodged from Mars, perhaps as the result of a collision with a large object.",
+    "questionStem": "The argument derives its conclusion by",
+    "options": {
+      "A": "offering a counterexample to a theory",
+      "B": "eliminating competing alternative explanations",
+      "C": "contrasting present circumstances with past circumstances",
+      "D": "questioning an assumption",
+      "E": "abstracting a general principle from specific data"
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 4,
+    "id": "PT91-S1-Q04",
+    "stimulus": "Because quitting smoking is very stressful and leads to weight gain, it is difficult to do. The key to quitting, however, may be as simple as replacing an unhealthy activity with a healthy one. In one study, half of those attempting to quit were assigned to a smoking-cessation program alone, and the other half were assigned to the same program plus fifteen weeks of aerobic exercise. At the one-month mark, none in the first group had quit, but 40 percent of those in the second group had not smoked.",
+    "questionStem": "Each of the following, if true, provides some support for the argument EXCEPT:",
+    "options": {
+      "A": "Regular exercise prevents weight gain.",
+      "B": "Each group in the study included four hundred randomly selected participants.",
+      "C": "Nonsmokers accustomed to regular exercise do not gain weight when they stop exercising.",
+      "D": "Aerobic exercise can stimulate the brain's production of endorphins, which reduce tension.",
+      "E": "Of those in the second group in the study, 38 percent had not smoked at the one-year mark."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 5,
+    "id": "PT91-S1-Q05",
+    "stimulus": "Altogether, the students in Ms. Tarnowski's Milton Elementary School class collected more aluminum cans than did the students in any of the school's other classes. Therefore, the Milton student who collected the most aluminum cans was in Ms. Tarnowski's class.",
+    "questionStem": "Which one of the following arguments contains flawed reasoning that is most parallel to that in the argument above?",
+    "options": {
+      "A": "Altogether, more trees were planted by the students in Mr. Kelly's class than were planted by those in Mr. Liang's class and Ms. Jackson's class combined. Therefore, Mr. Kelly's students planted more trees than Ms. Jackson's students planted.",
+      "B": "More than half of Milton Elementary School's students play in the band and more than half of the school's students sing in the choir. Therefore, every student at Milton Elementary School either plays in the band or sings in the choir.",
+      "C": "Mr. Rowe's Milton Elementary School class raised more money by selling candy bars than Ms. Hunt's class raised by holding a raffle. Therefore, the number of candy bars sold by Mr. Rowe's class was greater than the number of raffle tickets sold by Ms. Hunt's class.",
+      "D": "The total number of tickets to the school fair sold by the students in Ms. Ramirez's Milton Elementary School class was greater than the number sold by Milton students from any other class. Therefore, the Milton student who sold the most tickets to the school fair was a student in Ms. Ramirez's class.",
+      "E": "Ms. Ventura's Milton Elementary School class assembled more birdhouses than did any of the school's other classes. Since Ms. Ventura's class had fewer students than any other Milton class, her students assembled more birdhouses, on average, than did the students in any other Milton class."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 6,
+    "id": "PT91-S1-Q06",
+    "stimulus": "Several excellent candidates have been proposed for the presidency of United Wire, and each candidate would bring to the job different talents and experience. If the others are compared with Jones, however, it will be apparent that none of them has her unique set of qualifications. Jones, therefore, is best qualified to be the new president of United Wire.",
+    "questionStem": "The argument is vulnerable to criticism on the ground that it",
+    "options": {
+      "A": "uses flattery to win over those who hold an opposing position",
+      "B": "refutes a distorted version of an opposing position",
+      "C": "seeks to distinguish one member of a group on the basis of something that applies to all",
+      "D": "supports a universal claim on the basis of a single example",
+      "E": "describes an individual in terms that appropriately refer only to the group as a whole"
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 7,
+    "id": "PT91-S1-Q07",
+    "stimulus": "A neighborhood group plans to protest the closing of the neighborhood's only recreation center on the grounds that to do so would leave the neighborhood without local access to a recreation center. \"Our neighborhood already has the most residents per center of any neighborhood in the city,\" complained one resident, \"and closing this center would make the situation unacceptable since access to recreational facilities is a necessity for this neighborhood.\"",
+    "questionStem": "Each of the following, if true, weakens the resident's argument EXCEPT:",
+    "options": {
+      "A": "A large number of the neighborhood's residents are unable to travel outside their locality to gain access to recreational facilities.",
+      "B": "Children, the main users of recreational facilities, make up a disproportionately small segment of the neighborhood's population.",
+      "C": "Often the recreation center in the neighborhood is open but not being used.",
+      "D": "Programs that are routinely filled at other recreation centers must be canceled at the neighborhood's recreation center due to lack of interest.",
+      "E": "As people become more involved in computers and computer games, recreation centers are becoming increasingly less important."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 8,
+    "id": "PT91-S1-Q08",
+    "stimulus": "Sociologist: The claim that there is a large number of violent crimes in our society is false, for this claim is based upon the large number of stories in newspapers about violent crimes. But since violent crimes are very rare occurrences, newspapers are likely to print stories about them.",
+    "questionStem": "The sociologist's argument is flawed because it",
+    "options": {
+      "A": "presupposes that most newspaper stories are about violent crime",
+      "B": "presupposes the truth of the conclusion it is attempting to establish",
+      "C": "assumes without warrant that the newspaper stories in question are not biased",
+      "D": "mistakes a property of each member of a group taken as an individual for a property of the group taken as a whole",
+      "E": "uncritically draws an inference from what has been true in the past to what will be true in the future"
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 9,
+    "id": "PT91-S1-Q09",
+    "stimulus": "Historian: Anyone who thinks that the terrors of the ancient regime of Q were exclusively the work of fanatics is overlooking a basic truth: the regime was made up primarily of ordinary people enthusiastically seeking paradise. The regime executed many people in pursuit of its goal; but it later became clear that paradise, as they defined it, is unrealizable. So at least some of the ordinary people of Q were in fact murderers.",
+    "questionStem": "Which one of the following principles, if valid, provides the most support for the historian's argumentation?",
+    "options": {
+      "A": "The pursuit of paradise does not justify murder.",
+      "B": "The pursuit of paradise justifies fanaticism.",
+      "C": "Execution in pursuit of what is later found to be unattainable constitutes murder.",
+      "D": "Fanaticism in pursuit of paradise constitutes inhumanity.",
+      "E": "Enthusiasm in pursuit of what is eventually found to be unattainable constitutes fanaticism."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 10,
+    "id": "PT91-S1-Q10",
+    "stimulus": "Economist: The economy seems to be heading out of recession. Recent figures show that consumers are buying more durable goods than before, indicating that they expect economic growth in the near future.",
+    "questionStem": "That consumers are buying more durable goods than before figures in the economist's argument in which one of the following ways?",
+    "options": {
+      "A": "It is the phenomenon that the argument seeks to explain.",
+      "B": "Its truth is required in order for the argument's conclusion to be true.",
+      "C": "It is an inference drawn from the premise that the recession seems to be ending.",
+      "D": "It is an inference drawn from the premise that consumers expect economic growth in the near future.",
+      "E": "It is the primary evidence from which the argument's conclusion is drawn."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 11,
+    "id": "PT91-S1-Q11",
+    "stimulus": "Not surprisingly, there are no professors under the age of eighteen. And, as well known, no one under eighteen can vote legally. Finally, some brilliant people are professors, some are legal voters, and some are under eighteen.",
+    "questionStem": "If the statements above are true, then on the basis of them which one of the following must also be true?",
+    "options": {
+      "A": "No professors are eighteen-year-olds.",
+      "B": "All brilliant people are either professors, legal voters, or under eighteen.",
+      "C": "Some legal voters are not professors.",
+      "D": "Some professors are neither legal voters nor brilliant people.",
+      "E": "Some brilliant people are neither professors nor legal voters."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 12,
+    "id": "PT91-S1-Q12",
+    "stimulus": "For years scientists have been scanning the skies in the hope of finding life on other planets. But in spite of the ever increasing sophistication of the equipment they employ, some of it costing hundreds of millions of dollars, not the first shred of evidence of such life has been forthcoming. And there is no reason to think that these scientists will be anymore successful in the future, no matter how much money is invested in the search. The dream of finding extraterrestrial life is destined to remain a dream, as science's experience up to this point should indicate.",
+    "questionStem": "Which one of the following most accurately states the main point of the argument?",
+    "options": {
+      "A": "There is no reason to believe that life exists on other planets.",
+      "B": "The equipment that scientists employ is not as sophisticated as it should be.",
+      "C": "Scientists searching for extraterrestrial life will not find it.",
+      "D": "Only if scientists had already found evidence of life on other planets would continued search be justified.",
+      "E": "We should not spend money on sophisticated equipment to aid in the search for extraterrestrial life."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 13,
+    "id": "PT91-S1-Q13",
+    "stimulus": "Carl's Coffee Emporium stocks only two decaffeinated coffees: French Roast and Mocha Java. Yusef only serves decaffeinated coffee, and the coffee he served after dinner last night was far too smooth and mellow to have been French Roast. So, if Yusef still gets all his coffee from Carl's, what he served last night was Mocha Java. Roast. So, if Yusef still gets all his coffee from Carl's, what he served last night was Mocha Java.",
+    "questionStem": "The argument above is most similar in its logical structure to which one of the following?",
+    "options": {
+      "A": "Samuel wants to take three friends to the beach. His mother owns both a sedan and a convertible. The convertible holds four people so, although the sedan has a more powerful engine, if Samuel borrows a vehicle from his mother, he will borrow the convertible.",
+      "B": "If Anna wants to walk from her house to the office where she works, she must either go through the park or take the overpass across the railroad tracks. The park paths are muddy, and Anna does not like using the overpass, so she never walks to work.",
+      "C": "Rose can either take a two-week vacation in July or wait until October and take a three- week vacation. The trail she had planned to hike requires three weeks to complete but is closed by October, so if Rose takes a vacation, it will not be the one she had planned.",
+      "D": "Werdix, Inc., has offered Arno a choice between a job in sales and a job in research. Arno would like to work at Werdix but he would never take a job in sales when another job is available, so if he accepts one of these jobs, it will be the one in research.",
+      "E": "If Teresa does not fire her assistant, her staff will rebel and her department's efficiency will decline. Losing her assistant would also reduce its efficiency, so, if no alternative solution can be found, Teresa's department will become less efficient."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 14,
+    "id": "PT91-S1-Q14",
+    "stimulus": "Steven: The allowable blood alcohol level for drivers should be cut in half. With this reduced limit, social drinkers will be deterred from drinking and driving, resulting in significantly increased highway safety. Miguel: No, lowering the current allowable blood alcohol level would have little effect on highway safety, because it would not address the most important aspect of the drunken driving problem, which is the danger to the public posed by heavy drinkers, who often drive with a blood alcohol level of twice the current legal limit.",
+    "questionStem": "Steven and Miguel's statements provide the most support for holding that they would disagree about the truth of which one of the followings statements?",
+    "options": {
+      "A": "Social drinkers who drink an drive pose a substantial threat to the public.",
+      "B": "There is a direct correlation between a driver's blood alcohol level and the driver's ability to drive safely.",
+      "C": "A driver with a blood alcohol level above the current legal limit poses a substantial danger to the public.",
+      "D": "Some drivers whose blood alcohol level is lower than the current legal limit pose a danger to the public.",
+      "E": "A driver with a blood alcohol level slightly greater than half the current legal limit poses no danger to the public."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 15,
+    "id": "PT91-S1-Q15",
+    "stimulus": "The authors of a recent article examined warnings of an impending wave of extinctions of animal species within the next 100 years. These authors say that no evidence exists to support the idea that the rate of extinction of animal species is now accelerating. They are wrong, however. Consider only the data on fishes: 40 species and subspecies of North American fishes have vanished in the twentieth century, 13 between 1900 and 1950, and 27 since 1950.",
+    "questionStem": "Which one of the following is the main point of the argument?",
+    "options": {
+      "A": "There is evidence that the rate of extinction of animal species is accelerating.",
+      "B": "The future rate of extinction of animal species cannot be determined from available evidence.",
+      "C": "The rate of extinction of North American fishes is parallel to the rate of extinction of all animal species taken together.",
+      "D": "Forty species and subspecies of North American fishes have vanished in the twentieth century.",
+      "E": "A substantial number of fish species are in danger of imminent extinction. The authors of a recent article examined warnings of an impending wave of extinctions of animal species within the next 100 years. These authors say that no evidence exists to support the idea that the rate of extinction of animal species is now accelerating. They are wrong, however. Consider only the data on fishes: 40 species and subspecies of North American fishes have vanished in the twentieth century, 13 between 1900 and 1950, and 27 since 1950."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 16,
+    "id": "PT91-S1-Q16",
+    "stimulus": "The authors of a recent article examined warnings of an impending wave of extinctions of animal species within the next 100 years. These authors say that no evidence exists to support the idea that the rate of extinction of animal species is now accelerating. They are wrong, however. Consider only the data on fishes: 40 species and subspecies of North American fishes have vanished in the twentieth century, 13 between 1900 and 1950, and 27 since 1950.",
+    "questionStem": "The answer to which one of the following questions would contribute most to an evaluation of the argument?",
+    "options": {
+      "A": "Were the fish species and subspecies that became extinct unrepresentative of animal species in general with regard to their pattern of extinction?",
+      "B": "How numerous were the populations in 1950 of the species and subspecies of North American fishes that have become extinct since 1950?",
+      "C": "Did any of the species or subspecies of North American fishes that became extinct in the twentieth century originate in regions outside of North America?",
+      "D": "What proportion of North American fish species and subspecies whose populations were endangered in 1950 are now thriving?",
+      "E": "Were any of the species or subspecies of North American fishes that became extinct in the twentieth century commercially important?"
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 17,
+    "id": "PT91-S1-Q17",
+    "stimulus": "After the Second World War, the charter of the newly formed United Nations established an eleven- member Security Council and charged it with taking collective action in response to threats to world peace. The charter further provided that the five nations that were then the major powers would permanently have sole authority to cast vetoes. The reason given for this arrangement was that the burden of maintaining world peace would rest on the world's major powers, and no nation should be required to assume the burden of enforcing a decision it found repugnant.",
+    "questionStem": "The reason given for the structure of the Security Council assumes that",
+    "options": {
+      "A": "it does not make sense to provide for democracy among nations when nations themselves are not all democracies",
+      "B": "no nation that was not among the major powers at the end of the Second World War would become a major power",
+      "C": "nations would not eventually gravitate into large geographical blocs, each containing minor powers as well as at least one major power",
+      "D": "minor powers would not ally themselves with major powers to gain the protection of the veto exercised by major powers",
+      "E": "decisions reached by a majority of nations in response to threats to world peace would be biased in favor of one or more major powers"
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 18,
+    "id": "PT91-S1-Q18",
+    "stimulus": "Environmental scientist: It is true that over the past ten years, there has been a sixfold increase in government funding for the preservation of wetlands, while the total area of wetlands needing such preservation has increased only twofold (although this area was already large ten years ago). Even when inflation is taken into account, the amount of funding now is at least three times what it was ten years ago. Nevertheless, the current amount of government funding for the preservation of wetlands is inadequate and should be augmented.",
+    "questionStem": "Which one of the following, if true, most helps to reconcile the environmental scientist's conclusion with the evidence cited above?",
+    "options": {
+      "A": "The governmental agency responsible for administering wetland-preservation funds has been consistently mismanaged and run inefficiently over the past ten years.",
+      "B": "Over the past ten years, the salaries of scientists employed by the government to work on the preservation of wetlands have increased at a rate higher than the inflation rate.",
+      "C": "Research over the past ten years has enabled scientists today to identify wetlands in need of preservation well before the areas are at serious risk of destruction.",
+      "D": "More people today, scientists and nonscientists alike, are working to preserve all natural resources, including wetlands.",
+      "E": "Unlike today, funding for the preservation of wetlands was almost nonexistent ten years ago."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 19,
+    "id": "PT91-S1-Q19",
+    "stimulus": "In Australia the population that is of driving age has grown larger over the last five years, but the annual number of traffic fatalities has declined. This leads to the conclusion that, overall, the driving-age population of Australia consists of more skillful drivers now than five years ago.",
+    "questionStem": "Each of the statements below, if true, weakens the argument EXCEPT:",
+    "options": {
+      "A": "Three years ago, a mandatory seat-belt law went into effect throughout Australia.",
+      "B": "Five years ago, Australia began a major road repair project.",
+      "C": "Because of increases in the price of fuel, Australians on average drive less each year than in the preceding year.",
+      "D": "The number of hospital emergency facilities in Australia has doubled in the last five years.",
+      "E": "In response to an increase in traffic fatalities, Australia instituted a program of mandatory driver education five years ago."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 20,
+    "id": "PT91-S1-Q20",
+    "stimulus": "Anthropological studies indicate that distinct cultures differ in their moral codes. Thus, as long as there are distinct cultures, there are no values shared across cultures.",
+    "questionStem": "Each of the following, if true, would weaken the argument EXCEPT:",
+    "options": {
+      "A": "Anthropologists rely on inadequate translation techniques to investigate the values of cultures that use languages different from the anthropologists' languages.",
+      "B": "As a result of advancing technology and global communication, we will someday all share the same culture and the same values.",
+      "C": "Although specific moral values differ across cultures, more general moral principles, such as \"Friendship is good,\" are common to all cultures.",
+      "D": "The anthropologists who have studied various cultures have been biased in favor of finding differences rather than similarities between distinct cultures.",
+      "E": "What appear to be differences in values between distinct cultures are nothing more than differences in beliefs about how to live in accordance with shared values."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 21,
+    "id": "PT91-S1-Q21",
+    "stimulus": "Newspaper editor: Law enforcement experts, as well as most citizens, have finally come to recognize that legal prohibitions against gambling all share a common flaw: no matter how diligent the effort, the laws are impossible to enforce. Ethical qualms notwithstanding, when a law fails to be effective, it should not be a law. That is why there should be no legal prohibition against gambling.",
+    "questionStem": "Which one of the following, if assumed, allows the argument's conclusion to be properly drawn?",
+    "options": {
+      "A": "No effective law is unenforceable.",
+      "B": "All enforceable laws are effective.",
+      "C": "No legal prohibitions against gambling are enforceable.",
+      "D": "Most citizens must agree with a law for the law to be effective.",
+      "E": "Most citizens must agree with a law for the law to be enforceable."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 22,
+    "id": "PT91-S1-Q22",
+    "stimulus": "Copernicus's astronomical system is superior to Ptolemy's and was so at the time it was proposed, even though at that time all observational evidence was equally consistent with both theories. Ptolemy believed that the stars revolved around the earth at great speeds. This struck Copernicus as unlikely; he correctly thought that a simpler theory is that the earth rotates on its axis.",
+    "questionStem": "This argument most closely conforms to which one of the following principles?",
+    "options": {
+      "A": "Simplicity should be the sole deciding factor in choosing among competing scientific theories.",
+      "B": "If one theory is likely to be true, and another competing theory is likely to be false, then the one likely to be true is the superior of the two.",
+      "C": "If all observational evidence is consistent with two competing theories, the one that is more intuitively true is the more practical theory to adopt.",
+      "D": "Other things being equal, the more complex of two competing theories is the inferior theory.",
+      "E": "Other things being equal, the simpler of two competing theories is the more scientifically important theory."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 23,
+    "id": "PT91-S1-Q23",
+    "stimulus": "Essayist: The existence of a moral order in the universe—i.e., an order in which bad is always eventually punished and good rewarded— depends upon human souls being immortal. In some cultures this moral order is regarded as the result of a karma that controls how one is reincarnated, in others it results from the actions of a supreme being who metes out justice to people after their death. But however a moral order is represented, if human souls are immortal, then it follows that the bad will be punished.",
+    "questionStem": "Which one of the following most accurately describes a flaw in the essayist's reasoning?",
+    "options": {
+      "A": "From the assertion that something is necessary to a moral order, the argument concludes that thing is sufficient for an element of the moral order to be realized.",
+      "B": "The argument takes mere beliefs to be established facts.",
+      "C": "From the claim that the immortality of human souls implies that there is a moral order in the universe, the argument concludes that there being a moral order in the universe implies that human souls are immortal.",
+      "D": "The argument treats two fundamentally different conceptions of a moral order as essentially the same.",
+      "E": "The argument's conclusion is presupposed in the definition it gives of a moral order."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 24,
+    "id": "PT91-S1-Q24",
+    "stimulus": "No mathematical proposition can be proven true by observation. It follows that it is impossible to know any mathematical proposition to be true.",
+    "questionStem": "The conclusion follows logically if which one of the following is assumed?",
+    "options": {
+      "A": "Only propositions that can be proven true can be known to be true.",
+      "B": "Observation alone cannot be used to prove the truth of any proposition.",
+      "C": "If a proposition can be proven true by observation, then it can be known to be true.",
+      "D": "Knowing a proposition to be true is impossible only if it cannot be proven true by observation.",
+      "E": "Knowing a proposition to be true requires proving it true by observation."
+    }
+  },
+  {
+    "section": 1,
+    "qnum": 25,
+    "id": "PT91-S1-Q25",
+    "stimulus": "The publisher of a best-selling self-help book had, in some promotional material, claimed that it showed readers how to become exceptionally successful. Of course, everyone knows that no book can deliver to the many what, by definition, must remain limited to the few: exceptional success. Thus, although it is clear that the publisher knowingly made a false claim, doing so should not be considered unethical in this case.",
+    "questionStem": "Which one of the following principles, if valid, most strongly supports the reasoning above?",
+    "options": {
+      "A": "Knowingly making a false claim is unethical only if it is reasonable for people to accept the claim as true.",
+      "B": "Knowingly making a false claim is unethical if those making it derive a gain at the expense of those acting as if the claim were true.",
+      "C": "Knowingly making a false claim is unethical in only those cases in which those who accept the claim as true suffer a hardship greater than the gain they were anticipating.",
+      "D": "Knowingly making a false claim is unethical only if there is a possibility that someone will act as if the claim might be true.",
+      "E": "Knowingly making a false claim is unethical in at least those cases in which for someone else to discover that the claim is false, that person must have acted as if the claim were true."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 1,
+    "id": "PT91-S2-Q01",
+    "stimulus": "Francis: Failure to become properly registered to vote prevents one-third of the voting-age citizens of Lagonia from voting. If local election boards made the excessively cumbersome registration process easier, more people would register and vote. Sharon: The high number of citizens not registered to vote has persisted despite many attempts to make registering easier. Surveys show that most of these citizens believe that their votes would not make a difference. Until that belief is changed, simplifying the registration process will not increase the percentage of citizens registering to vote.",
+    "questionStem": "The main issue in dispute between Francis and Sharon is",
+    "options": {
+      "A": "whether changing the voter registration process would be cumbersome",
+      "B": "why so many citizens do not register to vote",
+      "C": "what percentage of those registered to vote actually vote",
+      "D": "whether local election boards have simplified the registration process",
+      "E": "why the public lacks confidence in the effects of voting"
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 2,
+    "id": "PT91-S2-Q02",
+    "stimulus": "Advertisement: Anyone who thinks moisturizers are not important for beautiful skin should consider what happens to the earth, the skin of the world, in time of drought. Without regular infusions of moisture the ground becomes lined and cracked and its lush liveliness fades away. Thus your skin, too, should be protected from the ravages caused by lack of moisture; give it the protection provided by regular infusions of Dewyfresh, the drought-defying moisturizer.",
+    "questionStem": "The Dewyfresh advertisement exhibits which one of the following errors of reasoning?",
+    "options": {
+      "A": "It treats something that is necessary for bringing about a state of affairs as something that is sufficient to bring about that state of affairs.",
+      "B": "It treats the fact that two things regularly occur together as proof that there is a single thing that its the cause of them both.",
+      "C": "It overlooks the fact that changing what people think is the case does not necessarily change what is the case.",
+      "D": "It relies on the ambiguity of the term \"infusion,\" which can designate either a process or the product of that process.",
+      "E": "It relies on an analogy between two things that are insufficiently alike in the respects in which they would have to be alike for the conclusion to be supported."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 3,
+    "id": "PT91-S2-Q03",
+    "stimulus": "M: The Greek alphabet must have been invented by some individual who knew the Phoenician writing system and who wanted to have some way of recording Homeric epics and thereby preserving expressions of a highly developed tradition of oral poetry. P: Your hypothesis is laughable! What would have been the point of such a person's writing Homeric epics down? Surely a person who knew them well enough to write them down would not need to read them; and no one else could read them, according to your hypothesis.",
+    "questionStem": "Which one of the following is an argumentative strategy that P uses in responding to M?",
+    "options": {
+      "A": "attacking M's understanding of the literary value of oral poetry",
+      "B": "disagreeing with M's thesis without attempting to refute it",
+      "C": "challenging M's knowledge of the Phoenician writing system",
+      "D": "attempting to undermine M's hypothesis by making it appear absurd",
+      "E": "providing an alternative interpretation of evidence put forward by M M: The Greek alphabet must have been invented by some individual who knew the Phoenician writing system and who wanted to have some way of recording Homeric epics and thereby preserving expressions of a highly developed tradition of oral poetry. P: Your hypothesis is laughable! What would have been the point of such a person's writing Homeric epics down? Surely a person who knew them well enough to write them down would not need to read them; and no one else could read them, according to your hypothesis."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 4,
+    "id": "PT91-S2-Q04",
+    "stimulus": "M: The Greek alphabet must have been invented by some individual who knew the Phoenician writing system and who wanted to have some way of recording Homeric epics and thereby preserving expressions of a highly developed tradition of oral poetry. P: Your hypothesis is laughable! What would have been the point of such a person's writing Homeric epics down? Surely a person who knew them well enough to write them down would not need to read them; and no one else could read them, according to your hypothesis.",
+    "questionStem": "P's argument is vulnerable to which one of the following criticisms?",
+    "options": {
+      "A": "It fails to demonstrate that the Phoenician alphabet alone could have provided the basis for the Greek alphabet.",
+      "B": "It incorrectly assumes that the first text ever written in Greek was a Homeric poem.",
+      "C": "It confuses the requirements for a complex oral tradition with the requirements of a written language.",
+      "D": "It attempts to demonstrate the truth of a hypothesis merely by showing that it is possible.",
+      "E": "It overlooks the possibility that the person who invented the Greek alphabet did so with the intention of teaching it to others."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 5,
+    "id": "PT91-S2-Q05",
+    "stimulus": "Bacteria from food can survive for several days on the surface of plastic cutting boards, but bacteria can penetrate wooden cutting boards almost immediately, leaving the surface free of contamination. Therefore, wooden cutting boards, unlike plastic cutting boards, need not be washed in order to prevent their contaminating food that is cut on them; wiping them off to remove food debris is sufficient.",
+    "questionStem": "Which one of the following is an assumption on which the argument depends?",
+    "options": {
+      "A": "Washing plastic cutting boards does not remove all bacteria from the surface.",
+      "B": "Prevention of bacteria contamination is the only respect in which wooden cutting boards are superior to plastic cutting boards.",
+      "C": "Food that is not already contaminated with bacteria can be contaminated only by being cut on contaminated cutting boards.",
+      "D": "Bacteria that penetrate into wooden cutting boards do not reemerge on the surface after the cutting boards have been used.",
+      "E": "Washing wooden cutting boards kills bacteria below the surface of the cutting boards."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 6,
+    "id": "PT91-S2-Q06",
+    "stimulus": "Asthmagon was long considered the most effective of the drugs known as beta-2 agonists, designed to alleviate asthma attacks. However, studies conducted in Rhiago between 1981 and 1987 revealed that nearly one out of every five of the asthma patients under observation who took asthmagon suffered serious side effects after taking the drug. Citing this statistic, some doctors argue that asthmagon should be banned as an anti-asthma drug.",
+    "questionStem": "Which one of the following, if true, most weakens the case for the proposed ban of asthmagon?",
+    "options": {
+      "A": "In Rhiago, where asthmagon had been the most widely prescribed of the beta-2 agonists, the number of asthma deaths increased between 1981 and 1987.",
+      "B": "Many of the patients under observation to whom asthmagon was administered had not previously taken a beta-2 agonist.",
+      "C": "Despite the growing concern about the drug, many physicians in Rhiago still prescribe asthmagon to asthma suffers.",
+      "D": "Among the patients observed, only those who had very high cholesterol counts suffered side effects after taking asthmagon.",
+      "E": "Asthmagon increases the severity of asthma attacks in some people because the drug can cause damage to heart tissues."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 7,
+    "id": "PT91-S2-Q07",
+    "stimulus": "In response to requests made by the dairy industry, the government is considering whether to approve the synthetic hormone BST for use in dairy cows. BST increases milk production but also leads to recurring udder inflammation, decreased fertility, and symptoms of stress in cows who receive the hormone. All of these problems can be kept under control with constant veterinary care, but such levels of veterinary help would cost big farms far less per cow than they would small farms.",
+    "questionStem": "If the statements above are true, which one of the following claims is most strongly supported by them?",
+    "options": {
+      "A": "The government is unlikely to approve the synthetic hormone BST for use in cows.",
+      "B": "The proportion of cows that suffer from udder inflammation, decreased fertility, and symptoms of stress is currently greater on big dairy farms than on small ones.",
+      "C": "At the present time milk from cows raised on small farms is safer to drink than milk from cows raised on big farms.",
+      "D": "The milk from cows who receive BST will not be safe for people to drink.",
+      "E": "Owners of big farms stand to gain more from government approval of BST than do owners of small farms."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 8,
+    "id": "PT91-S2-Q08",
+    "stimulus": "Jones is selling a house to Smith. The contract between the two specifies that for up to a year after ownership is transferred, Jones will be responsible for repairing any \"major structural defects,\" defined as defects in the roof or roof supporting components of the house, that might be found. Jones is not responsible for any other repairs. The house has a truss roof, which means that the only walls that support the roof are the exterior walls.",
+    "questionStem": "It can be properly concluded from the information above that",
+    "options": {
+      "A": "Jones did not know of any defects in the roof or roof-supporting components of the house at the time the contract was written",
+      "B": "although other components of the house may contain defects, the roof and roof-supporting components of the house are currently free from such defects",
+      "C": "the contract does not oblige Jones to repair any defects in the house's nonexterior walls after ownership of the house has been transferred",
+      "D": "Smith will be obligated to repair all structural defects in the house within a year after ownership is transferred, except those for which Jones is responsible",
+      "E": "in the past Jones has had to make repairs to some of the house's exterior walls"
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 9,
+    "id": "PT91-S2-Q09",
+    "stimulus": "The play Mankind must have been written between 1431 and 1471. It cannot have been written before 1431, for in that year the rose noble, a coin mentioned in the play, was first circulated. The play cannot have been written after 13471, since in that year King Henry VI died, and he is mentioned as a living monarch in the play's dedication.",
+    "questionStem": "The argument would be most seriously weakened if which one of the following were discovered?",
+    "options": {
+      "A": "The Royal Theatre Company includes the play on a list of those performed in 1480.",
+      "B": "Another coin mentioned in the play was first minted in 1422.",
+      "C": "The rose noble was neither minted nor circulated after 1468.",
+      "D": "Although Henry VI was deposed in 1461, he was briefly restored to the throne in 1470.",
+      "E": "In a letter written in early 1428, a merchant told of having seen the design for a much- discussed new coin called the \"rose noble.\""
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 10,
+    "id": "PT91-S2-Q10",
+    "stimulus": "All material bodies are divisible into parts, and everything divisible is imperfect. It follows that all material bodies are imperfect. It likewise follows that the spirit is not a material body.",
+    "questionStem": "The final conclusion above follows logically if which one of the following is assumed?",
+    "options": {
+      "A": "Everything divisible is a material body.",
+      "B": "Nothing imperfect is indivisible.",
+      "C": "The spirit is divisible.",
+      "D": "The spirit is perfect.",
+      "E": "The spirit is either indivisible or imperfect."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 11,
+    "id": "PT91-S2-Q11",
+    "stimulus": "Special kinds of cotton that grow fibers of green or brown have been around since the 1930s but only recently became commercially feasible when a long- fibered variety that can be spun by machine was finally bred. Since the cotton need not be dyed, processing plants avoid the expense of dyeing and the ecological hazards of getting rid of leftover dye and by products. products.",
+    "questionStem": "Which one of the following can be properly inferred from the passage?",
+    "options": {
+      "A": "It is ecologically safer to process long-fibered cotton than short-fibered cotton.",
+      "B": "Green and brown cottons that can be spun only by hand are not commercially viable.",
+      "C": "Hand-spun cotton is more ecologically safe than machine-spun cotton.",
+      "D": "Short-fibered regular cottons are economically competitive with synthetic fabrics.",
+      "E": "Garments made of green and brown cottons are less expensive than garments made of regular cotton."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 12,
+    "id": "PT91-S2-Q12",
+    "stimulus": "People in the tourist industry know that excessive development of seaside areas by the industry damages the environment. Such development also hurts the tourist industry by making these areas unattractive to tourists, a fact of which people in the tourist industry are well aware. People in the tourist industry would never knowingly do anything to damage the industry. Therefore, they would never knowingly damage the seaside environment, and the people who are concerned about damage to the seaside environment thus have nothing to fear from the tourist industry.",
+    "questionStem": "The reasoning in the argument is most vulnerable to criticism on which one of the following grounds?",
+    "options": {
+      "A": "No support is provided for the claim that excessive development hurts the tourist industry.",
+      "B": "That something is not the cause of a problem is used as evidence that it never coexists with that problem.",
+      "C": "The argument shifts from applying a characteristic to a few members of a group to applying the characteristic to all members of that group.",
+      "D": "The possibility that the tourist industry would unintentionally harm the environment is ignored.",
+      "E": "The argument establishes that a certain state of affairs is likely and then treats that as evidence that the state of affairs is inevitable."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 13,
+    "id": "PT91-S2-Q13",
+    "stimulus": "Health officials claim that because the foods and beverages mentioned or consumed on many television programs are extremely low in nutritional value, watching television has a bad influence on the dietary habits of television viewers.",
+    "questionStem": "The claim by health officials depends on the presupposition that",
+    "options": {
+      "A": "the eating and drinking habits of people on television programs are designed to mirror the eating and drinking habits of television viewers",
+      "B": "seeing some foods and beverages being consumed on, or hearing them mentioned on, television programs increases the likelihood that viewers will consume similar kinds of foods and beverages",
+      "C": "the food and beverage industry finances television programs so that the foods and beverages that have recently appeared on the market can be advertised on those programs",
+      "D": "television viewers are only interested in the people on television programs who have the same eating and drinking habits as they do",
+      "E": "the eating and drinking habits of people on television programs provide health officials with accurate predictions about the food and beverages that will become popular among television viewers"
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 14,
+    "id": "PT91-S2-Q14",
+    "stimulus": "In an effort to boost sales during the summer months, which are typically the best for soft-drink sales, Foamy Soda lowered its prices. In spite of this, however, the sales of Foamy Soda dropped during the summer months.",
+    "questionStem": "Each of the following, if true, contributes to reconciling the apparent discrepancy indicated above EXCEPT:",
+    "options": {
+      "A": "The soft-drink industry as a whole experienced depressed sales during the summer months.",
+      "B": "Foamy Soda's competitors lowered their prices even more drastically during the summer months.",
+      "C": "Because of an increase in the price of sweeteners, the production costs of Foamy Soda rose during the summer months.",
+      "D": "A strike at Foamy Soda's main plant forced production cutbacks that resulted in many stores not receiving their normal shipments during the summer months.",
+      "E": "The weather during the summer months was unseasonably cool, decreasing the demand for soft drinks."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 15,
+    "id": "PT91-S2-Q15",
+    "stimulus": "Dr. Z: Many of the characterizations of my work offered by Dr. Q are imprecise, and such characterizations do not provide an adequate basis for sound criticism of my work.",
+    "questionStem": "Which one of the following can be properly inferred from Dr. Z's statement?",
+    "options": {
+      "A": "Some of Dr. Q's characterizations of Dr. Z's work provide an adequate basis for sound criticism of Dr. Z's work.",
+      "B": "All of Dr. Q's characterizations of Dr. Z's work that are not imprecise provide an adequate basis for sound criticism of Dr. Z's work.",
+      "C": "All of the characterizations of Dr. Z's work by Dr. Q that do not provide an adequate basis for sound criticism of Dr. Z's work are imprecise.",
+      "D": "If the characterization of someone's work is precise, then it provides a sound basis for criticizing that work.",
+      "E": "At least one of Dr. Q's characterizations of Dr. Z's work fails to provide an adequate basis for sound criticism of that work."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 16,
+    "id": "PT91-S2-Q16",
+    "stimulus": "K, a research scientist, was accused of having falsified laboratory data. Although the original data in question have disappeared, data from K's more recent experiments have been examined and clearly none of them were falsified. Therefore, the accusation should be dismissed.",
+    "questionStem": "Which one of the following contains questionable reasoning that is most similar to that in the argument above?",
+    "options": {
+      "A": "L, an accountant, was charged with having embezzled funds from a client. The charge should be ignored, however, because although the records that might reveal this embezzlement have been destroyed, records of L's current clients show clearly that there has never been any embezzlement from them.",
+      "B": "M, a factory supervisor, was accused of failing to enforce safety standards. This accusation should be discussed, because although the identity of the accuser was not revealed, a survey of factory personnel revealed that some violations of the standards have occurred.",
+      "C": "N, a social scientist, was charged with plagiarism. The charge is without foundation because although strong similarities between N's book and the work of another scholar have been discovered, the other scholar's work was written after N's work was published.",
+      "D": "O, an auto mechanic, has been accused of selling stolen auto parts. The accusation seems to be justified since although no evidence links O directly to these sales, the pattern of distribution of the auto parts points of O as the source.",
+      "E": "P, a politician, has been accused of failing to protect the public interest. From at least some points of view, however, the accusation will undoubtedly be considered false, because there is clearly disagreement about where the public interest lies."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 17,
+    "id": "PT91-S2-Q17",
+    "stimulus": "The widespread staff reductions in a certain region's economy are said to be causing people who still have their jobs to cut back on new purchases as though they, too, had become economically distressed. Clearly, however, actual spending by such people is undiminished, because there has been no unusual increase in the amount of money held by those people in savings account.",
+    "questionStem": "The argument in the passage proceeds by doing which one of the following?",
+    "options": {
+      "A": "concluding that since an expected consequence of a supposed development did not occur, that development itself did not take place",
+      "B": "concluding that since only one of the two predictable consequences of a certain kind of behavior is observed to occur, this observed occurrence cannot, in the current situation, be a consequence of such behavior",
+      "C": "arguing that since people's economic behavior is guided by economic self-interest, only misinformation or error will cause people to engage in economic behavior that harms them economically",
+      "D": "arguing that since two alternative developments exhaust all the plausible possibilities, one of those developments occurred and the other did not",
+      "E": "concluding that since the evidence concerning a supposed change is ambiguous, it is most likely that no change is actually taking place The widespread staff reductions in a certain region's economy are said to be causing people who still have their jobs to cut back on new purchases as though they, too, had become economically distressed. Clearly, however, actual spending by such people is undiminished, because there has been no unusual increase in the amount of money held by those people in savings account."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 18,
+    "id": "PT91-S2-Q18",
+    "stimulus": "The widespread staff reductions in a certain region's economy are said to be causing people who still have their jobs to cut back on new purchases as though they, too, had become economically distressed. Clearly, however, actual spending by such people is undiminished, because there has been no unusual increase in the amount of money held by those people in savings account.",
+    "questionStem": "Which one of the following is an assumption on which the argument relies?",
+    "options": {
+      "A": "If people in the region who continue to be employed have debts, they are not now paying them off at an accelerated rate.",
+      "B": "People in the region who continue to be employed and who have relatives who have lost their jobs commonly assist those relatives financially.",
+      "C": "If people in the region who have lost jobs get new jobs, the new jobs generally pay less well than the ones they lost.",
+      "D": "People in the region who continue to be employed are pessimistic about their prospects for increasing their incomes.",
+      "E": "There exist no statistics about sales of goods in the region as a whole."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 19,
+    "id": "PT91-S2-Q19",
+    "stimulus": "Every student who walks to school goes home for lunch. It follows that some students who have part- time jobs do not walk to school.",
+    "questionStem": "The conclusion of the argument follows logically if which one of the following is assumed?",
+    "options": {
+      "A": "Some students who do not have part-time jobs go home for lunch.",
+      "B": "Every student who goes home for lunch has a part-time job.",
+      "C": "Some students who do not have part-time jobs do not go home for lunch.",
+      "D": "Some students who do not go home for lunch have part-time jobs.",
+      "E": "Every student who goes home for lunch walks to school."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 20,
+    "id": "PT91-S2-Q20",
+    "stimulus": "When the Pinecrest Animal Shelter, a charitable organization, was in danger of closing because it could not pay for important repairs, its directors appealed to the townspeople to donate money that would be earmarked to pay for those repairs. Since more funds were ultimately donated than were used for the repairs, the directors plan to donate the surplus funds to other animal shelters. But before doing so, the directors should obtain permission from those who made the donations.",
+    "questionStem": "Which one of the following principles, if valid, most helps to justify the position advocated above and yet places the least restriction on the allocation of funds by directors of charitable organizations?",
+    "options": {
+      "A": "The directors of charitable organizations cannot allocate publicly solicited funds to any purposes for which the directors had not specifically earmarked the funds in advance.",
+      "B": "People who solicit charitable donations from the public for a specific cause should spend the funds only on that cause, or, if that becomes impossible, should dispose of the funds according to the express wishes of the donors.",
+      "C": "Directors of charitable organizations who solicit money from the public must return all the money received from an appeal if more money is received than can practicably be used for the purposes specified in the appeal.",
+      "D": "Donors of money to charitable organizations cannot delegate to the directors of those organizations the responsibility of allocating the funds received to various purposes consonant with the purposes of the organization as the directors of the organization see fit.",
+      "E": "People who contribute money to charitable organizations should be considered to be placing their trust in the directors of those organizations to use the money wisely according to whatever circumstance might arise."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 21,
+    "id": "PT91-S2-Q21",
+    "stimulus": "The amount of electricity consumed in Millville on any day in August is directly proportional to peak humidity on that day. Since the average peak humidity this August was three points higher than the average peak humidity last August, it follows that more energy was consumed in Millville this August than last August.",
+    "questionStem": "Which one of the following arguments has a pattern of reasoning most similar to the one in the argument above?",
+    "options": {
+      "A": "The amount of art supplies used in any of the Aesthetic Institute's 25 classes is directly proportional to the number of students in that class. Since in these classes the institute enrolled 20 percent more students overall last year than in the previous year, more art supplies were used in the institute's classes last year than in the previous year.",
+      "B": "The number of courses in painting offered by the Aesthetic Institute in any term is directly proportional to the number of students enrolled in the institute in that term. But the institute offers the same number of courses in sculpture each term. Hence, the institute usually offers more courses in painting than in sculpture.",
+      "C": "The number of new students enrolled at the Aesthetic Institute in any given year is directly proportional to the amount of advertising the institute has done in the previous year. Hence, if the institute seeks to increase its student body it must increase the amount it spends on advertising.",
+      "D": "The fees paid by a student at the Aesthetic Institute are directly proportional to the number of classes in which that student enrolls. Since the number of students at the Aesthetic Institute is increasing, it follows that the institute is collecting a greater amount if fees paid by students that it used to.",
+      "E": "The number of instructors employed by the Aesthetic Institute in any term is directly proportional to the number of classes offered in that term and also directly proportional to the number of students enrolled at the institute. Thus, the number of classes offered by the institute in any term is directly proportional to the number of students enrolled in that term."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 22,
+    "id": "PT91-S2-Q22",
+    "stimulus": "Letter to the editor: After Baerton's factory closed, there was a sharp increase in the number of claims filed for job related injury compensation by the factory's former employees. Hence there is reason to believe that most of those who filed for compensation after the factory closed were just out to gain benefits they did not deserve, and filed only to help them weather their job loss.",
+    "questionStem": "Each of the following, if true, weakens the argument above EXCEPT:",
+    "options": {
+      "A": "Workers cannot file for compensation for many job-related injuries, such as hearing loss from factory noise, until they have left the job.",
+      "B": "In the years before the factory closed, the factory's managers dismissed several employees who had filed injury claims.",
+      "C": "Most workers who receive an injury on the job file for compensation on the day they suffer the injury.",
+      "D": "Workers who incur partial disabilities due to injuries on the job often do not file for compensation because they would have to stop working to receive compensation but cannot afford to live on that compensation alone.",
+      "E": "Workers who are aware that they will soon be laid off from a job often become depressed, making them more prone to job-related injuries."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 23,
+    "id": "PT91-S2-Q23",
+    "stimulus": "Historians of North American architecture who have studied early nineteenth-century houses with wooden floors have observed that the boards used on the floors of bigger houses were generally much narrower than those used on the floors of smaller houses. These historians have argued that, since the people for whom the bigger houses were built were generally richer than the people for whom the smaller houses were built, floors made out of narrow floorboards were probably once a status symbol, designed to proclaim the owner's wealth.",
+    "questionStem": "Which one of the following, if true, most helps to strengthen the historians' argument?",
+    "options": {
+      "A": "More original floorboards have survived from big early nineteenth-century houses than from small early nineteenth century houses.",
+      "B": "In the early nineteenth century, a piece of narrow floorboard was not significantly less expensive than a piece of wide floorboard of the same length.",
+      "C": "In the early nineteenth century, smaller houses generally had fewer rooms than did bigger houses.",
+      "D": "Some early nineteenth-century houses had wide floorboards near the walls of each room and narrower floorboards in the center, where the floors were usually carpeted.",
+      "E": "Many of the biggest early nineteenth-century houses but very few small houses from that period had some floors that were made of materials that were considerably more expensive."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 24,
+    "id": "PT91-S2-Q24",
+    "stimulus": "Ethicist: A society is just when, and only when, first, each person has an equal right to basic liberties, and second, inequalities in the distribution of income and wealth are not tolerated unless these inequalities are to everyone's advantage and are attached to jobs open to everyone.",
+    "questionStem": "Which one of the following judgments most closely conforms to the principle described above?",
+    "options": {
+      "A": "Society S guarantees everyone an equal right to basic liberties, while allowing inequalities in the distribution of income and wealth that are to the advantage of everyone. Further, the jobs to which these inequalities are attached are open to most people. Thus, society S is just.",
+      "B": "Society S gives everyone an equal right to basic liberties, but at the expense of creating inequalities in the distribution of income and wealth. Thus, society S is not just.",
+      "C": "Society S allows inequalities in the distribution of income and wealth, although everyone benefits, and these inequalities are attached to jobs that are open to everyone. Thus, society S is just.",
+      "D": "Society S distributes income and wealth to everyone equally, but at the expense of creating inequalities in the right to basic liberties. Thus, society S is not just.",
+      "E": "Society S gives everyone an equal right to basic liberties, and although there is an inequality in the distribution of income and wealth, the jobs to which these inequalities are attached are open to all. Thus, society S is just."
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 25,
+    "id": "PT91-S2-Q25",
+    "stimulus": "Economist: In order to decide what to do about protecting the ozone layer, we must determine the monetary amount of the economic resources that we would willingly expend to protect it. Such a determination amounts to a calculation of the monetary value of the ozone layer. Environmentalists argue that the ozone layer does not have a calculable monetary value. However, we would not willingly expend an amount equal to all of the world's economic resources to protect the ozone layer, so the ozone layer is demonstrably worth less than that amount. Thus, the ozone layer has a calculable monetary value.",
+    "questionStem": "The reasoning in the economist's argument is flawed in that the argument",
+    "options": {
+      "A": "uses evidence that the monetary value of a particular natural resource is less than a certain amount in order to establish that the monetary value of any natural resource is less than that amount",
+      "B": "presupposes that the ozone layer should not be protected and then argues to that claim as a conclusion",
+      "C": "takes advantage of an ambiguity in the term \"value\" to deflect the environmentalists' charge",
+      "D": "gives no reason for thinking that merely establishing an upper limit on a certain monetary value would allow the calculation of that monetary value",
+      "E": "does not directly address the argument of the environmentalists"
+    }
+  },
+  {
+    "section": 2,
+    "qnum": 26,
+    "id": "PT91-S2-Q26",
+    "stimulus": "Columnist on the arts: My elected government representatives were within their rights to vote to support the arts with tax dollars. While funded by the government, however, some artists have produced works of art that are morally or aesthetically offensive to many taxpayers. Nonetheless, my conclusion is that no taxpayers have been treated unjustly whose tax dollars are used to fund some particular work of art that they may find abominable.",
+    "questionStem": "Which one of the following principles, if valid, most supports the columnist's argument?",
+    "options": {
+      "A": "Taxpayers should be allowed to decide whether a portion of their tax dollars is to be used to fund the arts.",
+      "B": "The funding of a particular activity is warranted if it is funded by elected representatives who legitimately fund that activity in general.",
+      "C": "Elected representatives are within their rights to fund any activity that is supported by a majority of their constituents.",
+      "D": "Those who resent taxation to subsidize offensive art should vote against their incumbent government representatives.",
+      "E": "Since taxpayers are free to leave their country if they disapprove of their representatives' decisions, they have no right to complain about arts funding."
+    }
+  }
+]

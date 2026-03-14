@@ -1,0 +1,167 @@
+[
+  {
+    "questionId": "PT17-S2-Q22",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"D\",\n  \"reason\": \"The editor’s argument hinges on losing readership due to compromised integrity, not readers’ response to ads. The director’s response addresses ad effectiveness, which the editor’s argument doesn’t depend on.\"\n}",
+    "latencyMs": 3402
+  },
+  {
+    "questionId": "PT17-S2-Q22",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"D\",\n  \"reason\": \"The editor’s argument hinges on losing readership quantity, not readers’ ad response. The director’s focus on ad response does not address the core issue.\"\n}",
+    "latencyMs": 1290
+  },
+  {
+    "questionId": "PT17-S2-Q22",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"D\",\n  \"reason\": \"The editor’s argument hinges on losing readership, not ad effectiveness. The director’s focus on ad response is irrelevant to the editor’s point.\"\n}",
+    "latencyMs": 1269
+  },
+  {
+    "questionId": "PT158-S2-Q10",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"E\",\n  \"reason\": \"Assumes without evidence that Oromo constructed the tombs before Swahili, mistaking correlation for causation in cultural influence.\"\n}",
+    "latencyMs": 1198
+  },
+  {
+    "questionId": "PT158-S2-Q10",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"E\",\n  \"reason\": \"The argument assumes Oromo tombs predate Swahili tombs without establishing chronology, risking reversed influence.\"\n}",
+    "latencyMs": 1341
+  },
+  {
+    "questionId": "PT158-S2-Q10",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"E\",\n  \"reason\": \"The argument assumes Oromo built the tombs earlier than Swahili without evidence of timeline, confusing correlation with causation.\"\n}",
+    "latencyMs": 1486
+  },
+  {
+    "questionId": "PT158-S2-Q2",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"A\",\n  \"reason\": \"attacks the proposal's source (Smith's past) instead of evaluating its content.\"\n}",
+    "latencyMs": 1260
+  },
+  {
+    "questionId": "PT158-S2-Q2",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"A\",\n  \"reason\": \"The president attacks Smith's past actions instead of evaluating the ordinance's merits, focusing on the source rather than content.\"\n}",
+    "latencyMs": 1472
+  },
+  {
+    "questionId": "PT158-S2-Q2",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"A\",\n  \"reason\": \"The president attacks Smith's credibility rather than evaluating the ordinance's content.\"\n}",
+    "latencyMs": 1801
+  },
+  {
+    "questionId": "PT158-S3-Q14",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"C\",\n  \"reason\": \"Both arguments mistakenly infer exclusion between groups based on shared exclusion from a third category, mirroring the original flawed structure.\"\n}",
+    "latencyMs": 1741
+  },
+  {
+    "questionId": "PT158-S3-Q14",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"C\",\n  \"reason\": \"The argument uses 'some A are B' and 'no C are B' to conclude 'some C are not A,' which is structurally identical to the flawed reasoning in the stimulus.\"\n}",
+    "latencyMs": 2378
+  },
+  {
+    "questionId": "PT158-S3-Q14",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"C\",\n  \"reason\": \"Both arguments misuse overlapping categories to invalidly conclude a subset exclusion, assuming non-overlap in one area implies exclusion in another.\"\n}",
+    "latencyMs": 1503
+  },
+  {
+    "questionId": "PT158-S3-Q07",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"C\",\n  \"reason\": \"If medication A indirectly causes sleep by reducing discomfort, Dr. Faris's statement wasn't deceptive, weakening the ethicist's claim of violation.\"\n}",
+    "latencyMs": 1426
+  },
+  {
+    "questionId": "PT158-S3-Q07",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"C\",\n  \"reason\": \"If Medication A indirectly aids sleep by reducing discomfort, Dr. Faris's statement is truthful, undermining the deception claim.\"\n}",
+    "latencyMs": 1400
+  },
+  {
+    "questionId": "PT158-S3-Q07",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "```json\n{\n  \"correct_answer\": \"C\",\n  \"reason\": \"If medication A indirectly causes sleep by reducing pain, Dr. Faris's statement was truthful, undermining the deception claim.\"\n}\n```",
+    "latencyMs": 1291
+  }
+]

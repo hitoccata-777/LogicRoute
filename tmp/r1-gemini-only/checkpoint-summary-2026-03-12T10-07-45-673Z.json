@@ -1,0 +1,41 @@
+[
+  {
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "totalRuns": 51,
+    "correctRuns": 50,
+    "accuracyRate": "98.0%",
+    "parseFail": 0,
+    "avgLatencyMs": 1647,
+    "totalQuestions": 17,
+    "stableQuestions": 16,
+    "unstableQuestions": 1,
+    "stabilityRate": "94.1%"
+  },
+  {
+    "model": "google/gemini-2.5-pro",
+    "promptMode": "current",
+    "totalRuns": 48,
+    "correctRuns": 24,
+    "accuracyRate": "50.0%",
+    "parseFail": 24,
+    "avgLatencyMs": 1831,
+    "totalQuestions": 16,
+    "stableQuestions": 14,
+    "unstableQuestions": 2,
+    "stabilityRate": "87.5%"
+  },
+  {
+    "model": "google/gemini-2.5-pro",
+    "promptMode": "minimal",
+    "totalRuns": 51,
+    "correctRuns": 50,
+    "accuracyRate": "98.0%",
+    "parseFail": 1,
+    "avgLatencyMs": 3735,
+    "totalQuestions": 17,
+    "stableQuestions": 16,
+    "unstableQuestions": 1,
+    "stabilityRate": "94.1%"
+  }
+]

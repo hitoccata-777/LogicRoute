@@ -1,0 +1,28 @@
+[
+  {
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "totalRuns": 51,
+    "correctRuns": 50,
+    "accuracyRate": "98.0%",
+    "parseFail": 0,
+    "avgLatencyMs": 1647,
+    "totalQuestions": 17,
+    "stableQuestions": 16,
+    "unstableQuestions": 1,
+    "stabilityRate": "94.1%"
+  },
+  {
+    "model": "google/gemini-2.5-pro",
+    "promptMode": "minimal",
+    "totalRuns": 45,
+    "correctRuns": 45,
+    "accuracyRate": "100.0%",
+    "parseFail": 0,
+    "avgLatencyMs": 3737,
+    "totalQuestions": 15,
+    "stableQuestions": 15,
+    "unstableQuestions": 0,
+    "stabilityRate": "100.0%"
+  }
+]

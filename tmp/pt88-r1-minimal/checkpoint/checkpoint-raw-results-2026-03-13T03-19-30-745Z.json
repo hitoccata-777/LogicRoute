@@ -1,0 +1,233 @@
+[
+  {
+    "questionId": "PT91-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"B\",\n  \"reason\": \"The argument assumes heart safety implies overall safety, but heart health is not the same as general health.\"\n}",
+    "latencyMs": 3040
+  },
+  {
+    "questionId": "PT91-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "B",
+    "predictedAnswer": "C",
+    "isCorrect": false,
+    "rawText": "{\n  \"correct_answer\": \"C\",\n  \"reason\": \"The argument assumes coffee alone is safe, but ignores that coffee might be consumed with harmful foods, which could still harm the heart.\"\n}",
+    "latencyMs": 2016
+  },
+  {
+    "questionId": "PT91-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "**Answer**\n```json\n{\n  \"correct_answer\": \"B\",\n  \"reason\": \"The argument assumes heart safety implies overall safety, but general health includes more than just heart health.\"\n}\n```",
+    "latencyMs": 1265
+  },
+  {
+    "questionId": "PT91-S1-Q02",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"D\",\n  \"reason\": \"Sales data showing bright-colored toys sell better aligns with infants' preference for easily distinguishable colors, supporting that sales reflect their preference.\"\n}",
+    "latencyMs": 1268
+  },
+  {
+    "questionId": "PT91-S1-Q02",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"D\",\n  \"reason\": \"Sales of bright infant toys align with infants' preference for easily distinguishable colors.\"\n}",
+    "latencyMs": 1327
+  },
+  {
+    "questionId": "PT91-S1-Q02",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"D\",\n  \"reason\": \"Sales data aligns with infants' preference for easily distinguishable colors, supporting that sales reflect their preference in color choice.\"\n}",
+    "latencyMs": 1544
+  },
+  {
+    "questionId": "PT91-S1-Q03",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"B\",\n  \"reason\": \"The argument eliminates Mercury and Venus as possible sources, leaving Mars as the probable origin.\"\n}",
+    "latencyMs": 1848
+  },
+  {
+    "questionId": "PT91-S1-Q03",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"B\",\n  \"reason\": \"The argument eliminates Mercury and Venus as possible sources, leaving Mars as the most likely explanation.\"\n}",
+    "latencyMs": 1705
+  },
+  {
+    "questionId": "PT91-S1-Q03",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"B\",\n  \"reason\": \"The argument eliminates Mercury and Venus as possible sources, leaving Mars as the conclusion.\"\n}",
+    "latencyMs": 1808
+  },
+  {
+    "questionId": "PT91-S1-Q04",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"C\",\n  \"reason\": \"C discusses nonsmokers stopping exercise, which is irrelevant to the argument about smokers quitting with exercise.\"\n}",
+    "latencyMs": 1469
+  },
+  {
+    "questionId": "PT91-S1-Q04",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"C\",\n  \"reason\": \"C addresses nonsmokers stopping exercise, which is irrelevant to smokers quitting and weight gain.\"\n}",
+    "latencyMs": 1906
+  },
+  {
+    "questionId": "PT91-S1-Q04",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"C\",\n  \"reason\": \"C discusses nonsmokers and weight gain when stopping exercise, which is irrelevant to smokers quitting, thus providing no support.\"\n}",
+    "latencyMs": 1417
+  },
+  {
+    "questionId": "PT91-S1-Q05",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "```json\n{\n  \"correct_answer\": \"D\",\n  \"reason\": \"Assumes a group's highest total implies an individual within it must be the top performer, mirroring the original flaw.\"\n}\n```",
+    "latencyMs": 1455
+  },
+  {
+    "questionId": "PT91-S1-Q05",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"D\",\n  \"reason\": \"Assumes the class with the highest total must have the top individual, confusing group achievement with individual performance.\"\n}",
+    "latencyMs": 1603
+  },
+  {
+    "questionId": "PT91-S1-Q05",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"D\",\n  \"reason\": \"Both arguments incorrectly assume the group with the highest total must contain the top individual.\"\n}",
+    "latencyMs": 1694
+  },
+  {
+    "questionId": "PT91-S1-Q06",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"C\",\n  \"reason\": \"The argument claims Jones is unique, but all candidates have different qualifications, making uniqueness a trait common to all.\"\n}",
+    "latencyMs": 1091
+  },
+  {
+    "questionId": "PT91-S1-Q06",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"C\",\n  \"reason\": \"The argument claims Jones is best qualified because she has a unique set of qualifications, but uniqueness alone does not establish superiority if others also have unique qualifications.\"\n}",
+    "latencyMs": 1683
+  },
+  {
+    "questionId": "PT91-S1-Q06",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "C",
+    "predictedAnswer": "C",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"C\",\n  \"reason\": \"The argument claims Jones is best due to her unique qualifications, but if all candidates have unique qualifications, this distinction fails.\"\n}",
+    "latencyMs": 1390
+  },
+  {
+    "questionId": "PT91-S1-Q07",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"A\",\n  \"reason\": \"Option A strengthens the resident's argument by emphasizing the need for local access, while the other options weaken it by questioning the necessity or usage of the recreation center.\"\n}",
+    "latencyMs": 1382
+  },
+  {
+    "questionId": "PT91-S1-Q07",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"A\",\n  \"reason\": \"Option A strengthens by highlighting reliance on the local center, while others weaken by reducing necessity or demand.\"\n}",
+    "latencyMs": 1332
+  },
+  {
+    "questionId": "PT91-S1-Q07",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"A\",\n  \"reason\": \"Option A strengthens the argument by highlighting reliance on the local center, whereas other options weaken by reducing necessity or demand.\"\n}",
+    "latencyMs": 1329
+  }
+]

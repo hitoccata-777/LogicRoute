@@ -1,0 +1,35 @@
+[
+  {
+    "questionId": "PT88-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"B\",\n  \"reason\": \"Powell attributes lower costs to efficiency, while Freeman attributes it to customer selection.\"\n}",
+    "latencyMs": 2998
+  },
+  {
+    "questionId": "PT88-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"B\",\n  \"reason\": \"Powell attributes lower costs to efficiency, while Freeman argues it's due to selective customer exclusion.\"\n}",
+    "latencyMs": 1348
+  },
+  {
+    "questionId": "PT88-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"B\",\n  \"reason\": \"Powell attributes lower costs to greater efficiency, while Freeman argues it's due to private companies selectively serving less costly customers.\"\n}",
+    "latencyMs": 2046
+  }
+]

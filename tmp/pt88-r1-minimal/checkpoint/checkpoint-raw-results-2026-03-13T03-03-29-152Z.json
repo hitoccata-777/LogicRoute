@@ -1,0 +1,68 @@
+[
+  {
+    "questionId": "PT90-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"A\",\n  \"reason\": \"The smoker challenges the reasonableness of targeting only smokers, implying the politician’s proposal is inconsistent and thus unreasonable.\"\n}",
+    "latencyMs": 2478
+  },
+  {
+    "questionId": "PT90-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"A\",\n  \"reason\": \"The smoker challenges the reasonableness of the politician's proposal by arguing that applying the same logic to another group would be inconsistent.\"\n}",
+    "latencyMs": 1367
+  },
+  {
+    "questionId": "PT90-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"A\",\n  \"reason\": \"The smoker challenges the reasonableness of targeting only smokers, while the politician defends the proposal’s reasonableness.\"\n}",
+    "latencyMs": 1230
+  },
+  {
+    "questionId": "PT90-S1-Q02",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"A\",\n  \"reason\": \"The smoker uses high-fat foods as a counterexample to challenge the fairness and consistency of the politician’s reasoning.\"\n}",
+    "latencyMs": 1368
+  },
+  {
+    "questionId": "PT90-S1-Q02",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"A\",\n  \"reason\": \"The smoker uses high-fat food consumption as a counterexample to challenge the politician's principle linking health costs to specific habits.\"\n}",
+    "latencyMs": 1341
+  },
+  {
+    "questionId": "PT90-S1-Q02",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "A",
+    "predictedAnswer": "A",
+    "isCorrect": true,
+    "rawText": "```json\n{\n  \"correct_answer\": \"A\",\n  \"reason\": \"The smoker provides a counterexample (high-fat foods) that challenges the fairness of the politician's reasoning by showing inconsistency in applying the same principle.\"\n}\n```",
+    "latencyMs": 1641
+  }
+]

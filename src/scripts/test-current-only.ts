@@ -39,9 +39,7 @@ const ANSWER_KEY_PATH =
 const REPEATS = Number(process.argv[4] || 3);
 
 const MODELS = [
-  'openai/gpt-5.2-chat',
-  'anthropic/claude-sonnet-4.5',
-  'meituan/longcat-flash-chat'
+    'google/gemini-2.5-pro'
 ];
 
 function buildCurrentPrompt(q: Question): string {

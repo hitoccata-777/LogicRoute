@@ -1,0 +1,188 @@
+{
+  "config": {
+    "models": [
+      "deepseek/deepseek-r1",
+      "google/gemini-2.5-pro"
+    ],
+    "maxTokens": 256,
+    "temperature": 0,
+    "repeat": 3,
+    "targetQuestionIds": [
+      "PT88-S2-Q22"
+    ]
+  },
+  "summaryByModel": [
+    {
+      "model": "deepseek/deepseek-r1",
+      "maxTokens": 256,
+      "temperature": 0,
+      "totalRuns": 3,
+      "correctRuns": 0,
+      "answeredRuns": 0,
+      "nullRuns": 3,
+      "stopRuns": 0,
+      "lengthRuns": 0,
+      "rawAccuracy": 0,
+      "answeredAccuracy": 0,
+      "nullRate": 1,
+      "stopRate": 0,
+      "lengthRate": 0,
+      "totalQuestions": 1,
+      "fullyCorrectQuestions": 0,
+      "atLeast2CorrectQuestions": 0,
+      "majorityCorrectQuestions": 0,
+      "unanimousStabilityQuestions": 1,
+      "validUnanimousStabilityQuestions": 0,
+      "fullyCorrectQuestionRate": 0,
+      "atLeast2CorrectQuestionRate": 0,
+      "majorityCorrectQuestionRate": 0,
+      "unanimousStabilityRate": 1,
+      "validUnanimousStabilityRate": 0,
+      "testedQuestionIds": [
+        "PT88-S2-Q22"
+      ],
+      "questionSummaries": [
+        {
+          "questionId": "PT88-S2-Q22",
+          "correctAnswer": "D",
+          "predictedAnswers": [
+            null,
+            null,
+            null
+          ],
+          "numCorrect": 0,
+          "majorityAnswer": null,
+          "majorityIsCorrect": false,
+          "unanimousStability": true,
+          "validUnanimousStability": false
+        }
+      ]
+    },
+    {
+      "model": "google/gemini-2.5-pro",
+      "maxTokens": 256,
+      "temperature": 0,
+      "totalRuns": 3,
+      "correctRuns": 0,
+      "answeredRuns": 0,
+      "nullRuns": 3,
+      "stopRuns": 0,
+      "lengthRuns": 0,
+      "rawAccuracy": 0,
+      "answeredAccuracy": 0,
+      "nullRate": 1,
+      "stopRate": 0,
+      "lengthRate": 0,
+      "totalQuestions": 1,
+      "fullyCorrectQuestions": 0,
+      "atLeast2CorrectQuestions": 0,
+      "majorityCorrectQuestions": 0,
+      "unanimousStabilityQuestions": 1,
+      "validUnanimousStabilityQuestions": 0,
+      "fullyCorrectQuestionRate": 0,
+      "atLeast2CorrectQuestionRate": 0,
+      "majorityCorrectQuestionRate": 0,
+      "unanimousStabilityRate": 1,
+      "validUnanimousStabilityRate": 0,
+      "testedQuestionIds": [
+        "PT88-S2-Q22"
+      ],
+      "questionSummaries": [
+        {
+          "questionId": "PT88-S2-Q22",
+          "correctAnswer": "D",
+          "predictedAnswers": [
+            null,
+            null,
+            null
+          ],
+          "numCorrect": 0,
+          "majorityAnswer": null,
+          "majorityIsCorrect": false,
+          "unanimousStability": true,
+          "validUnanimousStability": false
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "model": "deepseek/deepseek-r1",
+      "questionId": "PT88-S2-Q22",
+      "section": 2,
+      "qnum": 22,
+      "repeat": 1,
+      "correctAnswer": "D",
+      "predictedAnswer": null,
+      "isCorrect": false,
+      "finishReason": null,
+      "nativeFinishReason": null,
+      "error": "OpenRouter error 403: {\"error\":{\"message\":\"Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys\",\"code\":403}}"
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "questionId": "PT88-S2-Q22",
+      "section": 2,
+      "qnum": 22,
+      "repeat": 2,
+      "correctAnswer": "D",
+      "predictedAnswer": null,
+      "isCorrect": false,
+      "finishReason": null,
+      "nativeFinishReason": null,
+      "error": "OpenRouter error 403: {\"error\":{\"message\":\"Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys\",\"code\":403}}"
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "questionId": "PT88-S2-Q22",
+      "section": 2,
+      "qnum": 22,
+      "repeat": 3,
+      "correctAnswer": "D",
+      "predictedAnswer": null,
+      "isCorrect": false,
+      "finishReason": null,
+      "nativeFinishReason": null,
+      "error": "OpenRouter error 403: {\"error\":{\"message\":\"Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys\",\"code\":403}}"
+    },
+    {
+      "model": "google/gemini-2.5-pro",
+      "questionId": "PT88-S2-Q22",
+      "section": 2,
+      "qnum": 22,
+      "repeat": 1,
+      "correctAnswer": "D",
+      "predictedAnswer": null,
+      "isCorrect": false,
+      "finishReason": null,
+      "nativeFinishReason": null,
+      "error": "OpenRouter error 403: {\"error\":{\"message\":\"Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys\",\"code\":403}}"
+    },
+    {
+      "model": "google/gemini-2.5-pro",
+      "questionId": "PT88-S2-Q22",
+      "section": 2,
+      "qnum": 22,
+      "repeat": 2,
+      "correctAnswer": "D",
+      "predictedAnswer": null,
+      "isCorrect": false,
+      "finishReason": null,
+      "nativeFinishReason": null,
+      "error": "OpenRouter error 403: {\"error\":{\"message\":\"Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys\",\"code\":403}}"
+    },
+    {
+      "model": "google/gemini-2.5-pro",
+      "questionId": "PT88-S2-Q22",
+      "section": 2,
+      "qnum": 22,
+      "repeat": 3,
+      "correctAnswer": "D",
+      "predictedAnswer": null,
+      "isCorrect": false,
+      "finishReason": null,
+      "nativeFinishReason": null,
+      "error": "OpenRouter error 403: {\"error\":{\"message\":\"Key limit exceeded (total limit). Manage it using https://openrouter.ai/settings/keys\",\"code\":403}}"
+    }
+  ]
+}

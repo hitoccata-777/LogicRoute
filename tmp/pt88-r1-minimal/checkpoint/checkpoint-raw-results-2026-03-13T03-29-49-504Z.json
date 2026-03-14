@@ -1,0 +1,68 @@
+[
+  {
+    "questionId": "PT93-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"D\",\n  \"reason\": \"Jorge argues for making all changes at once, while Christina argues for incremental changes, showing they disagree on whether changes should be made simultaneously.\"\n}",
+    "latencyMs": 5244
+  },
+  {
+    "questionId": "PT93-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"D\",\n  \"reason\": \"Jorge advocates immediate changes (all at once), while Christina supports incremental changes (lower heights first), directly opposing whether changes should be simultaneous.\"\n}",
+    "latencyMs": 1633
+  },
+  {
+    "questionId": "PT93-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"D\",\n  \"reason\": \"Jorge advocates immediate changes (one leap), while Christina supports incremental changes (lower heights first), disagreeing on whether changes should be simultaneous.\"\n}",
+    "latencyMs": 1305
+  },
+  {
+    "questionId": "PT93-S1-Q02",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"E\",\n  \"reason\": \"John's reasoning assumes fluoridated water is the only cause of bone cancer, ignoring other potential causes, which weakens his conclusion.\"\n}",
+    "latencyMs": 2097
+  },
+  {
+    "questionId": "PT93-S1-Q02",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"E\",\n  \"reason\": \"John assumes avoiding fluoride will prevent bone cancer, ignoring other potential causes.\"\n}",
+    "latencyMs": 1230
+  },
+  {
+    "questionId": "PT93-S1-Q02",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"E\",\n  \"reason\": \"John assumes avoiding fluoride prevents cancer, but ignores other potential causes, making his conclusion uncertain.\"\n}",
+    "latencyMs": 1315
+  }
+]

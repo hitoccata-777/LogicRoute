@@ -1,0 +1,68 @@
+[
+  {
+    "questionId": "PT17-S2-Q22",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"D\",\n  \"reason\": \"The editor’s argument hinges on losing readership due to compromised integrity, not readers’ response to ads. The director’s response addresses ad effectiveness, which the editor’s argument doesn’t depend on.\"\n}",
+    "latencyMs": 3402
+  },
+  {
+    "questionId": "PT17-S2-Q22",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"D\",\n  \"reason\": \"The editor’s argument hinges on losing readership quantity, not readers’ ad response. The director’s focus on ad response does not address the core issue.\"\n}",
+    "latencyMs": 1290
+  },
+  {
+    "questionId": "PT17-S2-Q22",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "D",
+    "predictedAnswer": "D",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"D\",\n  \"reason\": \"The editor’s argument hinges on losing readership, not ad effectiveness. The director’s focus on ad response is irrelevant to the editor’s point.\"\n}",
+    "latencyMs": 1269
+  },
+  {
+    "questionId": "PT158-S2-Q10",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"E\",\n  \"reason\": \"Assumes without evidence that Oromo constructed the tombs before Swahili, mistaking correlation for causation in cultural influence.\"\n}",
+    "latencyMs": 1198
+  },
+  {
+    "questionId": "PT158-S2-Q10",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{  \"correct_answer\": \"E\",\n  \"reason\": \"The argument assumes Oromo tombs predate Swahili tombs without establishing chronology, risking reversed influence.\"\n}",
+    "latencyMs": 1341
+  },
+  {
+    "questionId": "PT158-S2-Q10",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "E",
+    "predictedAnswer": "E",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"E\",\n  \"reason\": \"The argument assumes Oromo built the tombs earlier than Swahili without evidence of timeline, confusing correlation with causation.\"\n}",
+    "latencyMs": 1486
+  }
+]

@@ -1,0 +1,10 @@
+questionId,model,promptMode,repeatIndex,correctAnswer,predictedAnswer,isCorrect,latencyMs,error
+PT17-S2-Q22,deepseek/deepseek-r1,minimal,1,D,D,true,3402,
+PT17-S2-Q22,deepseek/deepseek-r1,minimal,2,D,D,true,1290,
+PT17-S2-Q22,deepseek/deepseek-r1,minimal,3,D,D,true,1269,
+PT158-S2-Q10,deepseek/deepseek-r1,minimal,1,E,E,true,1198,
+PT158-S2-Q10,deepseek/deepseek-r1,minimal,2,E,E,true,1341,
+PT158-S2-Q10,deepseek/deepseek-r1,minimal,3,E,E,true,1486,
+PT158-S2-Q2,deepseek/deepseek-r1,minimal,1,A,A,true,1260,
+PT158-S2-Q2,deepseek/deepseek-r1,minimal,2,A,A,true,1472,
+PT158-S2-Q2,deepseek/deepseek-r1,minimal,3,A,A,true,1801,

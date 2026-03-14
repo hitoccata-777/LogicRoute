@@ -1,0 +1,35 @@
+[
+  {
+    "questionId": "PT91-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 1,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "{\n  \"correct_answer\": \"B\",\n  \"reason\": \"The argument assumes heart safety implies overall safety, but heart health is not the same as general health.\"\n}",
+    "latencyMs": 3040
+  },
+  {
+    "questionId": "PT91-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 2,
+    "correctAnswer": "B",
+    "predictedAnswer": "C",
+    "isCorrect": false,
+    "rawText": "{\n  \"correct_answer\": \"C\",\n  \"reason\": \"The argument assumes coffee alone is safe, but ignores that coffee might be consumed with harmful foods, which could still harm the heart.\"\n}",
+    "latencyMs": 2016
+  },
+  {
+    "questionId": "PT91-S1-Q01",
+    "model": "deepseek/deepseek-r1",
+    "promptMode": "minimal",
+    "repeatIndex": 3,
+    "correctAnswer": "B",
+    "predictedAnswer": "B",
+    "isCorrect": true,
+    "rawText": "**Answer**\n```json\n{\n  \"correct_answer\": \"B\",\n  \"reason\": \"The argument assumes heart safety implies overall safety, but general health includes more than just heart health.\"\n}\n```",
+    "latencyMs": 1265
+  }
+]

@@ -1,0 +1,7 @@
+questionId,model,promptMode,repeatIndex,correctAnswer,predictedAnswer,isCorrect,latencyMs,error
+PT92-S2-Q01,deepseek/deepseek-r1,minimal,1,A,A,true,3356,
+PT92-S2-Q01,deepseek/deepseek-r1,minimal,2,A,A,true,1368,
+PT92-S2-Q01,deepseek/deepseek-r1,minimal,3,A,A,true,1816,
+PT92-S2-Q02,deepseek/deepseek-r1,minimal,1,C,C,true,1665,
+PT92-S2-Q02,deepseek/deepseek-r1,minimal,2,C,C,true,1409,
+PT92-S2-Q02,deepseek/deepseek-r1,minimal,3,C,C,true,1194,
