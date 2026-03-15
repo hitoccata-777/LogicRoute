@@ -1,0 +1,78 @@
+id,section,qnum,type,family,primaryMethods,sourceFile,questionStem
+PT89-S1-Q01,1,1,strengthen,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,"Each of the following, if true, strengthens the argument EXCEPT:"
+PT89-S1-Q02,1,2,assumption_necessary,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,Which one of the following is an assumption on which the argument relies?
+PT89-S1-Q03,1,3,parallel_flaw,structure_matching,formula|abstract_mapping|venn,PT89_no_answers.json,Which one of the following exhibits flawed reasoning most similar to the flawed reasoning in the argument above?
+PT89-S1-Q04,1,4,strengthen,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,"Which one of the following principles, if valid, most strongly supports the researcher's reasoning?"
+PT89-S1-Q05,1,5,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,"Which one of the following, if true, most seriously weakens the argument?"
+PT89-S1-Q06,1,6,main_conclusion,argument_structure,argument_chain,PT89_no_answers.json,Which one of the following is the main point at issue between the hospital auditor and the clinic administrator?
+PT89-S1-Q07,1,7,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,which one of the following?
+PT89-S1-Q08,1,8,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,"Which one of the following, if true, most helps to explain the similarity described above between alfalfa and non-nitrogen fixing plants?"
+PT89-S1-Q09,1,9,flaw,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,The reasoning in the argument is questionable because
+PT89-S1-Q10,1,10,principle_apply,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,Which one of the following is an application of the economic principle above?
+PT89-S1-Q11,1,11,except,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,"If the claims made above are true, then each of the following could be true EXCEPT:"
+PT89-S1-Q12,1,12,assumption_necessary,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,The author's conclusion in the passage depends on the assumption that
+PT89-S1-Q13,1,13,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,which one of the following?
+PT89-S1-Q14,1,14,must_be_true,inference,highlight|lego|venn|substitution,PT89_no_answers.json,"the statements above are true, which one of the following must also be true on the basis of them?"
+PT89-S1-Q15,1,15,strengthen,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,"Which one the following, if true, most strengthens the argument?"
+PT89-S1-Q16,1,16,most_supported,inference,highlight|lego|venn|substitution,PT89_no_answers.json,"The statement above, if true, most strongly support which one of the following?"
+PT89-S1-Q17,1,17,resolve,dual_structure,parallel_bridge|dispute_locate,PT89_no_answers.json,"Which one of the following, if true, most helps to explain the discrepancy described above?"
+PT89-S1-Q18,1,18,main_conclusion,argument_structure,argument_chain,PT89_no_answers.json,Which one of the following most accurately expresses the main conclusion of the essayist's argument?
+PT89-S1-Q19,1,19,flaw,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,The argument's reasoning is questionable because the argument
+PT89-S1-Q20,1,20,must_be_true,inference,highlight|lego|venn|substitution,PT89_no_answers.json,"the statements above are true, then which one of the following must be false?"
+PT89-S1-Q21,1,21,assumption_necessary,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,Which one of the following is an assumption on which the psychologist's argument depends?
+PT89-S1-Q22,1,22,most_supported,inference,highlight|lego|venn|substitution,PT89_no_answers.json,Which one of the following is most strongly supported by the information above?
+PT89-S1-Q23,1,23,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,"Each of the following, if true, weakens the argument EXCEPT:"
+PT89-S1-Q24,1,24,assumption_sufficient,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,which one of the following is added to the premises?
+PT89-S1-Q25,1,25,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,Engle's statement indicates that he is most likely interpreting McKinley's remarks to be
+PT89-S1-Q26,1,26,strengthen,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,"Which one of the following, if true, LEAST strengthens the argument above?"
+PT89-S2-Q01,2,1,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,which one of the following situations?
+PT89-S2-Q02,2,2,resolve,dual_structure,parallel_bridge|dispute_locate,PT89_no_answers.json,"Each of the following, if true, contributes to an explanation of the increase mentioned above EXCEPT:"
+PT89-S2-Q03,2,3,strengthen,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,The dialogue provides most support for the claim that Carolyn and Arnold disagree over whether the object described by Quinn as a conceptual portrait of Sir John Sulston
+PT89-S2-Q04,2,4,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,the argument is most vulnerable to criticism on the grounds that the argument
+PT89-S2-Q05,2,5,assumption_necessary,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,which one of the following is assumed?
+PT89-S2-Q06,2,6,most_supported,inference,highlight|lego|venn|substitution,PT89_no_answers.json,Which one of the following propositions is best illustrated by the passage?
+PT89-S2-Q07,2,7,point_at_issue,dual_structure,parallel_bridge|dispute_locate,PT89_no_answers.json,Antonio and Marla disagree over
+PT89-S2-Q08,2,8,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,The advertisement's reasoning is most vulnerable to criticism on the grounds that it fails to consider whether
+PT89-S2-Q09,2,9,assumption_necessary,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,Which one of the following is an assumption on which the naturalist's argument depends?
+PT89-S2-Q10,2,10,assumption_sufficient,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,Which one of the following most logically completes the argument?
+PT89-S2-Q11,2,11,assumption_necessary,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,The argument depends on assuming that
+PT89-S2-Q12,2,12,main_conclusion,argument_structure,argument_chain,PT89_no_answers.json,Which one of the following most accurately expresses the conclusion drawn in the argument?
+PT89-S2-Q13,2,13,strengthen,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,"Which one of the following, if true, would most strengthen the therapist's argument?"
+PT89-S2-Q14,2,14,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,which one of the following principles?
+PT89-S2-Q15,2,15,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,"Which one of the following, if true, most seriously weakens the argument?"
+PT89-S2-Q16,2,16,assumption_sufficient,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,Which one of the following most logically completes the philosopher's argument?
+PT89-S2-Q17,2,17,assumption_necessary,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,Which one of the following is an assumption required by the argument?
+PT89-S2-Q18,2,18,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,The reasoning in the editorialist's argument is most vulnerable to criticism on the grounds that this argument
+PT89-S2-Q19,2,19,strengthen,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,"Which one of the following, if true, would most strengthen the editor's argument?"
+PT89-S2-Q20,2,20,parallel,structure_matching,formula|abstract_mapping|venn,PT89_no_answers.json,the argument above is most similar to that exhibited by which one of the following arguments?
+PT89-S2-Q21,2,21,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,"Which one of the following, if true, would most weaken the ethicist's argument?"
+PT89-S2-Q22,2,22,must_be_true,inference,highlight|lego|venn|substitution,PT89_no_answers.json,Which one of the following statements follows logically from the statements above?
+PT89-S2-Q23,2,23,flaw,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,Which one of the following most accurately describes a flaw in the argument above?
+PT89-S2-Q24,2,24,strengthen,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,"Which one of the following principles, if valid, would most help to justify the sociologist's argument?"
+PT89-S2-Q25,2,25,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,the argument is most vulnerable to criticism on the grounds that the argument
+PT89-S3-Q01,3,1,must_be_true,inference,highlight|lego|venn|substitution,PT89_no_answers.json,Which one of the following can be properly inferred from the passage?
+PT89-S3-Q02,3,2,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,The argument is most vulnerable to the criticism that it
+PT89-S3-Q03,3,3,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,"Which one of the following, if true, most helps to explain the anomalous behavior of the birds that fly into windowpanes?"
+PT89-S3-Q04,3,4,except,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,Each of the following is supported by the information above EXCEPT:
+PT89-S3-Q05,3,5,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,which one of the following grounds?
+PT89-S3-Q06,3,6,strengthen,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,"Which one of the following, if true, most strengthens Jane's argument?"
+PT89-S3-Q07,3,7,role,argument_structure,argument_chain,PT89_no_answers.json,Which one of the following most accurately describes how Tiya's response is related to Sam's argument?
+PT89-S3-Q08,3,8,must_be_true,inference,highlight|lego|venn|substitution,PT89_no_answers.json,Which one of the following can be logically inferred from the passage?
+PT89-S3-Q09,3,9,strengthen,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,"Which one of the following, if true, provides the strongest support for the market researchers' claim?"
+PT89-S3-Q10,3,10,method_of_reasoning,argument_structure,argument_chain,PT89_no_answers.json,Ralph responds to Laura by pointing out that
+PT89-S3-Q11,3,11,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,"Which one of the following statements, if true, most weakens the argument?"
+PT89-S3-Q12,3,12,must_be_true,inference,highlight|lego|venn|substitution,PT89_no_answers.json,Each of the following statements conflicts with the letter writer's view EXCEPT:
+PT89-S3-Q13,3,13,resolve,dual_structure,parallel_bridge|dispute_locate,PT89_no_answers.json,"Which one of the following, if true, would most help to resolve the dispute described above in favor of one party to it?"
+PT89-S3-Q14,3,14,main_conclusion,argument_structure,argument_chain,PT89_no_answers.json,Which one of the following most accurately expresses the main conclusion of the argument?
+PT89-S3-Q15,3,15,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,"Which one of the following statements, if true, most calls into question the view above?"
+PT89-S3-Q16,3,16,assumption_necessary,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,Which one of the following is an assumption on which the historian's argument depends?
+PT89-S3-Q17,3,17,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,"Which one of the following, if true about the newspaper in 1992, most seriously undermines the justification offered by the executive?"
+PT89-S3-Q18,3,18,strengthen,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,"Which one of the following is a principle that would, if valid, provide the strongest justification for the reasoning above?"
+PT89-S3-Q19,3,19,assumption_necessary,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,The argument depends on which one of the following assumptions?
+PT89-S3-Q20,3,20,flaw,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,Each of the following describes a flaw in the game show host's reasoning EXCEPT:
+PT89-S3-Q21,3,21,parallel_flaw,structure_matching,formula|abstract_mapping|venn,PT89_no_answers.json,Which one of the following exhibits a flawed pattern of reasoning most similar to that in the argument above?
+PT89-S3-Q22,3,22,assumption_necessary,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,The researcher's argument requires the assumption that
+PT89-S3-Q23,3,23,principle_apply,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,Which one of the following most closely conforms to the principle the ethicist endorses?
+PT89-S3-Q24,3,24,strengthen,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,"Which one of the following, if true, most strengthens the argument?"
+PT89-S3-Q25,3,25,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT89_no_answers.json,"Which of the following statements, if true, most seriously weakens the argument?"
+PT89-S3-Q26,3,26,parallel,structure_matching,formula|abstract_mapping|venn,PT89_no_answers.json,Which one of the following arguments is most similar in its reasoning to the argument above?

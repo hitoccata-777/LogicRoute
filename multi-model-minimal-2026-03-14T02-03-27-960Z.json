@@ -1,0 +1,188 @@
+{
+  "config": {
+    "models": [
+      "deepseek/deepseek-r1",
+      "google/gemini-2.5-pro"
+    ],
+    "maxTokens": 256,
+    "temperature": 0,
+    "repeat": 3,
+    "targetQuestionIds": [
+      "PT88-S2-Q22"
+    ]
+  },
+  "summaryByModel": [
+    {
+      "model": "deepseek/deepseek-r1",
+      "maxTokens": 256,
+      "temperature": 0,
+      "totalRuns": 3,
+      "correctRuns": 3,
+      "answeredRuns": 3,
+      "nullRuns": 0,
+      "stopRuns": 3,
+      "lengthRuns": 0,
+      "rawAccuracy": 1,
+      "answeredAccuracy": 1,
+      "nullRate": 0,
+      "stopRate": 1,
+      "lengthRate": 0,
+      "totalQuestions": 1,
+      "fullyCorrectQuestions": 1,
+      "atLeast2CorrectQuestions": 1,
+      "majorityCorrectQuestions": 1,
+      "unanimousStabilityQuestions": 1,
+      "validUnanimousStabilityQuestions": 1,
+      "fullyCorrectQuestionRate": 1,
+      "atLeast2CorrectQuestionRate": 1,
+      "majorityCorrectQuestionRate": 1,
+      "unanimousStabilityRate": 1,
+      "validUnanimousStabilityRate": 1,
+      "testedQuestionIds": [
+        "PT88-S2-Q22"
+      ],
+      "questionSummaries": [
+        {
+          "questionId": "PT88-S2-Q22",
+          "correctAnswer": "D",
+          "predictedAnswers": [
+            "D",
+            "D",
+            "D"
+          ],
+          "numCorrect": 3,
+          "majorityAnswer": "D",
+          "majorityIsCorrect": true,
+          "unanimousStability": true,
+          "validUnanimousStability": true
+        }
+      ]
+    },
+    {
+      "model": "google/gemini-2.5-pro",
+      "maxTokens": 256,
+      "temperature": 0,
+      "totalRuns": 3,
+      "correctRuns": 3,
+      "answeredRuns": 3,
+      "nullRuns": 0,
+      "stopRuns": 3,
+      "lengthRuns": 0,
+      "rawAccuracy": 1,
+      "answeredAccuracy": 1,
+      "nullRate": 0,
+      "stopRate": 1,
+      "lengthRate": 0,
+      "totalQuestions": 1,
+      "fullyCorrectQuestions": 1,
+      "atLeast2CorrectQuestions": 1,
+      "majorityCorrectQuestions": 1,
+      "unanimousStabilityQuestions": 1,
+      "validUnanimousStabilityQuestions": 1,
+      "fullyCorrectQuestionRate": 1,
+      "atLeast2CorrectQuestionRate": 1,
+      "majorityCorrectQuestionRate": 1,
+      "unanimousStabilityRate": 1,
+      "validUnanimousStabilityRate": 1,
+      "testedQuestionIds": [
+        "PT88-S2-Q22"
+      ],
+      "questionSummaries": [
+        {
+          "questionId": "PT88-S2-Q22",
+          "correctAnswer": "D",
+          "predictedAnswers": [
+            "D",
+            "D",
+            "D"
+          ],
+          "numCorrect": 3,
+          "majorityAnswer": "D",
+          "majorityIsCorrect": true,
+          "unanimousStability": true,
+          "validUnanimousStability": true
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "model": "deepseek/deepseek-r1",
+      "questionId": "PT88-S2-Q22",
+      "section": 2,
+      "qnum": 22,
+      "repeat": 1,
+      "correctAnswer": "D",
+      "predictedAnswer": "D",
+      "isCorrect": true,
+      "finishReason": "stop",
+      "nativeFinishReason": "stop",
+      "rawContent": "D. The editorialist identifies inadequate media coverage and secrecy as factors isolating local politicians, which reduces the likelihood of positive responses to resident participation, thereby discouraging participation. Option D correctly infers that addressing one factor—improving media coverage—would reduce a source of discouragement (i.e., isolation caused by poor coverage). This directly aligns with the causal chain described. Other options either overreach (A, by assuming a \"likely\" outcome not guaranteed by the premises), prescribe actions (B, introducing normative claims), make unsupported comparative claims (C), or reverse causation (E). Thus, D is most strongly supported. \n\nANSWER: D"
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "questionId": "PT88-S2-Q22",
+      "section": 2,
+      "qnum": 22,
+      "repeat": 2,
+      "correctAnswer": "D",
+      "predictedAnswer": "D",
+      "isCorrect": true,
+      "finishReason": "stop",
+      "nativeFinishReason": "stop",
+      "rawContent": "D. The editorialist identifies infrequent thorough media coverage as a factor contributing to politicians' isolation, which reduces the likelihood of positive responses to resident participation and thereby discourages participation. By addressing one cause of isolation (inadequate coverage), increased thorough coverage would directly mitigate this source of discouragement. This aligns logically with the argument’s causal chain, making **D** the most strongly supported conclusion. Other options either overreach (e.g., **A** assumes \"likely\" outcomes without justification, **B** introduces a normative claim beyond the premises) or misrepresent causality (e.g., **E** reverses the direction of influence). \n\nANSWER: D"
+    },
+    {
+      "model": "deepseek/deepseek-r1",
+      "questionId": "PT88-S2-Q22",
+      "section": 2,
+      "qnum": 22,
+      "repeat": 3,
+      "correctAnswer": "D",
+      "predictedAnswer": "D",
+      "isCorrect": true,
+      "finishReason": "stop",
+      "nativeFinishReason": "stop",
+      "rawContent": "D. More-frequent thorough coverage of local politics would reduce at least one source of discouragement from resident participation in local politics.  \nThe editorialist identifies two factors (lack of media coverage and secrecy) that isolate politicians, leading to reduced responsiveness and discouraged participation. By addressing one factor—increasing thorough media coverage—the chain of causation implies that isolation would diminish, thereby reducing a source of discouragement. This aligns directly with option D. While option A is plausible, it focuses on the hypothetical effect of reduced isolation generally, whereas D specifically connects to a stated causal factor (media coverage) and its impact, making it the most strongly supported."
+    },
+    {
+      "model": "google/gemini-2.5-pro",
+      "questionId": "PT88-S2-Q22",
+      "section": 2,
+      "qnum": 22,
+      "repeat": 1,
+      "correctAnswer": "D",
+      "predictedAnswer": "D",
+      "isCorrect": true,
+      "finishReason": "stop",
+      "nativeFinishReason": "STOP",
+      "rawContent": "D"
+    },
+    {
+      "model": "google/gemini-2.5-pro",
+      "questionId": "PT88-S2-Q22",
+      "section": 2,
+      "qnum": 22,
+      "repeat": 2,
+      "correctAnswer": "D",
+      "predictedAnswer": "D",
+      "isCorrect": true,
+      "finishReason": "stop",
+      "nativeFinishReason": "STOP",
+      "rawContent": "D"
+    },
+    {
+      "model": "google/gemini-2.5-pro",
+      "questionId": "PT88-S2-Q22",
+      "section": 2,
+      "qnum": 22,
+      "repeat": 3,
+      "correctAnswer": "D",
+      "predictedAnswer": "D",
+      "isCorrect": true,
+      "finishReason": "stop",
+      "nativeFinishReason": "STOP",
+      "rawContent": "D"
+    }
+  ]
+}

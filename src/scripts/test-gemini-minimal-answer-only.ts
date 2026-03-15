@@ -18,35 +18,36 @@ type Question = {
 type AnswerKey = Record<string, OptionLetter>
 
 type OpenRouterResponse = {
-  id?: string
   choices?: Array<{
     message?: {
       content?: string
     }
-    finish_reason?: string
-    native_finish_reason?: string
   }>
 }
 
+type DatasetPair = {
+  questionsPath: string
+  answerKeyPath: string
+}
+
 const MODEL = 'google/gemini-2.5-pro'
-const MAX_TOKENS = 256
+const MAX_TOKENS = 1024
 const TEMPERATURE = 0
 
-const EXCLUDED_QUESTION_IDS = new Set<string>([
-  'PT88-S1-Q25',
-  'PT88-S2-Q08',
-  'PT88-S2-Q15',
-  'PT88-S2-Q21',
-  'PT88-S2-Q22',
-  'PT88-S2-Q24',
-  'PT88-S3-Q18',
-  'PT88-S3-Q21'
-])
-
 function usage() {
-  console.log(
-    'Usage: pnpm tsx src/scripts/test-gemini-minimal-answer-only.ts <questions.json> <answer_key.json> [repeat]'
-  )
+  console.log(`
+Usage:
+  pnpm tsx src/scripts/test-gemini-minimal-answer-only-multi.ts [repeat] --ids-file=src/data/gemini-empty-ids.txt --datasets=src/data/PT88_no_answers_fixed.json:src/data/PT88_answer_key_fixed.json,src/data/PT89_no_answers.json:src/data/PT89_answer_key.json,src/data/PT90_no_answers.json:src/data/PT90_answer_key.json,src/data/PT91_no_answers.json:src/data/PT91_answer_key.json,src/data/PT92_no_answers.json:src/data/PT92_answer_key.json,src/data/PT93_no_answers.json:src/data/PT93_answer_key.json
+
+Arguments:
+  [repeat]                 Optional. Defaults to 1.
+
+Required flags:
+  --ids-file=...           Text file with one question id per line
+  --datasets=...           Comma-separated dataset pairs
+                           Format:
+                           questions.json:answer_key.json,questions.json:answer_key.json
+`)
 }
 
 function isOptionLetter(value: string): value is OptionLetter {
@@ -94,9 +95,21 @@ async function readJsonFile<T>(filePath: string): Promise<T> {
   return JSON.parse(raw) as T
 }
 
-function validateQuestion(question: unknown, index: number): Question {
+async function readIdsFile(filePath: string): Promise<string[]> {
+  const raw = await fs.readFile(filePath, 'utf-8')
+  return Array.from(
+    new Set(
+      raw
+        .split(/\r?\n/)
+        .map((x) => x.trim())
+        .filter(Boolean)
+    )
+  )
+}
+
+function validateQuestion(question: unknown, index: number, sourcePath: string): Question {
   if (!question || typeof question !== 'object') {
-    throw new Error(`Invalid question at index ${index}: not an object`)
+    throw new Error(`Invalid question at index ${index} in ${sourcePath}: not an object`)
   }
 
   const q = question as Partial<Question>
@@ -116,7 +129,7 @@ function validateQuestion(question: unknown, index: number): Question {
     typeof q.questionStem !== 'string' ||
     !validOptions
   ) {
-    throw new Error(`Invalid question at index ${index}`)
+    throw new Error(`Invalid question at index ${index} in ${sourcePath}`)
   }
 
   return q as Question
@@ -131,10 +144,12 @@ async function loadDataset(questionsPath: string, answerKeyPath: string) {
     : (rawQuestions as { questions?: unknown[] })?.questions
 
   if (!Array.isArray(questionsArray)) {
-    throw new Error('Questions JSON must be an array or an object with a questions array')
+    throw new Error(`Questions JSON must be an array or an object with a questions array: ${questionsPath}`)
   }
 
-  const questions = questionsArray.map((q, index) => validateQuestion(q, index))
+  const questions = questionsArray.map((q, index) =>
+    validateQuestion(q, index, questionsPath)
+  )
 
   let answerKey: AnswerKey
   if (rawAnswerKey && typeof rawAnswerKey === 'object' && !Array.isArray(rawAnswerKey)) {
@@ -147,10 +162,48 @@ async function loadDataset(questionsPath: string, answerKeyPath: string) {
       answerKey = rawAnswerKey as AnswerKey
     }
   } else {
-    throw new Error('Answer key JSON must be an object')
+    throw new Error(`Answer key JSON must be an object: ${answerKeyPath}`)
   }
 
   return { questions, answerKey }
+}
+
+function parseCliArgs(argv: string[]) {
+  const positional: string[] = []
+  let idsFile: string | null = null
+  let datasets: DatasetPair[] = []
+
+  for (const arg of argv) {
+    if (arg.startsWith('--ids-file=')) {
+      idsFile = arg.slice('--ids-file='.length).trim()
+    } else if (arg.startsWith('--datasets=')) {
+      const raw = arg.slice('--datasets='.length).trim()
+
+      datasets = raw
+        .split(',')
+        .map((pair) => pair.trim())
+        .filter(Boolean)
+        .map((pair) => {
+          const sepIndex = pair.indexOf(':')
+          if (sepIndex === -1) {
+            throw new Error(`Invalid dataset pair: ${pair}`)
+          }
+
+          const questionsPath = pair.slice(0, sepIndex).trim()
+          const answerKeyPath = pair.slice(sepIndex + 1).trim()
+
+          if (!questionsPath || !answerKeyPath) {
+            throw new Error(`Invalid dataset pair: ${pair}`)
+          }
+
+          return { questionsPath, answerKeyPath }
+        })
+    } else {
+      positional.push(arg)
+    }
+  }
+
+  return { positional, idsFile, datasets }
 }
 
 async function callOpenRouter(prompt: string) {
@@ -193,62 +246,92 @@ function formatNowForFileName() {
   return new Date().toISOString().replace(/[:.]/g, '-')
 }
 
-function majorityAnswer(answers: Array<OptionLetter | null>): OptionLetter | null {
-  const counts = new Map<OptionLetter, number>()
-
-  for (const answer of answers) {
-    if (!answer) continue
-    counts.set(answer, (counts.get(answer) ?? 0) + 1)
-  }
-
-  if (counts.size === 0) return null
-
-  let bestAnswer: OptionLetter | null = null
-  let bestCount = -1
-
-  for (const [answer, count] of counts.entries()) {
-    if (count > bestCount) {
-      bestAnswer = answer
-      bestCount = count
-    }
-  }
-
-  return bestAnswer
-}
-
-function uniqueNonNullAnswers(answers: Array<OptionLetter | null>): OptionLetter[] {
-  return Array.from(new Set(answers.filter((x): x is OptionLetter => x !== null)))
+function buildOutputFileName(totalIds: number) {
+  const timestamp = formatNowForFileName()
+  return `gemini-minimal-answer-only-rerun-${totalIds}q-${timestamp}.json`
 }
 
 async function main() {
-  const [questionsPath, answerKeyPath, repeatArg] = process.argv.slice(2)
-
-  if (!questionsPath || !answerKeyPath) {
-    usage()
-    process.exit(1)
-  }
+  const { positional, idsFile, datasets } = parseCliArgs(process.argv.slice(2))
+  const repeatArg = positional[0]
 
   const repeat = Number.parseInt(repeatArg ?? '1', 10)
   if (!Number.isFinite(repeat) || repeat < 1) {
     throw new Error('Repeat must be a positive integer')
   }
 
-  const { questions, answerKey } = await loadDataset(questionsPath, answerKeyPath)
+  if (!idsFile) {
+    throw new Error('Missing --ids-file')
+  }
 
-  const targetQuestions = questions.filter((q) => !EXCLUDED_QUESTION_IDS.has(q.id))
+  if (datasets.length === 0) {
+    throw new Error('Missing --datasets')
+  }
+
+  const requestedIds = await readIdsFile(idsFile)
+  if (requestedIds.length === 0) {
+    throw new Error(`No question ids found in file: ${idsFile}`)
+  }
+
+  const allQuestions = new Map<string, Question>()
+  const allAnswerKeys = new Map<string, OptionLetter>()
+
+  for (const pair of datasets) {
+    const { questions, answerKey } = await loadDataset(pair.questionsPath, pair.answerKeyPath)
+
+    for (const question of questions) {
+      if (allQuestions.has(question.id)) {
+        throw new Error(`Duplicate question id found across datasets: ${question.id}`)
+      }
+      allQuestions.set(question.id, question)
+    }
+
+    for (const [qid, ans] of Object.entries(answerKey)) {
+      if (!isOptionLetter(ans)) continue
+
+      if (allAnswerKeys.has(qid)) {
+        throw new Error(`Duplicate answer key id found across datasets: ${qid}`)
+      }
+
+      allAnswerKeys.set(qid, ans)
+    }
+  }
+
+  const targetQuestions = requestedIds
+    .map((id) => allQuestions.get(id))
+    .filter((q): q is Question => q !== undefined)
 
   if (targetQuestions.length === 0) {
-    throw new Error('No target questions found in dataset')
+    throw new Error('No target questions found across provided datasets')
   }
+
+  const foundQuestionIds = new Set(targetQuestions.map((q) => q.id))
+  const missingRequestedIds = requestedIds.filter((id) => !foundQuestionIds.has(id))
 
   console.log(`\n===== MODEL: ${MODEL} =====`)
   console.log(`===== QUESTIONS: ${targetQuestions.length} =====`)
-  console.log(`===== REPEATS: ${repeat} =====\n`)
+  console.log(`===== REPEATS: ${repeat} =====`)
+  console.log(`===== MAX_TOKENS: ${MAX_TOKENS} =====`)
+  console.log(`===== IDS_FILE: ${idsFile} =====`)
+  console.log(`===== DATASETS: ${datasets.length} =====`)
 
-  const results: Array<Record<string, unknown>> = []
+  if (missingRequestedIds.length > 0) {
+    console.log(`===== MISSING_REQUESTED_IDS: ${missingRequestedIds.join(', ')} =====`)
+  }
+
+  console.log('')
+
+  const results: Array<{
+    questionId: string
+    correctAnswer: OptionLetter
+    predictedAnswer: OptionLetter | null
+    isCorrect: boolean
+    repeat: number
+    error?: string
+  }> = []
 
   for (const question of targetQuestions) {
-    const correctAnswer = answerKey[question.id]
+    const correctAnswer = allAnswerKeys.get(question.id)
 
     if (!correctAnswer || !isOptionLetter(correctAnswer)) {
       console.warn(`[WARN] Missing or invalid answer key for ${question.id}, skipping`)
@@ -260,47 +343,30 @@ async function main() {
 
       try {
         const raw = await callOpenRouter(prompt)
-        const choice = raw.choices?.[0]
-        const content = choice?.message?.content ?? ''
+        const content = raw.choices?.[0]?.message?.content ?? ''
         const predictedAnswer = extractAnswerLetter(content)
-        const finishReason = choice?.finish_reason ?? null
-        const nativeFinishReason = choice?.native_finish_reason ?? null
-
         const isCorrect = predictedAnswer === correctAnswer
 
-        const record = {
+        results.push({
           questionId: question.id,
-          section: question.section,
-          qnum: question.qnum,
-          repeat: attempt,
-          model: MODEL,
           correctAnswer,
           predictedAnswer,
           isCorrect,
-          finishReason,
-          nativeFinishReason,
-          rawContent: content
-        }
-
-        results.push(record)
+          repeat: attempt
+        })
 
         console.log(
-          `[${question.id}] repeat=${attempt} predicted=${predictedAnswer ?? 'null'} correct=${correctAnswer} result=${isCorrect ? 'OK' : 'WRONG'} finish=${finishReason ?? 'null'}`
+          `[${question.id}] repeat=${attempt} predicted=${predictedAnswer ?? 'null'} correct=${correctAnswer} result=${isCorrect ? 'OK' : 'WRONG'}`
         )
       } catch (error) {
         const message = error instanceof Error ? error.message : String(error)
 
         results.push({
           questionId: question.id,
-          section: question.section,
-          qnum: question.qnum,
-          repeat: attempt,
-          model: MODEL,
           correctAnswer,
           predictedAnswer: null,
           isCorrect: false,
-          finishReason: null,
-          nativeFinishReason: null,
+          repeat: attempt,
           error: message
         })
 
@@ -309,125 +375,27 @@ async function main() {
     }
   }
 
-  const correctRuns = results.filter((r) => r.isCorrect === true).length
-  const answeredRuns = results.filter((r) => r.predictedAnswer !== null).length
-  const nullRuns = results.filter((r) => r.predictedAnswer === null).length
-  const stopRuns = results.filter((r) => r.finishReason === 'stop').length
-  const lengthRuns = results.filter((r) => r.finishReason === 'length').length
-
-  const byQuestion = new Map<string, Array<Record<string, unknown>>>()
-
-  for (const record of results) {
-    const qid = String(record.questionId)
-    if (!byQuestion.has(qid)) byQuestion.set(qid, [])
-    byQuestion.get(qid)!.push(record)
-  }
-
-  let fullyCorrectQuestions = 0
-  let atLeast2CorrectQuestions = 0
-  let majorityCorrectQuestions = 0
-  let unanimousStabilityQuestions = 0
-  let validUnanimousStabilityQuestions = 0
-
-  const questionSummaries = Array.from(byQuestion.entries()).map(([questionId, rows]) => {
-    const correctAnswer = rows[0].correctAnswer as OptionLetter
-    const predictedAnswers = rows.map(
-      (r) => (r.predictedAnswer as OptionLetter | null) ?? null
-    )
-    const nonNullAnswers = predictedAnswers.filter((x): x is OptionLetter => x !== null)
-    const numCorrect = rows.filter((r) => r.isCorrect === true).length
-    const maj = majorityAnswer(predictedAnswers)
-
-    const unanimous =
-      predictedAnswers.length > 0 &&
-      predictedAnswers.every((x) => x === predictedAnswers[0])
-
-    const validUnique = uniqueNonNullAnswers(predictedAnswers)
-    const validUnanimous = nonNullAnswers.length > 0 && validUnique.length === 1
-
-    const majorityIsCorrect = maj === correctAnswer
-
-    if (numCorrect === rows.length) fullyCorrectQuestions += 1
-    if (numCorrect >= 2) atLeast2CorrectQuestions += 1
-    if (majorityIsCorrect) majorityCorrectQuestions += 1
-    if (unanimous) unanimousStabilityQuestions += 1
-    if (validUnanimous) validUnanimousStabilityQuestions += 1
-
-    return {
-      questionId,
-      correctAnswer,
-      predictedAnswers,
-      numCorrect,
-      majorityAnswer: maj,
-      majorityIsCorrect,
-      unanimousStability: unanimous,
-      validUnanimousStability: validUnanimous
-    }
-  })
-
-  const totalQuestions = questionSummaries.length
-
-  const summary = {
-    model: MODEL,
-    maxTokens: MAX_TOKENS,
-    temperature: TEMPERATURE,
-
-    totalRuns: results.length,
-    correctRuns,
-    answeredRuns,
-    nullRuns,
-    stopRuns,
-    lengthRuns,
-
-    rawAccuracy:
-      results.length > 0 ? Number((correctRuns / results.length).toFixed(4)) : 0,
-    answeredAccuracy:
-      answeredRuns > 0 ? Number((correctRuns / answeredRuns).toFixed(4)) : 0,
-    nullRate:
-      results.length > 0 ? Number((nullRuns / results.length).toFixed(4)) : 0,
-    stopRate:
-      results.length > 0 ? Number((stopRuns / results.length).toFixed(4)) : 0,
-    lengthRate:
-      results.length > 0 ? Number((lengthRuns / results.length).toFixed(4)) : 0,
-
-    totalQuestions,
-    fullyCorrectQuestions,
-    atLeast2CorrectQuestions,
-    majorityCorrectQuestions,
-    unanimousStabilityQuestions,
-    validUnanimousStabilityQuestions,
-
-    fullyCorrectQuestionRate:
-      totalQuestions > 0 ? Number((fullyCorrectQuestions / totalQuestions).toFixed(4)) : 0,
-    atLeast2CorrectQuestionRate:
-      totalQuestions > 0 ? Number((atLeast2CorrectQuestions / totalQuestions).toFixed(4)) : 0,
-    majorityCorrectQuestionRate:
-      totalQuestions > 0 ? Number((majorityCorrectQuestions / totalQuestions).toFixed(4)) : 0,
-    unanimousStabilityRate:
-      totalQuestions > 0 ? Number((unanimousStabilityQuestions / totalQuestions).toFixed(4)) : 0,
-    validUnanimousStabilityRate:
-      totalQuestions > 0
-        ? Number((validUnanimousStabilityQuestions / totalQuestions).toFixed(4))
-        : 0,
-
-    excludedQuestionIds: Array.from(EXCLUDED_QUESTION_IDS),
-    testedQuestionIds: targetQuestions.map((q) => q.id)
-  }
-
   const output = {
-    summary,
-    questionSummaries,
+    summary: {
+      model: MODEL,
+      maxTokens: MAX_TOKENS,
+      temperature: TEMPERATURE,
+      repeat,
+      idsFile,
+      totalRequestedIds: requestedIds.length,
+      totalFoundQuestions: targetQuestions.length,
+      missingRequestedIds
+    },
     results
   }
 
-  const outputFileName = `gemini-minimal-answer-only-${formatNowForFileName()}.json`
+  const outputFileName = buildOutputFileName(requestedIds.length)
   const outputPath = path.join(process.cwd(), outputFileName)
 
   await fs.writeFile(outputPath, JSON.stringify(output, null, 2), 'utf-8')
 
-  console.log('\n===== SUMMARY =====')
-  console.log(JSON.stringify(summary, null, 2))
-  console.log(`\nSaved to: ${outputPath}\n`)
+  console.log('\n===== DONE =====')
+  console.log(`Saved to: ${outputPath}\n`)
 }
 
 main().catch((error) => {

@@ -1,0 +1,77 @@
+id,section,qnum,type,family,primaryMethods,sourceFile,questionStem
+PT88-S1-Q01,1,1,point_at_issue,dual_structure,parallel_bridge|dispute_locate,PT88_no_answers_fixed.json,The issue in dispute between Powell and Freeman is the
+PT88-S1-Q02,1,2,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the argument fails to demonstrate that
+PT88-S1-Q03,1,3,most_supported,inference,highlight|lego|venn|substitution,PT88_no_answers_fixed.json,"The statements above, if true, support which one of the following inferences?"
+PT88-S1-Q04,1,4,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,"Which one of the following, if true, indicates that the criticism of Yasukawa’s research is based on a misunderstanding of it?"
+PT88-S1-Q05,1,5,strengthen,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,most strongly supports the explanation above?
+PT88-S1-Q06,1,6,method_of_reasoning,argument_structure,argument_chain,PT88_no_answers_fixed.json,proceeds by
+PT88-S1-Q07,1,7,resolve,dual_structure,parallel_bridge|dispute_locate,PT88_no_answers_fixed.json,most helps to resolve the apparent discrepancy in the information above?
+PT88-S1-Q08,1,8,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,"Which one of the following, if true, most calls into question the officials’ argument?"
+PT88-S1-Q09,1,9,must_be_true,inference,highlight|lego|venn|substitution,PT88_no_answers_fixed.json,which one of the following must be true?
+PT88-S1-Q10,1,10,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,"Which one of the following, if true, most seriously calls into question the accountant’s argument?"
+PT88-S1-Q11,1,11,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the argument above?
+PT88-S1-Q12,1,12,most_supported,inference,highlight|lego|venn|substitution,PT88_no_answers_fixed.json,Which one of the following is most strongly supported by the information above?
+PT88-S1-Q13,1,13,assumption_necessary,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the argument depends?
+PT88-S1-Q14,1,14,role,argument_structure,argument_chain,PT88_no_answers_fixed.json,plays which one of the following roles in the critic’s argument?
+PT88-S1-Q15,1,15,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,which one of the following ways?
+PT88-S1-Q16,1,16,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the argument’s conclusion?
+PT88-S1-Q17,1,17,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the argument?
+PT88-S1-Q18,1,18,strengthen,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,"Which one of the following, if true, provides the strongest additional support for the hypotheses above?"
+PT88-S1-Q19,1,19,must_be_true,inference,highlight|lego|venn|substitution,PT88_no_answers_fixed.json,which one of the following must also be true?
+PT88-S1-Q20,1,20,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,which one of the following?
+PT88-S1-Q21,1,21,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the argument given by the manufacturers depends?
+PT88-S1-Q22,1,22,must_be_true,inference,highlight|lego|venn|substitution,PT88_no_answers_fixed.json,which one of the following must also be true on the basis of them?
+PT88-S1-Q23,1,23,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the argument’s reasoning?
+PT88-S1-Q24,1,24,strengthen,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,"Which one of the following principles, if valid, most helps to justify the folklorist’s argumentation?"
+PT88-S1-Q25,1,25,except,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,each of the following possibilities EXCEPT:
+PT88-S1-Q26,1,26,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the argument above?
+PT88-S2-Q01,2,1,main_conclusion,argument_structure,argument_chain,PT88_no_answers_fixed.json,Which one of the following most accurately expresses the main conclusion of the economist’s argument?
+PT88-S2-Q02,2,2,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the argument above?
+PT88-S2-Q03,2,3,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the argument?
+PT88-S2-Q04,2,4,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the argument
+PT88-S2-Q05,2,5,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,"Which one of the following, if true, would count as evidence against the scientist’s explanation of Earth’s warming?"
+PT88-S2-Q06,2,6,assumption_necessary,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,which one of the following is assumed?
+PT88-S2-Q07,2,7,principle_apply,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,"which one of the following individuals exhibit the most advanced kind of moral motivation, as described by the ethicist?"
+PT88-S2-Q08,2,8,assumption_sufficient,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,Which one of the following most logically completes the argument?
+PT88-S2-Q09,2,9,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the argument?
+PT88-S2-Q10,2,10,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the argument?
+PT88-S2-Q11,2,11,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the argument?
+PT88-S2-Q12,2,12,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the argument above?
+PT88-S2-Q13,2,13,assumption_necessary,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,which one of the following is assumed?
+PT88-S2-Q14,2,14,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,"Which one of the following, if true, most seriously weakens the argument?"
+PT88-S2-Q15,2,15,assumption_sufficient,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,Which one of the following is an assumption that would allow the conclusion above to be properly drawn?
+PT88-S2-Q16,2,16,strengthen,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,The statements above provide the most support for holding that Sandra would disagree with Taylor about which one of the following statements?
+PT88-S2-Q17,2,17,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,most vulnerable to which one of the following objections?
+PT88-S2-Q18,2,18,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,which one of the following statements?
+PT88-S2-Q19,2,19,strengthen,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,"Each of the following, if true, strengthens the historian’s argument EXCEPT:"
+PT88-S2-Q20,2,20,method_of_reasoning,argument_structure,argument_chain,PT88_no_answers_fixed.json,"Of the following, which one most accurately describes Gamba’s strategy of argumentation?"
+PT88-S2-Q21,2,21,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,The reasoning in the driver’s argument is most vulnerable to criticism on the grounds that this argument
+PT88-S2-Q22,2,22,most_supported,inference,highlight|lego|venn|substitution,PT88_no_answers_fixed.json,Which one of the following is most strongly supported by the editorialist’s statements?
+PT88-S2-Q23,2,23,assumption_necessary,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,which one of the following is assumed?
+PT88-S2-Q24,2,24,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,which one of the following propositions?
+PT88-S2-Q25,2,25,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,"Which one of the following, if true, most helps to explain the difference between the amount of innovation in French painting and the amount of innovation in French sculpture during the nineteenth century?"
+PT88-S3-Q01,3,1,principle_apply,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,application of the politician’s principle of taxation?
+PT88-S3-Q02,3,2,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the argument?
+PT88-S3-Q03,3,3,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the principle cited above?
+PT88-S3-Q04,3,4,assumption_necessary,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,Which one of the following is assumed by the mayor’s argument?
+PT88-S3-Q05,3,5,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the statements above?
+PT88-S3-Q06,3,6,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the argument?
+PT88-S3-Q07,3,7,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the argument overlooks the possibility that
+PT88-S3-Q08,3,8,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,"Which one of the following, if true, does most to explain the apparent counterexample described above?"
+PT88-S3-Q09,3,9,assumption_necessary,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the argument depends?
+PT88-S3-Q10,3,10,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,most vulnerable to which one of the following criticisms?
+PT88-S3-Q11,3,11,point_at_issue,dual_structure,parallel_bridge|dispute_locate,PT88_no_answers_fixed.json,A point at issue between P and Q is whether
+PT88-S3-Q12,3,12,method_of_reasoning,argument_structure,argument_chain,PT88_no_answers_fixed.json,Q responds to P’s position by
+PT88-S3-Q13,3,13,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,which one of the following?
+PT88-S3-Q14,3,14,must_be_true,inference,highlight|lego|venn|substitution,PT88_no_answers_fixed.json,which one of the following can be properly concluded from them?
+PT88-S3-Q15,3,15,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the argument?
+PT88-S3-Q16,3,16,strengthen,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,provides support for the critique above EXCEPT:
+PT88-S3-Q17,3,17,must_be_true,inference,highlight|lego|venn|substitution,PT88_no_answers_fixed.json,Which one of the following is a conclusion that can be properly drawn from the information above?
+PT88-S3-Q18,3,18,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,"Which one of the following statements, if true, most seriously weakens the argument?"
+PT88-S3-Q19,3,19,assumption_necessary,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,Which one of the following is an assumption that the argument requires in order for its conclusion to be properly drawn?
+PT88-S3-Q20,3,20,assumption_necessary,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,depends on the assumption that
+PT88-S3-Q21,3,21,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,The argument does which one of the following in dealing with the counterexample it offers?
+PT88-S3-Q22,3,22,weaken,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,"The reasoning in the argument could have remained unchanged in force and focus if which one of the following had been advanced as a counterexample in place of the word ""absentee""?"
+PT88-S3-Q23,3,23,most_supported,inference,highlight|lego|venn|substitution,PT88_no_answers_fixed.json,Which one of the following statements is most strongly supported by the information in the passage?
+PT88-S3-Q24,3,24,role,argument_structure,argument_chain,PT88_no_answers_fixed.json,Which one of the following most accurately characterizes the role played in the passage by the unstated assumption that some patients who take penicillin develop bacteria with an immunity to penicillin?
+PT88-S3-Q25,3,25,unknown,river_crossing,river_crossing|river_dual_bridge|river_fork,PT88_no_answers_fixed.json,the argument presents?
